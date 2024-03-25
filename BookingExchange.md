@@ -22,9 +22,10 @@ Notify Subscriber systems of a new jail event. Subscribers may update existing p
 
 ## Artifacts:
 
-[Mapping Spreadsheet](schemas/booking-iepd/artifacts/booking mapping spreadsheet.xlsx)
+[Mapping Spreadsheet](schemas/booking-iepd/artifacts/booking_mapping_spreadsheet.xlsx)
 
-[Class Diagram](schemas/booking-iepd/artifacts/booking class diagram.svg)
+**Class Diagram:**
+![Class Diagram](schemas/booking-iepd/artifacts/booking_class_diagram.svg)
 
 [Sample XML File](schemas/booking-iepd/examples/Annotated_NOLA_Booking_msg.xml)
 
