@@ -7,8 +7,8 @@
 2. Supervisor Approval in JMS of a JMS Release</p>
 <p><strong>Real-World Effects</strong>: Notify Subscriber systems of a new jail event. Subscribers may update existing pending case events or update previously-created events. Many Subscriber systems will opt to stage incoming events in a queue or review screen pending human action to import into the case management system. ​</p>
 <p><strong>Data Requirements</strong>:<br>
-<em>Link to XML Schemas<em></p>
+<em> <a href="schemas/booking-iepd/api/xml_schema/">XML Schemas</a><em></p>
 <p></p><strong>Artifacts</strong>:<br>
-<p><em>Link to Mapping Spreadsheet</em></em><br>
+<p><em><a href="schemas/booking-iepd/artifacts/booking%20mapping%20spreadhseet.xlsx">Mapping Spreadsheet</a></em><br>
 <em>Link to Class Diagram</em><br>
 <em>Link to Sample XML File</em></p>
