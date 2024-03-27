@@ -14,7 +14,9 @@ Arrest Report (from Police Department)​
 
 ## Real-World Effects: 
 
-Notify Subscriber systems of a new jail event. Subscribers may update existing pending case events or update previously-created events. Many Subscriber systems will opt to stage incoming events in a queue or review screen pending human action to import into the case management system. 
+The purpose of this data exchange is to notify Subscriber systems of a new jail event. On a new jail booking, subscribers will have the data needed to create a new termporary case for preparing for the next step in the criminal justice process (e.g., a first appearance, indigent defense determination or charge review). 
+
+Subscribers may create new pending case events or update previously-created events. Many Subscriber systems will opt to stage incoming events in a queue or review screen pending human action to import into the case management system. 
 
 ## Data Requirements:
 
