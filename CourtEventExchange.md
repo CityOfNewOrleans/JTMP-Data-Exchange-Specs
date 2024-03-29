@@ -31,7 +31,7 @@ Subscriber systems will match the incoming Court Event with the Court Case ID (w
 
 ## Data Requirements:
 
-[XML Schemas](schemas/booking-iepd/api/xml_schema/)
+XML Schemas - coming soon
 ### Key data elements include:
 - Status indicator -- New or Updated Event
 - Court Case ID
@@ -43,11 +43,11 @@ Subscriber systems will match the incoming Court Event with the Court Case ID (w
 
 ## Artifacts:
 
-[Mapping Spreadsheet](schemas/booking-iepd/artifacts/booking_mapping_spreadsheet.xlsx)
+Mapping Spreadsheet - coming soon
 
-**Class Diagram:**
-![Class Diagram](schemas/booking-iepd/artifacts/booking_class_diagram.svg)
+**Class Diagram:** - coming soon
 
-[Sample XML File](schemas/booking-iepd/examples/Annotated_NOLA_Booking_msg.xml)
+
+Sample XML File - coming soon
 
 
