@@ -1,16 +1,16 @@
 
 # Court Event Exchange
 
-A Courts' Case Management (CMS)) will publish a Court Event message each time a court clerk schedules a hearing or other scheduled event on a case docket. 
+A Courts' Case Management (CMS)) will publish a Court Event message each time a court clerk schedules a hearing or other scheduled event on a case docket.
 
 The publisher may be the CMS of any court jurisdiction - Criminal, Juvenile, or Municipal & Traffic. 
 
-## Preceding Exchange: 
+## Preceding Exchange:
 
 Charge Screening Action (new Criminal charges filed - from District Attorney)
 Case Initiation (new criminal case established, Court publishes Case Number and Filed Charges)​
 
-## Triggering Event:
+## Triggering Event:  
 
 1. Judge orders an event (hearing) to be scheduled
 2. Court clerk addes the scheduled event to a court case docket
