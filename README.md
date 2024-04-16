@@ -8,7 +8,7 @@ The following diagram provides an overview of the JTMP Service Bus. ​</p>
 <h2>Data Exchange Specifications </h2>
 <p>JTMP has identified a set of Priority Data Exchanges between these systems that drive us toward that vision.  JTMP follows the National Information Exchange Model )NIEM) in building and publishing specificaitons for each data exchange. The requirements for building each data exchange are communicated in as Information Exchange Package Documentation (IEPD). The table below lists the Publishing system or systems for each data exchange. The right-most column provides the link to the IEPD in the repository.</p>
  
-|Data Exchange |Publishing System(s) |IEPD Page |API - exchangeDataType name|
+|Data Exchange |Publishing System(s) |IEPD Page |API Topic-exchangeDataType name|
 |-----|------|------|-----|
 |Booking | Jail Management System|[Booking IEPD](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/BookingExchange.md) |booking|
 |Charge Code Table Updates|Centrally-hosted Uniform Charge Table|[ChargeUpdate IEPD](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/ChargeCodeUpdateExchange.md)|chargeUpdate|
