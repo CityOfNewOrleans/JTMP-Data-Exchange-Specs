@@ -1,4 +1,3 @@
-
 # Booking Exchange
 
 The Jail Management System will publish a Booking and Release message each time a client is either booked  into the jail or released for any reason (ROR, Bond, No Probable Cause, Disposition, etc.)

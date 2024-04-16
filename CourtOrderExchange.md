@@ -9,7 +9,7 @@ The publisher may be the CMS of any court jurisdiction - Criminal, Juvenile, or 
 Charge Screening Action (new Criminal charges filed - from District Attorney)
 Case Initiation (new criminal case established, Court publishes Case Number and Filed Charges)​
 
-## Triggering Order:
+## Triggering Event:
 
 1. Judge approves a court order
 2. Court clerk adds the Order to a court case docket
