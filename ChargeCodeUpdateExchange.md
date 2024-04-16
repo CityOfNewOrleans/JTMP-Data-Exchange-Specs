@@ -28,6 +28,7 @@ XML Schemas - coming soon
 
 ### Key data elements include
 
+- Primary Key - a unique identifer
 - Statute String - the reference from Statute or Ordinance code books, e.g., ____
 - Statute Description
 - Enacted Date
