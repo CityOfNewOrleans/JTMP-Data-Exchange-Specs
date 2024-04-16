@@ -11,6 +11,6 @@ The following diagram provides an overview of the JTMP Service Bus. ​</p>
 |Data Exchange |Publishing System(s) |IEPD Page |
 |-----|------|------|
 |Booking | Jail Management System|[Booking IEPD](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/BookingExchange.md) |
-|Charge Code Table Updates|Centrally-hosted Uniform Charge Table|[ChargeUpdate IEPD](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/ChargeCodeUpdateExchange.md)|
+|Charge Code Table Updates|Centrally-hosted Uniform Charge Table|[ChargeUpdate IEPD](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/ChargeCodeUpdateExchange.md)|
 |Court Event|Court Case Management System (CMS)|[CourtEvent IEPD](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/CourtEventExchange.md) |
 |Court Order|Criminal District Court CMS/Municipal & Traffic Court CMS|[CourtOrder IEPD](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/6b9667a5bcf91a051187ed3dff26fe8e4ddb0612/CourtOrderExchange.md)|
