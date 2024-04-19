@@ -1,10 +1,10 @@
 # Charge Code Updates
 
-The Justice partners have established a standardized charge code table. Values from the table, such as the statute string, description, enacted and repealed dates, and associated codes or categories are to be incorporated consistently by all JTMP endpoint systems into their native offense or statute code tables.  
+The Justice partners are in the process of establishing a standardized charge code table. Values from the table, such as the statute string, description, enacted and repealed dates, and associated codes or categories are to be incorporated consistently by all JTMP endpoint systems into their native offense or statute code tables.  
 
 This table will include both chargeable offenses from Louisiana state statutes and New Orleans municipal code violations.
 
-The full table of statute codes is available here (Link to be provided).
+When published, the full table of statute codes will be available online to authorized users (including Orleans Parish justice developers).
 
 The charge code table is fronted by an application that enables authorized justice partner users to make updates to specific code values as legislation changes.
 
