@@ -36,7 +36,7 @@ Subscriber systems will match the incoming Court Event with the Court Case ID (w
 XML Schemas - coming soon
 ### Key data elements include:
 - Status indicator -- New or Updated Event
-- Court Case ID
+- Court Case ID (First Appearance events will have a Magistrate Number; other Event Types will have a Criminal Case number)
 - Event Code (enumerated code list)
 - Event Date
 - Event Time
