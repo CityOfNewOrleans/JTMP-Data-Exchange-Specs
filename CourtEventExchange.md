@@ -7,7 +7,9 @@ The publisher may be the CMS of any court jurisdiction - Criminal, Juvenile, or 
 
 ## Preceding Exchange:
 
-Charge Screening Action (new Criminal charges filed - from District Attorney)
+Booking - First Appearance would be scheduled with the Magistrate case number. 
+or
+Charge Screening Action (new Criminal charges filed - from District Attorney). Scheduled events will carry the Criminal Case number (after allotment). 
 Case Initiation (new criminal case established, Court publishes Case Number and Filed Charges)​
 
 ## Triggering Event:  
