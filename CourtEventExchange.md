@@ -40,6 +40,7 @@ XML Schemas - coming soon
 - Event Time
 - Location (codelist of courtroom locations)
 - Judicial Official (the Judge on the case)
+- Defendant Status (?)
 
 ## Artifacts:
 
