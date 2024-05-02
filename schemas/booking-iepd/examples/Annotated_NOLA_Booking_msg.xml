@@ -7,9 +7,9 @@
 			<!--  Class: Booking, Attribute: BookedDateTime  -->
 			<DateTime>2001-12-17T09:30:47Z</DateTime>
 		</ActivityDate>
+		<!--  Class: Arrest, Association: BookingAgency to Class:Agency -->
 		<j:BookingAgency>
 			<!--  Class: Agency, Attribute: AgencyName  -->
-			<!--  Class: Arrest, Attribute: BookingAgency  -->
 			<OrganizationName>String</OrganizationName>
 			<j:OrganizationAugmentation>
 				<j:OrganizationORIIdentification>
@@ -18,6 +18,7 @@
 				</j:OrganizationORIIdentification>
 			</j:OrganizationAugmentation>
 		</j:BookingAgency>
+		<!--  Class: Release, Association:BookingRelease from Class:Booking    -->
 		<j:BookingRelease>
 			<ActivityComment>
 				<!--  Class: Release, Attribute: ReasonforRelease, Type: string  -->
@@ -50,6 +51,8 @@
 					</Address>
 				</PersonBirthLocation>
 				<!--  Class: Person, Attribute: PersonImage, Type: As-is Process.Image  -->
+				<!--  Class: Booking, Attribute: BookingPhoto  -->
+				<!--  Class: Image, Attribute: BinaryAttachement  -->
 				<PersonDigitalImage>
 					<!--  Class: Attachement, Attribute: AttachementID, Type: string  -->
 					<BinaryID>String</BinaryID>
@@ -203,6 +206,7 @@
 					</ContactMailingAddress>
 					<!--  Class: ContactInformation, Attribute: PhoneNumber, Type: TelephoneNumberType  -->
 					<ContactTelephoneNumber>
+						<!--  Class: TelephoneNumberType, Attribute: InternationalTelephoneNumberType  -->
 						<InternationalTelephoneNumber>
 							<!--  Class: FullTelephoneNumberType, Attribute: InternationalTelephoneNumberCountryCodeExtension  -->
 							<TelephoneCountryCodeID>String</TelephoneCountryCodeID>
@@ -211,6 +215,7 @@
 							<!--  Class: FullTelephoneNumberType, Attribute: InternationalTelephoneNumberSuffix  -->
 							<TelephoneSuffixID>String</TelephoneSuffixID>
 						</InternationalTelephoneNumber>
+						<!--  Class: TelephoneNumberType, Attribute: FullTelephoneNumberType  -->
 						<FullTelephoneNumber>
 							<!--  Class: FullTelephoneNumberType, Attribute: FullTelephoneNumber  -->
 							<TelephoneNumberFullID>String</TelephoneNumberFullID>
@@ -220,7 +225,6 @@
 						<!--  Class: TelephoneNumberType, Attribute: TelephoneNumberDescription  -->
 						<TelephoneNumberDescriptionText>String</TelephoneNumberDescriptionText>
 					</ContactTelephoneNumber>
-					<ContactEntityDescriptionText>String</ContactEntityDescriptionText>
 				</PersonContactInformation>
 				<!--  Class: Employer, Attribute: EmployerContact, Type: As-is Process.ContactInformation  -->
 				<EmployeeContactInformation>
@@ -272,6 +276,7 @@
 					</ContactMailingAddress>
 					<!--  Class: ContactInformation, Attribute: PhoneNumber, Type: TelephoneNumberType  -->
 					<ContactTelephoneNumber>
+						<!--  Class: TelephoneNumberType, Attribute: InternationalTelephoneNumberType  -->
 						<InternationalTelephoneNumber>
 							<!--  Class: FullTelephoneNumberType, Attribute: InternationalTelephoneNumberCountryCodeExtension  -->
 							<TelephoneCountryCodeID>String</TelephoneCountryCodeID>
@@ -280,6 +285,7 @@
 							<!--  Class: FullTelephoneNumberType, Attribute: InternationalTelephoneNumberSuffix  -->
 							<TelephoneSuffixID>String</TelephoneSuffixID>
 						</InternationalTelephoneNumber>
+						<!--  Class: TelephoneNumberType, Attribute: FullTelephoneNumberType  -->
 						<FullTelephoneNumber>
 							<!--  Class: FullTelephoneNumberType, Attribute: FullTelephoneNumber  -->
 							<TelephoneNumberFullID>String</TelephoneNumberFullID>
@@ -344,6 +350,7 @@
 					</j:PersonNCICIdentification>
 				</j:PersonAugmentation>
 				<hs:PersonAugmentation>
+					<!--  Class: Employer, Attribute: EmployerContact  -->
 					<hs:EmployerContactInformation>
 						<!--  Class: ContactInformation, Attribute: EMailAddress, Type: string  -->
 						<ContactEmailID>String</ContactEmailID>
@@ -392,6 +399,7 @@
 						</ContactMailingAddress>
 						<!--  Class: ContactInformation, Attribute: PhoneNumber, Type: TelephoneNumberType  -->
 						<ContactTelephoneNumber>
+							<!--  Class: TelephoneNumberType, Attribute: InternationalTelephoneNumberType  -->
 							<InternationalTelephoneNumber>
 								<!--  Class: FullTelephoneNumberType, Attribute: InternationalTelephoneNumberCountryCodeExtension  -->
 								<TelephoneCountryCodeID>String</TelephoneCountryCodeID>
@@ -400,6 +408,7 @@
 								<!--  Class: FullTelephoneNumberType, Attribute: InternationalTelephoneNumberSuffix  -->
 								<TelephoneSuffixID>String</TelephoneSuffixID>
 							</InternationalTelephoneNumber>
+							<!--  Class: TelephoneNumberType, Attribute: FullTelephoneNumberType  -->
 							<FullTelephoneNumber>
 								<!--  Class: FullTelephoneNumberType, Attribute: FullTelephoneNumber  -->
 								<TelephoneNumberFullID>String</TelephoneNumberFullID>
@@ -511,12 +520,8 @@
 				</j:OrganizationAugmentation>
 			</j:ArrestAgency>
 			<j:ArrestCharge>
-				<!--  Class: AFIS, Attribute: AFISCharge  -->
-				<j:ChargeCategoryDescriptionText>String</j:ChargeCategoryDescriptionText>
 				<!--  Class: Charge, Attribute: ChargeCount  -->
 				<j:ChargeCountQuantity>0</j:ChargeCountQuantity>
-				<!--  Class: Charge, Attribute: ChargeDescription, Type: string  -->
-				<j:ChargeDescriptionText>String</j:ChargeDescriptionText>
 				<j:ChargeFilingDate>
 					<!--  Class: Charge, Attribute: ChargeEffectiveDate  -->
 					<DateTime>2001-12-17T09:30:47Z</DateTime>
@@ -525,20 +530,20 @@
 				<j:ChargeSequenceID>String</j:ChargeSequenceID>
 				<j:ChargeStatute>
 					<j:StatuteCodeIdentification>
-						<!--  Class: Charge, Attribute: ChargeStatute, Type: string  -->
+						<!--  Class: Statute, Attribute: ChargeStatute, Type: string  -->
 						<IdentificationID>String</IdentificationID>
 					</j:StatuteCodeIdentification>
 					<j:StatuteCodeSectionIdentification>
-						<!--  Class: Charge, Attribute: ChargeViolation, Type: string  -->
+						<!--  Class: Statute, Attribute: ChargeViolation, Type: string  -->
 						<IdentificationID>String</IdentificationID>
 					</j:StatuteCodeSectionIdentification>
-					<!--  Class: Charge, Attribute: ChargeDescription  -->
+					<!--  Class: Statute, Attribute: ChargeStatueDescription  -->
 					<j:StatuteDescriptionText>String</j:StatuteDescriptionText>
-					<!--  Class: Charge, Attribute: SupremeCourtChargeCode  -->
+					<!--  Class: Statute, Attribute: FullStatuteText  -->
 					<j:StatuteText>Full statute text</j:StatuteText>
 					<nola-ext:ChargeStatuteAugmentation>
 						<nola-ext:StatuteCodeSectionSubparagraphIdentification>
-							<!--  Class: Charge, Attribute: ChargeSubparagraph, Type: string  -->
+							<!--  Class: Statute, Attribute: ChargeSubparagraph, Type: string  -->
 							<IdentificationID>String</IdentificationID>
 						</nola-ext:StatuteCodeSectionSubparagraphIdentification>
 					</nola-ext:ChargeStatuteAugmentation>
@@ -555,10 +560,6 @@
 						</PersonBirthDate>
 						<!--  Class: PersonDemographics, Attribute: Ethnicity, Type: As-is Process.EthnicityCodeList  -->
 						<PersonEthnicityText>String</PersonEthnicityText>
-						<PersonInjury>
-							<!--  Class: PersonHealth, Attribute: InjuriesDescription, Type: string  -->
-							<InjuryDescriptionText>String</InjuryDescriptionText>
-						</PersonInjury>
 						<PersonName>
 							<!--  Class: PersonName, Attribute: Title, Type: string  -->
 							<PersonNamePrefixText>String</PersonNamePrefixText>
@@ -584,7 +585,6 @@
 						</PersonName>
 						<!--  Class: PersonDemographics, Attribute: RaceCode, Type: As-is Process.RaceCodeList  -->
 						<PersonRaceText>String</PersonRaceText>
-						<PersonReligionText>String</PersonReligionText>
 						<!--  Class: PersonDemographics, Attribute: SexCode, Type: SexCodeList  -->
 						<PersonSexText>String</PersonSexText>
 						<!--  Class: PersonDemographics, Attribute: Homosexual, Type: string  -->
@@ -641,6 +641,7 @@
 							</ContactMailingAddress>
 							<!--  Class: ContactInformation, Attribute: PhoneNumber, Type: TelephoneNumberType  -->
 							<ContactTelephoneNumber>
+								<!--  Class: TelephoneNumberType, Attribute: InternationalTelephoneNumberType  -->
 								<InternationalTelephoneNumber>
 									<!--  Class: FullTelephoneNumberType, Attribute: InternationalTelephoneNumberCountryCodeExtension  -->
 									<TelephoneCountryCodeID>String</TelephoneCountryCodeID>
@@ -649,6 +650,7 @@
 									<!--  Class: FullTelephoneNumberType, Attribute: InternationalTelephoneNumberSuffix  -->
 									<TelephoneSuffixID>String</TelephoneSuffixID>
 								</InternationalTelephoneNumber>
+								<!--  Class: TelephoneNumberType, Attribute: FullTelephoneNumberType  -->
 								<FullTelephoneNumber>
 									<!--  Class: FullTelephoneNumberType, Attribute: FullTelephoneNumber  -->
 									<TelephoneNumberFullID>String</TelephoneNumberFullID>
@@ -707,6 +709,7 @@
 							</ContactMailingAddress>
 							<!--  Class: ContactInformation, Attribute: PhoneNumber, Type: TelephoneNumberType  -->
 							<ContactTelephoneNumber>
+								<!--  Class: TelephoneNumberType, Attribute: InternationalTelephoneNumberType  -->
 								<InternationalTelephoneNumber>
 									<!--  Class: FullTelephoneNumberType, Attribute: InternationalTelephoneNumberCountryCodeExtension  -->
 									<TelephoneCountryCodeID>String</TelephoneCountryCodeID>
@@ -715,6 +718,7 @@
 									<!--  Class: FullTelephoneNumberType, Attribute: InternationalTelephoneNumberSuffix  -->
 									<TelephoneSuffixID>String</TelephoneSuffixID>
 								</InternationalTelephoneNumber>
+								<!--  Class: TelephoneNumberType, Attribute: FullTelephoneNumberType  -->
 								<FullTelephoneNumber>
 									<!--  Class: FullTelephoneNumberType, Attribute: FullTelephoneNumber  -->
 									<TelephoneNumberFullID>String</TelephoneNumberFullID>
@@ -797,6 +801,7 @@
 								</ContactMailingAddress>
 								<!--  Class: ContactInformation, Attribute: PhoneNumber, Type: TelephoneNumberType  -->
 								<ContactTelephoneNumber>
+									<!--  Class: TelephoneNumberType, Attribute: InternationalTelephoneNumberType  -->
 									<InternationalTelephoneNumber>
 										<!--  Class: FullTelephoneNumberType, Attribute: InternationalTelephoneNumberCountryCodeExtension  -->
 										<TelephoneCountryCodeID>String</TelephoneCountryCodeID>
@@ -805,6 +810,7 @@
 										<!--  Class: FullTelephoneNumberType, Attribute: InternationalTelephoneNumberSuffix  -->
 										<TelephoneSuffixID>String</TelephoneSuffixID>
 									</InternationalTelephoneNumber>
+									<!--  Class: TelephoneNumberType, Attribute: FullTelephoneNumberType  -->
 									<FullTelephoneNumber>
 										<!--  Class: FullTelephoneNumberType, Attribute: FullTelephoneNumber  -->
 										<TelephoneNumberFullID>String</TelephoneNumberFullID>
@@ -835,12 +841,6 @@
 				<nola-ext:ChargeAugmentation>
 					<!--  Class: Arrest, Attribute: ATNChargeSequenceNumber  -->
 					<nola-ext:ATNChargeSequenceNumber>String</nola-ext:ATNChargeSequenceNumber>
-					<nola-ext:OffenseDate>
-						<!--  Class: Charge, Attribute: OffenseDay  -->
-						<DayDate>---17</DayDate>
-						<!--  Class: Charge, Attribute: OffenseDate  -->
-						<DateTime>2001-12-17T09:30:47Z</DateTime>
-					</nola-ext:OffenseDate>
 					<!--  Class: Charge, Attribute: ChargeLIBRSCode  -->
 					<nola-ext:ChargeLIBRSCode>String</nola-ext:ChargeLIBRSCode>
 				</nola-ext:ChargeAugmentation>
@@ -855,8 +855,7 @@
 			</j:ArrestCharge>
 			<j:ArrestInvolvedWeapon>
 				<RoleOfItem>
-					<ItemDescriptionText>String</ItemDescriptionText>
-					<!--  Class: Arrest, Attribute: Weapon  -->
+					<!--  Class: Weapon, Attribute: ArresteeWeapon  -->
 					<ItemName>String</ItemName>
 				</RoleOfItem>
 			</j:ArrestInvolvedWeapon>
@@ -880,16 +879,16 @@
 						<!--  Class: ContactInformation, Attribute: EMailAddress, Type: string  -->
 						<ContactEmailID>String</ContactEmailID>
 						<ContactTelephoneNumber>
+							<!--  Class: TelephoneNumberType, Attribute: FullTelephoneNumberType  -->
 							<FullTelephoneNumber>
 								<!--  Class: FullTelephoneNumberType, Attribute: FullTelephoneNumber  -->
 								<TelephoneNumberFullID>String</TelephoneNumberFullID>
 								<!--  Class: FullTelephoneNumberType, Attribute: TelephoneNumberSuffix  -->
 								<TelephoneSuffixID>String</TelephoneSuffixID>
 							</FullTelephoneNumber>
+							<!--  Class: TelephoneNumberType, Attribute: TelephoneNumberDescription  -->
 							<TelephoneNumberDescriptionText>String</TelephoneNumberDescriptionText>
 						</ContactTelephoneNumber>
-						<!--  Class: TelephoneNumberType, Attribute: TelephoneNumberDescription  -->
-						<ContactEntityDescriptionText>String</ContactEntityDescriptionText>
 					</PersonContactInformation>
 				</RoleOfPerson>
 				<j:EnforcementOfficialBadgeIdentification>
@@ -899,10 +898,6 @@
 				<!-- Class:Officer, Attribute: OfficerType -->
 				<j:EnforcementOfficialCategoryText>String</j:EnforcementOfficialCategoryText>
 				<j:EnforcementOfficialUnit>
-					<OrganizationIdentification>
-						<!--  Class: Officer, Attribute: Unit, Type: string  -->
-						<IdentificationID>String</IdentificationID>
-					</OrganizationIdentification>
 					<!--  Class: Agency, Attribute: AgencyName  -->
 					<OrganizationName>String</OrganizationName>
 					<j:OrganizationAugmentation>
@@ -911,13 +906,22 @@
 							<IdentificationID>String</IdentificationID>
 						</j:OrganizationORIIdentification>
 					</j:OrganizationAugmentation>
-					<!--  Class: Officer, Attribute: Unit, Type: string  -->
+					<!--  Class: Officer, Attribute: UnitName, Type: string  -->
 					<j:EnforcementUnitName>String</j:EnforcementUnitName>
 				</j:EnforcementOfficialUnit>
 			</j:ArrestOfficial>
 			<!--  Class: Arrest, Attribute: ArrestRegisterNumber  -->
 			<j:ArrestSequenceID>String</j:ArrestSequenceID>
 			<nola-ext:ArrestAugmentation>
+				<!-- Class:Booking, Attribute:StatewideArrestTrackingNumber  -->
+				<nola-ext:StatewideArrestTrackingNumber>String</nola-ext:StatewideArrestTrackingNumber>
+				<nola-ext:OffenseDate>
+					<!--  Class: Charge, Attribute: OffenseDay  -->
+					<DayDate>---17</DayDate>
+					<!--  Class: Charge, Attribute: OffenseDate  -->
+					<DateTime>2001-12-17T09:30:47Z</DateTime>
+				</nola-ext:OffenseDate>
+				<!-- From Class:Arrest to Class:Incident Association:ArrestIncident -->
 				<j:IncidentArrestAssociation>
 					<Incident>
 						<ActivityIdentification>
@@ -926,7 +930,7 @@
 						</ActivityIdentification>
 						<!--  Class: Incident, Attribute: IncidentDescription, Type: string  -->
 						<ActivityDescriptionText>String</ActivityDescriptionText>
-						<!--  Class: Incident, Attribute: OffenseLocation, Type: As-is Process.Location  -->
+						<!--  Class: Offense, Attribute: OffenseLocation, Type: As-is Process.Location  -->
 						<ActivityLocation>
 							<!--  Class: Location, Attribute: LocationAddress, Type: As-is Process.Address  -->
 							<Address>
@@ -975,6 +979,7 @@
 								<AddressStreet>
 									<!--  Class: CrossStreet, Attribute: CrossStreetDirection, Type: string  -->
 									<StreetFullText>String</StreetFullText>
+									<!--  Class: CrossStreet, Attribute: CrossStreetDirectionNumber  -->
 									<StreetNumberText>String</StreetNumberText>
 									<StreetPredirectional>
 										<!--  Class: CrossStreet, Attribute: CrossStreetPrefix, Type: string  -->
@@ -989,7 +994,7 @@
 								</AddressStreet>
 							</AddressCrossStreet>
 							<LocationArea>
-								<!--  Class: Incident, Attribute: LocationDescription  -->
+								<!--  Class: Location, Attribute: LocationDescription  -->
 								<AreaDescriptionText>String</AreaDescriptionText>
 							</LocationArea>
 						</ActivityLocation>
@@ -1006,10 +1011,8 @@
 		</nola-ext:BookingAugmentation>
 	</j:Booking>
 	<Case>
-		<!--  Class: CourtCaseDetails, Attribute: CaseType  -->
+		<!--  Class: CourtCase, Attribute: CaseType  -->
 		<CaseGeneralCategoryText>String</CaseGeneralCategoryText>
-		<!--  Class: CourtCase, Attribute: CaseDefendantNumber  -->
-		<CaseTrackingID>String</CaseTrackingID>
 		<!--  Class: CourtCase, Attribute: CourtCaseNumberDocketNumber  -->
 		<CaseDocketID>String</CaseDocketID>
 		<j:CaseAugmentation>
@@ -1026,7 +1029,6 @@
 					</LocationPart>
 				</OrganizationLocation>
 				<!--  Class: Agency, Attribute: AgencyName  -->
-				<!--  Class: Court, Attribute: CourtName  -->
 				<OrganizationName>String</OrganizationName>
 				<j:OrganizationAugmentation>
 					<j:OrganizationORIIdentification>
@@ -1041,20 +1043,20 @@
 				<!--  Class: Court, Attribute: CourtTypeCode  -->
 				<j:CourtCategoryCode>MUN</j:CourtCategoryCode>
 			</j:CaseCourt>
-			<!-- CaseCourtEvent- A court occurrence related to a case. j:CourtEventType-->
+			<!-- j:CaseCourtEvent- A court occurrence related to a case. j:CourtEventType-->
 			<j:CaseCourtEvent>
 				<ActivityComment>
-					<!--  Class: CourtCaseDetails, Attribute: MinuteText  -->
+					<!--  Class: MinutesDocument, Attribute: MinuteText  -->
 					<CommentText>String</CommentText>
 				</ActivityComment>
 				<ActivityDate>
-					<!--  Class: CourtCaseDetails, Attribute: MagistrateEventDate  -->
+					<!--  Class: CourtEvent, Attribute: CourtEventDate  -->
 					<DateTime>2001-12-17T09:30:47Z</DateTime>
 				</ActivityDate>
-				<!--  Class: CourtCaseDetails, Attribute: MagistrateReasonCode  -->
+				<!--  Class: CourtCase, Attribute: MagistrateReasonCode  -->
 				<ActivityReasonText>String</ActivityReasonText>
 				<ActivityScheduledDate>
-					<!--  Class: CourtCaseDetails, Attribute: NextCourtDate, Type: dateTime  -->
+					<!--  Class: CourtCase, Attribute: NextCourtDate, Type: dateTime  -->
 					<DateTime>2001-12-17T09:30:47Z</DateTime>
 				</ActivityScheduledDate>
 			</j:CaseCourtEvent>
@@ -1134,6 +1136,7 @@
 						</ContactMailingAddress>
 						<!--  Class: ContactInformation, Attribute: PhoneNumber, Type: TelephoneNumberType  -->
 						<ContactTelephoneNumber>
+							<!--  Class: TelephoneNumberType, Attribute: InternationalTelephoneNumberType  -->
 							<InternationalTelephoneNumber>
 								<!--  Class: FullTelephoneNumberType, Attribute: InternationalTelephoneNumberCountryCodeExtension  -->
 								<TelephoneCountryCodeID>String</TelephoneCountryCodeID>
@@ -1142,6 +1145,7 @@
 								<!--  Class: FullTelephoneNumberType, Attribute: InternationalTelephoneNumberSuffix  -->
 								<TelephoneSuffixID>String</TelephoneSuffixID>
 							</InternationalTelephoneNumber>
+							<!--  Class: TelephoneNumberType, Attribute: FullTelephoneNumberType  -->
 							<FullTelephoneNumber>
 								<!--  Class: FullTelephoneNumberType, Attribute: FullTelephoneNumber  -->
 								<TelephoneNumberFullID>String</TelephoneNumberFullID>
