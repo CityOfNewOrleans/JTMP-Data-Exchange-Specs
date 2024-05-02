@@ -67,7 +67,6 @@
   <w:Element w:name="nc:IdentificationCategoryText"
     w:isReference="false" w:nillable="false"/>
   <w:Element w:name="nc:Incident" w:isReference="false" w:nillable="true"/>
-  <w:Element w:name="nc:Injury" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="nc:InternationalTelephoneNumber"
     w:isReference="false" w:nillable="false"/>
   <w:Element w:name="nc:LanguageName" w:isReference="false" w:nillable="false"/>
@@ -84,11 +83,9 @@
   <w:Element w:name="nc:PersonFacialHairText" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="nc:PersonHairColorText" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="nc:PersonHairLengthText" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:PersonInjury" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="nc:PersonMentalStateText" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="nc:PersonNamePrefixText" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="nc:PersonRaceText" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:PersonReligionText" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="nc:PersonSexText" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="nc:PersonSexualOrientationText"
     w:isReference="false" w:nillable="false"/>
@@ -96,7 +93,6 @@
   <w:Element w:name="nc:StateName" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="nc:StreetDirectionalText" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="ncic:StateUSCode" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="scr:ArrestAugmentation" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="unece:LengthUnitCode" w:isReference="false" w:nillable="false"/>
   <w:Type w:name="aamva_d20:CourtCategoryCodeSimpleType" w:isRequested="false">
     <w:Facet w:facet="enumeration" w:value="ADM"/>
@@ -233,12 +229,8 @@
       w:minOccurs="0" w:maxOccurs="unbounded"/>
   </w:Type>
   <w:Type w:name="j:ChargeType" w:isRequested="false">
-    <w:ElementInType w:name="j:ChargeCategoryDescriptionText"
-      w:isReference="false" w:minOccurs="0" w:maxOccurs="unbounded"/>
     <w:ElementInType w:name="j:ChargeCountQuantity"
       w:isReference="false" w:minOccurs="0" w:maxOccurs="unbounded"/>
-    <w:ElementInType w:name="j:ChargeDescriptionText"
-      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="j:ChargeFilingDate" w:isReference="false"
       w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="j:ChargeIdentification"
@@ -460,8 +452,6 @@
   <w:Type w:name="nc:CaseType" w:isRequested="false">
     <w:ElementInType w:name="nc:CaseGeneralCategoryAbstract"
       w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
-    <w:ElementInType w:name="nc:CaseTrackingID" w:isReference="false"
-      w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="nc:CaseDocketID" w:isReference="false"
       w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="nc:CaseAugmentationPoint"
@@ -474,8 +464,6 @@
   <w:Type w:name="nc:ContactInformationType" w:isRequested="false">
     <w:ElementInType w:name="nc:ContactMeansAbstract"
       w:isReference="false" w:minOccurs="0" w:maxOccurs="unbounded"/>
-    <w:ElementInType w:name="nc:ContactEntityDescriptionText"
-      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="nc:ContactResponder" w:isReference="false"
       w:minOccurs="0" w:maxOccurs="unbounded"/>
   </w:Type>
@@ -535,10 +523,6 @@
     <w:ElementInType w:name="nc:IncidentAugmentationPoint"
       w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
   </w:Type>
-  <w:Type w:name="nc:InjuryType" w:isRequested="false">
-    <w:ElementInType w:name="nc:InjuryDescriptionText"
-      w:isReference="false" w:minOccurs="0" w:maxOccurs="unbounded"/>
-  </w:Type>
   <w:Type w:name="nc:InternationalTelephoneNumberType" w:isRequested="false">
     <w:ElementInType w:name="nc:TelephoneCountryCodeID"
       w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
@@ -548,8 +532,6 @@
       w:minOccurs="0" w:maxOccurs="1"/>
   </w:Type>
   <w:Type w:name="nc:ItemType" w:isRequested="false">
-    <w:ElementInType w:name="nc:ItemDescriptionText"
-      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="nc:ItemName" w:isReference="false"
       w:minOccurs="0" w:maxOccurs="1"/>
   </w:Type>
@@ -581,8 +563,6 @@
     <w:Facet w:facet="minInclusive" w:value="0"/>
   </w:Type>
   <w:Type w:name="nc:OrganizationType" w:isRequested="false">
-    <w:ElementInType w:name="nc:OrganizationIdentification"
-      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="nc:OrganizationLocation"
       w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="nc:OrganizationName" w:isReference="false"
@@ -641,8 +621,6 @@
       w:isReference="false" w:minOccurs="0" w:maxOccurs="unbounded"/>
     <w:ElementInType w:name="nc:PersonHeightMeasure"
       w:isReference="false" w:minOccurs="0" w:maxOccurs="unbounded"/>
-    <w:ElementInType w:name="nc:PersonInjury" w:isReference="false"
-      w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="nc:PersonMedicationRequiredText"
       w:isReference="false" w:minOccurs="0" w:maxOccurs="unbounded"/>
     <w:ElementInType w:name="nc:PersonMentalStateAbstract"
@@ -654,8 +632,6 @@
     <w:ElementInType w:name="nc:PersonPrimaryLanguage"
       w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="nc:PersonRaceAbstract"
-      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
-    <w:ElementInType w:name="nc:PersonReligionAbstract"
       w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="nc:PersonSexAbstract" w:isReference="false"
       w:minOccurs="0" w:maxOccurs="1"/>
@@ -768,10 +744,6 @@
     <w:Facet w:facet="enumeration" w:value="WI"/>
     <w:Facet w:facet="enumeration" w:value="WV"/>
     <w:Facet w:facet="enumeration" w:value="WY"/>
-  </w:Type>
-  <w:Type w:name="scr:ArrestAugmentationType" w:isRequested="false">
-    <w:ElementInType w:name="j:Charge" w:isReference="false"
-      w:minOccurs="0" w:maxOccurs="unbounded"/>
   </w:Type>
   <w:Type w:name="unece:LengthCodeSimpleType" w:isRequested="false">
     <w:Facet w:facet="enumeration" w:value="4H"/>

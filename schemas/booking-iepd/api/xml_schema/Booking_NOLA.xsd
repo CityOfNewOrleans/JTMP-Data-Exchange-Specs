@@ -16,7 +16,7 @@
 	<xs:import namespace="http://release.niem.gov/niem/domains/screening/5.2/" schemaLocation="./niem\xsd\domains\screening.xsd"/>
 	<xs:import namespace="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-schema-appinfo/" schemaLocation="./niem\xsd\utility\code-lists-schema-appinfo.xsd"/>
 	<xs:import namespace="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-instance/" schemaLocation="./niem\xsd\utility\code-lists-instance.xsd"/>
-	<xs:import namespace = "http://release.niem.gov/niem/codes/unece_rec20/5.0/" schemaLocation="./niem\xsd\codes\unece_rec20.xsd"/>
+	<xs:import namespace="http://release.niem.gov/niem/codes/unece_rec20/5.0/" schemaLocation="./niem\xsd\codes\unece_rec20.xsd"/>
 	<xs:import namespace="http://mcp.com/nola/extension/v/1.0/" schemaLocation="./Booking_NOLA_Ext.xsd"/>
 	<!-- complexType Definitions -->
 	<xs:complexType name="BookingExchangeType">
@@ -28,10 +28,6 @@
 				<xs:sequence>
 					<xs:element ref="j:Booking" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element ref="nc:Case" minOccurs="0" maxOccurs="unbounded"/>
-					<!--????????????????????????????????????????????????????????????????//
-						Question how to handle/map attorney. Currently not apart of nola databases-->
-					<!--	<xs:element ref="j:Attorney" minOccurs="0" maxOccurs="unbounded"/>
-					<xs:element ref="j:CourtOrder" minOccurs="0" maxOccurs="unbounded"/>-->
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
