@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<w:WantList w:release="5.2" w:product="NIEM" w:nillableDefault="true"
+  xmlns:aamva_d20="http://release.niem.gov/niem/codes/aamva_d20/5.0/"
+  xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/"
+  xmlns:w="http://niem.gov/niem/wantlist/2.2" xmlns:j="http://release.niem.gov/niem/domains/jxdm/7.2/">
+  <w:Element w:name="j:CaseAugmentation" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="j:CourtCategoryCode" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="j:CourtOrder" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="nc:Base64BinaryObject" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="nc:BinaryFormatText" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="nc:Case" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="nc:CaseGeneralCategoryText" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="nc:DateTime" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="nc:Document" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:DocumentBinary" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="nc:DocumentCategoryText" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="nc:EntityPerson" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="nc:StatusText" w:isReference="false" w:nillable="false"/>
+  <w:Type w:name="aamva_d20:CourtCategoryCodeSimpleType" w:isRequested="false">
+    <w:Facet w:facet="enumeration" w:value="ADM"/>
+    <w:Facet w:facet="enumeration" w:value="CHA"/>
+    <w:Facet w:facet="enumeration" w:value="CIR"/>
+    <w:Facet w:facet="enumeration" w:value="CIT"/>
+    <w:Facet w:facet="enumeration" w:value="CIV"/>
+    <w:Facet w:facet="enumeration" w:value="COC"/>
+    <w:Facet w:facet="enumeration" w:value="COR"/>
+    <w:Facet w:facet="enumeration" w:value="CRI"/>
+    <w:Facet w:facet="enumeration" w:value="DIS"/>
+    <w:Facet w:facet="enumeration" w:value="DOT"/>
+    <w:Facet w:facet="enumeration" w:value="FED"/>
+    <w:Facet w:facet="enumeration" w:value="GEN"/>
+    <w:Facet w:facet="enumeration" w:value="HUS"/>
+    <w:Facet w:facet="enumeration" w:value="JPC"/>
+    <w:Facet w:facet="enumeration" w:value="JUS"/>
+    <w:Facet w:facet="enumeration" w:value="JUV"/>
+    <w:Facet w:facet="enumeration" w:value="LEC"/>
+    <w:Facet w:facet="enumeration" w:value="MAG"/>
+    <w:Facet w:facet="enumeration" w:value="MAY"/>
+    <w:Facet w:facet="enumeration" w:value="MUN"/>
+    <w:Facet w:facet="enumeration" w:value="OTH"/>
+    <w:Facet w:facet="enumeration" w:value="POL"/>
+    <w:Facet w:facet="enumeration" w:value="SJC"/>
+    <w:Facet w:facet="enumeration" w:value="SPL"/>
+    <w:Facet w:facet="enumeration" w:value="SSP"/>
+    <w:Facet w:facet="enumeration" w:value="SUM"/>
+    <w:Facet w:facet="enumeration" w:value="SUP"/>
+    <w:Facet w:facet="enumeration" w:value="TJC"/>
+    <w:Facet w:facet="enumeration" w:value="TRA"/>
+    <w:Facet w:facet="enumeration" w:value="TRI"/>
+    <w:Facet w:facet="enumeration" w:value="TWN"/>
+    <w:Facet w:facet="enumeration" w:value="UNK"/>
+    <w:Facet w:facet="enumeration" w:value="USC"/>
+    <w:Facet w:facet="enumeration" w:value="USM"/>
+    <w:Facet w:facet="enumeration" w:value="USS"/>
+  </w:Type>
+  <w:Type w:name="j:CaseAugmentationType" w:isRequested="false">
+    <w:ElementInType w:name="j:CaseDefenseAttorney"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="j:CaseProsecutionAttorney"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="j:CourtOrderType" w:isRequested="false">
+    <w:ElementInType w:name="j:CourtOrderDesignatedSubject"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="j:CourtOrderIssuingCourt"
+      w:isReference="false" w:minOccurs="1" w:maxOccurs="1"/>
+    <w:ElementInType w:name="j:CourtOrderIssuingDate"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="j:CourtOrderIssuingJudicialOfficial"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="j:CourtOrderAugmentationPoint"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="j:CourtType" w:isRequested="false">
+    <w:ElementInType w:name="j:CourtName" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="j:CourtDivisionText" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="j:CourtCategoryAbstract"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="j:JudicialOfficialBarMembershipType" w:isRequested="false">
+    <w:ElementInType w:name="j:JudicialOfficialBarIdentification"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="j:JudicialOfficialType" w:isRequested="true">
+    <w:ElementInType w:name="nc:RoleOfPerson" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="j:JudicialOfficialBarMembership"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType
+      w:name="j:JudicialOfficialRegistrationIdentification"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="j:SubjectType" w:isRequested="false">
+    <w:ElementInType w:name="nc:RoleOfPerson" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:ActivityType" w:isRequested="true">
+    <w:ElementInType w:name="nc:ActivityIdentification"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:ActivityStatus" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:BinaryType" w:isRequested="false">
+    <w:ElementInType w:name="nc:BinaryID" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:BinaryObjectAbstract"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:BinaryFormatAbstract"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:BinaryURI" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:BinarySizeValue" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:CaseType" w:isRequested="false">
+    <w:ElementInType w:name="nc:CaseTitleText" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:CaseGeneralCategoryAbstract"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:CaseDocketID" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:CaseAugmentationPoint"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:DateType" w:isRequested="false">
+    <w:ElementInType w:name="nc:DateRepresentation"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:DocumentType" w:isRequested="false">
+    <w:ElementInType w:name="nc:DocumentCategoryAbstract"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:DocumentContentAbstract"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:DocumentDispositionInstructionText"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:DocumentEffectiveDate"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:DocumentFileControlID"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:DocumentFiledDate" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:DocumentSequenceID"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:DocumentSubmitter" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:EntityType" w:isRequested="false">
+    <w:ElementInType w:name="nc:EntityRepresentation"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:IdentificationType" w:isRequested="false">
+    <w:ElementInType w:name="nc:IdentificationID" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:NonNegativeDecimalSimpleType" w:isRequested="false">
+    <w:Facet w:facet="minInclusive" w:value="0"/>
+  </w:Type>
+  <w:Type w:name="nc:PersonNameType" w:isRequested="false">
+    <w:ElementInType w:name="nc:PersonGivenName" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:PersonMiddleName" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:PersonSurName" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:PersonFullName" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:PersonType" w:isRequested="false">
+    <w:ElementInType w:name="nc:PersonName" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:PersonAugmentationPoint"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:StatusType" w:isRequested="false">
+    <w:ElementInType w:name="nc:StatusAbstract" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+</w:WantList>
