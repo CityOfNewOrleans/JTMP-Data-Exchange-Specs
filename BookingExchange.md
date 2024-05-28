@@ -1,16 +1,17 @@
 # Bookings and Releases
 
-The Jail Management System will publish a Booking and Release message each time a client is either booked  into the jail or released for any reason (ROR, Bond, No Probable Cause, Disposition, etc.).
+The Jail Management System (JMS) will publish a Booking and Release message each time a client is either booked  into the jail or released for any reason (ROR, Bond, No Probable Cause, Disposition, etc.).
 
 Booking and Release are distinct MessageTypes when making an API call to publish a JMS transaction. However both will use the same XML schema to format the payload of the message. 
 
 ## Preceding Exchange: 
 
-Arrest Report (from Police Department)​
+For Booking: Arrest Report (from Police Department)​
+For Release: Release Order, Disposition Order, Bond Order, or other Court action authorizing a release. 
 
 ## Triggering Events:
 
-1. Supervisor Approval in JMS of a new Booking
+1. Booking Complete or Supervisor Approval in JMS of a new Booking
 2. Supervisor Approval in JMS of a JMS Release
 
 ## Real-World Effects: 
