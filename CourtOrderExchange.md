@@ -44,7 +44,6 @@ Subscriber systems will match the incoming Court Order with the Court Case ID (w
 
 [Mapping Spreadsheet](schemas/court-order-iepd/artifacts/nola court order mapping spreadsheet.xlsx)
 
-**Class Diagram:** 
 [Class Diagram](schemas/court-order-iepd/artifacts/court order class diagram.jpg)
 
 [Sample XML File](schemas/court-order-iepd/examples/SampleCourtOrderXML.xml)
