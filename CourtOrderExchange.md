@@ -30,7 +30,8 @@ Subscriber systems will match the incoming Court Order with the Court Case ID (w
 
 ## Data Requirements:
 
-XML Schemas - coming soon
+[XML Schemas](schemas/court-order-iepd)
+
 ### Key data elements include:
 - Status indicator -- New or Updated Order
 - Court Case ID
@@ -41,11 +42,11 @@ XML Schemas - coming soon
 
 ## Artifacts:
 
-Mapping Spreadsheet - coming soon
+[Mapping Spreadsheet] (schemas/court-order-iepd/artifacts/nola court order mapping spreadsheet.xlsx)
 
-**Class Diagram:** - coming soon
+**Class Diagram:** 
+[Class Diagram] (schemas/court-order-iepd/artifacts/court order class diagram.jpg)
 
-
-Sample XML File - coming soon
+[Sample XML File] (schemas/court-order-iepd/examples/SampleCourtOrderXML.xml)
 
 
