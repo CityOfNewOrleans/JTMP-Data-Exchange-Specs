@@ -16,4 +16,14 @@ jobs:
       run: sudo apt-get update -y && sudo apt-get install libxml2-utils -y
     - name: Find and validate XML/XSD files
       run: |
-        find . -type f \( -iname "*.xml" -o -iname "*.xsd" \) -exec xmllint --noout {} +
+        set -e
+        find . -type f \( -iname "*.xml" -o -iname "*.xsd" \) | while read file; do
+          echo "Validating $file..."
+          xmllint --noout "$file"
+          if [ $? -eq 0 ]; then
+            echo "$file is valid."
+          else
+            echo "$file is not a valid XML or XSD file. Please check your syntax."
+            exit 1
+          fi
+        done
