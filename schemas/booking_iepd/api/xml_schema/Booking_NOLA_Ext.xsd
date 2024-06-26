@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:structures="http://release.niem.gov/niem/structures/5.0/" xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/" xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:niem-xs="http://release.niem.gov/niem/proxy/niem-xs/5.0/" xmlns:j="http://release.niem.gov/niem/domains/jxdm/7.2/" xmlns:hs="http://release.niem.gov/niem/domains/humanServices/5.2/" xmlns:em="http://release.niem.gov/niem/domains/emergencyManagement/5.2/" xmlns:im="http://release.niem.gov/niem/domains/immigration/5.2/" xmlns:nola-ext="http://mcp.com/nola/extension/v/1.0/" xmlns:clsa="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-schema-appinfo/" xmlns:aamva_d20="http://release.niem.gov/niem/codes/aamva_d20/5.0/" xmlns:ncic="http://release.niem.gov/niem/codes/ncic/5.2/" xmlns:scr="http://release.niem.gov/niem/domains/screening/5.2/" xmlns:cls="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-instance/" xmlns:unece="http://release.niem.gov/niem/codes/unece_rec20/5.0/" targetNamespace="http://mcp.com/nola/extension/v/1.0/" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1" xml:lang="en-US" ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ExtensionDocument">
+<xs:schema xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:structures="http://release.niem.gov/niem/structures/5.0/" xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/" xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:niem-xs="http://release.niem.gov/niem/proxy/niem-xs/5.0/" xmlns:j="http://release.niem.gov/niem/domains/jxdm/7.2/" xmlns:hs="http://release.niem.gov/niem/domains/humanServices/5.2/" xmlns:em="http://release.niem.gov/niem/domains/emergencyManagement/5.2/" xmlns:im="http://release.niem.gov/niem/domains/immigration/5.2/" xmlns:nola-ext="http://mcp.com/nola/extension/v/1.0/" xmlns:clsa="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-schema-appinfo/" xmlns:aamva_d20="http://release.niem.gov/niem/codes/aamva_d20/5.0/" xmlns:ncic="http://release.niem.gov/niem/codes/ncic/5.2/" xmlns:cls="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-instance/" xmlns:unece="http://release.niem.gov/niem/codes/unece_rec20/5.0/" targetNamespace="http://mcp.com/nola/extension/v/1.0/" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1" xml:lang="en-US" ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ExtensionDocument">
 	<!-- NIEM schema imports -->
 	<xs:import namespace="http://release.niem.gov/niem/niem-core/5.0/" schemaLocation="./niem\xsd\niem-core.xsd"/>
 	<xs:import namespace="http://release.niem.gov/niem/proxy/niem-xs/5.0/" schemaLocation="./niem\xsd\adapters\niem-xs.xsd"/>
@@ -12,7 +12,6 @@
 	<xs:import namespace="http://release.niem.gov/niem/structures/5.0/" schemaLocation="./niem\xsd\utility\structures.xsd"/>
 	<xs:import namespace="http://release.niem.gov/niem/codes/aamva_d20/5.0/" schemaLocation="./niem\xsd\codes\aamva_d20.xsd"/>
 	<xs:import namespace="http://release.niem.gov/niem/codes/ncic/5.2/" schemaLocation="./niem\xsd\codes\ncic.xsd"/>
-	<xs:import namespace="http://release.niem.gov/niem/domains/screening/5.2/" schemaLocation="./niem\xsd\domains\screening.xsd"/>
 	<xs:import namespace="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-schema-appinfo/" schemaLocation="./niem\xsd\utility\code-lists-schema-appinfo.xsd"/>
 	<xs:import namespace="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-instance/" schemaLocation="./niem\xsd\utility\code-lists-instance.xsd"/>
 	<xs:import namespace="http://release.niem.gov/niem/codes/unece_rec20/5.0/" schemaLocation="./niem\xsd\codes\unece_rec20.xsd"/>
@@ -25,32 +24,6 @@
 			<xs:extension base="structures:ObjectType">
 				<xs:sequence>
 					<xs:element ref="nola-ext:StatewideArrestTrackingNumber" minOccurs="0" maxOccurs="1"/>
-					<xs:element ref="nola-ext:OffenseDate" minOccurs="0" maxOccurs="unbounded"/>
-					<xs:element ref="j:IncidentArrestAssociation" minOccurs="0" maxOccurs="unbounded"/>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:complexType name="BookingAugmentationType">
-		<xs:annotation>
-			<xs:documentation>A data type for additional data booking information in NOLA.</xs:documentation>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="structures:ObjectType">
-				<xs:sequence>
-					<xs:element ref="nola-ext:BookingCheckinDate" minOccurs="0" maxOccurs="unbounded"/>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:complexType name="VictimAugmentationType">
-		<xs:annotation>
-			<xs:documentation>A data type for additional data about victim information in NOLA.</xs:documentation>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="structures:ObjectType">
-				<xs:sequence>
-					<xs:element ref="nola-ext:VictimOffenderRelationshipTypeID" minOccurs="0" maxOccurs="unbounded"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -135,11 +108,6 @@
 			<xs:documentation>Additional information about an arrest in the NOLA.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="BookingAugmentation" type="nola-ext:BookingAugmentationType" substitutionGroup="j:BookingAugmentationPoint">
-		<xs:annotation>
-			<xs:documentation>Additional information about a booking in the NOLA.</xs:documentation>
-		</xs:annotation>
-	</xs:element>
 	<xs:element name="ChargeAugmentation" type="nola-ext:ChargeAugmentationType" substitutionGroup="j:ChargeAugmentationPoint">
 		<xs:annotation>
 			<xs:documentation>Additional information about a charge in the NOLA.</xs:documentation>
@@ -165,20 +133,10 @@
 			<xs:documentation>Additional information about a person name.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="VictimAugmentation" type="nola-ext:VictimAugmentationType" substitutionGroup=" j:VictimAugmentationPoint">
-		<xs:annotation>
-			<xs:documentation>Additional information about a victim in the NOLA.</xs:documentation>
-		</xs:annotation>
-	</xs:element>
 	<!-- New Element definitions ======================================================================== -->
 	<xs:element name="ATNChargeSequenceNumber" type="niem-xs:string">
 		<xs:annotation>
 			<xs:documentation>A number assigned by the State CCH system to a submitted charge.</xs:documentation>
-		</xs:annotation>
-	</xs:element>
-	<xs:element name="BookingCheckinDate" type="nc:DateType">
-		<xs:annotation>
-			<xs:documentation>A date and time when a subject who has been arrested has arrived at the booking facility.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="PersonComputerControlIdentifier" type="niem-xs:string">
@@ -196,19 +154,6 @@
 			<xs:documentation>A LIBRS code associated with a charge.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="ChargeCategoryCodeText" type="niem-xs:string" substitutionGroup="j:ChargeCategoryAbstract">
-		<xs:annotation>
-			<xs:documentation>A category of the severity level to which a charge belongs. (Felony or Misdemeanor)</xs:documentation>
-			<xs:appinfo>
-				<clsa:SimpleCodeListBinding codeListURI="https://cje.georgia.gov/uniform-code-lists/v1.0/EndpointCode" columnName="code"/>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
-	<xs:element name="OffenseDate" type="nc:DateType">
-		<xs:annotation>
-			<xs:documentation>A date of an offense.</xs:documentation>
-		</xs:annotation>
-	</xs:element>
 	<xs:element name="PersonNameSoundex" type="nc:PersonNameType">
 		<xs:annotation>
 			<xs:documentation>A name encoding such that similar sounding names with different spellings appear the same.</xs:documentation>
@@ -218,15 +163,10 @@
 		<xs:annotation>
 			<xs:documentation>The State's Police Automated Fingerprint Inforamtion System (AFIS) generates an ATN to uniquely identify each booking event, often referred to as an Arrest Cycle. The ATN must be communicated from the Sheriff to the Court at a minimum, in order to effectively update the State computerized criminal history (CCH) with dispositions of arrest charges.</xs:documentation>
 		</xs:annotation>
-	</xs:element>	
+	</xs:element>
 	<xs:element name="StatuteCodeSectionSubparagraphIdentification" type="nc:IdentificationType">
 		<xs:annotation>
 			<xs:documentation>A name encoding such that similar sounding names with different spellings appear the same.</xs:documentation>
-		</xs:annotation>
-	</xs:element>
-	<xs:element name="VictimOffenderRelationshipTypeID" type="niem-xs:string">
-		<xs:annotation>
-			<xs:documentation>An ID for the relationship between the Victim and the Offender.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 </xs:schema>

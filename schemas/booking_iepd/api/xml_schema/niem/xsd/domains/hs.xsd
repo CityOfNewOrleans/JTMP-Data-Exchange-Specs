@@ -159,11 +159,6 @@
       <xs:documentation>A name of an employer.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="NextCourtEvent" type="j:CourtEventType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>An upcoming court occurrence.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
   <xs:element name="PersonAugmentation" type="hs:PersonAugmentationType" substitutionGroup="nc:PersonAugmentationPoint">
     <xs:annotation>
       <xs:documentation>Additional information about a person.</xs:documentation>
