@@ -1,0 +1,19 @@
+name: Validate XML/XSD Files
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Install XML tools
+      run: sudo apt-get update -y && sudo apt-get install libxml2-utils -y
+    - name: Find and validate XML/XSD files
+      run: |
+        find . -type f \( -iname "*.xml" -o -iname "*.xsd" \) -exec xmllint --noout {} +
