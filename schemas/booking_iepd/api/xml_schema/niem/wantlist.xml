@@ -42,6 +42,7 @@
   <w:Element w:name="nc:Employer" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="nc:EmploymentStatus" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="nc:FullTelephoneNumber" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="nc:Incident" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="nc:InternationalTelephoneNumber"
     w:isReference="false" w:nillable="false"/>
   <w:Element w:name="nc:LanguageName" w:isReference="false" w:nillable="false"/>
@@ -156,6 +157,8 @@
       w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="j:BookingAgencyRecordIdentification"
       w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="j:BookingDocumentControlIdentification"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="j:BookingRelease" w:isReference="false"
       w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="j:BookingSubject" w:isReference="false"
@@ -219,8 +222,6 @@
       w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="j:PersonFBIIdentification"
       w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
-    <w:ElementInType w:name="j:PersonNCICIdentification"
-      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
   </w:Type>
   <w:Type w:name="j:PersonEyeColorCodeSimpleType" w:isRequested="false">
     <w:Facet w:facet="enumeration" w:value="BLACK"/>
@@ -253,6 +254,8 @@
       w:minOccurs="0" w:maxOccurs="unbounded"/>
   </w:Type>
   <w:Type w:name="nc:ActivityType" w:isRequested="false">
+    <w:ElementInType w:name="nc:ActivityIdentification"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="nc:ActivityComment" w:isReference="false"
       w:minOccurs="0" w:maxOccurs="unbounded"/>
     <w:ElementInType w:name="nc:ActivityCompletedIndicator"

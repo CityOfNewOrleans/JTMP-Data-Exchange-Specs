@@ -44,6 +44,7 @@
     <xs:complexContent>
       <xs:extension base="structures:ObjectType">
         <xs:sequence>
+          <xs:element ref="nc:ActivityIdentification" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="nc:ActivityComment" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:ActivityCompletedIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:ActivityDate" minOccurs="0" maxOccurs="1"/>
@@ -248,6 +249,14 @@
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="nc:BinaryType"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="IncidentType">
+    <xs:annotation>
+      <xs:documentation>A data type for an occurrence or an event that may require a response.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc:ActivityType"/>
     </xs:complexContent>
   </xs:complexType>
   <xs:complexType name="InternationalTelephoneNumberType">
@@ -589,6 +598,11 @@
       <xs:documentation>A date of an activity.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="ActivityIdentification" type="nc:IdentificationType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>An identification that references an activity.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="ActivityScheduledDate" type="nc:DateType" nillable="true">
     <xs:annotation>
       <xs:documentation>A date when an activity is scheduled.</xs:documentation>
@@ -822,6 +836,11 @@
   <xs:element name="IdentificationJurisdiction" type="nc:JurisdictionType" nillable="true">
     <xs:annotation>
       <xs:documentation>An area, region, or unit where a unique identification is issued.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="Incident" type="nc:IncidentType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>An occurrence or an event that may require a response.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="InternationalTelephoneNumber" type="nc:InternationalTelephoneNumberType" substitutionGroup="nc:TelephoneNumberAbstract">
