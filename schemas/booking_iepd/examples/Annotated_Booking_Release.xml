@@ -83,14 +83,17 @@
 				<j:PersonEyeColorCode>UNKNOWN</j:PersonEyeColorCode>
 				<!--  Class: PersonDemographics, Attribute: HairColorCode, Type: As-is Process.HairColorCodeList  -->
 				<PersonHairColorText>String</PersonHairColorText>
-				<!--  Class: PersonDemographics, Attribute: Height, Type: string  --> <!-- total height here is implied to be 6 feet 2 inches -->
-				<PersonHeightDescriptionText>6</PersonHeightDescriptionText>
-				<PersonHeightDescriptionText>2</PersonHeightDescriptionText>
-				<!--  Class: PersonDemographics, Attribute: HeightUnits, Type: string  -->
+				<!-- total height here is 6 feet 2 inches -->
 				<PersonHeightMeasure>
+					<!--  Class: PersonDemographics, Attribute: Height, Type: string  --> 
+					<MeasureValueText>6</MeasureValueText>
+					<!--  Class: PersonDemographics, Attribute: HeightUnits, Type: string  -->
 					<unece:LengthUnitCode>FOT</unece:LengthUnitCode> <!-- foot -->
 				</PersonHeightMeasure>
 				<PersonHeightMeasure>
+					<!--  Class: PersonDemographics, Attribute: Height, Type: string  --> 
+					<MeasureValueText>2</MeasureValueText>
+					<!--  Class: PersonDemographics, Attribute: HeightUnits, Type: string  -->
 					<unece:LengthUnitCode>INH</unece:LengthUnitCode> <!-- inch -->
 				</PersonHeightMeasure>
 				<!--  Class: Person, Attribute: PersonName, Type: As-is Process.PersonName  -->
@@ -500,6 +503,7 @@
 					</j:BailBond>
 				</hs:ChargeAugmentation>
 			</j:ArrestCharge>
+			<!-- Arresting arrest officer -->
 			<j:ArrestOfficial>
 				<RoleOfPerson>
 					<PersonName>
@@ -537,7 +541,59 @@
 					<IdentificationID>String</IdentificationID>
 				</j:EnforcementOfficialBadgeIdentification>
 				<!-- Class:Officer, Attribute: OfficerType -->
-				<j:EnforcementOfficialCategoryText>String</j:EnforcementOfficialCategoryText>
+				<j:EnforcementOfficialCategoryText>Arresting Officer</j:EnforcementOfficialCategoryText>
+				<j:EnforcementOfficialUnit>
+					<!--  Class: Agency, Attribute: AgencyName  -->
+					<OrganizationName>String</OrganizationName>
+					<j:OrganizationAugmentation>
+						<j:OrganizationORIIdentification>
+							<!--  Class: Agency, Attribute: AgencyORI  -->
+							<IdentificationID>String</IdentificationID>
+						</j:OrganizationORIIdentification>
+					</j:OrganizationAugmentation>
+					<!--  Class: Officer, Attribute: UnitName, Type: string  -->
+					<j:EnforcementUnitName>String</j:EnforcementUnitName>
+				</j:EnforcementOfficialUnit>
+			</j:ArrestOfficial>
+			<!-- Transporting arrest officer -->
+			<j:ArrestOfficial>
+				<RoleOfPerson>
+					<PersonName>
+						<!--  Class: PersonName, Attribute: Title, Type: string  -->
+						<PersonNamePrefixText>String</PersonNamePrefixText>
+						<!--  Class: PersonName, Attribute: FirstName, Type: string  -->
+						<PersonGivenName>String</PersonGivenName>
+						<!--  Class: PersonName, Attribute: MiddleInitial, Type: string  -->
+						<PersonMiddleName>String</PersonMiddleName>
+						<!--  Class: PersonName, Attribute: LastName, Type: string  -->
+						<PersonSurName>String</PersonSurName>
+						<!--  Class: PersonName, Attribute: NameSuffix, Type: string  -->
+						<PersonNameSuffixText>String</PersonNameSuffixText>
+						<!--  Class: PersonName, Attribute: FullName, Type: string  -->
+						<PersonFullName>String</PersonFullName>
+					</PersonName>
+					<PersonContactInformation>
+						<!--  Class: ContactInformation, Attribute: EMailAddress, Type: string  -->
+						<ContactEmailID>String</ContactEmailID>
+						<ContactTelephoneNumber>
+							<!--  Class: TelephoneNumberType, Attribute: FullTelephoneNumberType  -->
+							<FullTelephoneNumber>
+								<!--  Class: FullTelephoneNumberType, Attribute: FullTelephoneNumber  -->
+								<TelephoneNumberFullID>String</TelephoneNumberFullID>
+								<!--  Class: FullTelephoneNumberType, Attribute: TelephoneNumberSuffix  -->
+								<TelephoneSuffixID>String</TelephoneSuffixID>
+							</FullTelephoneNumber>
+							<!--  Class: TelephoneNumberType, Attribute: TelephoneNumberDescription  -->
+							<TelephoneNumberDescriptionText>String</TelephoneNumberDescriptionText>
+						</ContactTelephoneNumber>
+					</PersonContactInformation>
+				</RoleOfPerson>
+				<j:EnforcementOfficialBadgeIdentification>
+					<!--  Class: Officer, Attribute: BadgeNumber, Type: string  -->
+					<IdentificationID>String</IdentificationID>
+				</j:EnforcementOfficialBadgeIdentification>
+				<!-- Class:Officer, Attribute: OfficerType -->
+				<j:EnforcementOfficialCategoryText>Transporting Officer</j:EnforcementOfficialCategoryText>
 				<j:EnforcementOfficialUnit>
 					<!--  Class: Agency, Attribute: AgencyName  -->
 					<OrganizationName>String</OrganizationName>

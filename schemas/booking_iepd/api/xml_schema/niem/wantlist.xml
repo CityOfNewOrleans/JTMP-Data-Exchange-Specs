@@ -47,6 +47,7 @@
     w:isReference="false" w:nillable="false"/>
   <w:Element w:name="nc:LanguageName" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="nc:Location" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="nc:MeasureValueText" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="nc:OrganizationName" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="nc:PersonAliasIdentityAssociation"
     w:isReference="false" w:nillable="true"/>
@@ -144,7 +145,7 @@
     <w:ElementInType w:name="j:ArrestCharge" w:isReference="false"
       w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="j:ArrestOfficial" w:isReference="false"
-      w:minOccurs="0" w:maxOccurs="1"/>
+      w:minOccurs="0" w:maxOccurs="unbounded"/>
     <w:ElementInType w:name="j:ArrestAugmentationPoint"
       w:isReference="false" w:minOccurs="0" w:maxOccurs="2"/>
   </w:Type>
@@ -383,6 +384,10 @@
     <w:ElementInType w:name="nc:LocationPart" w:isReference="false"
       w:minOccurs="0" w:maxOccurs="1"/>
   </w:Type>
+  <w:Type w:name="nc:MeasureType" w:isRequested="false">
+    <w:ElementInType w:name="nc:MeasureValueAbstract"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
   <w:Type w:name="nc:NonNegativeDecimalSimpleType" w:isRequested="false">
     <w:Facet w:facet="minInclusive" w:value="0"/>
   </w:Type>
@@ -439,8 +444,6 @@
       w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="nc:PersonHairColorAbstract"
       w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
-    <w:ElementInType w:name="nc:PersonHeightDescriptionText"
-      w:isReference="false" w:minOccurs="0" w:maxOccurs="unbounded"/>
     <w:ElementInType w:name="nc:PersonHeightMeasure"
       w:isReference="false" w:minOccurs="0" w:maxOccurs="unbounded"/>
     <w:ElementInType w:name="nc:PersonName" w:isReference="false"

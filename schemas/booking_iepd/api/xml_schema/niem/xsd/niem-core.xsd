@@ -347,7 +347,11 @@
       <xs:documentation>A data type for a measurement.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType"/>
+      <xs:extension base="structures:ObjectType">
+        <xs:sequence>
+          <xs:element ref="nc:MeasureValueAbstract" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
     </xs:complexContent>
   </xs:complexType>
   <xs:simpleType name="NonNegativeDecimalSimpleType">
@@ -463,7 +467,6 @@
           <xs:element ref="nc:PersonEthnicityAbstract" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="nc:PersonEyeColorAbstract" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="nc:PersonHairColorAbstract" minOccurs="0" maxOccurs="1"/>
-          <xs:element ref="nc:PersonHeightDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PersonHeightMeasure" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PersonName" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:PersonPrimaryLanguage" minOccurs="0" maxOccurs="1"/>
@@ -893,6 +896,16 @@
       <xs:documentation>A room at a location.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="MeasureValueAbstract" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A data concept for a measurement value.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MeasureValueText" type="nc:TextType" substitutionGroup="nc:MeasureValueAbstract">
+    <xs:annotation>
+      <xs:documentation>A textual description of a measurement value.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="OrganizationAugmentationPoint" abstract="true">
     <xs:annotation>
       <xs:documentation>An augmentation point for OrganizationType.</xs:documentation>
@@ -991,11 +1004,6 @@
   <xs:element name="PersonHairColorText" type="nc:TextType" substitutionGroup="nc:PersonHairColorAbstract">
     <xs:annotation>
       <xs:documentation>A color of the hair of a person.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="PersonHeightDescriptionText" type="nc:TextType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A description of the height of a person.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="PersonHeightMeasure" type="nc:LengthMeasureType" nillable="true">

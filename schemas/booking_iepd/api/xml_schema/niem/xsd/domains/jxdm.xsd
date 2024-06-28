@@ -125,7 +125,7 @@
         <xs:sequence>
           <xs:element ref="j:ArrestAgency" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="j:ArrestCharge" minOccurs="0" maxOccurs="1"/>
-          <xs:element ref="j:ArrestOfficial" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="j:ArrestOfficial" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:ArrestAugmentationPoint" minOccurs="0" maxOccurs="2"/>
         </xs:sequence>
       </xs:extension>
