@@ -18,6 +18,14 @@
 				</j:OrganizationORIIdentification>
 			</j:OrganizationAugmentation>
 		</j:BookingAgency>
+		<!--  Class: Booking, Attribute: SheriffControlNumber  -->
+		<j:BookingAgencyRecordIdentification>
+			<IdentificationID>String</IdentificationID>
+		</j:BookingAgencyRecordIdentification>
+		<!--  Class: Arrest, Attribute: FolderNumber  -->
+		<j:BookingDocumentControlIdentification>
+			<IdentificationID>String</IdentificationID>
+		</j:BookingDocumentControlIdentification>
 		<!--  Class: Release, Association:BookingRelease from Class:Booking    -->
 		<j:BookingRelease>
 			<ActivityComment>
@@ -40,7 +48,7 @@
 			<RoleOfPerson>
 				<PersonBirthDate>
 					<!--  Class: PersonIdentifiers, Attribute: DateOfBirth, Type: date  -->
-					<DateTime>2001-12-17T09:30:47Z</DateTime>
+					<Date>2001-12-17</Date>
 				</PersonBirthDate>
 				<PersonBirthLocation>
 					<Address>
@@ -75,14 +83,17 @@
 				<j:PersonEyeColorCode>UNKNOWN</j:PersonEyeColorCode>
 				<!--  Class: PersonDemographics, Attribute: HairColorCode, Type: As-is Process.HairColorCodeList  -->
 				<PersonHairColorText>String</PersonHairColorText>
-				<!--  Class: PersonDemographics, Attribute: Height, Type: string  --> <!-- total height here is implied to be 6 feet 2 inches -->
-				<PersonHeightDescriptionText>6</PersonHeightDescriptionText>
-				<PersonHeightDescriptionText>2</PersonHeightDescriptionText>
-				<!--  Class: PersonDemographics, Attribute: HeightUnits, Type: string  -->
+				<!-- total height here is 6 feet 2 inches -->
 				<PersonHeightMeasure>
+					<!--  Class: PersonDemographics, Attribute: Height, Type: string  --> 
+					<MeasureValueText>6</MeasureValueText>
+					<!--  Class: PersonDemographics, Attribute: HeightUnits, Type: string  -->
 					<unece:LengthUnitCode>FOT</unece:LengthUnitCode> <!-- foot -->
 				</PersonHeightMeasure>
 				<PersonHeightMeasure>
+					<!--  Class: PersonDemographics, Attribute: Height, Type: string  --> 
+					<MeasureValueText>2</MeasureValueText>
+					<!--  Class: PersonDemographics, Attribute: HeightUnits, Type: string  -->
 					<unece:LengthUnitCode>INH</unece:LengthUnitCode> <!-- inch -->
 				</PersonHeightMeasure>
 				<!--  Class: Person, Attribute: PersonName, Type: As-is Process.PersonName  -->
@@ -118,7 +129,6 @@
 							<PersonFullName>String</PersonFullName>
 						</nola-ext:PersonNameSoundex>
 					</nola-ext:PersonNameAugmentation>
-					<j:PersonNameAugmentation/>
 					<im:PersonNameAugmentation>
 						<!--  Class: PersonName, Attribute: Nickname, Type: string  -->
 						<im:PersonNickName>String</im:PersonNickName>
@@ -344,10 +354,6 @@
 						<!--  Class: PersonIdentifiers, Attribute: FBINumber, Type: string  -->
 						<IdentificationID>String</IdentificationID>
 					</j:PersonFBIIdentification>
-					<j:PersonNCICIdentification>
-						<!--  Class: Arrest, Attribute: FolderNumber, Type: int  -->
-						<IdentificationID>String</IdentificationID>
-					</j:PersonNCICIdentification>
 				</j:PersonAugmentation>
 				<hs:PersonAugmentation>
 					<!--  Class: Employer, Attribute: EmployerContact  -->
@@ -438,76 +444,6 @@
 		</j:BookingSubject>
 		<!--  Class: Booking, Attribute: BookingToArrest  -->
 		<j:Arrest>
-			<ActivityDate>
-				<!--  Class: Arrest, Attribute: ArrestTimeFormatted  -->
-				<Date>1957-08-13</Date>
-				<!--  Class: Arrest, Attribute: ArrestDateTime  -->
-				<DateTime>2001-12-17T09:30:47Z</DateTime>
-			</ActivityDate>
-			<ActivityDescriptionText>String</ActivityDescriptionText>
-			<!--  Class: Arrest, Attribute: ArrestLocation  -->
-			<ActivityLocation>
-				<!--  Class: Location, Attribute: LocationAddress, Type: As-is Process.Address  -->
-				<Address>
-					<!--  Class: Address, Attribute: Address, Type: string  -->
-					<AddressFullText>String</AddressFullText>
-					<!--  Class: Address, Attribute: ApartmentNumber, Type: string  -->
-					<AddressSecondaryUnitText>String</AddressSecondaryUnitText>
-					<AddressStreet>
-						<!--  Class: Address, Attribute: StreetDirection, Type: string  -->
-						<StreetFullText>String</StreetFullText>
-						<!--  Class: Address, Attribute: StreetNumber, Type: string  -->
-						<StreetNumberText>String</StreetNumberText>
-						<StreetPredirectional>
-							<!--  Class: Address, Attribute: StreetPrefix, Type: string  -->
-							<StreetDirectionalText>String</StreetDirectionalText>
-						</StreetPredirectional>
-						<!--  Class: Address, Attribute: StreetName, Type: string  -->
-						<StreetName>String</StreetName>
-						<StreetPostdirectional>
-							<!--  Class: Address, Attribute: StreetSuffix, Type: string  -->
-							<StreetDirectionalText>String</StreetDirectionalText>
-						</StreetPostdirectional>
-					</AddressStreet>
-					<!--  Class: Address, Attribute: BoxRouteCode, Type: CodeList  -->
-					<AddressDeliveryPointID>String</AddressDeliveryPointID>
-					<!--  Class: Address, Attribute: ApartmentBoxRoute, Type: string  -->
-					<AddressRouteName>String</AddressRouteName>
-					<!--  Class: Address, Attribute: AddressCity, Type: string  -->
-					<AddressCityName>String</AddressCityName>
-					<AddressState>
-						<!--  Class: Address, Attribute: AddressState, Type: string  -->
-						<StateName>String</StateName>
-						<!--  Class: Address, Attribute: StateCode, Type: CodeList  -->
-						<ncic:StateUSCode>TX</ncic:StateUSCode>
-					</AddressState>
-					<AddressCountry>
-						<!--  Class: Address, Attribute: AddressCountryName, Type: string  -->
-						<CountryName>String</CountryName>
-					</AddressCountry>
-					<!--  Class: Address, Attribute: ZIPCode, Type: CodeList  -->
-					<AddressPostalCode>String</AddressPostalCode>
-					<!--  Class: Address, Attribute: ZIPCodeExtension, Type: CodeList  -->
-					<AddressPostalExtensionCode>String</AddressPostalExtensionCode>
-				</Address>
-				<AddressCrossStreet>
-					<AddressStreet>
-						<!--  Class: CrossStreet, Attribute: CrossStreetDirection, Type: string  -->
-						<StreetFullText>String</StreetFullText>
-						<StreetNumberText>String</StreetNumberText>
-						<StreetPredirectional>
-							<!--  Class: CrossStreet, Attribute: CrossStreetPrefix, Type: string  -->
-							<StreetDirectionalText>String</StreetDirectionalText>
-						</StreetPredirectional>
-						<!--  Class: CrossStreet, Attribute: CrossStreetName, Type: string  -->
-						<StreetName>String</StreetName>
-						<StreetPostdirectional>
-							<!--  Class: CrossStreet, Attribute: CrossStreetSuffix, Type: string  -->
-							<StreetDirectionalText>String</StreetDirectionalText>
-						</StreetPostdirectional>
-					</AddressStreet>
-				</AddressCrossStreet>
-			</ActivityLocation>
 			<j:ArrestAgency>
 				<!--  Class: Agency, Attribute: AgencyName  -->
 				<!--  Class: Arrest, Attribute: ArrestingAgency  -->
@@ -520,6 +456,8 @@
 				</j:OrganizationAugmentation>
 			</j:ArrestAgency>
 			<j:ArrestCharge>
+				<!--  Class: Charge, Attribute: ChargeType  -->
+				<j:ChargeCategoryDescriptionText>String</j:ChargeCategoryDescriptionText>
 				<!--  Class: Charge, Attribute: ChargeCount  -->
 				<j:ChargeCountQuantity>0</j:ChargeCountQuantity>
 				<j:ChargeFilingDate>
@@ -548,301 +486,13 @@
 						</nola-ext:StatuteCodeSectionSubparagraphIdentification>
 					</nola-ext:ChargeStatuteAugmentation>
 				</j:ChargeStatute>
-				<j:ChargeTrackingIdentification>
-					<!--  Class: Arrest, Attribute: ArrestTrackingNumber  -->
-					<IdentificationID>String</IdentificationID>
-				</j:ChargeTrackingIdentification>
-				<j:ChargeVictim>
-					<RoleOfPerson>
-						<PersonBirthDate>
-							<!--  Class: PersonIdentifiers, Attribute: DateOfBirth, Type: date  -->
-							<Date>1957-08-13</Date>
-						</PersonBirthDate>
-						<!--  Class: PersonDemographics, Attribute: Ethnicity, Type: As-is Process.EthnicityCodeList  -->
-						<PersonEthnicityText>String</PersonEthnicityText>
-						<PersonName>
-							<!--  Class: PersonName, Attribute: Title, Type: string  -->
-							<PersonNamePrefixText>String</PersonNamePrefixText>
-							<!--  Class: PersonName, Attribute: FirstName, Type: string  -->
-							<PersonGivenName>String</PersonGivenName>
-							<!--  Class: PersonName, Attribute: MiddleInitial, Type: string  -->
-							<PersonMiddleName>String</PersonMiddleName>
-							<!--  Class: PersonName, Attribute: LastName, Type: string  -->
-							<PersonSurName>String</PersonSurName>
-							<!--  Class: PersonName, Attribute: NameSuffix, Type: string  -->
-							<PersonNameSuffixText>String</PersonNameSuffixText>
-							<!--  Class: PersonName, Attribute: FullName, Type: string  -->
-							<PersonFullName>String</PersonFullName>
-							<nola-ext:PersonNameAugmentation>
-								<!--  Class: PersonName, Attribute: AlternateAliasName, Type: string  -->
-								<em:PersonAlternateName>String</em:PersonAlternateName>
-							</nola-ext:PersonNameAugmentation>
-							<j:PersonNameAugmentation/>
-							<im:PersonNameAugmentation>
-								<!--  Class: PersonName, Attribute: Nickname, Type: string  -->
-								<im:PersonNickName>String</im:PersonNickName>
-							</im:PersonNameAugmentation>
-						</PersonName>
-						<!--  Class: PersonDemographics, Attribute: RaceCode, Type: As-is Process.RaceCodeList  -->
-						<PersonRaceText>String</PersonRaceText>
-						<!--  Class: PersonDemographics, Attribute: SexCode, Type: SexCodeList  -->
-						<PersonSexText>String</PersonSexText>
-						<!--  Class: PersonDemographics, Attribute: Homosexual, Type: string  -->
-						<PersonSexualOrientationText>String</PersonSexualOrientationText>
-						<PersonSSNIdentification>
-							<!--  Class: PersonIdentifiers, Attribute: SocialSecurityNumber, Type: string  -->
-							<IdentificationID>String</IdentificationID>
-						</PersonSSNIdentification>
-						<PersonContactInformation>
-							<!--  Class: ContactInformation, Attribute: EMailAddress, Type: string  -->
-							<ContactEmailID>String</ContactEmailID>
-							<!--  Class: ContactInformation, Attribute: ContactAddress, Type: As-is Process.Location  -->
-							<ContactMailingAddress>
-								<!--  Class: Address, Attribute: Address, Type: string  -->
-								<AddressFullText>String</AddressFullText>
-								<!--  Class: Address, Attribute: ApartmentNumber, Type: string  -->
-								<AddressSecondaryUnitText>String</AddressSecondaryUnitText>
-								<AddressStreet>
-									<!--  Class: Address, Attribute: StreetDirection, Type: string  -->
-									<StreetFullText>String</StreetFullText>
-									<!--  Class: Address, Attribute: StreetNumber, Type: string  -->
-									<StreetNumberText>String</StreetNumberText>
-									<StreetPredirectional>
-										<!--  Class: Address, Attribute: StreetPrefix, Type: string  -->
-										<StreetDirectionalText>String</StreetDirectionalText>
-									</StreetPredirectional>
-									<!--  Class: Address, Attribute: StreetName, Type: string  -->
-									<StreetName>String</StreetName>
-									<StreetPostdirectional>
-										<!--  Class: Address, Attribute: StreetSuffix, Type: string  -->
-										<StreetDirectionalText>String</StreetDirectionalText>
-									</StreetPostdirectional>
-								</AddressStreet>
-								<!--  Class: Address, Attribute: BoxRouteCode, Type: CodeList  -->
-								<AddressDeliveryPointID>String</AddressDeliveryPointID>
-								<!--  Class: Address, Attribute: ApartmentBoxRoute, Type: string  -->
-								<AddressRouteName>String</AddressRouteName>
-								<!--  Class: Address, Attribute: AddressCity, Type: string  -->
-								<AddressCityName>String</AddressCityName>
-								<AddressState>
-									<!--  Class: Address, Attribute: AddressState, Type: string  -->
-									<StateName>String</StateName>
-									<!--  Class: Address, Attribute: StateCode, Type: CodeList  -->
-									<ncic:StateUSCode>TX</ncic:StateUSCode>
-								</AddressState>
-								<AddressCountry>
-									<!--  Class: Address, Attribute: AddressCountryName, Type: string  -->
-									<CountryName>String</CountryName>
-								</AddressCountry>
-								<!--  Class: Address, Attribute: ZIPCode, Type: CodeList  -->
-								<AddressPostalCode>String</AddressPostalCode>
-								<!--  Class: Address, Attribute: ZIPCodeExtension, Type: CodeList  -->
-								<AddressPostalExtensionCode>String</AddressPostalExtensionCode>
-							</ContactMailingAddress>
-							<!--  Class: ContactInformation, Attribute: PhoneNumber, Type: TelephoneNumberType  -->
-							<ContactTelephoneNumber>
-								<!--  Class: TelephoneNumberType, Attribute: InternationalTelephoneNumberType  -->
-								<InternationalTelephoneNumber>
-									<!--  Class: FullTelephoneNumberType, Attribute: InternationalTelephoneNumberCountryCodeExtension  -->
-									<TelephoneCountryCodeID>String</TelephoneCountryCodeID>
-									<!--  Class: FullTelephoneNumberType, Attribute: InternationalTelephoneNumber  -->
-									<TelephoneNumberID>String</TelephoneNumberID>
-									<!--  Class: FullTelephoneNumberType, Attribute: InternationalTelephoneNumberSuffix  -->
-									<TelephoneSuffixID>String</TelephoneSuffixID>
-								</InternationalTelephoneNumber>
-								<!--  Class: TelephoneNumberType, Attribute: FullTelephoneNumberType  -->
-								<FullTelephoneNumber>
-									<!--  Class: FullTelephoneNumberType, Attribute: FullTelephoneNumber  -->
-									<TelephoneNumberFullID>String</TelephoneNumberFullID>
-									<!--  Class: FullTelephoneNumberType, Attribute: TelephoneNumberSuffix  -->
-									<TelephoneSuffixID>String</TelephoneSuffixID>
-								</FullTelephoneNumber>
-								<!--  Class: TelephoneNumberType, Attribute: TelephoneNumberDescription  -->
-								<TelephoneNumberDescriptionText>String</TelephoneNumberDescriptionText>
-							</ContactTelephoneNumber>
-						</PersonContactInformation>
-						<EmployeeContactInformation>
-							<!--  Class: ContactInformation, Attribute: EMailAddress, Type: string  -->
-							<ContactEmailID>String</ContactEmailID>
-							<!--  Class: ContactInformation, Attribute: ContactAddress, Type: As-is Process.Location  -->
-							<ContactMailingAddress>
-								<!--  Class: Address, Attribute: Address, Type: string  -->
-								<AddressFullText>String</AddressFullText>
-								<!--  Class: Address, Attribute: ApartmentNumber, Type: string  -->
-								<AddressSecondaryUnitText>String</AddressSecondaryUnitText>
-								<AddressStreet>
-									<!--  Class: Address, Attribute: StreetDirection, Type: string  -->
-									<StreetFullText>String</StreetFullText>
-									<!--  Class: Address, Attribute: StreetNumber, Type: string  -->
-									<StreetNumberText>String</StreetNumberText>
-									<StreetPredirectional>
-										<!--  Class: Address, Attribute: StreetPrefix, Type: string  -->
-										<StreetDirectionalText>String</StreetDirectionalText>
-									</StreetPredirectional>
-									<!--  Class: Address, Attribute: StreetName, Type: string  -->
-									<StreetName>String</StreetName>
-									<StreetPostdirectional>
-										<!--  Class: Address, Attribute: StreetSuffix, Type: string  -->
-										<StreetDirectionalText>String</StreetDirectionalText>
-									</StreetPostdirectional>
-								</AddressStreet>
-								<!--  Class: Address, Attribute: BoxRouteCode, Type: CodeList  -->
-								<AddressDeliveryPointID>String</AddressDeliveryPointID>
-								<!--  Class: Address, Attribute: ApartmentBoxRoute, Type: string  -->
-								<AddressRouteName>String</AddressRouteName>
-								<!--  Class: Address, Attribute: AddressCity, Type: string  -->
-								<AddressCityName>String</AddressCityName>
-								<AddressState>
-									<!--  Class: Address, Attribute: AddressState, Type: string  -->
-									<StateName>String</StateName>
-									<!--  Class: Address, Attribute: StateCode, Type: CodeList  -->
-									<ncic:StateUSCode>TX</ncic:StateUSCode>
-								</AddressState>
-								<AddressCountry>
-									<!--  Class: Address, Attribute: AddressCountryName, Type: string  -->
-									<CountryName>String</CountryName>
-								</AddressCountry>
-								<!--  Class: Address, Attribute: ZIPCode, Type: CodeList  -->
-								<AddressPostalCode>String</AddressPostalCode>
-								<!--  Class: Address, Attribute: ZIPCodeExtension, Type: CodeList  -->
-								<AddressPostalExtensionCode>String</AddressPostalExtensionCode>
-							</ContactMailingAddress>
-							<!--  Class: ContactInformation, Attribute: PhoneNumber, Type: TelephoneNumberType  -->
-							<ContactTelephoneNumber>
-								<!--  Class: TelephoneNumberType, Attribute: InternationalTelephoneNumberType  -->
-								<InternationalTelephoneNumber>
-									<!--  Class: FullTelephoneNumberType, Attribute: InternationalTelephoneNumberCountryCodeExtension  -->
-									<TelephoneCountryCodeID>String</TelephoneCountryCodeID>
-									<!--  Class: FullTelephoneNumberType, Attribute: InternationalTelephoneNumber  -->
-									<TelephoneNumberID>String</TelephoneNumberID>
-									<!--  Class: FullTelephoneNumberType, Attribute: InternationalTelephoneNumberSuffix  -->
-									<TelephoneSuffixID>String</TelephoneSuffixID>
-								</InternationalTelephoneNumber>
-								<!--  Class: TelephoneNumberType, Attribute: FullTelephoneNumberType  -->
-								<FullTelephoneNumber>
-									<!--  Class: FullTelephoneNumberType, Attribute: FullTelephoneNumber  -->
-									<TelephoneNumberFullID>String</TelephoneNumberFullID>
-									<!--  Class: FullTelephoneNumberType, Attribute: TelephoneNumberSuffix  -->
-									<TelephoneSuffixID>String</TelephoneSuffixID>
-								</FullTelephoneNumber>
-								<!--  Class: TelephoneNumberType, Attribute: TelephoneNumberDescription  -->
-								<TelephoneNumberDescriptionText>String</TelephoneNumberDescriptionText>
-							</ContactTelephoneNumber>
-						</EmployeeContactInformation>
-						<j:PersonAugmentation>
-							<j:DriverLicense>
-								<j:DriverLicenseCardIdentification>
-									<!--  Class: DriversLicense, Attribute: DriversLicenseNumber, Type: string  -->
-									<IdentificationID>String</IdentificationID>
-									<IdentificationJurisdiction>
-										<JurisdictionLocation>
-											<Address>
-												<AddressState>
-													<StateName>String</StateName>
-													<!--  Class: DriversLicense, Attribute: DriversLicenseStateCode, Type: CodeList  -->
-													<ncic:StateUSCode>CO</ncic:StateUSCode>
-												</AddressState>
-											</Address>
-										</JurisdictionLocation>
-									</IdentificationJurisdiction>
-									<IdentificationExpirationDate>
-										<!--  Class: DriversLicense, Attribute: DriversLicenseYear, Type: date  -->
-										<Date>1957-08-13</Date>
-									</IdentificationExpirationDate>
-								</j:DriverLicenseCardIdentification>
-							</j:DriverLicense>
-						</j:PersonAugmentation>
-						<hs:PersonAugmentation>
-							<hs:EmployerContactInformation>
-								<!--  Class: ContactInformation, Attribute: EMailAddress, Type: string  -->
-								<ContactEmailID>String</ContactEmailID>
-								<!--  Class: ContactInformation, Attribute: ContactAddress, Type: As-is Process.Location  -->
-								<ContactMailingAddress>
-									<!--  Class: Address, Attribute: Address, Type: string  -->
-									<AddressFullText>String</AddressFullText>
-									<!--  Class: Address, Attribute: ApartmentNumber, Type: string  -->
-									<AddressSecondaryUnitText>String</AddressSecondaryUnitText>
-									<AddressStreet>
-										<!--  Class: Address, Attribute: StreetDirection, Type: string  -->
-										<StreetFullText>String</StreetFullText>
-										<!--  Class: Address, Attribute: StreetNumber, Type: string  -->
-										<StreetNumberText>String</StreetNumberText>
-										<StreetPredirectional>
-											<!--  Class: Address, Attribute: StreetPrefix, Type: string  -->
-											<StreetDirectionalText>String</StreetDirectionalText>
-										</StreetPredirectional>
-										<!--  Class: Address, Attribute: StreetName, Type: string  -->
-										<StreetName>String</StreetName>
-										<StreetPostdirectional>
-											<!--  Class: Address, Attribute: StreetSuffix, Type: string  -->
-											<StreetDirectionalText>String</StreetDirectionalText>
-										</StreetPostdirectional>
-									</AddressStreet>
-									<!--  Class: Address, Attribute: BoxRouteCode, Type: CodeList  -->
-									<AddressDeliveryPointID>String</AddressDeliveryPointID>
-									<!--  Class: Address, Attribute: ApartmentBoxRoute, Type: string  -->
-									<AddressRouteName>String</AddressRouteName>
-									<!--  Class: Address, Attribute: AddressCity, Type: string  -->
-									<AddressCityName>String</AddressCityName>
-									<AddressState>
-										<!--  Class: Address, Attribute: AddressState, Type: string  -->
-										<StateName>String</StateName>
-										<!--  Class: Address, Attribute: StateCode, Type: CodeList  -->
-										<ncic:StateUSCode>TX</ncic:StateUSCode>
-									</AddressState>
-									<AddressCountry>
-										<!--  Class: Address, Attribute: AddressCountryName, Type: string  -->
-										<CountryName>String</CountryName>
-									</AddressCountry>
-									<!--  Class: Address, Attribute: ZIPCode, Type: CodeList  -->
-									<AddressPostalCode>String</AddressPostalCode>
-									<!--  Class: Address, Attribute: ZIPCodeExtension, Type: CodeList  -->
-									<AddressPostalExtensionCode>String</AddressPostalExtensionCode>
-								</ContactMailingAddress>
-								<!--  Class: ContactInformation, Attribute: PhoneNumber, Type: TelephoneNumberType  -->
-								<ContactTelephoneNumber>
-									<!--  Class: TelephoneNumberType, Attribute: InternationalTelephoneNumberType  -->
-									<InternationalTelephoneNumber>
-										<!--  Class: FullTelephoneNumberType, Attribute: InternationalTelephoneNumberCountryCodeExtension  -->
-										<TelephoneCountryCodeID>String</TelephoneCountryCodeID>
-										<!--  Class: FullTelephoneNumberType, Attribute: InternationalTelephoneNumber  -->
-										<TelephoneNumberID>String</TelephoneNumberID>
-										<!--  Class: FullTelephoneNumberType, Attribute: InternationalTelephoneNumberSuffix  -->
-										<TelephoneSuffixID>String</TelephoneSuffixID>
-									</InternationalTelephoneNumber>
-									<!--  Class: TelephoneNumberType, Attribute: FullTelephoneNumberType  -->
-									<FullTelephoneNumber>
-										<!--  Class: FullTelephoneNumberType, Attribute: FullTelephoneNumber  -->
-										<TelephoneNumberFullID>String</TelephoneNumberFullID>
-										<!--  Class: FullTelephoneNumberType, Attribute: TelephoneNumberSuffix  -->
-										<TelephoneSuffixID>String</TelephoneSuffixID>
-									</FullTelephoneNumber>
-									<!--  Class: TelephoneNumberType, Attribute: TelephoneNumberDescription  -->
-									<TelephoneNumberDescriptionText>String</TelephoneNumberDescriptionText>
-								</ContactTelephoneNumber>
-							</hs:EmployerContactInformation>
-							<!--  Class: PersonDemographics, Attribute: GenderText, Type: string  -->
-							<hs:PersonGenderIdentityText>String</hs:PersonGenderIdentityText>
-						</hs:PersonAugmentation>
-					</RoleOfPerson>
-					<j:VictimIdentification>
-						<!--  Class: Victim, Attribute: VictimNumber  -->
-						<IdentificationID>String</IdentificationID>
-					</j:VictimIdentification>
-					<!--  Class: Victim, Attribute: VictimTypeID  -->
-					<j:VictimCategoryText>String</j:VictimCategoryText>
-					<nola-ext:VictimAugmentation>
-						<!--  Class: Victim, Attribute: VictimOffenderRelationshipTypeID  -->
-						<nola-ext:VictimOffenderRelationshipTypeID>String</nola-ext:VictimOffenderRelationshipTypeID>
-					</nola-ext:VictimAugmentation>
-				</j:ChargeVictim>
 				<!--  Class: Charge, Attribute: ChargeType  -->
-				<nola-ext:ChargeCategoryCodeText>String</nola-ext:ChargeCategoryCodeText>
+				<!--<nola-ext:ChargeCategoryCodeText>String</nola-ext:ChargeCategoryCodeText>-->
 				<nola-ext:ChargeAugmentation>
-					<!--  Class: Arrest, Attribute: ATNChargeSequenceNumber  -->
-					<nola-ext:ATNChargeSequenceNumber>String</nola-ext:ATNChargeSequenceNumber>
 					<!--  Class: Charge, Attribute: ChargeLIBRSCode  -->
 					<nola-ext:ChargeLIBRSCode>String</nola-ext:ChargeLIBRSCode>
+					<!--  Class: Charge, Attribute: ChargeKey  -->
+					<nola-ext:ChargeKey>String</nola-ext:ChargeKey>
 				</nola-ext:ChargeAugmentation>
 				<hs:ChargeAugmentation>
 					<j:BailBond>
@@ -853,12 +503,7 @@
 					</j:BailBond>
 				</hs:ChargeAugmentation>
 			</j:ArrestCharge>
-			<j:ArrestInvolvedWeapon>
-				<RoleOfItem>
-					<!--  Class: Weapon, Attribute: ArresteeWeapon  -->
-					<ItemName>String</ItemName>
-				</RoleOfItem>
-			</j:ArrestInvolvedWeapon>
+			<!-- Arresting arrest officer -->
 			<j:ArrestOfficial>
 				<RoleOfPerson>
 					<PersonName>
@@ -896,7 +541,7 @@
 					<IdentificationID>String</IdentificationID>
 				</j:EnforcementOfficialBadgeIdentification>
 				<!-- Class:Officer, Attribute: OfficerType -->
-				<j:EnforcementOfficialCategoryText>String</j:EnforcementOfficialCategoryText>
+				<j:EnforcementOfficialCategoryText>Arresting Officer</j:EnforcementOfficialCategoryText>
 				<j:EnforcementOfficialUnit>
 					<!--  Class: Agency, Attribute: AgencyName  -->
 					<OrganizationName>String</OrganizationName>
@@ -910,111 +555,71 @@
 					<j:EnforcementUnitName>String</j:EnforcementUnitName>
 				</j:EnforcementOfficialUnit>
 			</j:ArrestOfficial>
-			<!--  Class: Arrest, Attribute: ArrestRegisterNumber  -->
-			<j:ArrestSequenceID>String</j:ArrestSequenceID>
+			<!-- Transporting arrest officer -->
+			<j:ArrestOfficial>
+				<RoleOfPerson>
+					<PersonName>
+						<!--  Class: PersonName, Attribute: Title, Type: string  -->
+						<PersonNamePrefixText>String</PersonNamePrefixText>
+						<!--  Class: PersonName, Attribute: FirstName, Type: string  -->
+						<PersonGivenName>String</PersonGivenName>
+						<!--  Class: PersonName, Attribute: MiddleInitial, Type: string  -->
+						<PersonMiddleName>String</PersonMiddleName>
+						<!--  Class: PersonName, Attribute: LastName, Type: string  -->
+						<PersonSurName>String</PersonSurName>
+						<!--  Class: PersonName, Attribute: NameSuffix, Type: string  -->
+						<PersonNameSuffixText>String</PersonNameSuffixText>
+						<!--  Class: PersonName, Attribute: FullName, Type: string  -->
+						<PersonFullName>String</PersonFullName>
+					</PersonName>
+					<PersonContactInformation>
+						<!--  Class: ContactInformation, Attribute: EMailAddress, Type: string  -->
+						<ContactEmailID>String</ContactEmailID>
+						<ContactTelephoneNumber>
+							<!--  Class: TelephoneNumberType, Attribute: FullTelephoneNumberType  -->
+							<FullTelephoneNumber>
+								<!--  Class: FullTelephoneNumberType, Attribute: FullTelephoneNumber  -->
+								<TelephoneNumberFullID>String</TelephoneNumberFullID>
+								<!--  Class: FullTelephoneNumberType, Attribute: TelephoneNumberSuffix  -->
+								<TelephoneSuffixID>String</TelephoneSuffixID>
+							</FullTelephoneNumber>
+							<!--  Class: TelephoneNumberType, Attribute: TelephoneNumberDescription  -->
+							<TelephoneNumberDescriptionText>String</TelephoneNumberDescriptionText>
+						</ContactTelephoneNumber>
+					</PersonContactInformation>
+				</RoleOfPerson>
+				<j:EnforcementOfficialBadgeIdentification>
+					<!--  Class: Officer, Attribute: BadgeNumber, Type: string  -->
+					<IdentificationID>String</IdentificationID>
+				</j:EnforcementOfficialBadgeIdentification>
+				<!-- Class:Officer, Attribute: OfficerType -->
+				<j:EnforcementOfficialCategoryText>Transporting Officer</j:EnforcementOfficialCategoryText>
+				<j:EnforcementOfficialUnit>
+					<!--  Class: Agency, Attribute: AgencyName  -->
+					<OrganizationName>String</OrganizationName>
+					<j:OrganizationAugmentation>
+						<j:OrganizationORIIdentification>
+							<!--  Class: Agency, Attribute: AgencyORI  -->
+							<IdentificationID>String</IdentificationID>
+						</j:OrganizationORIIdentification>
+					</j:OrganizationAugmentation>
+					<!--  Class: Officer, Attribute: UnitName, Type: string  -->
+					<j:EnforcementUnitName>String</j:EnforcementUnitName>
+				</j:EnforcementOfficialUnit>
+			</j:ArrestOfficial>
 			<nola-ext:ArrestAugmentation>
 				<!-- Class:Booking, Attribute:StatewideArrestTrackingNumber  -->
 				<nola-ext:StatewideArrestTrackingNumber>String</nola-ext:StatewideArrestTrackingNumber>
-				<nola-ext:OffenseDate>
-					<!--  Class: Charge, Attribute: OffenseDay  -->
-					<DayDate>---17</DayDate>
-					<!--  Class: Charge, Attribute: OffenseDate  -->
-					<DateTime>2001-12-17T09:30:47Z</DateTime>
-				</nola-ext:OffenseDate>
-				<!-- From Class:Arrest to Class:Incident Association:ArrestIncident -->
-				<j:IncidentArrestAssociation>
-					<Incident>
-						<ActivityIdentification>
-							<!--  Class: Incident, Attribute: IncidentNumber, Type: string  -->
-							<IdentificationID>String</IdentificationID>
-						</ActivityIdentification>
-						<!--  Class: Incident, Attribute: IncidentDescription, Type: string  -->
-						<ActivityDescriptionText>String</ActivityDescriptionText>
-						<!--  Class: Offense, Attribute: OffenseLocation, Type: As-is Process.Location  -->
-						<ActivityLocation>
-							<!--  Class: Location, Attribute: LocationAddress, Type: As-is Process.Address  -->
-							<Address>
-								<!--  Class: Address, Attribute: Address, Type: string  -->
-								<AddressFullText>String</AddressFullText>
-								<!--  Class: Address, Attribute: ApartmentNumber, Type: string  -->
-								<AddressSecondaryUnitText>String</AddressSecondaryUnitText>
-								<AddressStreet>
-									<!--  Class: Address, Attribute: StreetDirection, Type: string  -->
-									<StreetFullText>String</StreetFullText>
-									<!--  Class: Address, Attribute: StreetNumber, Type: string  -->
-									<StreetNumberText>String</StreetNumberText>
-									<StreetPredirectional>
-										<!--  Class: Address, Attribute: StreetPrefix, Type: string  -->
-										<StreetDirectionalText>String</StreetDirectionalText>
-									</StreetPredirectional>
-									<!--  Class: Address, Attribute: StreetName, Type: string  -->
-									<StreetName>String</StreetName>
-									<StreetPostdirectional>
-										<!--  Class: Address, Attribute: StreetSuffix, Type: string  -->
-										<StreetDirectionalText>String</StreetDirectionalText>
-									</StreetPostdirectional>
-								</AddressStreet>
-								<!--  Class: Address, Attribute: BoxRouteCode, Type: CodeList  -->
-								<AddressDeliveryPointID>String</AddressDeliveryPointID>
-								<!--  Class: Address, Attribute: ApartmentBoxRoute, Type: string  -->
-								<AddressRouteName>String</AddressRouteName>
-								<!--  Class: Address, Attribute: AddressCity, Type: string  -->
-								<AddressCityName>String</AddressCityName>
-								<AddressState>
-									<!--  Class: Address, Attribute: AddressState, Type: string  -->
-									<StateName>String</StateName>
-									<!--  Class: Address, Attribute: StateCode, Type: CodeList  -->
-									<ncic:StateUSCode>TX</ncic:StateUSCode>
-								</AddressState>
-								<AddressCountry>
-									<!--  Class: Address, Attribute: AddressCountryName, Type: string  -->
-									<CountryName>String</CountryName>
-								</AddressCountry>
-								<!--  Class: Address, Attribute: ZIPCode, Type: CodeList  -->
-								<AddressPostalCode>String</AddressPostalCode>
-								<!--  Class: Address, Attribute: ZIPCodeExtension, Type: CodeList  -->
-								<AddressPostalExtensionCode>String</AddressPostalExtensionCode>
-							</Address>
-							<AddressCrossStreet>
-								<AddressStreet>
-									<!--  Class: CrossStreet, Attribute: CrossStreetDirection, Type: string  -->
-									<StreetFullText>String</StreetFullText>
-									<!--  Class: CrossStreet, Attribute: CrossStreetDirectionNumber  -->
-									<StreetNumberText>String</StreetNumberText>
-									<StreetPredirectional>
-										<!--  Class: CrossStreet, Attribute: CrossStreetPrefix, Type: string  -->
-										<StreetDirectionalText>String</StreetDirectionalText>
-									</StreetPredirectional>
-									<!--  Class: CrossStreet, Attribute: CrossStreetName, Type: string  -->
-									<StreetName>String</StreetName>
-									<StreetPostdirectional>
-										<!--  Class: CrossStreet, Attribute: CrossStreetSuffix, Type: string  -->
-										<StreetDirectionalText>String</StreetDirectionalText>
-									</StreetPostdirectional>
-								</AddressStreet>
-							</AddressCrossStreet>
-							<LocationArea>
-								<!--  Class: Location, Attribute: LocationDescription  -->
-								<AreaDescriptionText>String</AreaDescriptionText>
-							</LocationArea>
-						</ActivityLocation>
-						<j:IncidentAugmentation/>
-					</Incident>
-				</j:IncidentArrestAssociation>
+				<Incident>
+					<ActivityIdentification>
+						<!-- Class:Incident Attribute:IncidentItemNumber -->
+						<IdentificationID>String</IdentificationID>
+					</ActivityIdentification>
+				</Incident>
 			</nola-ext:ArrestAugmentation>
 		</j:Arrest>
-		<nola-ext:BookingAugmentation>
-			<nola-ext:BookingCheckinDate>
-				<!--  Class: Arrest, Attribute: ArrestCheckin  -->
-				<DateTime>2001-12-17T09:30:47Z</DateTime>
-			</nola-ext:BookingCheckinDate>
-		</nola-ext:BookingAugmentation>
 	</j:Booking>
 	<Case>
-		<!--  Class: CourtCase, Attribute: CaseType  -->
-		<CaseGeneralCategoryText>String</CaseGeneralCategoryText>
-		<!--  Class: CourtCase, Attribute: CourtCaseNumberDocketNumber  -->
-		<CaseDocketID>String</CaseDocketID>
 		<j:CaseAugmentation>
 			<!-- CaseCourt - A court of law in which the case is being tried. j:CourtType-->
 			<j:CaseCourt>
@@ -1053,136 +658,7 @@
 					<!--  Class: CourtEvent, Attribute: CourtEventDate  -->
 					<DateTime>2001-12-17T09:30:47Z</DateTime>
 				</ActivityDate>
-				<!--  Class: CourtCase, Attribute: MagistrateReasonCode  -->
-				<ActivityReasonText>String</ActivityReasonText>
-				<ActivityScheduledDate>
-					<!--  Class: CourtCase, Attribute: NextCourtDate, Type: dateTime  -->
-					<DateTime>2001-12-17T09:30:47Z</DateTime>
-				</ActivityScheduledDate>
 			</j:CaseCourtEvent>
-			<j:CaseWitness>
-				<RoleOfPerson>
-					<PersonBirthDate>
-						<!--  Class: PersonIdentifiers, Attribute: DateOfBirth, Type: date  -->
-						<Date>1957-08-13</Date>
-					</PersonBirthDate>
-					<!--  Class: PersonDemographics, Attribute: Ethnicity, Type: As-is Process.EthnicityCodeList  -->
-					<PersonEthnicityText>String</PersonEthnicityText>
-					<!--  Class: Person, Attribute: PersonName, Type: As-is Process.PersonName  -->
-					<PersonName>
-						<PersonNamePrefixText>String</PersonNamePrefixText>
-						<PersonGivenName>String</PersonGivenName>
-						<PersonMiddleName>String</PersonMiddleName>
-						<PersonSurName>String</PersonSurName>
-						<PersonNameSuffixText>String</PersonNameSuffixText>
-						<PersonFullName>String</PersonFullName>
-						<nola-ext:PersonNameAugmentation>
-							<em:PersonAlternateName>String</em:PersonAlternateName>
-						</nola-ext:PersonNameAugmentation>
-						<j:PersonNameAugmentation/>
-						<im:PersonNameAugmentation>
-							<im:PersonNickName>String</im:PersonNickName>
-						</im:PersonNameAugmentation>
-					</PersonName>
-					<!--  Class: PersonDemographics, Attribute: RaceCode, Type: As-is Process.RaceCodeList  -->
-					<PersonRaceText>String</PersonRaceText>
-					<!--  Class: PersonDemographics, Attribute: SexCode, Type: SexCodeList  -->
-					<PersonSexText>String</PersonSexText>
-					<PersonContactInformation>
-						<!--  Class: ContactInformation, Attribute: EMailAddress, Type: string  -->
-						<ContactEmailID>String</ContactEmailID>
-						<!--  Class: ContactInformation, Attribute: ContactAddress, Type: As-is Process.Location  -->
-						<ContactMailingAddress>
-							<!--  Class: Address, Attribute: Address, Type: string  -->
-							<AddressFullText>String</AddressFullText>
-							<!--  Class: Address, Attribute: ApartmentNumber, Type: string  -->
-							<AddressSecondaryUnitText>String</AddressSecondaryUnitText>
-							<AddressStreet>
-								<!--  Class: Address, Attribute: StreetDirection, Type: string  -->
-								<StreetFullText>String</StreetFullText>
-								<!--  Class: Address, Attribute: StreetNumber, Type: string  -->
-								<StreetNumberText>String</StreetNumberText>
-								<StreetPredirectional>
-									<!--  Class: Address, Attribute: StreetPrefix, Type: string  -->
-									<StreetDirectionalText>String</StreetDirectionalText>
-								</StreetPredirectional>
-								<!--  Class: Address, Attribute: StreetName, Type: string  -->
-								<StreetName>String</StreetName>
-								<StreetPostdirectional>
-									<!--  Class: Address, Attribute: StreetSuffix, Type: string  -->
-									<StreetDirectionalText>String</StreetDirectionalText>
-								</StreetPostdirectional>
-							</AddressStreet>
-							<!--  Class: Address, Attribute: BoxRouteCode, Type: CodeList  -->
-							<AddressDeliveryPointID>String</AddressDeliveryPointID>
-							<!--  Class: Address, Attribute: ApartmentBoxRoute, Type: string  -->
-							<AddressRouteName>String</AddressRouteName>
-							<!--  Class: Address, Attribute: AddressCity, Type: string  -->
-							<AddressCityName>String</AddressCityName>
-							<AddressState>
-								<!--  Class: Address, Attribute: AddressState, Type: string  -->
-								<StateName>String</StateName>
-								<!--  Class: Address, Attribute: StateCode, Type: CodeList  -->
-								<ncic:StateUSCode>TX</ncic:StateUSCode>
-							</AddressState>
-							<AddressCountry>
-								<!--  Class: Address, Attribute: AddressCountryName, Type: string  -->
-								<CountryName>String</CountryName>
-							</AddressCountry>
-							<!--  Class: Address, Attribute: ZIPCode, Type: CodeList  -->
-							<AddressPostalCode>String</AddressPostalCode>
-							<!--  Class: Address, Attribute: ZIPCodeExtension, Type: CodeList  -->
-							<AddressPostalExtensionCode>String</AddressPostalExtensionCode>
-						</ContactMailingAddress>
-						<!--  Class: ContactInformation, Attribute: PhoneNumber, Type: TelephoneNumberType  -->
-						<ContactTelephoneNumber>
-							<!--  Class: TelephoneNumberType, Attribute: InternationalTelephoneNumberType  -->
-							<InternationalTelephoneNumber>
-								<!--  Class: FullTelephoneNumberType, Attribute: InternationalTelephoneNumberCountryCodeExtension  -->
-								<TelephoneCountryCodeID>String</TelephoneCountryCodeID>
-								<!--  Class: FullTelephoneNumberType, Attribute: InternationalTelephoneNumber  -->
-								<TelephoneNumberID>String</TelephoneNumberID>
-								<!--  Class: FullTelephoneNumberType, Attribute: InternationalTelephoneNumberSuffix  -->
-								<TelephoneSuffixID>String</TelephoneSuffixID>
-							</InternationalTelephoneNumber>
-							<!--  Class: TelephoneNumberType, Attribute: FullTelephoneNumberType  -->
-							<FullTelephoneNumber>
-								<!--  Class: FullTelephoneNumberType, Attribute: FullTelephoneNumber  -->
-								<TelephoneNumberFullID>String</TelephoneNumberFullID>
-								<!--  Class: FullTelephoneNumberType, Attribute: TelephoneNumberSuffix  -->
-								<TelephoneSuffixID>String</TelephoneSuffixID>
-							</FullTelephoneNumber>
-							<!--  Class: TelephoneNumberType, Attribute: TelephoneNumberDescription  -->
-							<TelephoneNumberDescriptionText>String</TelephoneNumberDescriptionText>
-						</ContactTelephoneNumber>
-					</PersonContactInformation>
-					<j:PersonAugmentation>
-						<j:DriverLicense>
-							<j:DriverLicenseCardIdentification>
-								<!--  Class: DriversLicense, Attribute: DriversLicenseNumber, Type: string  -->
-								<IdentificationID>String</IdentificationID>
-								<IdentificationExpirationDate>
-									<DayDate>---17</DayDate>
-									<!--  Class: DriversLicense, Attribute: DriversLicenseYear, Type: date  -->
-									<Date>1957-08-13</Date>
-								</IdentificationExpirationDate>
-							</j:DriverLicenseCardIdentification>
-						</j:DriverLicense>
-					</j:PersonAugmentation>
-					<hs:PersonAugmentation>
-						<!--  Class: PersonDemographics, Attribute: GenderText -->
-						<hs:PersonGenderIdentityText>String</hs:PersonGenderIdentityText>
-						<!--  Class: PersonDemographics, Attribute: GenderCode, Type: As-is Process.GenderCodeList  -->
-						<hs:PersonGenderIdentityCode>Female</hs:PersonGenderIdentityCode>
-					</hs:PersonAugmentation>
-				</RoleOfPerson>
-				<j:WitnessIdentification>
-					<!--  Class: Witness, Attribute: WitnessNumber, Type: string  -->
-					<IdentificationID>String</IdentificationID>
-				</j:WitnessIdentification>
-				<!-- Class:Witness, Attribute: WitnesssequenceNumber -->
-				<j:WitnessSequenceNumberText>String</j:WitnessSequenceNumberText>
-			</j:CaseWitness>
 		</j:CaseAugmentation>
 	</Case>
 </nola:BookingExchange>

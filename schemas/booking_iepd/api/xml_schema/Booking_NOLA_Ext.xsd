@@ -24,6 +24,7 @@
 			<xs:extension base="structures:ObjectType">
 				<xs:sequence>
 					<xs:element ref="nola-ext:StatewideArrestTrackingNumber" minOccurs="0" maxOccurs="1"/>
+					<xs:element ref="nc:Incident" minOccurs="0" maxOccurs="1"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -35,8 +36,8 @@
 		<xs:complexContent>
 			<xs:extension base="structures:ObjectType">
 				<xs:sequence>
-					<xs:element ref="nola-ext:ATNChargeSequenceNumber" minOccurs="0" maxOccurs="unbounded"/>
-					<xs:element ref="nola-ext:ChargeLIBRSCode" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element ref="nola-ext:ChargeLIBRSCode" minOccurs="0" maxOccurs="1"/>
+					<xs:element ref="nola-ext:ChargeKey" minOccurs="0" maxOccurs="1"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -134,11 +135,6 @@
 		</xs:annotation>
 	</xs:element>
 	<!-- New Element definitions ======================================================================== -->
-	<xs:element name="ATNChargeSequenceNumber" type="niem-xs:string">
-		<xs:annotation>
-			<xs:documentation>A number assigned by the State CCH system to a submitted charge.</xs:documentation>
-		</xs:annotation>
-	</xs:element>
 	<xs:element name="PersonComputerControlIdentifier" type="niem-xs:string">
 		<xs:annotation>
 			<xs:documentation>Unique lifetime person ID used by NOPD and Sheriff, otherwise known as the Computer Control Number (CCN). An individual retains the same CCN no matter how many times they are arrested (as opposed to Folder Number, which changes with each new incarceration period). Only used in Orleans Parish.</xs:documentation>
@@ -147,6 +143,11 @@
 	<xs:element name="CaseDefendantNumber" type="niem-xs:string">
 		<xs:annotation>
 			<xs:documentation>A case defandant-number associated with a specific criminal court case number.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+		<xs:element name="ChargeKey" type="niem-xs:string">
+		<xs:annotation>
+			<xs:documentation>A UCT Charge Key (Uniform Charge Table) is a shared key or identifier from a shared table that standardizes charge code definitions across the enterprise.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="ChargeLIBRSCode" type="niem-xs:string">

@@ -13,7 +13,6 @@
 	<xs:import namespace="http://release.niem.gov/niem/structures/5.0/" schemaLocation="./niem\xsd\utility\structures.xsd"/>
 	<xs:import namespace="http://release.niem.gov/niem/codes/aamva_d20/5.0/" schemaLocation="./niem\xsd\codes\aamva_d20.xsd"/>
 	<xs:import namespace="http://release.niem.gov/niem/codes/ncic/5.2/" schemaLocation="./niem\xsd\codes\ncic.xsd"/>
-<!--	<xs:import namespace="http://release.niem.gov/niem/domains/screening/5.2/" schemaLocation="./niem\xsd\domains\screening.xsd"/> xmlns:scr="http://release.niem.gov/niem/domains/screening/5.2/" -->
 	<xs:import namespace="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-schema-appinfo/" schemaLocation="./niem\xsd\utility\code-lists-schema-appinfo.xsd"/>
 	<xs:import namespace="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-instance/" schemaLocation="./niem\xsd\utility\code-lists-instance.xsd"/>
 	<xs:import namespace="http://release.niem.gov/niem/codes/unece_rec20/5.0/" schemaLocation="./niem\xsd\codes\unece_rec20.xsd"/>
@@ -21,7 +20,7 @@
 	<!-- complexType Definitions -->
 	<xs:complexType name="BookingExchangeType">
 		<xs:annotation>
-			<xs:documentation>A data type containing the data for a booking that is being exchanged betwen agencies in NOLA.</xs:documentation>
+			<xs:documentation>A data type containing the data for a booking and release that is being exchanged betwen agencies in NOLA.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="nola-ext:NOLAExchangeType">
@@ -35,7 +34,7 @@
 	<!-- Element definitions -->
 	<xs:element name="BookingExchange" type="nola:BookingExchangeType">
 		<xs:annotation>
-			<xs:documentation>A message payload describing an exchange for a booking in NOLA.</xs:documentation>
+			<xs:documentation>A message payload describing an exchange for a booking and release in NOLA.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<!-- External schema imports -->
