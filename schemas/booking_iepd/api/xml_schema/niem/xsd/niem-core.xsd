@@ -986,6 +986,11 @@
       <xs:documentation>A data concept for a color of the eyes of a person.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="PersonEyeColorText" type="nc:TextType" substitutionGroup="nc:PersonEyeColorAbstract">
+    <xs:annotation>
+      <xs:documentation>A color of the eyes of a person.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="PersonFullName" type="nc:PersonNameTextType" nillable="true">
     <xs:annotation>
       <xs:documentation>A complete name of a person.</xs:documentation>
@@ -1214,6 +1219,11 @@
   <xs:element name="TelephoneSuffixID" type="niem-xs:string" nillable="true">
     <xs:annotation>
       <xs:documentation>An additional sequence of numbers to be entered after a call connects to be directed to the appropriate place.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="YearDate" type="niem-xs:gYear" substitutionGroup="nc:DateRepresentation" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A year.</xs:documentation>
     </xs:annotation>
   </xs:element>
 </xs:schema>

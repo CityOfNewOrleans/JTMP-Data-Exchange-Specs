@@ -23,7 +23,6 @@
 		<xs:complexContent>
 			<xs:extension base="structures:ObjectType">
 				<xs:sequence>
-					<xs:element ref="nola-ext:StatewideArrestTrackingNumber" minOccurs="0" maxOccurs="1"/>
 					<xs:element ref="nc:Incident" minOccurs="0" maxOccurs="1"/>
 				</xs:sequence>
 			</xs:extension>
@@ -38,6 +37,9 @@
 				<xs:sequence>
 					<xs:element ref="nola-ext:ChargeLIBRSCode" minOccurs="0" maxOccurs="1"/>
 					<xs:element ref="nola-ext:ChargeKey" minOccurs="0" maxOccurs="1"/>
+					<xs:element ref="nola-ext:StatewideArrestTrackingNumber" minOccurs="0" maxOccurs="1"/>
+					<xs:element ref="nola-ext:StatewideATNChargeSequenceID" minOccurs="0" maxOccurs="1"/>
+					<xs:element ref="nola-ext:JMSChargeNumber" minOccurs="0" maxOccurs="1"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -50,6 +52,18 @@
 			<xs:extension base="structures:ObjectType">
 				<xs:sequence>
 					<xs:element ref="nola-ext:StatuteCodeSectionSubparagraphIdentification" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+		<xs:complexType name="CourtCategoryAbstractType">
+		<xs:annotation>
+			<xs:documentation>A data type for additional data for a kind of court information in NOLA.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="structures:ObjectType">
+				<xs:sequence>
+					<xs:element ref="nola-ext:CourtCategoryText" minOccurs="0" maxOccurs="1"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -114,9 +128,14 @@
 			<xs:documentation>Additional information about a charge in the NOLA.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="ChargeStatuteAugmentation" type="nola-ext:ChargeStatuteAugmentationType" substitutionGroup="j:StatuteAugmentationPoint ">
+	<xs:element name="ChargeStatuteAugmentation" type="nola-ext:ChargeStatuteAugmentationType" substitutionGroup="j:StatuteAugmentationPoint">
 		<xs:annotation>
 			<xs:documentation>Additional information about a charge statute in the NOLA.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="CourtCategoryAbstract" type="nola-ext:CourtCategoryAbstractType" substitutionGroup="j:CourtCategoryAbstract">
+		<xs:annotation>
+			<xs:documentation>Additional information about a kind of court in the NOLA.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="EmployerAugmentation" type="nola-ext:EmployerAugmentationType" substitutionGroup=" nc:EmployerAugmentationPoint">
@@ -135,17 +154,12 @@
 		</xs:annotation>
 	</xs:element>
 	<!-- New Element definitions ======================================================================== -->
-	<xs:element name="PersonComputerControlIdentifier" type="niem-xs:string">
-		<xs:annotation>
-			<xs:documentation>Unique lifetime person ID used by NOPD and Sheriff, otherwise known as the Computer Control Number (CCN). An individual retains the same CCN no matter how many times they are arrested (as opposed to Folder Number, which changes with each new incarceration period). Only used in Orleans Parish.</xs:documentation>
-		</xs:annotation>
-	</xs:element>
 	<xs:element name="CaseDefendantNumber" type="niem-xs:string">
 		<xs:annotation>
 			<xs:documentation>A case defandant-number associated with a specific criminal court case number.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-		<xs:element name="ChargeKey" type="niem-xs:string">
+	<xs:element name="ChargeKey" type="niem-xs:string">
 		<xs:annotation>
 			<xs:documentation>A UCT Charge Key (Uniform Charge Table) is a shared key or identifier from a shared table that standardizes charge code definitions across the enterprise.</xs:documentation>
 		</xs:annotation>
@@ -153,6 +167,21 @@
 	<xs:element name="ChargeLIBRSCode" type="niem-xs:string">
 		<xs:annotation>
 			<xs:documentation>A LIBRS code associated with a charge.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="CourtCategoryText" type="niem-xs:string">
+		<xs:annotation>
+			<xs:documentation>A kind of court.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="JMSChargeNumber" type="niem-xs:string">
+		<xs:annotation>
+			<xs:documentation>A unique identification number assigned to a particular charge by a Jail Management System (JMS).</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="PersonComputerControlIdentifier" type="niem-xs:string">
+		<xs:annotation>
+			<xs:documentation>Unique lifetime person ID used by NOPD and Sheriff, otherwise known as the Computer Control Number (CCN). An individual retains the same CCN no matter how many times they are arrested (as opposed to Folder Number, which changes with each new incarceration period). Only used in Orleans Parish.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="PersonNameSoundex" type="nc:PersonNameType">
@@ -163,6 +192,11 @@
 	<xs:element name="StatewideArrestTrackingNumber" type="niem-xs:string">
 		<xs:annotation>
 			<xs:documentation>The State's Police Automated Fingerprint Inforamtion System (AFIS) generates an ATN to uniquely identify each booking event, often referred to as an Arrest Cycle. The ATN must be communicated from the Sheriff to the Court at a minimum, in order to effectively update the State computerized criminal history (CCH) with dispositions of arrest charges.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="StatewideATNChargeSequenceID" type="niem-xs:string">
+		<xs:annotation>
+			<xs:documentation>A sequential identifier number assigned to the arrest of a subject i.e ATN. The State's Police Automated Fingerprint Inforamtion System (AFIS) generates an ATN to uniquely identify each booking event, often referred to as an Arrest Cycle. The ATN must be communicated from the Sheriff to the Court at a minimum, in order to effectively update the State computerized criminal history (CCH) with dispositions of arrest charges.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="StatuteCodeSectionSubparagraphIdentification" type="nc:IdentificationType">

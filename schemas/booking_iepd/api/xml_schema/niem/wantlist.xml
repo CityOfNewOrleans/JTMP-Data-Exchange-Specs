@@ -20,10 +20,8 @@
   <w:Element w:name="j:Booking" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="j:CaseAugmentation" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="j:CaseCourtEvent" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="j:CourtCategoryCode" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="j:OrganizationAugmentation" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="j:PersonAugmentation" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="j:PersonEyeColorCode" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="nc:Address" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="nc:AddressDeliveryPointID" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="nc:AddressRouteName" w:isReference="false" w:nillable="false"/>
@@ -54,6 +52,7 @@
   <w:Element w:name="nc:PersonEmploymentAssociation"
     w:isReference="false" w:nillable="false"/>
   <w:Element w:name="nc:PersonEthnicityText" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="nc:PersonEyeColorText" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="nc:PersonHairColorText" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="nc:PersonNamePrefixText" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="nc:PersonRaceText" w:isReference="false" w:nillable="false"/>
@@ -63,7 +62,7 @@
   <w:Element w:name="nc:PersonSkinToneText" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="nc:StateName" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="nc:StreetDirectionalText" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="ncic:StateUSCode" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="nc:YearDate" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="unece:LengthUnitCode" w:isReference="false" w:nillable="false"/>
   <w:Type w:name="aamva_d20:CourtCategoryCodeSimpleType" w:isRequested="false">
     <w:Facet w:facet="enumeration" w:value="ADM"/>
@@ -143,7 +142,7 @@
     <w:ElementInType w:name="j:ArrestAgency" w:isReference="false"
       w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="j:ArrestCharge" w:isReference="false"
-      w:minOccurs="0" w:maxOccurs="1"/>
+      w:minOccurs="0" w:maxOccurs="unbounded"/>
     <w:ElementInType w:name="j:ArrestOfficial" w:isReference="false"
       w:minOccurs="0" w:maxOccurs="unbounded"/>
     <w:ElementInType w:name="j:ArrestAugmentationPoint"
@@ -178,6 +177,8 @@
       w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="j:ChargeCountQuantity"
       w:isReference="false" w:minOccurs="0" w:maxOccurs="unbounded"/>
+    <w:ElementInType w:name="j:ChargeDescriptionText"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="j:ChargeFilingDate" w:isReference="false"
       w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="j:ChargeSequenceID" w:isReference="false"
