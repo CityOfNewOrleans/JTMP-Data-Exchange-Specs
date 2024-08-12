@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:cbrn="http://release.niem.gov/niem/domains/cbrn/5.2/" xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cbrncl="http://release.niem.gov/niem/codes/cbrncl/5.0/" xmlns:structures="http://release.niem.gov/niem/structures/5.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/" xmlns:niem-xs="http://release.niem.gov/niem/proxy/niem-xs/5.0/" xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/" targetNamespace="http://release.niem.gov/niem/domains/cbrn/5.2/" version="1" xml:lang="en-US" xsi:schemaLocation="http://release.niem.gov/niem/appinfo/5.0/ ../utility/appinfo.xsd http://release.niem.gov/niem/conformanceTargets/3.0/ ../utility/conformanceTargets.xsd" ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ReferenceSchemaDocument">
+	<xs:annotation>
+		<xs:documentation>Chemical, Biological, Radiological, and Nuclear Domain</xs:documentation>
+		<xs:appinfo>
+			<appinfo:LocalTerm term="Bio" literal="Biological"/>
+			<appinfo:LocalTerm term="CBP" literal="United States Customs and Border Protection"/>
+			<appinfo:LocalTerm term="CBRNE" literal="Chemical, Biological, Radiological, Nuclear and high- yield Explosives"/>
+			<appinfo:LocalTerm term="CC" literal="cubic centimeter (cc) units"/>
+			<appinfo:LocalTerm term="Chem" literal="Chemical"/>
+			<appinfo:LocalTerm term="CM" literal="Centimeter"/>
+			<appinfo:LocalTerm term="CPS" literal="Counts per second"/>
+			<appinfo:LocalTerm term="FWHM" literal="Full width at half maximum"/>
+			<appinfo:LocalTerm term="Geo" literal="Geographic"/>
+			<appinfo:LocalTerm term="IDREF" literal="Identifier reference"/>
+			<appinfo:LocalTerm term="IEC" literal="International Electrotechnical Commission"/>
+			<appinfo:LocalTerm term="KeV" literal="Kiloelectronvolts"/>
+			<appinfo:LocalTerm term="kilobecquerel" definition="A unit of radioactivity equal to one thousand becquerels."/>
+			<appinfo:LocalTerm term="MDA" literal="minimum detectable activity"/>
+			<appinfo:LocalTerm term="MeV" literal="Megaelectron-volt"/>
+			<appinfo:LocalTerm term="microsievert" definition="The sievert is the special name for the SI unit of equivalent dose, effective dose, and operational dose quantities. The unit is joule per kilogram.  1 microsievert = 0.000001 sieverts"/>
+			<appinfo:LocalTerm term="microsieverts" definition="The sievert is the special name for the SI unit of equivalent dose, effective dose, and operational dose quantities. The unit is joule per kilogram.  1 microsievert = 0.000001 sieverts"/>
+			<appinfo:LocalTerm term="milliroentgen" definition="A unit of exposure to ionizing radiation, one thousandth of a roentgen."/>
+			<appinfo:LocalTerm term="MIME" literal="Multipurpose Internet Mail Extensions"/>
+			<appinfo:LocalTerm term="mR" literal="milliroentgen"/>
+			<appinfo:LocalTerm term="mRh" literal="milliroentgen per hour (mR/h)"/>
+			<appinfo:LocalTerm term="N42" definition="The ANSI/IEEE N42.42 standard specifies the XML data format that shall be used for both required and optional data to be made available by radiation measurement instruments."/>
+			<appinfo:LocalTerm term="n42Doc" literal="N42 XML document"/>
+			<appinfo:LocalTerm term="Reachback" definition="A process by which commanders, their staffs and deployed forces may be provided with timely, coordinated and authoritative advice on Chemical, Biological, Radiological and Nuclear issues, drawing upon remote expert sources of information."/>
+			<appinfo:LocalTerm term="UID" literal="Unique Identifier"/>
+			<appinfo:LocalTerm term="uSv" literal="microsieverts"/>
+			<appinfo:LocalTerm term="uSvh" literal="microsieverts per hour (uSv/h)"/>
+			<appinfo:LocalTerm term="UTF8" literal="UCS Transformation Format—8-bit"/>
+			<appinfo:LocalTerm term="UUID" literal="Universally Unique Identifier"/>
+			<appinfo:LocalTerm term="WGS-84" definition="The standard U.S. Department of Defense definition of a global reference system for geospatial information and the reference system for the Global Positioning System (GPS)."/>
+			<appinfo:LocalTerm term="X" literal="The first dimension"/>
+			<appinfo:LocalTerm term="XY" literal="A two dimensional array or pair of values for a data point"/>
+		</xs:appinfo>
+	</xs:annotation>
+	<xs:import namespace="http://release.niem.gov/niem/codes/cbrncl/5.0/" schemaLocation="../codes/cbrncl.xsd"/>
+	<xs:import namespace="http://release.niem.gov/niem/niem-core/5.0/" schemaLocation="../niem-core.xsd"/>
+	<xs:import namespace="http://release.niem.gov/niem/proxy/niem-xs/5.0/" schemaLocation="../adapters/niem-xs.xsd"/>
+	<xs:import namespace="http://release.niem.gov/niem/structures/5.0/" schemaLocation="../utility/structures.xsd"/>
+	<xs:complexType name="MessageContentErrorType">
+		<xs:annotation>
+			<xs:documentation>A data type that provides information about the point in the xml payload content of a message where an error occurred in processing the message.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="structures:ObjectType">
+				<xs:sequence>
+					<xs:element ref="cbrn:ErrorDescription" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="MessageErrorType">
+		<xs:annotation>
+			<xs:documentation>A data type that describes a message error.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="structures:ObjectType">
+				<xs:sequence>
+					<xs:element ref="cbrn:ErrorCodeText" minOccurs="1" maxOccurs="1"/>
+					<xs:element ref="cbrn:ErrorCodeDescriptionText" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="MessageOriginOrDestinationType">
+		<xs:annotation>
+			<xs:documentation>A data type for identifying a message origin or destination.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="structures:ObjectType">
+				<xs:sequence>
+					<xs:element ref="nc:OrganizationName" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="MessageStatusType">
+		<xs:annotation>
+			<xs:documentation>A data type to provide success or error feedback on a message that has been received.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="cbrn:SystemEventType">
+				<xs:sequence>
+					<xs:element ref="nc:MessageID" minOccurs="1" maxOccurs="1"/>
+					<xs:element ref="cbrn:MessageStatusCode" minOccurs="1" maxOccurs="1"/>
+					<xs:element ref="cbrn:MessageContentError" minOccurs="0" maxOccurs="1"/>
+					<xs:element ref="cbrn:MessageHandlingError" minOccurs="0" maxOccurs="1"/>
+					<xs:element ref="cbrn:MessageStatusAugmentationPoint" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RemarksComplexObjectType">
+		<xs:annotation>
+			<xs:documentation>A data type providing a Remark via inheritance to applicable Types.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="structures:ObjectType">
+				<xs:sequence>
+					<xs:element ref="cbrn:RemarkText" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SystemEventType">
+		<xs:annotation>
+			<xs:documentation>A data type for a system event.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="cbrn:RemarksComplexObjectType">
+				<xs:sequence>
+					<xs:element ref="cbrn:SystemEventDateTime" minOccurs="1" maxOccurs="1"/>
+					<xs:element ref="cbrn:SystemEventDescriptionText" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:attribute name="systemSimulatedIndicator" type="xs:boolean">
+		<xs:annotation>
+			<xs:documentation>True if the system is simulated; false otherwise.  If the attribute is not present, the value is false.</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:element name="ErrorCodeDescriptionText" type="nc:TextType" nillable="true">
+		<xs:annotation>
+			<xs:documentation>A description of an error code in free form text.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="ErrorCodeText" type="nc:TextType" nillable="true">
+		<xs:annotation>
+			<xs:documentation>An error code.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="ErrorDescription" type="cbrn:MessageErrorType" nillable="true">
+		<xs:annotation>
+			<xs:documentation>A text description of an error that occurred at a specific XML tag while processing an XML message.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="MessageContentError" type="cbrn:MessageContentErrorType" nillable="true">
+		<xs:annotation>
+			<xs:documentation>A set of information about the point in the xml payload content of a message where an error occurred in processing the message.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="MessageDestination" type="cbrn:MessageOriginOrDestinationType" nillable="true">
+		<xs:annotation>
+			<xs:documentation>An identifier and/or name of a facility, site, or organization(s) that is(are) the destination of a message.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="MessageHandlingError" type="cbrn:MessageErrorType" nillable="true">
+		<xs:annotation>
+			<xs:documentation>A description of a message error encountered by an infrastructure component in the process of message handling and transmission.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="MessageStatus" type="cbrn:MessageStatusType" nillable="true">
+		<xs:annotation>
+			<xs:documentation>A status of the message.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="MessageStatusAugmentationPoint" abstract="true">
+		<xs:annotation>
+			<xs:documentation>An augmentation point for cbrn:MessageStatusType.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="MessageStatusCode" type="cbrncl:MessageStatusCodeType" nillable="true">
+		<xs:annotation>
+			<xs:documentation>A code for the receiving status of a message.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="RemarkText" type="nc:TextType" nillable="true">
+		<xs:annotation>
+			<xs:documentation>A placeholder for comments intended to help the consumer of the data to understand better the information encapsulated by the parent element.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="SystemEventDateTime" type="niem-xs:dateTime" nillable="true">
+		<xs:annotation>
+			<xs:documentation>A date and time of a system event.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="SystemEventDescriptionText" type="niem-xs:string" nillable="true">
+		<xs:annotation>
+			<xs:documentation>A description of a system event.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

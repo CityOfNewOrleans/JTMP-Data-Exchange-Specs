@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+<xs:schema 
+xmlns:nola="http://mcp.com/nola/v/1.0/" 
+xmlns:nola-ext="http://mcp.com/nola/extension/v/1.0/" 
+xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/"
+xmlns:niem-xs="http://release.niem.gov/niem/proxy/niem-xs/5.0/" 
+xmlns:cbrncl="http://release.niem.gov/niem/codes/cbrncl/5.0/"
+xmlns:cbrn="http://release.niem.gov/niem/domains/cbrn/5.2/"
+xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/" 
+xmlns:cls="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-instance/" 
+xmlns:clsa="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-schema-appinfo/" 
+xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/" 
+xmlns:structures="http://release.niem.gov/niem/structures/5.0/" 
+xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+targetNamespace="http://mcp.com/nola/v/1.0/" 
+elementFormDefault="qualified" attributeFormDefault="unqualified" 
+version="1" xml:lang="en-US" 
+ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ExtensionDocument" 
+>
+	<xs:annotation>
+		<xs:documentation> Asynchronous Response root schema for NOLA.</xs:documentation>
+	</xs:annotation>
+	<!-- NIEM schema imports -->
+	<xs:import namespace = "http://release.niem.gov/niem/niem-core/5.0/" schemaLocation="./niem\xsd\niem-core.xsd"/>
+	<xs:import namespace = "http://release.niem.gov/niem/proxy/niem-xs/5.0/" schemaLocation="./niem\xsd\adapters\niem-xs.xsd"/>
+	<xs:import namespace = "http://release.niem.gov/niem/codes/cbrncl/5.0/" schemaLocation="./niem\xsd\codes\cbrncl.xsd"/>
+	<xs:import namespace = "http://release.niem.gov/niem/domains/cbrn/5.2/" schemaLocation="./niem\xsd\domains\cbrn.xsd"/>
+	<xs:import namespace = "http://release.niem.gov/niem/appinfo/5.0/" schemaLocation="./niem\xsd\utility\appinfo.xsd"/>
+	<xs:import namespace = "http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-instance/" schemaLocation="./niem\xsd\utility\code-lists-instance.xsd"/>
+	<xs:import namespace = "http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-schema-appinfo/" schemaLocation="./niem\xsd\utility\code-lists-schema-appinfo.xsd"/>
+	<xs:import namespace = "http://release.niem.gov/niem/conformanceTargets/3.0/" schemaLocation="./niem\xsd\utility\conformanceTargets.xsd"/>
+	<xs:import namespace = "http://release.niem.gov/niem/structures/5.0/" schemaLocation="./niem\xsd\utility\structures.xsd"/>
+	<xs:import namespace = "http://mcp.com/nola/extension/v/1.0/" schemaLocation="./Asynchronous_NOLA_Ext.xsd"/>
+	<!-- complexType Definitions -->
+	<xs:complexType name="AsynchronousResponseMessageType">
+		<xs:annotation>
+			<xs:documentation>A data type containing the data for an Asyncronous Response Message between two endpoints.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="nola-ext:NOLAExchangeType">
+				<xs:sequence>
+					<xs:element ref="cbrn:MessageStatus" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="AsynchronousResponseMessage" type="nola:AsynchronousResponseMessageType">
+		<xs:annotation>
+			<xs:documentation>A message payload describing an Asynchronous Response Message between two endpoints in NOLA.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

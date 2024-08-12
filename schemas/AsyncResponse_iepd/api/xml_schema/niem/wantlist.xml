@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<w:WantList w:release="5.2" w:product="NIEM" w:nillableDefault="true"
+  xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/"
+  xmlns:w="http://niem.gov/niem/wantlist/2.2"
+  xmlns:cbrn="http://release.niem.gov/niem/domains/cbrn/5.2/" xmlns:cbrncl="http://release.niem.gov/niem/codes/cbrncl/5.0/">
+  <w:Element w:name="cbrn:MessageDestination" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="cbrn:MessageStatus" w:isReference="false" w:nillable="true"/>
+  <w:Type w:name="cbrn:MessageContentErrorType" w:isRequested="false">
+    <w:ElementInType w:name="cbrn:ErrorDescription"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="unbounded"/>
+  </w:Type>
+  <w:Type w:name="cbrn:MessageErrorType" w:isRequested="false">
+    <w:ElementInType w:name="cbrn:ErrorCodeText" w:isReference="false"
+      w:minOccurs="1" w:maxOccurs="1"/>
+    <w:ElementInType w:name="cbrn:ErrorCodeDescriptionText"
+      w:isReference="false" w:minOccurs="1" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="cbrn:MessageOriginOrDestinationType" w:isRequested="false">
+    <w:ElementInType w:name="nc:OrganizationName" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="cbrn:MessageStatusType" w:isRequested="false">
+    <w:ElementInType w:name="nc:MessageID" w:isReference="false"
+      w:minOccurs="1" w:maxOccurs="1"/>
+    <w:ElementInType w:name="cbrn:MessageStatusCode"
+      w:isReference="false" w:minOccurs="1" w:maxOccurs="1"/>
+    <w:ElementInType w:name="cbrn:MessageContentError"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="cbrn:MessageHandlingError"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="cbrn:MessageStatusAugmentationPoint"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="cbrn:RemarksComplexObjectType" w:isRequested="true">
+    <w:ElementInType w:name="cbrn:RemarkText" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="cbrn:SystemEventType" w:isRequested="true">
+    <w:ElementInType w:name="cbrn:SystemEventDateTime"
+      w:isReference="false" w:minOccurs="1" w:maxOccurs="1"/>
+    <w:ElementInType w:name="cbrn:SystemEventDescriptionText"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="cbrncl:MessageStatusCodeSimpleType" w:isRequested="false">
+    <w:Facet w:facet="enumeration" w:value="ActivityCodeFailure"/>
+    <w:Facet w:facet="enumeration" w:value="DataError"/>
+    <w:Facet w:facet="enumeration" w:value="DeviceError"/>
+    <w:Facet w:facet="enumeration" w:value="DuplicateMessage"/>
+    <w:Facet w:facet="enumeration" w:value="ErrorAcknowledgement"/>
+    <w:Facet w:facet="enumeration" w:value="InvalidSchema"/>
+    <w:Facet w:facet="enumeration" w:value="MessageError"/>
+    <w:Facet w:facet="enumeration" w:value="Other"/>
+    <w:Facet w:facet="enumeration" w:value="Success"/>
+    <w:Facet w:facet="enumeration" w:value="SystemError"/>
+    <w:Facet w:facet="enumeration" w:value="UnknownError"/>
+  </w:Type>
+</w:WantList>
