@@ -1,6 +1,8 @@
 # Asynchronous Response Messaging
 
-The Subscriber to any message will send a response message through the service bus to convey the results of message processing. The response message goes through the same process as the request message, but since it is one to one communication, the queue messaging pattern will be used. The sending agency needs to provide an endpoint to receive the response message. It is agency’s responsibility to correlate the request message and response message by using message meta data or the message body. 
+The Subscriber to any message will send a response message through the service bus to convey the results of message processing. The response message goes through the same process as the request message, but since it is one to one communication, the queue messaging pattern will be used. The sending agency needs to provide an endpoint to receive the response message. It is agency’s responsibility to correlate the request message and response message by using message meta data or the message body.
+
+![Async Response IEPD](schemas/AsyncResponse_iepd)
 
 ## Preceding Exchange: 
 
@@ -17,8 +19,6 @@ Robust response messaging gives the Publisher of a message the assurance that th
 
 ## Data Requirements:
 
-![XML Schemas](schemas/AsyncResponse_iepd/api/xml_schema)
-
 ### Key data elements include:
 - Original TransactionID from the published message
 - New, unique MessageID that identifies the response as a separate message
@@ -26,9 +26,15 @@ Robust response messaging gives the Publisher of a message the assurance that th
 - Text field to include error message encountered, or text provided by an end user (who may be rejecting a message for a business reason). 
 
 ## Artifacts:
+**XML Schemas:** 
+![XML Schemas](schemas/AsyncResponse_iepd/api/xml_schema)
 
+**Mapping Spreadsheet:**
 ![Mapping Spreadsheet](schemas/AsyncResponse_iepd/artifacts/Async_Response_MappingSpreadsheet.xlsx)
 
-![Class Diagram](schemas/AsyncResponse_iepd/artifacts/AsyncResponse_ClassDiagram.svg)
-
+**Sample XML:** 
 ![Sample XML Files](schemas/AsyncResponse_iepd/examples)
+
+**Class Diagram:** 
+
+![Class Diagram](schemas/AsyncResponse_iepd/artifacts/AsyncResponse_ClassDiagram.svg)
