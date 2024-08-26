@@ -17,7 +17,7 @@ Robust response messaging gives the Publisher of a message the assurance that th
 
 ## Data Requirements:
 
-[XML Schemas]
+![XML Schemas](schemas/AsyncResponse_iepd/api/xml_schema)
 
 ### Key data elements include:
 - Original TransactionID from the published message
@@ -27,8 +27,8 @@ Robust response messaging gives the Publisher of a message the assurance that th
 
 ## Artifacts:
 
-[Mapping Spreadsheet]
+![Mapping Spreadsheet](schemas/AsyncResponse_iepd/artifacts/Async_Response_MappingSpreadsheet.xlsx)
 
-![Class Diagram](schemas/court-order-iepd/artifacts/court%20order%20class%20diagram.svg)
+![Class Diagram](schemas/AsyncResponse_iepd/artifacts/AsyncResponse_ClassDiagram.svg)
 
-[Sample XML File]
+![Sample XML Files](schemas/AsyncResponse_iepd/examples)
