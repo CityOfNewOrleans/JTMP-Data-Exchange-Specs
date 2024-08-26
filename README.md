@@ -12,9 +12,9 @@ The following diagram provides an overview of the JTMP Service Bus. ​</p>
 |-----|------|------|-----|
 |Arrest|Records Management System |TBD|arrestReport|
 Incident|Records Management System |TBD |incidentReport|
-|Booking | Jail Management System|[Booking IEPD](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/BookingExchange.md) |bookingAndRelease|
+|Booking | Jail Management System|[Booking and Release IEPD](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/BookingExchange.md) |bookingAndRelease|
 |New Case Initiation |Court CMS|[Case Initation IEPD](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/CaseInitiation.md) |caseInitiation|
-|Court Event|Court Case Management System (CMS)|[CourtEvent IEPD](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/CourtEventExchange.md) |courtEvent|
-|Court Order|Criminal District Court CMS/Municipal & Traffic Court CMS|[CourtOrder IEPD](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/6b9667a5bcf91a051187ed3dff26fe8e4ddb0612/CourtOrderExchange.md)|courtOrder|
+|Court Event|Court Case Management System (CMS)|[Court Event IEPD](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/CourtEventExchange.md) |courtEvent|
+|Court Order|Criminal District Court CMS/Municipal & Traffic Court CMS|[Court Order IEPD](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/6b9667a5bcf91a051187ed3dff26fe8e4ddb0612/CourtOrderExchange.md)|courtOrder|
 |Charge Code Table Updates|Centrally-hosted Uniform Charge Table|[ChargeUpdate IEPD](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/ChargeCodeUpdateExchange.md)|chargeUpdate|
-|Asynchronous Responses|All Subscribers|[asyncResponse IEPD](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/AsyncResponse.md)|AsyncResponse|
+|Asynchronous Responses|All Subscribers|[Async Response IEPD](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/AsyncResponse.md)|AsyncResponse|
