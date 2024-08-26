@@ -5,6 +5,8 @@ A Courts' Case Management (CMS)) will publish a Court Event message each time a 
 
 The publisher may be the CMS of any court jurisdiction - Criminal, Juvenile, or Municipal & Traffic. 
 
+![Court Event IEPD](schemas/CourtEvent_iepd)
+
 ## Preceding Exchange:
 
 Booking - First Appearance would be scheduled with the Magistrate case number. 
@@ -32,8 +34,6 @@ The Court Event data exchange will include a Status indicator, indicating to the
 Subscriber systems will match the incoming Court Event with the Court Case ID (which had previously been received in a Case Initition message). 
 
 ## Data Requirements:
-
-XML Schemas - coming soon
 ### Key data elements include:
 - Status indicator -- New or Updated Event
 - Court Case ID (First Appearance events will have a Magistrate Number; other Event Types will have a Criminal Case number)
@@ -45,12 +45,10 @@ XML Schemas - coming soon
 - Defendant Status (?)
 
 ## Artifacts:
+**XML Schemas:** ![XML Schemas](schemas/CourtEvent_iepd/api/xml_schema)
 
-Mapping Spreadsheet - coming soon
+**Mapping Spreadsheet:** ![Mapping Spreadsheet](schemas/CourtEvent_iepd/artifacts/CourtEvent_MappingSpreadsheet.xlsx)
 
-**Class Diagram:** - coming soon
+**Sample XML:** ![Sample XML](schemas/CourtEvent_iepd/examples/SampleCourtEventXML.xml)
 
-
-Sample XML File - coming soon
-
-
+**Class Diagram:** ![Class Diagram](schemas/CourtEvent_iepd/artifacts/CourtEventClassDiagram.svg)
