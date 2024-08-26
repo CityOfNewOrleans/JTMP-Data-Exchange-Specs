@@ -4,6 +4,8 @@ A Courts' Case Management (CMS)) will publish a Court Order message each time a 
 
 The publisher may be the CMS of any court jurisdiction - Criminal, Juvenile, or Municipal & Traffic. 
 
+![Court Order IEPD](schemas/CourtOrder_iepd)
+
 ## Preceding Exchange: 
 
 Charge Screening Action (new Criminal charges filed - from District Attorney)
@@ -29,9 +31,6 @@ The Court Order data exchange will include a Status indicator, indicating to the
 Subscriber systems will match the incoming Court Order with the Court Case ID (which had previously been received in a Case Initition message). Subscriber systems will have internal processing and requirements on how a case file in the application interacts with a document to be stored in a document management system or module. 
 
 ## Data Requirements:
-
-[XML Schemas](schemas/court-order-iepd)
-
 ### Key data elements include:
 - Status indicator -- New or Updated Order
 - Court Case ID
@@ -41,11 +40,16 @@ Subscriber systems will match the incoming Court Order with the Court Case ID (w
 - Judicial Official (the Judge or Magistrate who approved/signed the Order)
 
 ## Artifacts:
+**XML Schemas:** ![XML Schemas](schemas/CourtOrder_iepd/api/xml_schema)
 
-[Mapping Spreadsheet](schemas/court-order-iepd/artifacts/nola%20court%20order%20mapping%20spreadsheet.xlsx)
+**Mapping Spreadsheet:** ![Mapping Spreadsheet](schemas/CourtOrder_iepd/artifacts/CourtOrder_MappingSpreadsheet.xlsx)
 
-![Class Diagram](schemas/court-order-iepd/artifacts/court%20order%20class%20diagram.svg)
+**Sample XML:** ![Sample XML](schemas/CourtOrder_iepd/examples/Annotated_CourtOrder.xml)
 
-[Sample XML File](schemas/court-order-iepd/examples/SampleCourtOrderXML.xml)
+**Class Diagram:**
+
+![Class Diagram](schemas/CourtOrder_iepd/artifacts/CourtOrder_ClassDiagram.svg)
+
+
 
 
