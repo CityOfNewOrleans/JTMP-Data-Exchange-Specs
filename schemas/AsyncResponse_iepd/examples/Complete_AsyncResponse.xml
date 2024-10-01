@@ -10,8 +10,10 @@
 		<SystemEventDateTime>2001-12-17T09:30:47Z</SystemEventDateTime>
 		<!--  Class: AsynchronousResponse, Attribute: responseDescription  -->
 		<SystemEventDescriptionText>String</SystemEventDescriptionText>
-		<!--  Class: AsynchronousResponse, Attribute: transactionID  -->
+		<!--  Class: AsynchronousResponse, Attribute: messageID  -->
 		<nc:MessageID>String</nc:MessageID>
+		<!--  Class: AsynchronousResponse, Attribute: transactionID  -->
+		<nc:TransactionID>String</nc:TransactionID>
 		<!--  Class: AsynchronousResponse, Attribute: transactionStatusCode  -->
 		<MessageStatusCode>Success</MessageStatusCode>
 		<!--  Class: AsynchronousResponse, Association: SchemaError  -->

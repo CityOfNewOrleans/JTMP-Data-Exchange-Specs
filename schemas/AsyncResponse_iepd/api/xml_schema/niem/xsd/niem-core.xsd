@@ -47,7 +47,12 @@
   </xs:complexType>
   <xs:element name="MessageID" type="niem-xs:string" nillable="true">
     <xs:annotation>
-      <xs:documentation>A message identifier associated with an email or message content.</xs:documentation>
+      <xs:documentation>The original messageID that was set by the originator of the message.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TransactionID" type="niem-xs:string" nillable="true">
+    <xs:annotation>
+      <xs:documentation>The original transactionID that was set by the originator of the message.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="OrganizationName" type="nc:TextType" nillable="true">

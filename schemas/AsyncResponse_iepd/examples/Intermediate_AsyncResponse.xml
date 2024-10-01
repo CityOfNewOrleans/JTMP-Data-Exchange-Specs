@@ -11,8 +11,10 @@
 		<SystemEventDateTime>2020-03-07T13:47:42</SystemEventDateTime>
 		<!--  Class: AsynchronousResponse, Attribute: responseDescription  -->
 		<SystemEventDescriptionText>Received</SystemEventDescriptionText>
-		<!--  Class: AsynchronousResponse, Attribute: transactionID  -->
+		<!--  Class: AsynchronousResponse, Attribute: messageID  -->
 		<nc:MessageID>a8fa7290-b4d7-4c9f-8734-3a718d086299</nc:MessageID>
+		<!--  Class: AsynchronousResponse, Attribute: transactionID  -->
+		<nc:TransactionID>b9ab8301-c5e8-5d0a-9845-4b829e17100</nc:TransactionID>
 		<!--  Class: AsynchronousResponse, Attribute: transactionStatusCode  -->
 		<MessageStatusCode>Success</MessageStatusCode>
 		<!--  Class: AsynchronousResponse, Association: ProcessingError  -->

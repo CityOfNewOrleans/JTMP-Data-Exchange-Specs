@@ -12,6 +12,8 @@
 		<SystemEventDescriptionText>Approved</SystemEventDescriptionText>
 		<!--  Class: AsynchronousResponse, Attribute: transactionID  -->
 		<nc:MessageID>a8fa7290-b4d7-4c9f-8734-3a718d086299</nc:MessageID>
+		<!--  Class: AsynchronousResponse, Attribute: messageID  -->
+		<nc:TransactionID>b9ab8301-c5e8-5d0a-9845-4b829e17100</nc:TransactionID>
 		<!--  Class: AsynchronousResponse, Attribute: transactionStatusCode  -->
 		<MessageStatusCode>Success</MessageStatusCode>
 		<nola-ext:MessageStatusAugmentation>

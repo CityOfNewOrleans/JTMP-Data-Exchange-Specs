@@ -86,6 +86,7 @@
 			<xs:extension base="cbrn:SystemEventType">
 				<xs:sequence>
 					<xs:element ref="nc:MessageID" minOccurs="1" maxOccurs="1"/>
+					<xs:element ref="nc:TransactionID" minOccurs="0" maxOccurs="1"/>
 					<xs:element ref="cbrn:MessageStatusCode" minOccurs="1" maxOccurs="1"/>
 					<xs:element ref="cbrn:MessageContentError" minOccurs="0" maxOccurs="1"/>
 					<xs:element ref="cbrn:MessageHandlingError" minOccurs="0" maxOccurs="1"/>

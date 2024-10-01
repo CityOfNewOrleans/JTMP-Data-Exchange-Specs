@@ -22,6 +22,8 @@
   <w:Type w:name="cbrn:MessageStatusType" w:isRequested="false">
     <w:ElementInType w:name="nc:MessageID" w:isReference="false"
       w:minOccurs="1" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:TransactionID" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="cbrn:MessageStatusCode"
       w:isReference="false" w:minOccurs="1" w:maxOccurs="1"/>
     <w:ElementInType w:name="cbrn:MessageContentError"
