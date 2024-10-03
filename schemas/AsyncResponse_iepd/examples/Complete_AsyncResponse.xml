@@ -10,7 +10,7 @@
 		<SystemEventDateTime>2001-12-17T09:30:47Z</SystemEventDateTime>
 		<!--  Class: AsynchronousResponse, Attribute: responseDescription  -->
 		<SystemEventDescriptionText>String</SystemEventDescriptionText>
-		<!--  Class: AsynchronousResponse, Attribute: transactionID  -->
+		<!--  Class: AsynchronousResponse, Attribute: messageID  -->
 		<nc:MessageID>String</nc:MessageID>
 		<!--  Class: AsynchronousResponse, Attribute: transactionStatusCode  -->
 		<MessageStatusCode>Success</MessageStatusCode>
@@ -37,6 +37,8 @@
 				<!--  Class: AsynchronousResponse, Attribute: destinationAgency  -->
 				<nc:OrganizationName>String</nc:OrganizationName>
 			</MessageDestination>
+			<!--  Class: AsynchronousResponse, Attribute: transactionID  -->
+			<nola-ext:TransactionID>String</nola-ext:TransactionID>
 		</nola-ext:MessageStatusAugmentation>
 	</MessageStatus>
 </nola:AsynchronousResponseMessage>

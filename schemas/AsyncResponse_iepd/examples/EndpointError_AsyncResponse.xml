@@ -18,7 +18,7 @@ xsi:schemaLocation="http://mcp.com/nola/v/1.0/ ../api/xml_schema/Asynchronous_NO
 		<SystemEventDateTime>2017-01-07T13:47:42</SystemEventDateTime>
 		<!--  Class: AsynchronousResponse, Attribute: responseDescription  -->
 		<SystemEventDescriptionText>Failed to put message into staging system.</SystemEventDescriptionText>
-		<!--  Class: AsynchronousResponse, Attribute: transactionID  -->
+		<!--  Class: AsynchronousResponse, Attribute: messageID  -->
 		<nc:MessageID>a8fa7290-b4d7-4c9f-8734-3a718d086299</nc:MessageID>
 		<!--  Class: AsynchronousResponse, Attribute: transactionStatusCode  -->
 		<MessageStatusCode>SystemError</MessageStatusCode>
@@ -36,6 +36,8 @@ xsi:schemaLocation="http://mcp.com/nola/v/1.0/ ../api/xml_schema/Asynchronous_NO
 				<!--  Class: AsynchronousResponse, Attribute: destinationAgency  -->
 				<nc:OrganizationName>07</nc:OrganizationName>
 			</MessageDestination>
+			<!--  Class: AsynchronousResponse, Attribute: transactionID  -->
+			<nola-ext:TransactionID>String</nola-ext:TransactionID>
 		</nola-ext:MessageStatusAugmentation>
 	</MessageStatus>
 </nola:AsynchronousResponseMessage>

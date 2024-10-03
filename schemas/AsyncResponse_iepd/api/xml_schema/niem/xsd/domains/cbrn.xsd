@@ -89,7 +89,7 @@
 					<xs:element ref="cbrn:MessageStatusCode" minOccurs="1" maxOccurs="1"/>
 					<xs:element ref="cbrn:MessageContentError" minOccurs="0" maxOccurs="1"/>
 					<xs:element ref="cbrn:MessageHandlingError" minOccurs="0" maxOccurs="1"/>
-					<xs:element ref="cbrn:MessageStatusAugmentationPoint" minOccurs="0" maxOccurs="1"/>
+					<xs:element ref="cbrn:MessageStatusAugmentationPoint" minOccurs="0" maxOccurs="2"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>

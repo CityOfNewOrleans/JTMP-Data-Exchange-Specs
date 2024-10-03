@@ -10,7 +10,7 @@
 		<SystemEventDateTime>2020-03-07T13:47:42</SystemEventDateTime>
 		<!--  Class: AsynchronousResponse, Attribute: responseDescription  -->
 		<SystemEventDescriptionText>Approved</SystemEventDescriptionText>
-		<!--  Class: AsynchronousResponse, Attribute: transactionID  -->
+		<!--  Class: AsynchronousResponse, Attribute: messageID  -->
 		<nc:MessageID>a8fa7290-b4d7-4c9f-8734-3a718d086299</nc:MessageID>
 		<!--  Class: AsynchronousResponse, Attribute: transactionStatusCode  -->
 		<MessageStatusCode>Success</MessageStatusCode>
@@ -19,6 +19,8 @@
 				<!--  Class: AsynchronousResponse, Attribute: destinationAgency  -->
 				<nc:OrganizationName>07</nc:OrganizationName>
 			</MessageDestination>
+			<!--  Class: AsynchronousResponse, Attribute: transactionID  -->
+			<nola-ext:TransactionID>String</nola-ext:TransactionID>
 		</nola-ext:MessageStatusAugmentation>
 	</MessageStatus>
 </nola:AsynchronousResponseMessage>
