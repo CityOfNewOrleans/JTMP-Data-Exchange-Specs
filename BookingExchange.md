@@ -46,7 +46,7 @@ Subscribers may create new pending case events or update previously-created even
 ![XML Schemas](schemas/booking_iepd/api/xml_schema)
 
 **Mapping Spreadsheet:**
-![Mapping Spreadsheet](schemas/booking_iepd/artifacts/Expanded_Booking_MappingSpreadsheet.xlsx)
+![Mapping Spreadsheet](schemas/booking_iepd/artifacts/Booking_MappingSpreadsheet.xlsx)
 
 **Sample XML:**
 ![Sample XML File](schemas/booking_iepd/examples/Annotated_Booking_Release.xml)
