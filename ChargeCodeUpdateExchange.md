@@ -43,7 +43,10 @@ XML Schemas - coming soon
 ## Artifacts
 
 Mapping Spreadsheet - coming soon
+![Mapping Spreadsheet](schemas/UniformChargeTable_iepd/artifacts/UniformChargeTable_MappingSpreadsheet.xlsx)
 
-**Class Diagram:** - coming soon
+**Class Diagram:**
+![Class Diagram-SVG file](schemas/UniformChargeTable_iepd/artifacts/UniformChargeTable_ClassDiagram.svg).
+![Class Diagram-JEPG file](schemas/UniformChargeTable_iepd/artifacts/UniformChargeTable_ClassDiagram.jpg).
 
 Sample XML File - coming soon
