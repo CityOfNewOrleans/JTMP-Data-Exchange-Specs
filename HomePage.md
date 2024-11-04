@@ -17,4 +17,5 @@ Incident|Records Management System |TBD |incidentReport|
 |Court Event|Court Case Management System (CMS)|[Court Event IEPD](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/CourtEventExchange.md) |courtEvent|
 |Court Order|Criminal District Court CMS/Municipal & Traffic Court CMS|[Court Order IEPD](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/CourtOrderExchange.md)|courtOrder|
 |Charge Code Table Updates|Centrally-hosted Uniform Charge Table|[ChargeUpdate IEPD](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/ChargeCodeUpdateExchange.md)|chargeUpdate|
+|Uniform Commitment Order|Sentencing and Disposition Data - follows LA State Uniform Commitment Order format|[UniformCommitmentOrder IEPD](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/ChargeCodeUpdateExchange.md)|UniformCommitmentOrder|
 |Asynchronous Responses|All Subscribers|[Async Response IEPD](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/AsyncResponse.md)|AsyncResponse|
