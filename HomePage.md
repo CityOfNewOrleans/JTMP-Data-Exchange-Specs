@@ -12,7 +12,7 @@ The following diagram provides an overview of the JTMP Service Bus. ​</p>
 |-----|------|------|-----|
 |Arrest|Records Management System |TBD|arrestReport|
 Incident|Records Management System |TBD |incidentReport|
-|Booking | Jail Management System|[Booking and Release IEPD](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/BookingExchange.md) |bookingAndRelease|
+|Booking | Jail Management System|[Booking and Release IEPD](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/schemas/booking_iepd/BookingAndRelease.md) |bookingAndRelease|
 |New Case Initiation |Court CMS|[Case Initation IEPD](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/CaseInitiation.md) |caseInitiation|
 |Court Event|Court Case Management System (CMS)|[Court Event IEPD](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/CourtEventExchange.md) |courtEvent|
 |Court Order|Criminal District Court CMS/Municipal & Traffic Court CMS|[Court Order IEPD](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/CourtOrderExchange.md)|courtOrder|
