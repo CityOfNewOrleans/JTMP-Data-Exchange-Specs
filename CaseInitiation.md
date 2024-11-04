@@ -30,7 +30,7 @@ This exchange will also convey the details of the one or more charges filed on t
 
 ## Data Requirements:
 
-XML Schemas - coming soon
+![XML Schemas](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/tree/main/schemas/CaseInitiation_iepd/api/xml_schema).
 
 ### Key data elements include:
 - Arrest number (enabling the JMS to correlate a new case to a previous Booking or Charge Screening). 
@@ -43,12 +43,9 @@ XML Schemas - coming soon
 
 ## Artifacts:
 
-**Mapping Spreadsheet:** 
 ![Mapping Spreadsheet](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/CaseInitiation_iepd/artifacts/CaseInitiation_MappingSpreasheet.xlsx). 
 
-**XML Schemas:** - coming soon
-
-**Sample XML File** - coming soon
+![Sample XML Files](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/tree/main/schemas/CaseInitiation_iepd/examples).
 
 **Class Diagram:** 
 ![Class Diagram](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/CaseInitiation_iepd/artifacts/CaseInitiation_ClassDiagram.svg). 
