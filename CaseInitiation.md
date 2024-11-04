@@ -43,11 +43,15 @@ XML Schemas - coming soon
 
 ## Artifacts:
 
-Mapping Spreadsheet - coming soon
+**Mapping Spreadsheet:** 
+![Mapping Spreadsheet](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/CaseInitiation_iepd/artifacts/CaseInitiation_MappingSpreasheet.xlsx). 
 
-**Class Diagram:** - coming soon
+**XML Schemas:** - coming soon
 
+**Sample XML File** - coming soon
 
-Sample XML File - coming soon
+**Class Diagram:** 
+![Class Diagram](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/CaseInitiation_iepd/artifacts/CaseInitiation_ClassDiagram.svg). 
+
 
 
