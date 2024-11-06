@@ -41,9 +41,9 @@ XML Schemas - coming soon
 - ChargeString - a Concatenation of Title, ChargeViolation, ChargeSubparagraph and Class to uniquely identify a charge with a more user-readable syntax 
 
 ## Artifacts
+**Sample XML File** - coming soon
 
-Mapping Spreadsheet - coming soon
+![Mapping Spreadsheet](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/UniformChargeTable_iepd/artifacts/UniformChargeTable_MappingSpreadsheet.xlsx)
 
-**Class Diagram:** - coming soon
+![Class Diagram](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/UniformChargeTable_iepd/artifacts/UniformChargeTable_ClassDiagram.svg)
 
-Sample XML File - coming soon
