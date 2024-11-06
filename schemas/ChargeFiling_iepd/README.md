@@ -2,7 +2,7 @@
 
 # Charge Filing Exchange
 
-A Prosecutor's Case Management or Matter Management System (CMS or MMS) will publish a New Chage Filing message each time an Assistant District Attorney, paralegal or other professional completes a charge filing document and saves or indicates it is Ready to File. 
+A Prosecutor's Case Management or Matter Management System (CMS or MMS) will publish a New Charge Filing message each time an Assistant District Attorney, paralegal or other professional completes a charge filing document and saves or indicates it is Ready to File. 
 
 In Orleans Parish, the charge-filing instrument is known as a Bill of Information or BOI). The BOI is normally accompanied by a Screening Action Form. The Screening Action Form contains all of the data necessary for a Court Clerk to either (a) create a new criminal court case; or (b) match a formal filing of charges to an existing Magistrate or Pre-Filing (temporary) case.  In Orleans Parish a BOI kicks off the Allotment process, whereby the new case gets assigned to a court section based on court section caseloads and case types.  
 
