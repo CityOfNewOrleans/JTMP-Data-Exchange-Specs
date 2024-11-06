@@ -1,3 +1,5 @@
+![Return to the JTMP landing page](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/HomePage.md)
+
 # New Case Initiation Exchange
 
 A Courts' Case Management (CMS) will publish a New Case Initiation message each time a Clerk creates a new Criminal case (other case types?). This data exchange serves two purposes: to provide case details and a court case number to parties that need to track or contribute to case processing; and to correlate a court case with a preceeding event sent by another publishing system, for example a Booking message published by the jail management system (JMS). 
