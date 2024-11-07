@@ -37,7 +37,7 @@ This exchange will also leverage the UCTID from the Uniform Charge Table to impr
 
 ## Data Requirements:
 
-![XML Schemas](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/tree/main/schemas/CaseInitiation_iepd/api/xml_schema).
+XML Schemas - coming soon. 
 
 ### Key data elements include:
 - Arrest number (enabling the JMS to correlate a new case to a previous Booking or Charge Screening). 
