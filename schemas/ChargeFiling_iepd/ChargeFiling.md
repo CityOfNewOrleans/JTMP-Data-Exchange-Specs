@@ -50,10 +50,10 @@ This exchange will also leverage the UCTID from the Uniform Charge Table to impr
 
 ## Artifacts: coming soon. 
 
-![Mapping Spreadsheet](). 
+**Mapping Spreadsheet** - coming soon
 
-![Sample XML Files](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/tree/main/schemas/CaseInitiation_iepd/examples).
+**Sample XML Files** - coming soon
 
-**Class Diagram:** 
-![Class Diagram](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/CaseInitiation_iepd/artifacts/CaseInitiation_ClassDiagram.svg). 
+**Class Diagram:**  - coming soon
+
 
