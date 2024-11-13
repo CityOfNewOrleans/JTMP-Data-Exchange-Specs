@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+<xs:schema xmlns:nola="http://mcp.com/nola/v/1.0/" xmlns:nola-ext="http://mcp.com/nola/extension/v/1.0/" xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/" xmlns:niem-xs="http://release.niem.gov/niem/proxy/niem-xs/5.0/" xmlns:j="http://release.niem.gov/niem/domains/jxdm/7.2/" xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/" xmlns:cls="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-instance/" xmlns:clsa="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-schema-appinfo/" xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/" xmlns:structures="http://release.niem.gov/niem/structures/5.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://mcp.com/nola/extension/v/1.0/" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1" xml:lang="en-US" ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ReferenceSchemaDocument">
+	<xs:annotation>
+		<xs:documentation>Uniform Commitment Order extension schema for NOLA.</xs:documentation>
+	</xs:annotation>
+	<!-- NIEM schema imports -->
+	<xs:import namespace="http://release.niem.gov/niem/niem-core/5.0/" schemaLocation="./niem\xsd\niem-core.xsd"/>
+	<xs:import namespace="http://release.niem.gov/niem/proxy/niem-xs/5.0/" schemaLocation="./niem\xsd\adapters\niem-xs.xsd"/>
+	<xs:import namespace="http://release.niem.gov/niem/domains/jxdm/7.2/" schemaLocation="./niem\xsd\domains\jxdm.xsd"/>
+	<xs:import namespace="http://release.niem.gov/niem/appinfo/5.0/" schemaLocation="./niem\xsd\utility\appinfo.xsd"/>
+	<xs:import namespace="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-instance/" schemaLocation="./niem\xsd\utility\code-lists-instance.xsd"/>
+	<xs:import namespace="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-schema-appinfo/" schemaLocation="./niem\xsd\utility\code-lists-schema-appinfo.xsd"/>
+	<xs:import namespace="http://release.niem.gov/niem/conformanceTargets/3.0/" schemaLocation="./niem\xsd\utility\conformanceTargets.xsd"/>
+	<xs:import namespace="http://release.niem.gov/niem/structures/5.0/" schemaLocation="./niem\xsd\utility\structures.xsd"/>
+	<!-- complexType Definitions, NIEM mapping ======================================================================== -->
+	<xs:complexType name="NOLAExchangeType">
+		<xs:annotation>
+			<xs:documentation>A data type for a common ancestor containing exchange level data relevant to exchanges in NOLA.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="structures:ObjectType">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="MessageAugmentationType">
+		<xs:annotation>
+			<xs:documentation>An augmentation type for the Uniform Commitment Order message.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="structures:AugmentationType">
+				<xs:sequence>
+<!--
+					<xs:element ref="cbrn:MessageDestination" minOccurs="0" maxOccurs="1"/>
+					<xs:element ref="nola-ext:TransactionID" minOccurs="0" maxOccurs="1"/>
+-->
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Augmentation Elements ======================================================================== -->
+<!--
+	<xs:element name="MessageStatusAugmentation" type="nola-ext:MessageStatusAugmentationType" substitutionGroup="cbrn:MessageStatusAugmentationPoint">
+		<xs:annotation>
+			<xs:documentation>The destination agency to whom the request was related to. This is not required but is a middleware debugging convenience.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+-->
+	<!-- New Element definitions ======================================================================== -->
+<!--
+		<xs:element name="TransactionID" type="niem-xs:string">
+		<xs:annotation>
+			<xs:documentation>The original transactionID that was set by the originator of the message.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+-->
+</xs:schema>
