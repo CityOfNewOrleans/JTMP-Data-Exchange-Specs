@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<w:WantList w:release="5.2" w:product="NIEM" w:nillableDefault="true"
+  xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/"
+  xmlns:w="http://niem.gov/niem/wantlist/2.2" xmlns:j="http://release.niem.gov/niem/domains/jxdm/7.2/">
+  <w:Element w:name="j:Charge" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="j:Statute" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="j:StatuteCategoryText" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="j:StatuteDescriptionText" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="j:StatuteStatus" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="j:StatuteText" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:SourceText" w:isReference="false" w:nillable="true"/>
+  <w:Type w:name="j:ChargeType" w:isRequested="true">
+    <w:ElementInType w:name="j:ChargeArrestReasonIndicator"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="j:ChargeDisposition" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="j:ChargeSpecialAllegationText"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="j:ChargeStatute" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="j:ChargeAugmentationPoint"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="j:StatuteType" w:isRequested="false">
+    <w:ElementInType w:name="j:StatuteCodeSectionIdentification"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:DocumentType" w:isRequested="true">
+    <w:ElementInType w:name="nc:DocumentEffectiveDate"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:PersonNameType" w:isRequested="true">
+    <w:ElementInType w:name="nc:PersonFullName" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+</w:WantList>
