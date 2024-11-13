@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ChargeTableUpdateMessage xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/"
+ xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/"
+ xmlns="http://mcp.com/nola/v/1.0/"
+ xmlns:nola-ext="http://mcp.com/nola/extension/v/1.0/"
+ xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/"
+ xmlns:niem-xs="http://release.niem.gov/niem/proxy/niem-xs/5.0/"
+ xmlns:j="http://release.niem.gov/niem/domains/jxdm/7.2/"
+ xmlns:cls="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-instance/"
+ xmlns:clsa="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-schema-appinfo/"
+ xmlns:structures="http://release.niem.gov/niem/structures/5.0/"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://mcp.com/nola/v/1.0/ file:/C:/Users/JamesCabral/git/JTMP-Data-Exchange-Specs/schemas/UniformChargeTable_iepd/api/xml_schema/ChargeTableUpdate_NOLA.xsd">
+    <j:Charge>
+        <
+    </j:Charge>
+    <j:Charge>
+    </j:Charge>
+</ChargeTableUpdateMessage>
