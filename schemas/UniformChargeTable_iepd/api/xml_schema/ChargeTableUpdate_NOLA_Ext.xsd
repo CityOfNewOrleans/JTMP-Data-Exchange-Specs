@@ -31,9 +31,34 @@
 		<xs:complexContent>
 			<xs:extension base="structures:AugmentationType">
 				<xs:sequence>
-					<xs:element ref="nola-ext:ChargeAuditLog" minOccurs="0" maxOccurs="unbounded"/>
-					<xs:element ref="nola-ext:ChargeDocument" minOccurs="0" maxOccurs="1"/>
+					<xs:element ref="nc:SourceText" minOccurs="0" maxOccurs="1"/>				
+					<xs:element ref="nola-ext:ChargeKey" minOccurs="0" maxOccurs="1"/>
 					<xs:element ref="nola-ext:ChargeOffenseReportingIndicator" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ChargeAuditLogAssociationType">
+		<xs:annotation>
+			<xs:documentation>An association between a charge and an audit log.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="structures:AssociationType">
+				<xs:sequence>
+					<xs:element ref="j:Charge" minOccurs="0" maxOccurs="1"/>
+					<xs:element ref="nola-ext:AuditLog" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="StatuteAugmentationType">
+		<xs:annotation>
+			<xs:documentation>An augmentation type for a Statute.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="structures:AugmentationType">
+				<xs:sequence>
+					<xs:element ref="nola-ext:StatuteCodeSectionSubparagraphIdentification" minOccurs="0" maxOccurs="1"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -41,23 +66,38 @@
 	<!-- Augmentation Elements ======================================================================== -->
 	<xs:element name="ChargeAugmentation" type="nola-ext:ChargeAugmentationType" substitutionGroup="j:ChargeAugmentationPoint">
 		<xs:annotation>
-			<xs:documentation>The destination agency to whom the request was related to. This is not required but is a middleware debugging convenience.</xs:documentation>
+			<xs:documentation>An augmentation of a charge in NOLA.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="StatuteAugmentation" type="nola-ext:StatuteAugmentationType" substitutionGroup="j:StatuteAugmentationPoint">
+		<xs:annotation>
+			<xs:documentation>An augmentation of a statute in NOLA.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<!-- New Element definitions ======================================================================== -->
-	<xs:element name="ChargeAuditLog" type="structures:AssociationType">
-		<xs:annotation>
-			<xs:documentation>An association of a charge to an audit log,</xs:documentation>
-		</xs:annotation>
-	</xs:element>
-	<xs:element name="ChargeDocument" type="nc:DocumentType">
+	<xs:element name="AuditLog" type="nc:DocumentType">
 		<xs:annotation>
 			<xs:documentation>A document with charge update(s).</xs:documentation>
 		</xs:annotation>
 	</xs:element>	
+	<xs:element name="ChargeAuditLogAssociation" type="nola-ext:ChargeAuditLogAssociationType">
+		<xs:annotation>
+			<xs:documentation>An association of a charge to an audit log.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="ChargeKey" type="nc:TextType">
+		<xs:annotation>
+			<xs:documentation>A UCT Charge Key (Uniform Charge Table) is a shared key or identifier from a shared table that standardizes charge code definitions across the enterprise.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 	<xs:element name="ChargeOffenseReportingIndicator" type="niem-xs:boolean">
 		<xs:annotation>
 			<xs:documentation>An indicator whether a charge is viewable for offense reporting</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="StatuteCodeSectionSubparagraphIdentification" type="nc:IdentificationType">
+		<xs:annotation>
+			<xs:documentation>A minor numbered paragraph reference in statute or ordinance</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 

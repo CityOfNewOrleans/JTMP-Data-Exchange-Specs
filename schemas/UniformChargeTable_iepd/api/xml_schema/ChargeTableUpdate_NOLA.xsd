@@ -23,6 +23,8 @@
 			<xs:extension base="nola-ext:NOLAExchangeType">
 				<xs:sequence>
 					<xs:element ref="j:Charge" minOccurs="1" maxOccurs="unbounded"/>
+					<xs:element ref="nola-ext:AuditLog" minOccurs="0" maxOccurs="1"/>
+					<xs:element ref="nola-ext:ChargeAuditLogAssociation" minOccurs="0" maxOccurs="unbounded"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
