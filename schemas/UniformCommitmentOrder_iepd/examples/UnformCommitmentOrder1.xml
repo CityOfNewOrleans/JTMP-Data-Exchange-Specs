@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UniformCommitmentOderMessage xmlns:structures="http://release.niem.gov/niem/structures/5.0/"
+    xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/"
+    xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:niem-xs="http://release.niem.gov/niem/proxy/niem-xs/5.0/"
+    xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/"
+    xmlns:j="http://release.niem.gov/niem/domains/jxdm/7.2/" xmlns="http://mcp.com/nola/v/1.0/"
+    xmlns:hs="http://release.niem.gov/niem/domains/humanServices/5.2/"
+    xmlns:nola-ext="http://mcp.com/nola/extension/v/1.0/"
+    xmlns:cls="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-instance/"
+    xmlns:clsa="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-schema-appinfo/"
+    xsi:schemaLocation="http://mcp.com/nola/v/1.0/ file:/C:/Users/JamesCabral/git/JTMP-Data-Exchange-Specs/schemas/UniformCommitmentOrder_iepd/api/xml_schema/UniformCommitmentOrder_NOLA.xsd">
+    <nola-ext:UniformCommitmentOrder>
+        <j:Conviction>
+            <j:ConvictionPlea>
+                <!-- Verdict/plea (if a plea) -->
+                <j:PleaDescriptionText>G</j:PleaDescriptionText>
+            </j:ConvictionPlea>
+            <j:ConvictionVerdict>
+                <!-- Verdict/plea (if a verdict -->
+                <j:VerdictDescriptionText>G</j:VerdictDescriptionText>
+            </j:ConvictionVerdict>
+        </j:Conviction>
+        <j:CourtOrder>
+            <j:CourtOrderDesignatedSubject>
+                <nc:RoleOfPerson>
+                    <nc:PersonBirthDate>
+                        <!-- Offender Date of Birth -->
+                        <nc:Date>1986-06-18</nc:Date>
+                    </nc:PersonBirthDate>
+                    <nc:PersonName>
+                        <!-- Offender Name -->
+                        <nc:PersonFullName>John Doe</nc:PersonFullName>
+                    </nc:PersonName>
+                    <!-- Offender Race -->
+                    <nc:PersonRaceText>BLACK</nc:PersonRaceText>
+                    <!-- Offendef Sex -->
+                    <nc:PersonSexText>M</nc:PersonSexText>
+                    <nc:PersonStateIdentification>
+                        <!-- Offender State Id Number -->
+                        <nc:IdentificationID>999999999</nc:IdentificationID>
+                    </nc:PersonStateIdentification>
+                    <nc:PersonContactInformation>
+                        <nc:ContactMailingAddress>
+                            <!-- Offender Address -->
+                            <nc:AddressFullText>101 Main St, New Orleans, LA 70032</nc:AddressFullText>
+                        </nc:ContactMailingAddress>
+                        <nc:ContactTelephoneNumber>
+                            <nc:FullTelephoneNumber>
+                                <!-- Offender Phone -->
+                                <nc:TelephoneNumberFullID>502-555-1212</nc:TelephoneNumberFullID>
+                            </nc:FullTelephoneNumber>
+                        </nc:ContactTelephoneNumber>
+                    </nc:PersonContactInformation>
+                    <hs:PersonAugmentation>
+                        <hs:HealthDetails>
+                            <hs:SubstanceAbuseDetails>
+                                <!-- Drug offense activity -->
+                                <hs:DrugUseFrequencyDescriptionText>possession</hs:DrugUseFrequencyDescriptionText>
+                                <nc:Substance>
+                                    <!-- Drug offense type -->
+                                    <nc:SubstanceCategoryText>marijuana</nc:SubstanceCategoryText>
+                                </nc:Substance>
+                            </hs:SubstanceAbuseDetails>
+                        </hs:HealthDetails>
+                    </hs:PersonAugmentation>
+                </nc:RoleOfPerson>
+            </j:CourtOrderDesignatedSubject>
+            <j:CourtOrderIssuingDate>
+                <!-- Sentence Signed date -->
+                <nc:Date>2019-03-23</nc:Date>
+            </j:CourtOrderIssuingDate>
+            <j:CourtOrderIssuingJudicialOfficial>
+                <nc:RoleOfPerson>
+                    <nc:PersonName>
+                        <!-- Judge name -->
+                        <nc:PersonFullName>Hon. Jim Smith</nc:PersonFullName>
+                    </nc:PersonName>
+                    <nc:PersonContactInformation>
+                        <nc:ContactMailingAddress>
+                            <!-- Judge address -->
+                            <nc:AddressFullText>103 Main St., New Orleans, LA 70032</nc:AddressFullText>
+                        </nc:ContactMailingAddress>
+                    </nc:PersonContactInformation>
+                </nc:RoleOfPerson>
+            </j:CourtOrderIssuingJudicialOfficial>
+            <nola-ext:CourtOrderAugmentation>
+                <nc:Case>
+                    <!-- Docket numner -->
+                    <nc:CaseDocketID>12-17-0304</nc:CaseDocketID>
+                    <j:CaseAugmentation>
+                        <j:CaseCourt>
+                            <!-- Judicial district -->
+                            <j:CourtName>41st Judicial District Court</j:CourtName>
+                            <!-- Court section -->
+                            <j:CourtDivisionText>5</j:CourtDivisionText>
+                            <nola-ext:CourtAugmentation>
+                                <!-- Parish of commitment -->
+                                <nc:AddressCountyName>Orleans</nc:AddressCountyName>
+                            </nola-ext:CourtAugmentation>
+                        </j:CaseCourt>
+                        <j:CaseCourtEvent>
+                            <nc:ActivityDate>
+                                <!-- Adjudication date -->
+                                <nc:Date>2019-03-22</nc:Date>
+                            </nc:ActivityDate>
+                        </j:CaseCourtEvent>
+                        <j:CaseDefenseAttorney>
+                            <nc:RoleOfPerson>
+                                <nc:PersonName>
+                                    <!-- Defense attorney -->
+                                    <nc:PersonFullName>Robert Smith</nc:PersonFullName>
+                                </nc:PersonName>
+                                <nc:PersonContactInformation>
+                                    <nc:ContactMailingAddress>
+                                        <!-- Defense attorney address -->
+                                        <nc:AddressFullText>102 Main St., New Orleans, LA 70032</nc:AddressFullText>
+                                    </nc:ContactMailingAddress>
+                                </nc:PersonContactInformation>
+                            </nc:RoleOfPerson>
+                        </j:CaseDefenseAttorney>
+                        <j:CaseProsecutionAttorney>
+                            <nc:RoleOfPerson>
+                                <nc:PersonName>
+                                    <!-- Prosecution attorney -->
+                                    <nc:PersonFullName>John Smith</nc:PersonFullName>
+                                </nc:PersonName>
+                                <nc:PersonContactInformation>
+                                    <nc:ContactMailingAddress>
+                                        <!-- Prosecutor address -->
+                                        <nc:AddressFullText>100 Main St., New Orleans, LA 70032</nc:AddressFullText>
+                                    </nc:ContactMailingAddress>
+                                </nc:PersonContactInformation>
+                            </nc:RoleOfPerson>
+                        </j:CaseProsecutionAttorney>
+                    </j:CaseAugmentation>
+                </nc:Case>
+                <nc:Document>
+                    <nc:DocumentSubmitter>
+                        <nc:EntityPerson>
+                            <nc:PersonName>
+                                <!-- Minute clerk -->
+                                <nc:PersonFullName>Jane Doe</nc:PersonFullName>
+                            </nc:PersonName>
+                        </nc:EntityPerson>
+                    </nc:DocumentSubmitter>
+                </nc:Document>
+                <nola-ext:CourtReporter>
+                    <nc:PersonName>
+                        <!-- Court reporter -->
+                        <nc:PersonFullName>Jane Smith</nc:PersonFullName>
+                    </nc:PersonName>
+                </nola-ext:CourtReporter>
+            </nola-ext:CourtOrderAugmentation>
+        </j:CourtOrder>
+        <j:Sentence>
+            <nc:ActivityDate>
+                <!-- Sentence date -->
+                <nc:Date>2019-03-22</nc:Date>
+            </nc:ActivityDate>
+            <j:SentenceCharge>
+                <!-- Counts -->
+                <j:ChargeCountQuantity>1</j:ChargeCountQuantity>
+                <j:ChargeDisposition>
+                    <!-- Charges dismissed or not guilty -->
+                    <nc:DispositionCategoryText>2</nc:DispositionCategoryText>
+                    <!-- Waiver of minimum mandatory sentence -->
+                    <nc:DispositionDescriptionText>No</nc:DispositionDescriptionText>
+                </j:ChargeDisposition>
+                <j:ChargeEnhancingAllegationCharge>
+                    <j:ChargeStatute>
+                        <j:StatuteCodeIdentification>
+                            <!-- Enhancements/modiiers -->
+                            <nc:IdentificationID>14:27</nc:IdentificationID>
+                        </j:StatuteCodeIdentification>
+                    </j:ChargeStatute>
+                </j:ChargeEnhancingAllegationCharge>
+                <j:ChargeStatute>
+                    <j:StatuteCodeIdentification>
+                        <!-- Convicted of -->
+                        <nc:IdentificationID>40:1023 POSS OF DRUG PARA</nc:IdentificationID>
+                    </j:StatuteCodeIdentification>
+                </j:ChargeStatute>
+                <nola-ext:ChargeAugmentation>
+                    <nola-ext:OffenseDate>
+                        <!-- Offense date-->
+                        <nc:Date>2017-10-23</nc:Date>
+                    </nola-ext:OffenseDate>
+                </nola-ext:ChargeAugmentation>
+            </j:SentenceCharge>
+            <!-- Credit for time served -->
+            <j:SentenceConfinementCreditIndicator>false</j:SentenceConfinementCreditIndicator>
+            <!-- Probation after incarceration -->
+            <j:SentenceDescriptionText>No probation</j:SentenceDescriptionText>
+            <j:SentenceTerm>
+                <!-- Total sentence length -->
+                <j:TermLifeIndicator>true</j:TermLifeIndicator>
+            </j:SentenceTerm>
+            <nola-ext:SentenceAugmentation>
+                <j:Incarceration>
+                    <j:SupervisionAugmentation>
+                        <j:SupervisionAssignedTerm>
+                            <!-- Imposed time -->
+                            <j:TermLifeIndicator>true</j:TermLifeIndicator>
+                            <!-- Minimum time served -->
+                            <j:TermMinimumDuration>P1Y0M0D</j:TermMinimumDuration>
+                        </j:SupervisionAssignedTerm>
+                    </j:SupervisionAugmentation>
+                </j:Incarceration>
+                <nola-ext:RelatedSentenceAssociation>
+                    <!-- Concurrent with -->
+                    <nc:CaseDocketID>12-17-0302</nc:CaseDocketID>
+                    <!-- Concurrent sentence -->
+                    <nola-ext:SentenceAssociationCode>concurrent</nola-ext:SentenceAssociationCode>
+                </nola-ext:RelatedSentenceAssociation>
+                <nola-ext:RelatedSentenceAssociation>
+                    <!-- Consecutive to -->
+                    <nc:CaseDocketID>12-17-0303</nc:CaseDocketID>
+                    <!-- Consecutive sentence -->
+                    <nola-ext:SentenceAssociationCode>consecutive</nola-ext:SentenceAssociationCode>
+                </nola-ext:RelatedSentenceAssociation>
+                <nola-ext:RelatedSentenceAssociation>
+                    <!-- Multiple bill proceeding -->
+                    <nc:CaseDocketID>12-17-0303</nc:CaseDocketID>
+                    <!-- Multiple bill -->
+                    <nola-ext:SentenceAssociationCode>multiplebill</nola-ext:SentenceAssociationCode>
+                </nola-ext:RelatedSentenceAssociation>
+                <!-- Special comments -->
+                <nola-ext:SentenceSpecialConditionText>No special comments</nola-ext:SentenceSpecialConditionText>
+            </nola-ext:SentenceAugmentation>
+        </j:Sentence>
+        <j:SentenceModification>
+            <!-- Revocation date -->
+            <nc:ActivityDate>
+                <nc:Date>2020-01-01</nc:Date>
+            </nc:ActivityDate>
+            <j:SentenceModificationDismissalIndicator>true</j:SentenceModificationDismissalIndicator>
+        </j:SentenceModification>
+        <j:SubjectAssignment>
+            <j:ServiceDeliveryProgram>
+                <!-- Setnence abuse treatment -->
+                <nc:ActivityName>No sentence abuse treatment</nc:ActivityName>
+            </j:ServiceDeliveryProgram>
+        </j:SubjectAssignment>
+    </nola-ext:UniformCommitmentOrder>
+</UniformCommitmentOderMessage>

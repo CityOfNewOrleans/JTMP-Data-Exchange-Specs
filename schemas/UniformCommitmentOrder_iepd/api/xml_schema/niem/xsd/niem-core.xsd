@@ -108,6 +108,7 @@
       <xs:extension base="structures:ObjectType">
         <xs:sequence>
           <xs:element ref="nc:DispositionCategoryAbstract" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="nc:DispositionDescriptionText" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="nc:DispositionText" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
       </xs:extension>
@@ -142,7 +143,11 @@
       <xs:documentation>A data type for a full telephone number.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="structures:ObjectType"/>
+      <xs:extension base="structures:ObjectType">
+        <xs:sequence>
+          <xs:element ref="nc:TelephoneNumberFullID" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
     </xs:complexContent>
   </xs:complexType>
   <xs:complexType name="IdentificationType">
@@ -201,6 +206,7 @@
     <xs:complexContent>
       <xs:extension base="structures:ObjectType">
         <xs:sequence>
+          <xs:element ref="nc:PersonBirthDate" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="nc:PersonName" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="nc:PersonRaceAbstract" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="nc:PersonSexAbstract" minOccurs="0" maxOccurs="1"/>
@@ -356,6 +362,11 @@
       <xs:documentation>A kind of disposition.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="DispositionDescriptionText" type="nc:TextType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A description of a disposition.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="DispositionText" type="nc:TextType" nillable="true">
     <xs:annotation>
       <xs:documentation>A result or outcome of a disposition.</xs:documentation>
@@ -399,6 +410,11 @@
   <xs:element name="PersonAugmentationPoint" abstract="true">
     <xs:annotation>
       <xs:documentation>An augmentation point for PersonType.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PersonBirthDate" type="nc:DateType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A date a person was born.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="PersonContactInformation" type="nc:ContactInformationType" nillable="true">
@@ -474,6 +490,11 @@
   <xs:element name="TelephoneNumberAbstract" abstract="true">
     <xs:annotation>
       <xs:documentation>A data concept for a telephone number.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TelephoneNumberFullID" type="niem-xs:string" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A complete telephone number.</xs:documentation>
     </xs:annotation>
   </xs:element>
 </xs:schema>

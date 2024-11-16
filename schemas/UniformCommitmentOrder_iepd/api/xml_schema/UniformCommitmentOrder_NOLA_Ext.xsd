@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="US-ASCII"?>
-<xs:schema xmlns:nola="http://mcp.com/nola/v/1.0/" xmlns:nola-ext="http://mcp.com/nola/extension/v/1.0/" xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/" xmlns:niem-xs="http://release.niem.gov/niem/proxy/niem-xs/5.0/" xmlns:j="http://release.niem.gov/niem/domains/jxdm/7.2/" xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/" xmlns:cls="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-instance/" xmlns:clsa="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-schema-appinfo/" xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/" xmlns:structures="http://release.niem.gov/niem/structures/5.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://mcp.com/nola/extension/v/1.0/" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1" xml:lang="en-US" ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ReferenceSchemaDocument">
+<xs:schema xmlns:nola="http://mcp.com/nola/v/1.0/" xmlns:nola-ext="http://mcp.com/nola/extension/v/1.0/" xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/" xmlns:niem-xs="http://release.niem.gov/niem/proxy/niem-xs/5.0/" xmlns:j="http://release.niem.gov/niem/domains/jxdm/7.2/" xmlns:hs="http://release.niem.gov/niem/domains/humanServices/5.2/" xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/" xmlns:cls="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-instance/" xmlns:clsa="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-schema-appinfo/" xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/" xmlns:structures="http://release.niem.gov/niem/structures/5.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://mcp.com/nola/extension/v/1.0/" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1" xml:lang="en-US" ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ReferenceSchemaDocument">
 	<xs:annotation>
 		<xs:documentation>Uniform Commitment Order extension schema for NOLA.</xs:documentation>
 	</xs:annotation>
@@ -7,6 +7,7 @@
 	<xs:import namespace="http://release.niem.gov/niem/niem-core/5.0/" schemaLocation="./niem\xsd\niem-core.xsd"/>
 	<xs:import namespace="http://release.niem.gov/niem/proxy/niem-xs/5.0/" schemaLocation="./niem\xsd\adapters\niem-xs.xsd"/>
 	<xs:import namespace="http://release.niem.gov/niem/domains/jxdm/7.2/" schemaLocation="./niem\xsd\domains\jxdm.xsd"/>
+	<xs:import namespace="http://release.niem.gov/niem/domains/humanServices/5.2/" schemaLocation="./niem\xsd\domains\hs.xsd"/>	
 	<xs:import namespace="http://release.niem.gov/niem/appinfo/5.0/" schemaLocation="./niem\xsd\utility\appinfo.xsd"/>
 	<xs:import namespace="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-instance/" schemaLocation="./niem\xsd\utility\code-lists-instance.xsd"/>
 	<xs:import namespace="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-schema-appinfo/" schemaLocation="./niem\xsd\utility\code-lists-schema-appinfo.xsd"/>
@@ -23,35 +24,137 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:complexType name="MessageAugmentationType">
+	<xs:complexType name="UnformComitmentOrderType">
 		<xs:annotation>
-			<xs:documentation>An augmentation type for the Uniform Commitment Order message.</xs:documentation>
+			<xs:documentation>A data type for a uniform commitment order in NOLA.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="nola-ext:NOLAExchangeType">
+				<xs:sequence>
+					<xs:element ref="j:Conviction" minOccurs="0" maxOccurs="1"/>
+					<xs:element ref="j:CourtOrder" minOccurs="0" maxOccurs="1"/>					
+					<xs:element ref="j:Sentence" minOccurs="0" maxOccurs="1"/>
+					<xs:element ref="j:SentenceModification" minOccurs="0" maxOccurs="1"/>
+					<xs:element ref="j:SubjectAssignment" minOccurs="0" maxOccurs="1"/>		
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ChargeAugmentationType">
+		<xs:annotation>
+			<xs:documentation>An augmentation type for a charge in NOLA.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="structures:AugmentationType">
 				<xs:sequence>
-<!--
-					<xs:element ref="cbrn:MessageDestination" minOccurs="0" maxOccurs="1"/>
-					<xs:element ref="nola-ext:TransactionID" minOccurs="0" maxOccurs="1"/>
--->
+					<xs:element ref="nola-ext:OffenseDate" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="CourtAugmentationType">
+		<xs:annotation>
+			<xs:documentation>An augmentation type for a court in NOLA.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="structures:AugmentationType">
+				<xs:sequence>
+					<xs:element ref="nc:AddressCountyName" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="CourtOrderAugmentationType">
+		<xs:annotation>
+			<xs:documentation>An augmentation type for a court order in NOLA.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="structures:AugmentationType">
+				<xs:sequence>
+					<xs:element ref="nc:Case" minOccurs="0" maxOccurs="1"/>
+					<xs:element ref="nc:Document" minOccurs="0" maxOccurs="1"/>
+					<xs:element ref="nola-ext:CourtReporter" minOccurs="0" maxOccurs="1"/>					
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SentenceAssociationType">
+		<xs:annotation>
+			<xs:documentation>An augmentation type for a sentence in NOLA.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="structures:AssociationType">
+				<xs:sequence>
+					<xs:element ref="nc:CaseDocketID" minOccurs="0" maxOccurs="1"/>
+					<xs:element ref="nola-ext:SentenceAssociationCode" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SentenceAugmentationType">
+		<xs:annotation>
+			<xs:documentation>An augmentation type for a sentence in NOLA.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="structures:AugmentationType">
+				<xs:sequence>
+					<xs:element ref="j:Incarceration" minOccurs="0" maxOccurs="1"/>
+					<xs:element ref="nola-ext:RelatedSentenceAssociation" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element ref="nola-ext:SentenceSpecialConditionText" minOccurs="0" maxOccurs="unbounded"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
 	<!-- Augmentation Elements ======================================================================== -->
-<!--
-	<xs:element name="MessageStatusAugmentation" type="nola-ext:MessageStatusAugmentationType" substitutionGroup="cbrn:MessageStatusAugmentationPoint">
+	<xs:element name="ChargeAugmentation" type="nola-ext:ChargeAugmentationType" substitutionGroup="j:ChargeAugmentationPoint">
 		<xs:annotation>
-			<xs:documentation>The destination agency to whom the request was related to. This is not required but is a middleware debugging convenience.</xs:documentation>
+			<xs:documentation>An augmentation type for a charge in NOLA</xs:documentation>
 		</xs:annotation>
 	</xs:element>
--->
+	<xs:element name="CourtAugmentation" type="nola-ext:CourtAugmentationType" substitutionGroup="j:CourtAugmentationPoint">
+		<xs:annotation>
+			<xs:documentation>An augmentation type for a court in NOLA</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="CourtOrderAugmentation" type="nola-ext:CourtOrderAugmentationType" substitutionGroup="j:CourtOrderAugmentationPoint">
+		<xs:annotation>
+			<xs:documentation>An augmentation type for a court order in NOLA</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="SentenceAugmentation" type="nola-ext:SentenceAugmentationType" substitutionGroup="j:SentenceAugmentationPoint">
+		<xs:annotation>
+			<xs:documentation>An augmentation type for a sentence in NOLA</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 	<!-- New Element definitions ======================================================================== -->
-<!--
-		<xs:element name="TransactionID" type="niem-xs:string">
+	<xs:element name="CourtReporter" type="nc:PersonType">
 		<xs:annotation>
-			<xs:documentation>The original transactionID that was set by the originator of the message.</xs:documentation>
+			<xs:documentation>A court reporter in NOLA.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
--->
+	<xs:element name="OffenseDate" type="nc:DateType">
+		<xs:annotation>
+			<xs:documentation>The date of an offense in NOLA.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="RelatedSentenceAssociation" type="nola-ext:SentenceAssociationType">
+		<xs:annotation>
+			<xs:documentation>The date of an offense in NOLA.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="SentenceAssociationCode" type="nc:TextType">
+		<xs:annotation>
+			<xs:documentation>A type of association between sentences in NOLA.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="SentenceSpecialConditionText" type="nc:TextType">
+		<xs:annotation>
+			<xs:documentation>A special condition in a sentence in NOLA.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="UniformCommitmentOrder" type="nola-ext:UnformComitmentOrderType">
+		<xs:annotation>
+			<xs:documentation>A uniform commitment order in NOLA.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 </xs:schema>
