@@ -26,7 +26,7 @@ The purpose of the Charge Code Update data exchange is to ensure consistency in 
 
 ## Data Requirements
 
-XML Schemas - coming soon
+![XML Schemas](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/tree/main/schemas/UniformChargeTable_iepd/api)
 
 ### Key data elements include
 
@@ -43,7 +43,7 @@ XML Schemas - coming soon
 - ChargeString - a Concatenation of Title, ChargeViolation, ChargeSubparagraph and Class to uniquely identify a charge with a more user-readable syntax 
 
 ## Artifacts
-**Sample XML File** - coming soon
+![Sample XML File](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/tree/main/schemas/UniformChargeTable_iepd/examples)
 
 ![Mapping Spreadsheet](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/UniformChargeTable_iepd/artifacts/UniformChargeTable_MappingSpreadsheet.xlsx)
 
