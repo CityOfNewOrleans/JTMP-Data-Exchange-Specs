@@ -323,8 +323,8 @@
       <xs:extension base="nc:ActivityType">
         <xs:sequence>
           <xs:element ref="j:TermDuration" minOccurs="0" maxOccurs="1"/>
-          <xs:element ref="j:TermLifeIndicator" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="j:TermMinimumDuration" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="j:TermAugmentationPoint" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -521,14 +521,14 @@
       <xs:documentation>Additional information about a supervision.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="TermAugmentationPoint" abstract="true">
+    <xs:annotation>
+      <xs:documentation>An augmentation point for TermType.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="TermDuration" type="niem-xs:duration" nillable="true">
     <xs:annotation>
       <xs:documentation>A specific range or duration of a term.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="TermLifeIndicator" type="niem-xs:boolean" nillable="true">
-    <xs:annotation>
-      <xs:documentation>True if the term is not for a set duration length but for life; false otherwise.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="TermMinimumDuration" type="niem-xs:duration" nillable="true">

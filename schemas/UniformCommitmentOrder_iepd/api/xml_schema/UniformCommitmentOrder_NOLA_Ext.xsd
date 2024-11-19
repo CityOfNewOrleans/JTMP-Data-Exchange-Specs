@@ -134,29 +134,80 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
+	<xs:complexType name="TermAugmentationType">
+		<xs:annotation>
+			<xs:documentation>An augmentation type for a sentence term in NOLA.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="structures:AugmentationType">
+				<xs:sequence>
+					<xs:element ref="nola-ext:TermCategoryCode" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TermCategoryCodeType">
+		<xs:annotation>
+			<xs:documentation>A code type sentence term in NOLA.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="nola-ext:TermCategoryCodeSimpleType">
+				<xs:attributeGroup ref="structures:SimpleObjectAttributeGroup"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="TermCategoryCodeSimpleType">
+		<xs:annotation>
+			<xs:documentation>A data type sentence term in NOLA.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="life with benefits">
+				<xs:annotation>
+					<xs:documentation>The offender is sentenced to life with the potential benefits of parole/probation.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="life without benefits">
+				<xs:annotation>
+					<xs:documentation>The offender is sentenced to life without the potential benefits of parole/probation.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="death">
+				<xs:annotation>
+					<xs:documentation>The offender is sentenced to death.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	
 	<!-- Augmentation Elements ======================================================================== -->
 	<xs:element name="ChargeAugmentation" type="nola-ext:ChargeAugmentationType"
 		substitutionGroup="j:ChargeAugmentationPoint">
 		<xs:annotation>
-			<xs:documentation>An augmentation type for a charge in NOLA</xs:documentation>
+			<xs:documentation>An augmentation for a charge in NOLA</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="CourtAugmentation" type="nola-ext:CourtAugmentationType"
 		substitutionGroup="j:CourtAugmentationPoint">
 		<xs:annotation>
-			<xs:documentation>An augmentation type for a court in NOLA</xs:documentation>
+			<xs:documentation>An augmentation for a court in NOLA</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="CourtOrderAugmentation" type="nola-ext:CourtOrderAugmentationType"
 		substitutionGroup="j:CourtOrderAugmentationPoint">
 		<xs:annotation>
-			<xs:documentation>An augmentation type for a court order in NOLA</xs:documentation>
+			<xs:documentation>An augmentation for a court order in NOLA</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="SentenceAugmentation" type="nola-ext:SentenceAugmentationType"
 		substitutionGroup="j:SentenceAugmentationPoint">
 		<xs:annotation>
-			<xs:documentation>An augmentation type for a sentence in NOLA</xs:documentation>
+			<xs:documentation>An augmentation for a sentence in NOLA</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="TermAugmentation" type="nola-ext:TermAugmentationType"
+		substitutionGroup="j:TermAugmentationPoint">
+		<xs:annotation>
+			<xs:documentation>An augmentation for a sentence term in NOLA</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<!-- New Element definitions ======================================================================== -->
@@ -183,6 +234,11 @@
 	<xs:element name="SentenceSpecialConditionText" type="nc:TextType">
 		<xs:annotation>
 			<xs:documentation>A special condition in a sentence in NOLA.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="TermCategoryCode" type="nola-ext:TermCategoryCodeType">
+		<xs:annotation>
+			<xs:documentation>A uniform commitment order in NOLA.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="UniformCommitmentOrder" type="nola-ext:UnformComitmentOrderType">
