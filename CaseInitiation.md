@@ -1,3 +1,5 @@
+![Return to the JTMP landing page](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/HomePage.md)
+
 # New Case Initiation Exchange
 
 A Courts' Case Management (CMS) will publish a New Case Initiation message each time a Clerk creates a new Criminal case (other case types?). This data exchange serves two purposes: to provide case details and a court case number to parties that need to track or contribute to case processing; and to correlate a court case with a preceeding event sent by another publishing system, for example a Booking message published by the jail management system (JMS). 
@@ -30,7 +32,7 @@ This exchange will also convey the details of the one or more charges filed on t
 
 ## Data Requirements:
 
-XML Schemas - coming soon
+![XML Schemas](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/tree/main/schemas/CaseInitiation_iepd/api/xml_schema).
 
 ### Key data elements include:
 - Arrest number (enabling the JMS to correlate a new case to a previous Booking or Charge Screening). 
@@ -43,11 +45,12 @@ XML Schemas - coming soon
 
 ## Artifacts:
 
-Mapping Spreadsheet - coming soon
+![Mapping Spreadsheet](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/CaseInitiation_iepd/artifacts/CaseInitiation_MappingSpreasheet.xlsx). 
 
-**Class Diagram:** - coming soon
+![Sample XML Files](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/tree/main/schemas/CaseInitiation_iepd/examples).
 
+**Class Diagram:** 
+![Class Diagram](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/CaseInitiation_iepd/artifacts/CaseInitiation_ClassDiagram.svg). 
 
-Sample XML File - coming soon
 
 
