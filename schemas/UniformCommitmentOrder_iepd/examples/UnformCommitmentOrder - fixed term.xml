@@ -53,9 +53,7 @@
             <j:SentenceDescriptionText>No probation</j:SentenceDescriptionText>
             <j:SentenceTerm>
                 <!-- Total sentence length -->
-                <nola-ext:TermAugmentation>
-                    <nola-ext:TermCategoryCode>life with benefits</nola-ext:TermCategoryCode>
-                </nola-ext:TermAugmentation>
+                <j:TermDuration>P10Y6M0D</j:TermDuration>
             </j:SentenceTerm>
             <nola-ext:SentenceAugmentation>
                 <j:Conviction>
@@ -203,12 +201,10 @@
                 <j:Incarceration>
                     <j:SupervisionAugmentation>
                         <j:SupervisionAssignedTerm>
+                            <!-- Imposed time -->
+                            <j:TermDuration>P10Y6M0D</j:TermDuration>
                             <!-- Minimum time served -->
                             <j:TermMinimumDuration>P1Y0M0D</j:TermMinimumDuration>
-                            <nola-ext:TermAugmentation>
-                                <!-- Imposed time -->
-                                <nola-ext:TermCategoryCode>life with benefits</nola-ext:TermCategoryCode>
-                            </nola-ext:TermAugmentation>
                         </j:SupervisionAssignedTerm>
                     </j:SupervisionAugmentation>
                 </j:Incarceration>
