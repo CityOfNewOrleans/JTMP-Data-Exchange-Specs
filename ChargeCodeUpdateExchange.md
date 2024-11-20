@@ -1,3 +1,5 @@
+![Return to the JTMP landing page](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/HomePage.md)
+
 # Charge Code Updates
 
 The Justice partners are in the process of establishing a standardized charge code table. Values from the Uniform Charge Table are to be incorporated consistently by all JTMP endpoint systems into their native offense or statute code tables.  The UCT will provide a Charge Key that will uniquely identify each charge and provide the basis for standardizing key data elements related to each charge, as well as keeping all partner systems synchronized as legislative change and other changes result in modification, repeal or enactment of charges. 
@@ -24,7 +26,7 @@ The purpose of the Charge Code Update data exchange is to ensure consistency in 
 
 ## Data Requirements
 
-XML Schemas - coming soon
+![XML Schemas](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/tree/main/schemas/UniformChargeTable_iepd/api)
 
 ### Key data elements include
 
@@ -41,9 +43,9 @@ XML Schemas - coming soon
 - ChargeString - a Concatenation of Title, ChargeViolation, ChargeSubparagraph and Class to uniquely identify a charge with a more user-readable syntax 
 
 ## Artifacts
+![Sample XML File](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/tree/main/schemas/UniformChargeTable_iepd/examples)
 
-Mapping Spreadsheet - coming soon
+![Mapping Spreadsheet](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/UniformChargeTable_iepd/artifacts/UniformChargeTable_MappingSpreadsheet.xlsx)
 
-**Class Diagram:** - coming soon
+![Class Diagram](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/UniformChargeTable_iepd/artifacts/UniformChargeTable_ClassDiagram.svg)
 
-Sample XML File - coming soon
