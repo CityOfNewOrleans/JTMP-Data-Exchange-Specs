@@ -10,7 +10,7 @@ The following diagram provides an overview of the JTMP Service Bus. ​</p>
  
 |Data Exchange |Publishing System(s) |IEPD Page |API Topic-exchangeDataType name|
 |-----|------|------|-----|
-|Arrest|Records Management System |TBD|arrestReport|
+|Arrest|Records Management System |[ArrestReport IEPD](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/ArrestReport_iepd/ArrestReport.md)|arrestReport|
 Incident|Records Management System |TBD |incidentReport|
 |Booking | Jail Management System|[Booking and Release IEPD](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/booking_iepd/BookingAndRelease.md) |bookingAndRelease|
 |Charge Filing (Screening Action/Bill of Information) | Prosecutor CMS|[Charge Filing IEPD](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/ChargeFiling_iepd/ChargeFiling.md)|CaseChargeFiling|
