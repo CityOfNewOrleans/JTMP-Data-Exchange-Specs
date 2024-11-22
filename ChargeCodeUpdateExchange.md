@@ -24,6 +24,9 @@ An existing record is modified or a new record is saved to the Orleans Uniform C
 
 The purpose of the Charge Code Update data exchange is to ensure consistency in the definition of chargeable offenses as a case moves from initial police incident and arrest, to booking, to charging and disposition of a court case.  
 
+##Business Rules##
+...mandaory vs optional...
+
 ## Data Requirements
 
 ![XML Schemas](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/tree/main/schemas/UniformChargeTable_iepd/api)
