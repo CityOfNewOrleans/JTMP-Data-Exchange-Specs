@@ -41,6 +41,7 @@
                     </j:StatuteCodeIdentification>
                 </j:ChargeStatute>
                 <nola-ext:ChargeAugmentation>
+                    <nola-ext:ChargeKey>13489</nola-ext:ChargeKey>
                     <nola-ext:OffenseDate>
                         <!-- Offense date-->
                         <nc:Date>2017-10-23</nc:Date>

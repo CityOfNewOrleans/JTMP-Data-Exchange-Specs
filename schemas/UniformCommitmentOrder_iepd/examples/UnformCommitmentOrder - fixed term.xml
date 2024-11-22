@@ -41,6 +41,38 @@
                     </j:StatuteCodeIdentification>
                 </j:ChargeStatute>
                 <nola-ext:ChargeAugmentation>
+                    <nola-ext:ChargeKey>13489</nola-ext:ChargeKey>
+                    <nola-ext:OffenseDate>
+                        <!-- Offense date-->
+                        <nc:Date>2017-10-23</nc:Date>
+                    </nola-ext:OffenseDate>
+                </nola-ext:ChargeAugmentation>
+            </j:SentenceCharge>
+            <j:SentenceCharge>
+                <!-- Counts -->
+                <j:ChargeCountQuantity>1</j:ChargeCountQuantity>
+                <j:ChargeDisposition>
+                    <!-- Charges dismissed or not guilty -->
+                    <nc:DispositionCategoryText>2</nc:DispositionCategoryText>
+                    <!-- Waiver of minimum mandatory sentence -->
+                    <nc:DispositionDescriptionText>No</nc:DispositionDescriptionText>
+                </j:ChargeDisposition>
+                <j:ChargeEnhancingAllegationCharge>
+                    <j:ChargeStatute>
+                        <j:StatuteCodeIdentification>
+                            <!-- Enhancements/modiiers -->
+                            <nc:IdentificationID>14:27</nc:IdentificationID>
+                        </j:StatuteCodeIdentification>
+                    </j:ChargeStatute>
+                </j:ChargeEnhancingAllegationCharge>
+                <j:ChargeStatute>
+                    <j:StatuteCodeIdentification>
+                        <!-- Convicted of -->
+                        <nc:IdentificationID>CONSP DIST HEROIN</nc:IdentificationID>
+                    </j:StatuteCodeIdentification>
+                </j:ChargeStatute>
+                <nola-ext:ChargeAugmentation>
+                    <nola-ext:ChargeKey>13498</nola-ext:ChargeKey>
                     <nola-ext:OffenseDate>
                         <!-- Offense date-->
                         <nc:Date>2017-10-23</nc:Date>

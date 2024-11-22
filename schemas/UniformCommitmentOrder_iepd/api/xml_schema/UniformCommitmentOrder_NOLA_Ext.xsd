@@ -70,6 +70,7 @@
 		<xs:complexContent>
 			<xs:extension base="structures:AugmentationType">
 				<xs:sequence>
+					<xs:element ref="nola-ext:ChargeKey" minOccurs="0" maxOccurs="1"/>
 					<xs:element ref="nola-ext:OffenseDate" minOccurs="0" maxOccurs="1"/>
 				</xs:sequence>
 			</xs:extension>
@@ -211,6 +212,11 @@
 		</xs:annotation>
 	</xs:element>
 	<!-- New Element definitions ======================================================================== -->
+	<xs:element name="ChargeKey" type="nc:TextType">
+		<xs:annotation>
+			<xs:documentation>A UCT Charge Key (Uniform Charge Table) is a shared key or identifier from a shared table that standardizes charge code definitions across the enterprise.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 	<xs:element name="CourtReporter" type="nc:PersonType">
 		<xs:annotation>
 			<xs:documentation>A court reporter in NOLA.</xs:documentation>
