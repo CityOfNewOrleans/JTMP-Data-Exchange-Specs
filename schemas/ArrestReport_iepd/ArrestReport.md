@@ -4,7 +4,7 @@
 
 Law Enforcement's Records Management System (RMS) will publish an Arrest Report message each time an officer completes and a supervisor approves an Arrest Report within the system.
 
-![ArrestReport IEPD](schemas/ArrestReport_iepd)
+![ArrestReport IEPD]([schemas/ArrestReport_iepd](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/tree/main/schemas/ArrestReport_iepd/api))
 
 ## Preceding Exchange: 
 
@@ -31,14 +31,12 @@ This data exchange should also include all informaiton an arresting officer has,
 - State ID (SID) number, if available. This is the state AFIS identifying number tied to a unique set of fingerprints. This number should be associated with an individual over the course of a lifetime, potentially multiple booking events in Orleans Parish and other jurisdictions. NOTE: this number would only be available in RMS for individuals who have previously been booked and fingerprinted in Louisiana, and for whom that number was available to law enforcement previously. 
 
 ## Artifacts:
-**XML Schema:**
-![XML Schemas](schemas/ArrestReport_iepd/api/xml_schema)
 
 **Mapping Spreadsheet:**
-![Mapping Spreadsheet](schemas/ArrestReport_iepd/artifacts/Booking_MappingSpreadsheet.xlsx)
+![Mapping Spreadsheet]([schemas/ArrestReport_iepd/artifacts/Booking_MappingSpreadsheet.xlsx](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/tree/main/schemas/ArrestReport_iepd/artifacts))
 
 **Sample XML:**
 ![Sample XML File](schemas/ArrestReport_iepd/examples/Annotated_Booking_Release.xml)
 
 **Class Diagram:**
-![Class Diagram](schemas/ArrestReport_iepd/artifacts/Booking_ClassDiagram.svg)
+Coming soon. 
