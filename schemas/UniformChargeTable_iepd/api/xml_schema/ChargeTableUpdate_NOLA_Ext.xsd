@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+<xs:schema xmlns:nola="http://mcp.com/nola/v/1.0/" xmlns:nola-ext="http://mcp.com/nola/extension/v/1.0/" xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/" xmlns:niem-xs="http://release.niem.gov/niem/proxy/niem-xs/5.0/" xmlns:j="http://release.niem.gov/niem/domains/jxdm/7.2/" xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/" xmlns:cls="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-instance/" xmlns:clsa="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-schema-appinfo/" xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/" xmlns:structures="http://release.niem.gov/niem/structures/5.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://mcp.com/nola/extension/v/1.0/" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1" xml:lang="en-US" ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ReferenceSchemaDocument">
+	<xs:annotation>
+		<xs:documentation> Charge Table Update extension schema for NOLA.</xs:documentation>
+	</xs:annotation>
+	<!-- NIEM schema imports -->
+	<xs:import namespace="http://release.niem.gov/niem/niem-core/5.0/" schemaLocation="./niem\xsd\niem-core.xsd"/>
+	<xs:import namespace="http://release.niem.gov/niem/proxy/niem-xs/5.0/" schemaLocation="./niem\xsd\adapters\niem-xs.xsd"/>
+	<xs:import namespace="http://release.niem.gov/niem/appinfo/5.0/" schemaLocation="./niem\xsd\utility\appinfo.xsd"/>
+	<xs:import namespace="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-instance/" schemaLocation="./niem\xsd\utility\code-lists-instance.xsd"/>
+	<xs:import namespace="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-schema-appinfo/" schemaLocation="./niem\xsd\utility\code-lists-schema-appinfo.xsd"/>
+	<xs:import namespace="http://release.niem.gov/niem/conformanceTargets/3.0/" schemaLocation="./niem\xsd\utility\conformanceTargets.xsd"/>
+	<xs:import namespace="http://release.niem.gov/niem/structures/5.0/" schemaLocation="./niem\xsd\utility\structures.xsd"/>
+	<xs:import namespace="http://release.niem.gov/niem/domains/jxdm/7.2/" schemaLocation="./niem\xsd\domains\jxdm.xsd"/>
+	
+	<!-- complexType Definitions, NIEM mapping ======================================================================== -->
+	<xs:complexType name="NOLAExchangeType">
+		<xs:annotation>
+			<xs:documentation>A data type for a common ancestor containing exchange level data relevant to exchanges in NOLA.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="structures:ObjectType">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ChargeAugmentationType">
+		<xs:annotation>
+			<xs:documentation>An augmentation type for a Charge.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="structures:AugmentationType">
+				<xs:sequence>
+					<xs:element ref="nc:SourceText" minOccurs="0" maxOccurs="1"/>				
+					<xs:element ref="nola-ext:ChargeKey" minOccurs="0" maxOccurs="1"/>
+					<xs:element ref="nola-ext:ChargeOffenseReportingIndicator" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ChargeAuditLogAssociationType">
+		<xs:annotation>
+			<xs:documentation>An association between a charge and an audit log.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="structures:AssociationType">
+				<xs:sequence>
+					<xs:element ref="j:Charge" minOccurs="0" maxOccurs="1"/>
+					<xs:element ref="nola-ext:AuditLog" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="StatuteAugmentationType">
+		<xs:annotation>
+			<xs:documentation>An augmentation type for a Statute.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="structures:AugmentationType">
+				<xs:sequence>
+					<xs:element ref="nola-ext:StatuteCodeSectionSubparagraphIdentification" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- Augmentation Elements ======================================================================== -->
+	<xs:element name="ChargeAugmentation" type="nola-ext:ChargeAugmentationType" substitutionGroup="j:ChargeAugmentationPoint">
+		<xs:annotation>
+			<xs:documentation>An augmentation of a charge in NOLA.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="StatuteAugmentation" type="nola-ext:StatuteAugmentationType" substitutionGroup="j:StatuteAugmentationPoint">
+		<xs:annotation>
+			<xs:documentation>An augmentation of a statute in NOLA.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!-- New Element definitions ======================================================================== -->
+	<xs:element name="AuditLog" type="nc:DocumentType">
+		<xs:annotation>
+			<xs:documentation>A document with charge update(s).</xs:documentation>
+		</xs:annotation>
+	</xs:element>	
+	<xs:element name="ChargeAuditLogAssociation" type="nola-ext:ChargeAuditLogAssociationType">
+		<xs:annotation>
+			<xs:documentation>An association of a charge to an audit log.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="ChargeKey" type="nc:TextType">
+		<xs:annotation>
+			<xs:documentation>A UCT Charge Key (Uniform Charge Table) is a shared key or identifier from a shared table that standardizes charge code definitions across the enterprise.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="ChargeOffenseReportingIndicator" type="niem-xs:boolean">
+		<xs:annotation>
+			<xs:documentation>An indicator whether a charge is viewable for offense reporting</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="StatuteCodeSectionSubparagraphIdentification" type="nc:IdentificationType">
+		<xs:annotation>
+			<xs:documentation>A minor numbered paragraph reference in statute or ordinance</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+
+</xs:schema>

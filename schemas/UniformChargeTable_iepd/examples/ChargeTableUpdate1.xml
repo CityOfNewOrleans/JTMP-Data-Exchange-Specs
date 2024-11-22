@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ChargeTableUpdateMessage xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/"
+    xmlns:structures="http://release.niem.gov/niem/structures/5.0/"
+    xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/"
+    xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:niem-xs="http://release.niem.gov/niem/proxy/niem-xs/5.0/"
+    xmlns:clsa="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-schema-appinfo/"
+    xmlns="http://mcp.com/nola/v/1.0/" xmlns:nola-ext="http://mcp.com/nola/extension/v/1.0/"
+    xmlns:j="http://release.niem.gov/niem/domains/jxdm/7.2/"
+    xmlns:cls="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-instance/"
+    xsi:schemaLocation="http://mcp.com/nola/v/1.0/ ../api/xml_schema/ChargeTableUpdate_NOLA.xsd">
+    <j:Charge structures:id="charge1">
+        <!-- ChargeModifier1, ChargeModifier2 -->
+        <j:ChargeApplicabilityText>14:27</j:ChargeApplicabilityText>
+        <!-- CourtType -->
+        <j:ChargeCategoryDescriptionText>S</j:ChargeCategoryDescriptionText>
+        <!-- ChargeDescriptino -->
+        <j:ChargeDescriptionText>ATT THEFT $1499 TO $4999</j:ChargeDescriptionText>
+        <!-- ChargeClass -->
+        <j:ChargeSeverityText>3</j:ChargeSeverityText>
+        <j:ChargeStatute>
+            <!-- Title -->
+            <j:StatuteCodeIdentification>
+                <nc:IdentificationID>14</nc:IdentificationID>
+            </j:StatuteCodeIdentification>
+            <j:StatuteCodeSectionIdentification>
+                <!-- ChargeViolation -->
+                <nc:IdentificationID>(27)67(B)(2)</nc:IdentificationID>
+            </j:StatuteCodeSectionIdentification>
+            <!-- LongDescription -->
+            <j:StatuteDescriptionText>ATT THEFT $1499 TO $4999</j:StatuteDescriptionText>
+            <j:StatuteEnactmentDate>
+                <!-- EffectiveDate -->
+                <nc:Date>2001-01-20</nc:Date>
+            </j:StatuteEnactmentDate>
+            <j:StatuteRepealDate>
+                <!-- InactiveDate -->
+                <nc:Date>2025-01-01</nc:Date>
+            </j:StatuteRepealDate>
+            <j:StatuteStatus>
+                <!-- InactiveReason -->
+                <nc:StatusDescriptionText>Repeal</nc:StatusDescriptionText>
+            </j:StatuteStatus>
+            <!-- ChargeString -->
+            <j:StatuteText>14:(27)67(B)(2)23D</j:StatuteText>
+            <nola-ext:StatuteAugmentation>
+                <nola-ext:StatuteCodeSectionSubparagraphIdentification>
+                    <!-- ChargeSubparagraph -->
+                    <nc:IdentificationID>23D</nc:IdentificationID>
+                </nola-ext:StatuteCodeSectionSubparagraphIdentification>
+            </nola-ext:StatuteAugmentation>
+        </j:ChargeStatute>
+        <nola-ext:ChargeAugmentation>
+            <!-- Source -->
+            <nc:SourceText>LA R.S.</nc:SourceText>
+            <!-- ChargeKey -->
+            <nola-ext:ChargeKey>1125</nola-ext:ChargeKey>
+            <!-- NOPDFlag -->
+            <nola-ext:ChargeOffenseReportingIndicator>true</nola-ext:ChargeOffenseReportingIndicator>
+        </nola-ext:ChargeAugmentation>
+    </j:Charge>
+    <nola-ext:AuditLog structures:id="auditlog1">
+        <nc:DocumentEffectiveDate>
+            <!-- EnteredDate -->
+            <nc:Date>2025-01-01</nc:Date>
+        </nc:DocumentEffectiveDate>
+        <nc:DocumentEntrySubmitter>
+            <nc:PersonName>
+                <!-- LastUpdateUser -->
+                <nc:PersonFullName>John Doe</nc:PersonFullName>
+            </nc:PersonName>
+        </nc:DocumentEntrySubmitter>
+        <nc:DocumentLastModifiedDate>
+            <!-- LastUpdateDate -->
+            <nc:Date>2024-01-01</nc:Date>
+        </nc:DocumentLastModifiedDate>
+        <nc:DocumentSubmitter>
+            <nc:EntityPerson>
+                <nc:PersonName>
+                    <!-- UserEntered -->
+                    <nc:PersonFullName>Jane Doe</nc:PersonFullName>
+                </nc:PersonName>
+            </nc:EntityPerson>
+        </nc:DocumentSubmitter>
+    </nola-ext:AuditLog>
+    <nola-ext:ChargeAuditLogAssociation>
+        <j:Charge structures:ref="charge1"/>
+        <nola-ext:AuditLog structures:ref="auditlog1"/>
+    </nola-ext:ChargeAuditLogAssociation>
+</ChargeTableUpdateMessage>
