@@ -5,6 +5,8 @@
   <uri name="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-schema-appinfo/" uri="utility/code-lists-schema-appinfo.xsd"/>
   <uri name="http://release.niem.gov/niem/appinfo/5.0/" uri="utility/appinfo.xsd"/>
   <uri name="http://release.niem.gov/niem/codes/cbrncl/5.0/" uri="codes/cbrncl.xsd"/>
+  <uri name="http://release.niem.gov/niem/codes/ncic/5.2/" uri="codes/ncic.xsd"/>
+  <uri name="http://release.niem.gov/niem/codes/ucr/5.1/" uri="codes/ucr.xsd"/>
   <uri name="http://release.niem.gov/niem/conformanceTargets/3.0/" uri="utility/conformanceTargets.xsd"/>
   <uri name="http://release.niem.gov/niem/domains/humanServices/5.2/" uri="domains/hs.xsd"/>
   <uri name="http://release.niem.gov/niem/domains/jxdm/7.2/" uri="domains/jxdm.xsd"/>

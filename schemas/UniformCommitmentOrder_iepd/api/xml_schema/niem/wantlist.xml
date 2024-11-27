@@ -3,13 +3,16 @@
   xmlns:hs="http://release.niem.gov/niem/domains/humanServices/5.2/"
   xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/"
   xmlns:w="http://niem.gov/niem/wantlist/2.2"
-  xmlns:j="http://release.niem.gov/niem/domains/jxdm/7.2/" xmlns:cbrncl="http://release.niem.gov/niem/codes/cbrncl/5.0/">
+  xmlns:j="http://release.niem.gov/niem/domains/jxdm/7.2/"
+  xmlns:cbrncl="http://release.niem.gov/niem/codes/cbrncl/5.0/"
+  xmlns:ucr="http://release.niem.gov/niem/codes/ucr/5.1/" xmlns:ncic="http://release.niem.gov/niem/codes/ncic/5.2/">
   <w:Element w:name="hs:DrugUseFrequencyDescriptionText"
     w:isReference="false" w:nillable="false"/>
   <w:Element w:name="hs:PersonAugmentation" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="j:CaseAugmentation" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="j:Conviction" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="j:CourtOrder" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="j:DrugCategoryCode" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="j:Incarceration" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="j:Sentence" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="j:SentenceModification" w:isReference="false" w:nillable="true"/>
@@ -25,9 +28,8 @@
   <w:Element w:name="nc:Document" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="nc:EntityPerson" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="nc:FullTelephoneNumber" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:PersonRaceText" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:PersonSexText" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:SubstanceCategoryText" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="ncic:PersonRaceCode" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="ncic:PersonSexCode" w:isReference="false" w:nillable="false"/>
   <w:Type w:name="cbrncl:CaseStatusCodeSimpleType" w:isRequested="false">
     <w:Facet w:facet="enumeration" w:value="Active-Hot"/>
     <w:Facet w:facet="enumeration" w:value="Active-Routine"/>
@@ -236,5 +238,37 @@
   <w:Type w:name="nc:TelephoneNumberType" w:isRequested="false">
     <w:ElementInType w:name="nc:TelephoneNumberAbstract"
       w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="ncic:RACECodeSimpleType" w:isRequested="false">
+    <w:Facet w:facet="enumeration" w:value="A"/>
+    <w:Facet w:facet="enumeration" w:value="B"/>
+    <w:Facet w:facet="enumeration" w:value="I"/>
+    <w:Facet w:facet="enumeration" w:value="U"/>
+    <w:Facet w:facet="enumeration" w:value="W"/>
+  </w:Type>
+  <w:Type w:name="ncic:SEXCodeSimpleType" w:isRequested="false">
+    <w:Facet w:facet="enumeration" w:value="F"/>
+    <w:Facet w:facet="enumeration" w:value="M"/>
+    <w:Facet w:facet="enumeration" w:value="U"/>
+  </w:Type>
+  <w:Type w:name="ucr:DrugCategoryCodeSimpleType" w:isRequested="false">
+    <w:Facet w:facet="enumeration" w:value="AMPHETAMINES-METHAMPHETAMINES"/>
+    <w:Facet w:facet="enumeration" w:value="BARBITURATES"/>
+    <w:Facet w:facet="enumeration" w:value="COCAINE"/>
+    <w:Facet w:facet="enumeration" w:value="CRACK_COCAINE"/>
+    <w:Facet w:facet="enumeration" w:value="HASHISH"/>
+    <w:Facet w:facet="enumeration" w:value="HEROIN"/>
+    <w:Facet w:facet="enumeration" w:value="LSD"/>
+    <w:Facet w:facet="enumeration" w:value="MARIJUANA"/>
+    <w:Facet w:facet="enumeration" w:value="MORPHINE"/>
+    <w:Facet w:facet="enumeration" w:value="OPIUM"/>
+    <w:Facet w:facet="enumeration" w:value="OTHER_DEPRESSANTS"/>
+    <w:Facet w:facet="enumeration" w:value="OTHER_DRUGS"/>
+    <w:Facet w:facet="enumeration" w:value="OTHER_HALLUCINOGENS"/>
+    <w:Facet w:facet="enumeration" w:value="OTHER_NARCOTICS"/>
+    <w:Facet w:facet="enumeration" w:value="OTHER_STIMULANTS"/>
+    <w:Facet w:facet="enumeration" w:value="OVER_THREE_DRUG_TYPES"/>
+    <w:Facet w:facet="enumeration" w:value="PCP"/>
+    <w:Facet w:facet="enumeration" w:value="UNKNOWN_DRUG_TYPE"/>
   </w:Type>
 </w:WantList>

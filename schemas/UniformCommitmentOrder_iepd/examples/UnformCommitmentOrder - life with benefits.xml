@@ -6,6 +6,7 @@
     xmlns:niem-xs="http://release.niem.gov/niem/proxy/niem-xs/5.0/"
     xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/"
     xmlns:j="http://release.niem.gov/niem/domains/jxdm/7.2/" xmlns="http://mcp.com/nola/v/1.0/"
+    xmlns:ncic="http://release.niem.gov/niem/codes/ncic/5.2/"
     xmlns:hs="http://release.niem.gov/niem/domains/humanServices/5.2/"
     xmlns:nola-ext="http://mcp.com/nola/extension/v/1.0/"
     xmlns:cls="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-instance/"
@@ -82,9 +83,9 @@
                                 <nc:PersonFullName>John Doe</nc:PersonFullName>
                             </nc:PersonName>
                             <!-- Offender Race -->
-                            <nc:PersonRaceText>BLACK</nc:PersonRaceText>
+                            <ncic:PersonRaceCode>B</ncic:PersonRaceCode>
                             <!-- Offendef Sex -->
-                            <nc:PersonSexText>M</nc:PersonSexText>
+                            <ncic:PersonSexCode>M</ncic:PersonSexCode>
                             <nc:PersonStateIdentification>
                                 <!-- Offender State Id Number -->
                                 <nc:IdentificationID>999999999</nc:IdentificationID>
@@ -108,7 +109,7 @@
                                         <hs:DrugUseFrequencyDescriptionText>possession</hs:DrugUseFrequencyDescriptionText>
                                         <nc:Substance>
                                             <!-- Drug offense type -->
-                                            <nc:SubstanceCategoryText>marijuana</nc:SubstanceCategoryText>
+                                            <j:DrugCategoryCode>MARIJUANA</j:DrugCategoryCode>
                                         </nc:Substance>
                                     </hs:SubstanceAbuseDetails>
                                 </hs:HealthDetails>
