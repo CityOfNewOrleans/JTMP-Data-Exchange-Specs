@@ -18,9 +18,9 @@
   </nc:ActivityDate>
   <j:ArrestCharge>
    <!-- Charge Modifier -->
-   <j:ChargeApplicabilityText>0</j:ChargeApplicabilityText>
+   <j:ChargeApplicabilityText>14:25</j:ChargeApplicabilityText>
    <!-- Charge Name -->
-   <j:ChargeDescriptionText>CARNAL KNOWLEDGE</j:ChargeDescriptionText>
+   <j:ChargeDescriptionText>ACC SIMPLE BURGLARY</j:ChargeDescriptionText>
    <j:ChargeStatute>
     <j:StatuteCodeIdentification>
      <!-- Charge Statute -->
@@ -28,12 +28,12 @@
     </j:StatuteCodeIdentification>
    </j:ChargeStatute>
    <!-- Charge Class -->
-   <j:ChargeSeverityDescriptionText>F/3</j:ChargeSeverityDescriptionText>
+   <j:ChargeSeverityDescriptionText>3</j:ChargeSeverityDescriptionText>
    <nola-ext:ChargeAugmentation>
     <!-- Refused Charge Disposition RefusalCode -->
     <nola-ext:ChargeDispositionCode>accepted</nola-ext:ChargeDispositionCode>
     <!-- Charge Key -->
-    <nola-ext:ChargeKey>XXX</nola-ext:ChargeKey>
+    <nola-ext:ChargeKey>1058</nola-ext:ChargeKey>
     <!-- JMSChargeNumnber -->
     <nola-ext:JMSChargeNumber>H-26560-24</nola-ext:JMSChargeNumber>
     <!-- Date of offense -->
@@ -46,9 +46,9 @@
   </j:ArrestCharge>
   <j:ArrestCharge>
    <!-- Charge Modifier -->
-   <j:ChargeApplicabilityText>0</j:ChargeApplicabilityText>
+   <j:ChargeApplicabilityText>14:25</j:ChargeApplicabilityText>
    <!-- Charge Name -->
-   <j:ChargeDescriptionText>CARNAL KNOWLEDGE</j:ChargeDescriptionText>
+   <j:ChargeDescriptionText>ACC SIMPLE BURGLARY</j:ChargeDescriptionText>
    <j:ChargeStatute>
     <j:StatuteCodeIdentification>
      <!-- Charge Statute -->
@@ -56,12 +56,12 @@
     </j:StatuteCodeIdentification>
    </j:ChargeStatute>
    <!-- Charge Class -->
-   <j:ChargeSeverityDescriptionText>F/3</j:ChargeSeverityDescriptionText>
+   <j:ChargeSeverityDescriptionText>3</j:ChargeSeverityDescriptionText>
    <nola-ext:ChargeAugmentation>
     <!-- Refused Charge Disposition RefusalCode -->
     <nola-ext:ChargeDispositionCode>accepted</nola-ext:ChargeDispositionCode>
     <!-- Charge Key -->
-    <nola-ext:ChargeKey>XXX</nola-ext:ChargeKey>
+    <nola-ext:ChargeKey>1058</nola-ext:ChargeKey>
     <!-- JMSChargeNumnber -->
     <nola-ext:JMSChargeNumber>H-26560-24</nola-ext:JMSChargeNumber>
     <!-- Date of offense -->
