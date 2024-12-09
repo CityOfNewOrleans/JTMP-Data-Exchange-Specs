@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://release.niem.gov/niem/codes/ncic/5.2/" version="1" xml:lang="en-US" xsi:schemaLocation="http://release.niem.gov/niem/appinfo/5.0/ ../utility/appinfo.xsd http://release.niem.gov/niem/conformanceTargets/3.0/ ../utility/conformanceTargets.xsd" ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ReferenceSchemaDocument" xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:structures="http://release.niem.gov/niem/structures/5.0/" xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/" xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ncic="http://release.niem.gov/niem/codes/ncic/5.2/">
+  <xs:annotation>
+    <xs:documentation>FBI National Crime and Information Center (NCIC) codes</xs:documentation>
+    <xs:appinfo>
+      <appinfo:LocalTerm term="ABRA" literal="Article Brand Name"/>
+      <appinfo:LocalTerm term="BCO" literal="Boat Color"/>
+      <appinfo:LocalTerm term="BLT" literal="Blood Type"/>
+      <appinfo:LocalTerm term="BMA" literal="Boat Make"/>
+      <appinfo:LocalTerm term="BPS" literal="Body Parts Status"/>
+      <appinfo:LocalTerm term="BRA" literal="Boat Brand Name"/>
+      <appinfo:LocalTerm term="BTMA" literal="Vehicle Make for Boat Trailer"/>
+      <appinfo:LocalTerm term="BTY" literal="Boat Type"/>
+      <appinfo:LocalTerm term="BXR" literal="Body X-Rays Available"/>
+      <appinfo:LocalTerm term="CAL" literal="(Firearm) Caliber"/>
+      <appinfo:LocalTerm term="CAT" literal="(Vehicle/Boat Part) Category"/>
+      <appinfo:LocalTerm term="CBTY" literal="Canadian Boat Type"/>
+      <appinfo:LocalTerm term="CDA" literal="Manner and Cause of Death"/>
+      <appinfo:LocalTerm term="CMC" literal="Caution and Medical Conditions"/>
+      <appinfo:LocalTerm term="COL" literal="(Physical Feature) Color"/>
+      <appinfo:LocalTerm term="CPRO" literal="Canadian Vehicle Index Propulsion"/>
+      <appinfo:LocalTerm term="CRC" literal="Circumcision"/>
+      <appinfo:LocalTerm term="CRR" literal="Conviction Resulting in Registration"/>
+      <appinfo:LocalTerm term="CTZ" literal="Citizenship"/>
+      <appinfo:LocalTerm term="DBN" literal="One Crime Inquiry Database Name"/>
+      <appinfo:LocalTerm term="DCH" literal="Dental Characteristics"/>
+      <appinfo:LocalTerm term="DEN" literal="Denomination"/>
+      <appinfo:LocalTerm term="ECR" literal="(Threat Group Member) Criteria for Entry"/>
+      <appinfo:LocalTerm term="EPD" literal="(Boat) Engine Power or Displacement"/>
+      <appinfo:LocalTerm term="ETN" literal="Ethnicity"/>
+      <appinfo:LocalTerm term="EXL" literal="Extradition Limitation"/>
+      <appinfo:LocalTerm term="EYE" literal="Eye Color"/>
+      <appinfo:LocalTerm term="FILE" literal="FILE fields"/>
+      <appinfo:LocalTerm term="FP" literal="Fingerprint"/>
+      <appinfo:LocalTerm term="FPC" literal="Fingerprint Classification"/>
+      <appinfo:LocalTerm term="GOFF" definition="Offenses of General Applicability"/>
+      <appinfo:LocalTerm term="GTYP" literal="Gun Type Characteristic 1 Weapon Type"/>
+      <appinfo:LocalTerm term="GTYP2" literal="Gun Type Characteristic 2"/>
+      <appinfo:LocalTerm term="GTYP3" literal="Gun Type Combination"/>
+      <appinfo:LocalTerm term="GTYPE" literal="Global Inquiry Type of Request"/>
+      <appinfo:LocalTerm term="HAI" literal="Hair Color"/>
+      <appinfo:LocalTerm term="HSP" literal="(Boat) Hull Shape"/>
+      <appinfo:LocalTerm term="HUL" literal="(Boat) Outer Hull Material"/>
+      <appinfo:LocalTerm term="IDT" literal="Identity Theft Type"/>
+      <appinfo:LocalTerm term="IFS" literal="Identification for Firearm Sales"/>
+      <appinfo:LocalTerm term="IMT" literal="Image Type"/>
+      <appinfo:LocalTerm term="JWT" literal="Jewelry Type"/>
+      <appinfo:LocalTerm term="LIS" literal="License Plate State"/>
+      <appinfo:LocalTerm term="LIT" literal="License Plate Number"/>
+      <appinfo:LocalTerm term="LITP" literal="License Plate Type"/>
+      <appinfo:LocalTerm term="LSTA" literal="State/Country Index"/>
+      <appinfo:LocalTerm term="MAK" literal="(Firearm) Make"/>
+      <appinfo:LocalTerm term="MNP" literal="Missing Person"/>
+      <appinfo:LocalTerm term="MNU" literal="(person identifier) Miscellaneous Number"/>
+      <appinfo:LocalTerm term="MPC" literal="Missing Person Circumstances"/>
+      <appinfo:LocalTerm term="NICS" literal="National Instant Criminal Background Check System"/>
+      <appinfo:LocalTerm term="NPF" literal="Number of Missing Person Found"/>
+      <appinfo:LocalTerm term="OFF" literal="Offense Code"/>
+      <appinfo:LocalTerm term="OFS" literal="Offender Status"/>
+      <appinfo:LocalTerm term="OLS" literal="Operator License State"/>
+      <appinfo:LocalTerm term="OOC" literal="Original Offense Code"/>
+      <appinfo:LocalTerm term="ORI" definition="A nine-character identifier assigned by the FBI Criminal Justice Information Systems (CJIS) staff to an organization, which must have met the established qualifying criteria for ORI assignment to identify the agency in transactions on CJIS Systems."/>
+      <appinfo:LocalTerm term="PCC" literal="Physical Feature Class"/>
+      <appinfo:LocalTerm term="PCO" literal="Protection Order Condition"/>
+      <appinfo:LocalTerm term="PCS" literal="(Fingerprint) Pattern Code Source"/>
+      <appinfo:LocalTerm term="POB" literal="Place of Birth"/>
+      <appinfo:LocalTerm term="PRO" literal="(Boat) Propulsion"/>
+      <appinfo:LocalTerm term="PSC" literal="Physical Feature Sub Class"/>
+      <appinfo:LocalTerm term="RAC" literal="Race"/>
+      <appinfo:LocalTerm term="RES" literal="Registration State"/>
+      <appinfo:LocalTerm term="RMI" literal="Ransom Money Indicator"/>
+      <appinfo:LocalTerm term="ROV" literal="Relationship of Victim"/>
+      <appinfo:LocalTerm term="RPP" literal="Reason for Property Record Removal"/>
+      <appinfo:LocalTerm term="SDT" literal="Security Date or Series Year"/>
+      <appinfo:LocalTerm term="SEX" literal="Gender"/>
+      <appinfo:LocalTerm term="SKN" literal="Skin Tone"/>
+      <appinfo:LocalTerm term="SMT" literal="Scars, Marks, Tattoos, and Other Characteristics"/>
+      <appinfo:LocalTerm term="SVC" literal="Service Information"/>
+      <appinfo:LocalTerm term="TRFU" literal="Translation Field Usage"/>
+      <appinfo:LocalTerm term="TYP" literal="(Firearm) Type"/>
+      <appinfo:LocalTerm term="TYPA" literal="Article Type"/>
+      <appinfo:LocalTerm term="TYPO" literal="ORI Type"/>
+      <appinfo:LocalTerm term="TYPS" literal="(Securities) Type"/>
+      <appinfo:LocalTerm term="UDC" literal="User Decision Code"/>
+      <appinfo:LocalTerm term="VCO" literal="Vehicle Color"/>
+      <appinfo:LocalTerm term="VMA" literal="Vehicle Make"/>
+      <appinfo:LocalTerm term="VMO" literal="Vehicle Model"/>
+      <appinfo:LocalTerm term="VPC" literal="Violent Person Criteria"/>
+      <appinfo:LocalTerm term="VST" literal="Vehicle Style"/>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:import namespace="http://release.niem.gov/niem/niem-core/5.0/" schemaLocation="../niem-core.xsd"/>
+  <xs:import namespace="http://release.niem.gov/niem/structures/5.0/" schemaLocation="../utility/structures.xsd"/>
+  <xs:simpleType name="RACECodeSimpleType">
+    <xs:annotation>
+      <xs:documentation>A data type for 3 - Race (RAC), Protected Person Race (PPR), and Person with Information Race (PIR) Field Codes</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="A">
+        <xs:annotation>
+          <xs:documentation>ASIAN</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="B">
+        <xs:annotation>
+          <xs:documentation>BLACK</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="I">
+        <xs:annotation>
+          <xs:documentation>AMERICAN INDIAN</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="U">
+        <xs:annotation>
+          <xs:documentation>UNKNOWN</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="W">
+        <xs:annotation>
+          <xs:documentation>WHITE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="RACECodeType">
+    <xs:annotation>
+      <xs:documentation>A data type for 3 - Race (RAC), Protected Person Race (PPR), and Person with Information Race (PIR) Field Codes</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="ncic:RACECodeSimpleType">
+        <xs:attributeGroup ref="structures:SimpleObjectAttributeGroup"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="SEXCodeSimpleType">
+    <xs:annotation>
+      <xs:documentation>A data type for 2 - Sex, Sex of Victim (SOV), and Protected Person Sex (PSX) Field Codes</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="F">
+        <xs:annotation>
+          <xs:documentation>FEMALE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="M">
+        <xs:annotation>
+          <xs:documentation>MALE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="U">
+        <xs:annotation>
+          <xs:documentation>UNKNOWN</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="SEXCodeType">
+    <xs:annotation>
+      <xs:documentation>A data type for 2 - Sex, Sex of Victim (SOV), and Protected Person Sex (PSX) Field Codes</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="ncic:SEXCodeSimpleType">
+        <xs:attributeGroup ref="structures:SimpleObjectAttributeGroup"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:element name="PersonRaceCode" type="ncic:RACECodeType" substitutionGroup="nc:PersonRaceAbstract">
+    <xs:annotation>
+      <xs:documentation>A classification of a person based on factors such as geographical locations and genetics.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PersonSexCode" type="ncic:SEXCodeType" substitutionGroup="nc:PersonSexAbstract">
+    <xs:annotation>
+      <xs:documentation>A gender or sex of a person.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+</xs:schema>
