@@ -1,105 +1,67 @@
-# Introduction to [NIEM](https://www.niem.gov/)
-**NOTE**: This IEPD is using NIEM v5.2
+![Return to the JTMP landing page](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/HomePage.md)
 
-The **National Information Exchange Model** (NIEM) is a standardized framework that facilitates data sharing and interoperability across different organizations and systems. It provides a common vocabulary and data structure to enable efficient and accurate information exchanges, particularly in government and public sector applications.
+# Charge Filing Exchange
+This Message Specification contains the required data elements for a A Prosecutor's Case Management or Matter Management System (CMS or MMS) to either file arrest charges to intiate a criminal court case, or to file an Indictment with the Clerk of Courts for Grand Jury review. 
 
----
+### New Charge Filing
+A Prosecutor's Case Management or Matter Management System (CMS or MMS) will publish a New Charge Filing message each time an Assistant District Attorney, paralegal or other professional completes a charge filing document and saves or indicates it is Ready to File. 
 
-## Understanding an IEPD
-An **Information Exchange Package Documentation** (IEPD) is a comprehensive set of artifacts that define the structure, content, and rules for data exchanges within the NIEM framework. An IEPD includes schemas, documentation, and sample messages to ensure consistent implementation and understanding of the data exchange requirements.
+In Orleans Parish, the charge-filing instrument is known as a Bill of Information or BOI). The BOI is normally accompanied by a Screening Action Form. The Screening Action Form contains all of the data necessary for a Court Clerk to either (a) create a new criminal court case; or (b) match a formal filing of charges to an existing Magistrate or Pre-Filing (temporary) case.  In Orleans Parish a BOI kicks off the Allotment process, whereby the new case gets assigned to a court section based on court section caseloads and case types.  
 
-### Key Artifacts in an IEPD
+This data exchange streamlines the Criminal Distric Court Clerk's process of creating a new criminal court case by enabling the Clerk's CMS to automatically import the filed charges. The Clerk's CMS will match the new charge filing to an existing Magistrate case using one or more of the shared identifiers: 
+-Police Item Number
+-Sheriff Control Number (SCN) or Booking number
+-Person identifiers, including the statewide identification (SID) number when available and local person identifiers as described in the Specification. 
 
-    1. NIEM Schema: Defines the root structure and any extensions for the data exchange.
-    2. NIEM Subset: Contains the specific NIEM elements used in the exchange.
-    3. Mapping Spreadsheet: Maps the visual data model to the physical NIEM schema elements and instance message paths.
-    4. Class Diagram: A visual representation of the data model.
-    5. Sample Message: An annotated example of an instance message in XML or JSON format, validated against the schemas.
+### Indictment Filing
+This Message Specification includes a GrandJuryIndictment indicator in the required XML. When a Proseutor files a charge or charges for Grand Jury deliberation, the Prosecutor CMS will set that indciator to True. 
 
-## Folder Structure and Contents
-The IEPD is organized into several folders, each containing essential artifacts needed for the data exchange:
-### ./api/xml_schema/
+The Criminal District Court Clerk's CMS will read that Indicator and route Grand Jury Indictments to set up a new Grand Jury case for the jury's deliberation. 
 
-    - Root XML Schema: Primary schema defining the data structure.
-    - Extensions Schema: Additional custom elements or modifications.
-    - NIEM Subset Folder: XML schema files with NIEM elements specific to this IEPD.
+## Preceding Exchange: 
 
-### ./api/json_schema/
+Booking
+Arrest Report
 
-    - Root JSON Schema: Primary schema in JSON format. Using yaml.
-    - Extensions Schema: Additional custom elements or modifications in JSON format.
-    - NIEM Subset Folder: YAML files for schemas and JSON-LD files for mapping JSON names to NIEM names.
+## Triggering Event:
 
-### ./artifacts/
+1. DA CMS user completes a charge filing document and saves or indicates it is Ready to File.
+2. DA CMS user updates a previously-filed Screening Action Form and indicates it is Ready to File. 
 
-    - Class Diagram Image: Visual representation of the data model.
-    - Mapping Spreadsheet: Maps elements from the class diagram to NIEM schema elements and instance message paths (XPath, JsonPath).
+Juvenile Court filings may use this exchange; details on the appropriate form, and routing information will be provided when the Juvenile Court CMS begins data integration. 
 
-### ./examples/
+## Subsequent Event:
+CaseInitiation from the Court Clerk CMS. Matching on one or more of the identifiers listed above, Case Initiation is intended to update the Matter or Case in each justice partner's system to include the Criminal Court Case Docket Number. 
 
-    - Annotated Sample Instance Message: Sample data message in XML or JSON format, validated against the schema, 
-	with annotations showing class and attribute names as per the class diagram.
+## Real-World Effects: 
 
-## Detailed Artifact List
-1. NIEM Schema
-	Root XML Schema
-	Extensions Schema
-2. NIEM Subset
-	XML Schema files (in ./api/xml_schema/niem_subset)
-	YAML files (in ./api/json_schema/niem_subset)
-	JSON-LD files (in ./api/json_schema/niem_subset)
-3. Mapping Spreadsheet
-	Located in ./artifacts/
-4. Class Diagram
-	Image file in ./artifacts/
-5. Sample Message
-	Annotated XML or JSON file in ./examples/
+The purpose of this data exchange is to automate filing of charges and creation of the details for a new Criminal Court case. 
+The Court CLerk's CMS vendor/system will need to attempt to match to an exisitng, pre-filing temporary case based on identifiers of predecessor events, such as incident, arrest or booking. 
 
----
+The Clerk's CMS will create a new Grand Jury case when the GrandJuryIndictment indicator is set to True. This streamliness the process of setting up new cases for Grand Jury deliberations, and provides an efficient transition to opening a new criminal court case for those charges on which a Grand Jury returns a True Bill of Indictment. 
 
-# Getting Started
+The timely exchange results in improvements in data accuracy and completeness, since data will populate automatically in the Subscriber systems. Reduction of re-keying of information saves staff time and reduces or elimiates errors.  The errors in re-keying obscure identifying numbers like SSN or court case ID reduce the types of errors that lead to case delays and ill-informed decision-making. 
 
-Before diving into the IEPD, familiarize yourself with the NIEM framework and the purpose of each artifact. The NIEM [training resources](https://niem.github.io/training/) provide valuable background information. Review the folder structure and contents to understand how the data exchange is defined and implemented.
+This exchange will also leverage the UCTID from the Uniform Charge Table to improve the clarity of specific charges and improve the visibility and accuracy of charges as the case proceeds. 
 
-## Usage
-    1. Schemas: Refer to the schemas in ./api/xml_schema/ and ./api/json_schema/ to understand the data structures.
-    2. Subset: Check the NIEM subset files for the specific elements used.
-    3. Mapping: Use the mapping spreadsheet to see how the visual model maps to schema elements and instance paths.
-    4. Class Diagram: Study the class diagram for a high-level view of the data model.
-    5. Sample Message: Review the annotated sample message for a concrete example of the data exchange.
+## Data Requirements:
 
-**By following this guide, developers can effectively navigate and utilize the IEPD to implement consistent and accurate data exchanges within the NIEM framework.**
+XML Schemas - coming soon. 
 
----
+### Key data elements include:
+- Arrest number (enabling the JMS to correlate a new case to a previous Booking or Charge Screening). 
+- Magistrte Court Case ID if known
+- Created Date/Filed DAte 
+- Accepted charges (indicated by UCTID).
+- Rejected charges
+- SCN-Sequence number to correlate each Charge to the value originally assigned in the State's AFIS and CCH. 
+- Prosecuting Attorney
 
-# Using the SSGT Tool to Create NIEM Subset Files and Wantlist
+## Artifacts: coming soon. 
 
-The **Schema Subset Generation Tool** (SSGT) is a powerful utility for creating NIEM subset files and wantlists. The [SSGT](https://niem.github.io/reference/tools/ssgt/) simplifies the process of generating tailored subsets of NIEM schemas by allowing users to select only the elements and types relevant to their specific data exchange needs. This targeted approach helps reduce complexity and improve performance by excluding unnecessary elements.
-(https://tools.niem.gov/niemtools/ssgt/index.iepd)
-## Steps to Use SSGT
+**Mapping Spreadsheet** - coming soon
 
-    1. Access the SSGT: Navigate to the SSGT website.
+**Sample XML Files** - coming soon
 
-    2. Create a New Subset:
-        Click on "Create a New Subset."
-        Choose the version of NIEM you are working with.
+**Class Diagram:**  - coming soon
 
-    3. Select Components:
-        Use the interface to browse or search for the elements and types you need for your subset.
-        Add these elements to your subset by selecting them and clicking "Add to Subset."
-
-    4. Generate Wantlist:
-        Once you have added all necessary elements, click on "Generate Wantlist."
-        Review and adjust your selections if needed.
-
-    5. Download Subset Files:
-        After finalizing your wantlist, click on "Download Subset."
-        The SSGT will generate and provide a zip file containing your subset schema files and wantlist.
-
-### Benefits of Using SSGT
-
-    - Efficiency: Streamlines the process of creating NIEM subsets by providing an intuitive interface for selecting required elements.
-    - Customization: Ensures that only relevant components are included, reducing schema size and complexity.
-    - Consistency: Helps maintain consistency in data exchanges by providing standardized subsets tailored to specific needs.
-
-By leveraging the SSGT tool, developers can efficiently create NIEM subset files and wantlists that align with their data exchange requirements, facilitating smoother and more effective interoperability.
