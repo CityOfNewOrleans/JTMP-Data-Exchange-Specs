@@ -35,12 +35,12 @@ Subscribers will be able to associate the details of the disposition and/or rele
 - Concurrent/Consecutive indicators
 
 ## Artifacts:
-**XML Schema:** - Coming soon
+![XML Schema](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/tree/main/schemas/UniformCommitmentOrder_iepd/api/xml_schema)
 
 **Mapping Spreadsheet:**
 ![Mapping Spreadsheet](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/UniformCommitmentOrder_iepd/artifacts/UniformCommitmentOrder_MappingSpreadsheet.xlsx)
 
-**Sample XML:** - Coming soon. 
+![Sample XML](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/tree/main/schemas/UniformCommitmentOrder_iepd/examples)
 
 **Class Diagram:**
 ![Class Diagram](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/UniformCommitmentOrder_iepd/artifacts/UnformCommitmentOrder_ClassDiagram.svg)
