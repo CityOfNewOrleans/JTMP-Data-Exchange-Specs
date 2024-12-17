@@ -1,0 +1,2436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://release.niem.gov/niem/codes/ncic/5.2/" version="1" xml:lang="en-US" xsi:schemaLocation="http://release.niem.gov/niem/appinfo/5.0/ ../utility/appinfo.xsd http://release.niem.gov/niem/conformanceTargets/3.0/ ../utility/conformanceTargets.xsd" ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ReferenceSchemaDocument" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:j="http://release.niem.gov/niem/domains/jxdm/7.2/" xmlns:structures="http://release.niem.gov/niem/structures/5.0/" xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/" xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ncic="http://release.niem.gov/niem/codes/ncic/5.2/">
+  <xs:annotation>
+    <xs:documentation>FBI National Crime and Information Center (NCIC) codes</xs:documentation>
+    <xs:appinfo>
+      <appinfo:LocalTerm term="ABRA" literal="Article Brand Name"/>
+      <appinfo:LocalTerm term="BCO" literal="Boat Color"/>
+      <appinfo:LocalTerm term="BLT" literal="Blood Type"/>
+      <appinfo:LocalTerm term="BMA" literal="Boat Make"/>
+      <appinfo:LocalTerm term="BPS" literal="Body Parts Status"/>
+      <appinfo:LocalTerm term="BRA" literal="Boat Brand Name"/>
+      <appinfo:LocalTerm term="BTMA" literal="Vehicle Make for Boat Trailer"/>
+      <appinfo:LocalTerm term="BTY" literal="Boat Type"/>
+      <appinfo:LocalTerm term="BXR" literal="Body X-Rays Available"/>
+      <appinfo:LocalTerm term="CAL" literal="(Firearm) Caliber"/>
+      <appinfo:LocalTerm term="CAT" literal="(Vehicle/Boat Part) Category"/>
+      <appinfo:LocalTerm term="CBTY" literal="Canadian Boat Type"/>
+      <appinfo:LocalTerm term="CDA" literal="Manner and Cause of Death"/>
+      <appinfo:LocalTerm term="CMC" literal="Caution and Medical Conditions"/>
+      <appinfo:LocalTerm term="COL" literal="(Physical Feature) Color"/>
+      <appinfo:LocalTerm term="CPRO" literal="Canadian Vehicle Index Propulsion"/>
+      <appinfo:LocalTerm term="CRC" literal="Circumcision"/>
+      <appinfo:LocalTerm term="CRR" literal="Conviction Resulting in Registration"/>
+      <appinfo:LocalTerm term="CTZ" literal="Citizenship"/>
+      <appinfo:LocalTerm term="DBN" literal="One Crime Inquiry Database Name"/>
+      <appinfo:LocalTerm term="DCH" literal="Dental Characteristics"/>
+      <appinfo:LocalTerm term="DEN" literal="Denomination"/>
+      <appinfo:LocalTerm term="ECR" literal="(Threat Group Member) Criteria for Entry"/>
+      <appinfo:LocalTerm term="EPD" literal="(Boat) Engine Power or Displacement"/>
+      <appinfo:LocalTerm term="ETN" literal="Ethnicity"/>
+      <appinfo:LocalTerm term="EXL" literal="Extradition Limitation"/>
+      <appinfo:LocalTerm term="EYE" literal="Eye Color"/>
+      <appinfo:LocalTerm term="FILE" literal="FILE fields"/>
+      <appinfo:LocalTerm term="FP" literal="Fingerprint"/>
+      <appinfo:LocalTerm term="FPC" literal="Fingerprint Classification"/>
+      <appinfo:LocalTerm term="GOFF" definition="Offenses of General Applicability"/>
+      <appinfo:LocalTerm term="GTYP" literal="Gun Type Characteristic 1 Weapon Type"/>
+      <appinfo:LocalTerm term="GTYP2" literal="Gun Type Characteristic 2"/>
+      <appinfo:LocalTerm term="GTYP3" literal="Gun Type Combination"/>
+      <appinfo:LocalTerm term="GTYPE" literal="Global Inquiry Type of Request"/>
+      <appinfo:LocalTerm term="HAI" literal="Hair Color"/>
+      <appinfo:LocalTerm term="HSP" literal="(Boat) Hull Shape"/>
+      <appinfo:LocalTerm term="HUL" literal="(Boat) Outer Hull Material"/>
+      <appinfo:LocalTerm term="IDT" literal="Identity Theft Type"/>
+      <appinfo:LocalTerm term="IFS" literal="Identification for Firearm Sales"/>
+      <appinfo:LocalTerm term="IMT" literal="Image Type"/>
+      <appinfo:LocalTerm term="JWT" literal="Jewelry Type"/>
+      <appinfo:LocalTerm term="LIS" literal="License Plate State"/>
+      <appinfo:LocalTerm term="LIT" literal="License Plate Number"/>
+      <appinfo:LocalTerm term="LITP" literal="License Plate Type"/>
+      <appinfo:LocalTerm term="LSTA" literal="State/Country Index"/>
+      <appinfo:LocalTerm term="MAK" literal="(Firearm) Make"/>
+      <appinfo:LocalTerm term="MNP" literal="Missing Person"/>
+      <appinfo:LocalTerm term="MNU" literal="(person identifier) Miscellaneous Number"/>
+      <appinfo:LocalTerm term="MPC" literal="Missing Person Circumstances"/>
+      <appinfo:LocalTerm term="NICS" literal="National Instant Criminal Background Check System"/>
+      <appinfo:LocalTerm term="NPF" literal="Number of Missing Person Found"/>
+      <appinfo:LocalTerm term="OFF" literal="Offense Code"/>
+      <appinfo:LocalTerm term="OFS" literal="Offender Status"/>
+      <appinfo:LocalTerm term="OLS" literal="Operator License State"/>
+      <appinfo:LocalTerm term="OOC" literal="Original Offense Code"/>
+      <appinfo:LocalTerm term="ORI" definition="A nine-character identifier assigned by the FBI Criminal Justice Information Systems (CJIS) staff to an organization, which must have met the established qualifying criteria for ORI assignment to identify the agency in transactions on CJIS Systems."/>
+      <appinfo:LocalTerm term="PCC" literal="Physical Feature Class"/>
+      <appinfo:LocalTerm term="PCO" literal="Protection Order Condition"/>
+      <appinfo:LocalTerm term="PCS" literal="(Fingerprint) Pattern Code Source"/>
+      <appinfo:LocalTerm term="POB" literal="Place of Birth"/>
+      <appinfo:LocalTerm term="PRO" literal="(Boat) Propulsion"/>
+      <appinfo:LocalTerm term="PSC" literal="Physical Feature Sub Class"/>
+      <appinfo:LocalTerm term="RAC" literal="Race"/>
+      <appinfo:LocalTerm term="RES" literal="Registration State"/>
+      <appinfo:LocalTerm term="RMI" literal="Ransom Money Indicator"/>
+      <appinfo:LocalTerm term="ROV" literal="Relationship of Victim"/>
+      <appinfo:LocalTerm term="RPP" literal="Reason for Property Record Removal"/>
+      <appinfo:LocalTerm term="SDT" literal="Security Date or Series Year"/>
+      <appinfo:LocalTerm term="SEX" literal="Gender"/>
+      <appinfo:LocalTerm term="SKN" literal="Skin Tone"/>
+      <appinfo:LocalTerm term="SMT" literal="Scars, Marks, Tattoos, and Other Characteristics"/>
+      <appinfo:LocalTerm term="SVC" literal="Service Information"/>
+      <appinfo:LocalTerm term="TRFU" literal="Translation Field Usage"/>
+      <appinfo:LocalTerm term="TYP" literal="(Firearm) Type"/>
+      <appinfo:LocalTerm term="TYPA" literal="Article Type"/>
+      <appinfo:LocalTerm term="TYPO" literal="ORI Type"/>
+      <appinfo:LocalTerm term="TYPS" literal="(Securities) Type"/>
+      <appinfo:LocalTerm term="UDC" literal="User Decision Code"/>
+      <appinfo:LocalTerm term="VCO" literal="Vehicle Color"/>
+      <appinfo:LocalTerm term="VMA" literal="Vehicle Make"/>
+      <appinfo:LocalTerm term="VMO" literal="Vehicle Model"/>
+      <appinfo:LocalTerm term="VPC" literal="Violent Person Criteria"/>
+      <appinfo:LocalTerm term="VST" literal="Vehicle Style"/>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:import namespace="http://release.niem.gov/niem/domains/jxdm/7.2/" schemaLocation="../domains/jxdm.xsd"/>
+  <xs:import namespace="http://release.niem.gov/niem/structures/5.0/" schemaLocation="../utility/structures.xsd"/>
+  <xs:simpleType name="OFFCodeSimpleType">
+    <xs:annotation>
+      <xs:documentation>A data type for 3 - Uniform Offense Classification (OFF, OOC, and CRR) Field Codes</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="0101">
+        <xs:annotation>
+          <xs:documentation>TREASON</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0102">
+        <xs:annotation>
+          <xs:documentation>TREASON MISPRISION</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0103">
+        <xs:annotation>
+          <xs:documentation>ESPIONAGE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0104">
+        <xs:annotation>
+          <xs:documentation>SABOTAGE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0105">
+        <xs:annotation>
+          <xs:documentation>SEDITION</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0106">
+        <xs:annotation>
+          <xs:documentation>SELECTIVE SERVICE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0199">
+        <xs:annotation>
+          <xs:documentation>SOVEREIGNTY</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0201">
+        <xs:annotation>
+          <xs:documentation>MILITARY DESERTION</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0299">
+        <xs:annotation>
+          <xs:documentation>MILITARY</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0301">
+        <xs:annotation>
+          <xs:documentation>ILLEGAL ENTRY</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0302">
+        <xs:annotation>
+          <xs:documentation>FALSE CITIZENSHIP</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0303">
+        <xs:annotation>
+          <xs:documentation>SMUGGLING ALIENS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0399">
+        <xs:annotation>
+          <xs:documentation>IMMIGRATION</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0901">
+        <xs:annotation>
+          <xs:documentation>HOMICIDE - WILLFUL KILL-FAMILY-GUN</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0902">
+        <xs:annotation>
+          <xs:documentation>HOMICIDE - WILLFUL KILL-FAMILY-WEAPON</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0903">
+        <xs:annotation>
+          <xs:documentation>HOMICIDE - WILLFUL KILL-NONFAMILY-GUN</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0904">
+        <xs:annotation>
+          <xs:documentation>HOMICIDE - WILLFUL KILL-NONFAMILY-WEAPON</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0905">
+        <xs:annotation>
+          <xs:documentation>HOMICIDE - WILLFUL KILL-PUB OFF-GUN</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0906">
+        <xs:annotation>
+          <xs:documentation>HOMICIDE - WILLFUL KILL-PUB OFF-WEAPON</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0907">
+        <xs:annotation>
+          <xs:documentation>HOMICIDE - WILLFUL KILL-POL OFF-GUN</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0908">
+        <xs:annotation>
+          <xs:documentation>HOMICIDE - WILLFUL KILL-POL OFF-WEAPON</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0909">
+        <xs:annotation>
+          <xs:documentation>HOMICIDE - NEGLIG MANSL-VEH</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0910">
+        <xs:annotation>
+          <xs:documentation>HOMICIDE - NEGLIG MANSL-WEAPON</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0911">
+        <xs:annotation>
+          <xs:documentation>HOMICIDE - WILLFUL KILL-GUN</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0912">
+        <xs:annotation>
+          <xs:documentation>HOMICIDE - WILLFUL KILL-WEAPON</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0913">
+        <xs:annotation>
+          <xs:documentation>HOMICIDE - JOHN OR JANE DOE - NO WARRANT</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="0999">
+        <xs:annotation>
+          <xs:documentation>HOMICIDE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1001">
+        <xs:annotation>
+          <xs:documentation>KIDNAP MINOR FOR RANSOM</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1002">
+        <xs:annotation>
+          <xs:documentation>KIDNAP ADULT FOR RANSOM</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1003">
+        <xs:annotation>
+          <xs:documentation>KIDNAP MINOR TO SEXUALLY ASSLT</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1004">
+        <xs:annotation>
+          <xs:documentation>KIDNAP ADULT TO SEXUALLY ASSLT</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1005">
+        <xs:annotation>
+          <xs:documentation>KIDNAP MINOR</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1006">
+        <xs:annotation>
+          <xs:documentation>KIDNAP ADULT</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1007">
+        <xs:annotation>
+          <xs:documentation>KIDNAP HOSTAGE FOR ESCAPE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1008">
+        <xs:annotation>
+          <xs:documentation>ABDUCT - NO RANSOM OR ASSLT</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1009">
+        <xs:annotation>
+          <xs:documentation>KIDNAP - HIJACK AIRCRAFT</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1010">
+        <xs:annotation>
+          <xs:documentation>KIDNAP MINOR-PARENTAL</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1011">
+        <xs:annotation>
+          <xs:documentation>KIDNAP MINOR-NONPARENTAL</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1020">
+        <xs:annotation>
+          <xs:documentation>FALSE IMPRISONMENT-MINOR-NONPARENTAL</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1021">
+        <xs:annotation>
+          <xs:documentation>FALSE IMPRISONMENT-MINOR-PARENTAL</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1099">
+        <xs:annotation>
+          <xs:documentation>KIDNAPPING</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1101">
+        <xs:annotation>
+          <xs:documentation>RAPE - GUN</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1102">
+        <xs:annotation>
+          <xs:documentation>RAPE WITH WEAPON</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1103">
+        <xs:annotation>
+          <xs:documentation>RAPE - STRONGARM</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1104">
+        <xs:annotation>
+          <xs:documentation>SEX ASSLT - SODOMY-BOY-GUN</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1105">
+        <xs:annotation>
+          <xs:documentation>SEX ASSLT - SODOMY-MAN-GUN</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1106">
+        <xs:annotation>
+          <xs:documentation>SEX ASSLT - SODOMY-GIRL-GUN</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1107">
+        <xs:annotation>
+          <xs:documentation>SEX ASSLT - SODOMY-WOMAN-GUN</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1108">
+        <xs:annotation>
+          <xs:documentation>SEX ASSLT - SODOMY-BOY-WEAPON</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1109">
+        <xs:annotation>
+          <xs:documentation>SEX ASSLT - SODOMY-MAN-WEAPON</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1110">
+        <xs:annotation>
+          <xs:documentation>SEX ASSLT - SODOMY-GIRL-WEAPON</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1111">
+        <xs:annotation>
+          <xs:documentation>SEX ASSLT - SODOMY-WOMAN-WEAPON</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1112">
+        <xs:annotation>
+          <xs:documentation>SEX ASSLT - SODOMY-BOY-STGARM</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1113">
+        <xs:annotation>
+          <xs:documentation>SEX ASSLT - SODOMY-MAN-STGARM</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1114">
+        <xs:annotation>
+          <xs:documentation>SEX ASSLT - SODOMY-GIRL-STGARM</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1115">
+        <xs:annotation>
+          <xs:documentation>SEX ASSLT - SODOMY-WOMAN-STGARM</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1116">
+        <xs:annotation>
+          <xs:documentation>STAT RAPE - NO FORCE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1117">
+        <xs:annotation>
+          <xs:documentation>SEX ASSLT - CARNAL ABUSE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1118">
+        <xs:annotation>
+          <xs:documentation>RAPE-ELDERLY</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1119">
+        <xs:annotation>
+          <xs:documentation>RAPE-DISABLED</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1120">
+        <xs:annotation>
+          <xs:documentation>SEX ASSAULT-ELDERLY</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1121">
+        <xs:annotation>
+          <xs:documentation>SEX ASSAULT-DISABLED</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1122">
+        <xs:annotation>
+          <xs:documentation>RAPE-DRUG-INDUCED</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1123">
+        <xs:annotation>
+          <xs:documentation>SEXUAL ASSAULT-DRUG-INDUCED</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1198">
+        <xs:annotation>
+          <xs:documentation>RAPE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1199">
+        <xs:annotation>
+          <xs:documentation>SEX ASSAULT</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1201">
+        <xs:annotation>
+          <xs:documentation>ROBBERY - BUSINESS-GUN</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1202">
+        <xs:annotation>
+          <xs:documentation>ROBBERY - BUSINESS-WEAPON</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1203">
+        <xs:annotation>
+          <xs:documentation>ROBBERY - BUSINESS-STGARM</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1204">
+        <xs:annotation>
+          <xs:documentation>ROBBERY - STREET-GUN</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1205">
+        <xs:annotation>
+          <xs:documentation>ROBBERY - STREET-WEAPON</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1206">
+        <xs:annotation>
+          <xs:documentation>ROBBERY - STREET-STGARM</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1207">
+        <xs:annotation>
+          <xs:documentation>ROBBERY - RESID-GUN</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1208">
+        <xs:annotation>
+          <xs:documentation>ROBBERY - RESID-WEAPON</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1209">
+        <xs:annotation>
+          <xs:documentation>ROBBERY - RESID-STGARM</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1210">
+        <xs:annotation>
+          <xs:documentation>FORCIBLE PURSE SNATCHING</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1211">
+        <xs:annotation>
+          <xs:documentation>ROBBERY - BANKING-TYPE INST</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1212">
+        <xs:annotation>
+          <xs:documentation>CARJACKING - ARMED</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1299">
+        <xs:annotation>
+          <xs:documentation>ROBBERY</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1301">
+        <xs:annotation>
+          <xs:documentation>AGGRAV ASSLT - FAMILY-GUN</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1302">
+        <xs:annotation>
+          <xs:documentation>AGGRAV ASSLT - FAMILY-WEAPON</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1303">
+        <xs:annotation>
+          <xs:documentation>AGGRAV ASSLT - FAMILY-STGARM</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1304">
+        <xs:annotation>
+          <xs:documentation>AGGRAV ASSLT - NONFAMILY-GUN</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1305">
+        <xs:annotation>
+          <xs:documentation>AGGRAV ASSLT - NONFAMILY-WEAPON</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1306">
+        <xs:annotation>
+          <xs:documentation>AGGRAV ASSLT - NONFAMILY-STGARM</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1307">
+        <xs:annotation>
+          <xs:documentation>AGGRAV ASSLT - PUB OFF-GUN</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1308">
+        <xs:annotation>
+          <xs:documentation>AGGRAV ASSLT - PUB OFF-WEAPON</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1309">
+        <xs:annotation>
+          <xs:documentation>AGGRAV ASSLT - PUB OFF-STGARM</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1310">
+        <xs:annotation>
+          <xs:documentation>AGGRAV ASSLT - POL OFF-GUN</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1311">
+        <xs:annotation>
+          <xs:documentation>AGGRAV ASSLT - POL OFF-WEAPON</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1312">
+        <xs:annotation>
+          <xs:documentation>AGGRAV ASSLT - POL OFF-STGARM</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1313">
+        <xs:annotation>
+          <xs:documentation>SIMPLE ASSLT</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1314">
+        <xs:annotation>
+          <xs:documentation>AGGRAV ASSLT - GUN</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1315">
+        <xs:annotation>
+          <xs:documentation>AGGRAV ASSLT - WEAPON</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1316">
+        <xs:annotation>
+          <xs:documentation>INTIMIDATION (INCLUDES STALKING)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1399">
+        <xs:annotation>
+          <xs:documentation>ASSAULT</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1401">
+        <xs:annotation>
+          <xs:documentation>ABORTIONAL ACT ON OTHER</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1402">
+        <xs:annotation>
+          <xs:documentation>ABORTIONAL ACT ON SELF</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1403">
+        <xs:annotation>
+          <xs:documentation>SUBMISSION TO ABORTIONAL ACT</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1404">
+        <xs:annotation>
+          <xs:documentation>ABORTIFACIENT</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1499">
+        <xs:annotation>
+          <xs:documentation>ABORTION</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1601">
+        <xs:annotation>
+          <xs:documentation>THREAT - FEDERAL PROTECTEES</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1602">
+        <xs:annotation>
+          <xs:documentation>THREAT - TERRORISTIC - STATE OFFENSES</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1603">
+        <xs:annotation>
+          <xs:documentation>ASSIST, SPONSOR, OR PROVIDE MATERIAL OR FINANCIAL SUPPORT TO TERRORISTS OR TERROR ORGANAIZATIONS.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1701">
+        <xs:annotation>
+          <xs:documentation>STATE/LOCAL - MATERIAL WITNESS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1702">
+        <xs:annotation>
+          <xs:documentation>FEDERAL - MATERIAL WITNESS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2001">
+        <xs:annotation>
+          <xs:documentation>ARSON - BUSINESS-ENDANGERED LIFE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2002">
+        <xs:annotation>
+          <xs:documentation>ARSON - RESID-ENDANGERED LIFE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2003">
+        <xs:annotation>
+          <xs:documentation>ARSON - BUSINESS-DEFRAUD INSURER</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2004">
+        <xs:annotation>
+          <xs:documentation>ARSON - RESID-DEFRAUD INSURER</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2005">
+        <xs:annotation>
+          <xs:documentation>ARSON - BUSINESS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2006">
+        <xs:annotation>
+          <xs:documentation>ARSON - RESID</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2007">
+        <xs:annotation>
+          <xs:documentation>BURNING OF-SEE MIS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2008">
+        <xs:annotation>
+          <xs:documentation>ARSON - PUB-BLDG-ENDANGERED LIFE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2009">
+        <xs:annotation>
+          <xs:documentation>ARSON - PUB-BLDG</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2099">
+        <xs:annotation>
+          <xs:documentation>ARSON</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2101">
+        <xs:annotation>
+          <xs:documentation>EXTORT - THREAT INJURE PERSON</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2102">
+        <xs:annotation>
+          <xs:documentation>EXTORT - THREAT DAMAGE PROP</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2103">
+        <xs:annotation>
+          <xs:documentation>EXTORT - THREAT INJURE REPUTATION</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2104">
+        <xs:annotation>
+          <xs:documentation>EXTORT - THREAT ACCUSE PERSON OF CRIME</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2105">
+        <xs:annotation>
+          <xs:documentation>EXTORT - THREAT OF INFORMING OF VIO</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2199">
+        <xs:annotation>
+          <xs:documentation>EXTORTION</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2201">
+        <xs:annotation>
+          <xs:documentation>BURGL - SAFE-VAULT</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2202">
+        <xs:annotation>
+          <xs:documentation>BURGL - FORCED ENTRY-RESID</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2203">
+        <xs:annotation>
+          <xs:documentation>BURGL - FORCED ENTRY-NONRESID</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2204">
+        <xs:annotation>
+          <xs:documentation>BURGL - NO FORCED ENTRY-RESID</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2205">
+        <xs:annotation>
+          <xs:documentation>BURGL - NO FORCED ENTRY-NONRESID</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2206">
+        <xs:annotation>
+          <xs:documentation>BURGL TOOLS - POSSESS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2207">
+        <xs:annotation>
+          <xs:documentation>BURGL - BANKING-TYPE INST</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2299">
+        <xs:annotation>
+          <xs:documentation>BURGLARY</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2301">
+        <xs:annotation>
+          <xs:documentation>POCKETPICKING</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2302">
+        <xs:annotation>
+          <xs:documentation>PURSE SNATCHING - NO FORCE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2303">
+        <xs:annotation>
+          <xs:documentation>SHOPLIFTING</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2304">
+        <xs:annotation>
+          <xs:documentation>LARC - PARTS FROM VEH</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2305">
+        <xs:annotation>
+          <xs:documentation>LARC - FROM AUTO</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2306">
+        <xs:annotation>
+          <xs:documentation>LARC - FROM SHIPMENT</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2307">
+        <xs:annotation>
+          <xs:documentation>LARC - FROM COIN MACHINE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2308">
+        <xs:annotation>
+          <xs:documentation>LARC - FROM BLDG</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2309">
+        <xs:annotation>
+          <xs:documentation>LARC - FROM YARDS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2310">
+        <xs:annotation>
+          <xs:documentation>LARC - FROM MAILS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2311">
+        <xs:annotation>
+          <xs:documentation>LARC - FROM BANKING-TYPE INST</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2312">
+        <xs:annotation>
+          <xs:documentation>LARC - FROM INTERSTATE SHIPMENT</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2313">
+        <xs:annotation>
+          <xs:documentation>OBSTRUCT CORRESPONDENCE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2314">
+        <xs:annotation>
+          <xs:documentation>THEFT OF US GOVT PROP</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2315">
+        <xs:annotation>
+          <xs:documentation>LARC ON US GOVT RESERV</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2316">
+        <xs:annotation>
+          <xs:documentation>LARC - POSTAL</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2399">
+        <xs:annotation>
+          <xs:documentation>LARCENY</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2401">
+        <xs:annotation>
+          <xs:documentation>THEFT AND SALE VEH</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2402">
+        <xs:annotation>
+          <xs:documentation>THEFT AND STRIP VEH</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2403">
+        <xs:annotation>
+          <xs:documentation>THEFT AND USE VEH OTHER CRIME</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2404">
+        <xs:annotation>
+          <xs:documentation>VEHICLE THEFT</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2405">
+        <xs:annotation>
+          <xs:documentation>THEFT VEH BY BAILEE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2406">
+        <xs:annotation>
+          <xs:documentation>RECEIV STOLEN VEH</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2407">
+        <xs:annotation>
+          <xs:documentation>STRIP STOLEN VEH</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2408">
+        <xs:annotation>
+          <xs:documentation>POSSESS STOLEN VEHICLE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2409">
+        <xs:annotation>
+          <xs:documentation>INTERSTATE TRANSP STOLEN VEH</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2410">
+        <xs:annotation>
+          <xs:documentation>AIRCRAFT THEFT</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2411">
+        <xs:annotation>
+          <xs:documentation>UNAUTH USE OF VEH</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2499">
+        <xs:annotation>
+          <xs:documentation>STOLEN VEHICLE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2501">
+        <xs:annotation>
+          <xs:documentation>FORGERY OF CHECKS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2502">
+        <xs:annotation>
+          <xs:documentation>FORGERY OF</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2503">
+        <xs:annotation>
+          <xs:documentation>COUNTERFEITING OF</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2504">
+        <xs:annotation>
+          <xs:documentation>PASS FORGED</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2505">
+        <xs:annotation>
+          <xs:documentation>PASS COUNTERFEITED</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2506">
+        <xs:annotation>
+          <xs:documentation>POSSESS FORGED - SEE MIS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2507">
+        <xs:annotation>
+          <xs:documentation>POSSESS COUNTERFEITED - SEE MIS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2508">
+        <xs:annotation>
+          <xs:documentation>POSSESS TOOLS FOR FORGERY/COUNTERFEITING</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2509">
+        <xs:annotation>
+          <xs:documentation>TRANSPORT FORGED - SEE MIS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2510">
+        <xs:annotation>
+          <xs:documentation>TRANSPORT COUNTERFEITED - SEE MIS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2511">
+        <xs:annotation>
+          <xs:documentation>TRANSPORT TOOLS FOR FORGERY/COUNTERFEITING</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2589">
+        <xs:annotation>
+          <xs:documentation>FORGERY</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2599">
+        <xs:annotation>
+          <xs:documentation>COUNTERFEITING</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2601">
+        <xs:annotation>
+          <xs:documentation>FRAUD - CONFIDENCE GAME</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2602">
+        <xs:annotation>
+          <xs:documentation>FRAUD - SWINDLE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2603">
+        <xs:annotation>
+          <xs:documentation>MAIL FRAUD</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2604">
+        <xs:annotation>
+          <xs:documentation>FRAUD - IMPERSON</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2605">
+        <xs:annotation>
+          <xs:documentation>FRAUD - ILLEG USE CREDIT CARDS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2606">
+        <xs:annotation>
+          <xs:documentation>FRAUD - INSUFF FUNDS CHECK</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2607">
+        <xs:annotation>
+          <xs:documentation>FRAUD - FALSE STATEMENT</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2608">
+        <xs:annotation>
+          <xs:documentation>FRAUD - BY WIRE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2609">
+        <xs:annotation>
+          <xs:documentation>FRAUD AND ABUSE, COMPUTER</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2610">
+        <xs:annotation>
+          <xs:documentation>IDENTITY THEFT</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2699">
+        <xs:annotation>
+          <xs:documentation>FRAUD</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2701">
+        <xs:annotation>
+          <xs:documentation>EMBEZZLE - BUSINESS PROP</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2702">
+        <xs:annotation>
+          <xs:documentation>EMBEZZLE - INTERSTATE SHIPMENT</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2703">
+        <xs:annotation>
+          <xs:documentation>EMBEZZLE - BANKING-TYPE INST</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2704">
+        <xs:annotation>
+          <xs:documentation>EMBEZZLE - PUBLIC PROP</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2705">
+        <xs:annotation>
+          <xs:documentation>EMBEZZLE - POSTAL</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2799">
+        <xs:annotation>
+          <xs:documentation>EMBEZZLE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2801">
+        <xs:annotation>
+          <xs:documentation>SALE OF STOLEN PROP</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2802">
+        <xs:annotation>
+          <xs:documentation>TRANSPORT INTERSTATE STOLEN PROP</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2803">
+        <xs:annotation>
+          <xs:documentation>RECEIVE STOLEN PROP</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2804">
+        <xs:annotation>
+          <xs:documentation>POSSESS STOLEN PROP</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2805">
+        <xs:annotation>
+          <xs:documentation>CONCEAL STOLEN PROP</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2899">
+        <xs:annotation>
+          <xs:documentation>STOLEN PROPERTY</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2901">
+        <xs:annotation>
+          <xs:documentation>DAMAGE PROP - BUSINESS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2902">
+        <xs:annotation>
+          <xs:documentation>DAMAGE PROP - PRIVATE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2903">
+        <xs:annotation>
+          <xs:documentation>DAMAGE PROP - PUBLIC</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2904">
+        <xs:annotation>
+          <xs:documentation>DAMAGE PROP - BUSINESS-WITH EXPLOSIVE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2905">
+        <xs:annotation>
+          <xs:documentation>DAMAGE PROP - PRIVATE-WITH EXPLOSIVE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2906">
+        <xs:annotation>
+          <xs:documentation>DAMAGE PROP - PUBLIC-WITH EXPLOSIVE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2999">
+        <xs:annotation>
+          <xs:documentation>DAMAGE PROPERTY</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3501">
+        <xs:annotation>
+          <xs:documentation>HALLUCINOGEN - MFR</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3502">
+        <xs:annotation>
+          <xs:documentation>HALLUCINOGEN - DISTRIB</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3503">
+        <xs:annotation>
+          <xs:documentation>HALLUCINOGEN - SELL</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3504">
+        <xs:annotation>
+          <xs:documentation>HALLUCINOGEN - POSSESS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3505">
+        <xs:annotation>
+          <xs:documentation>HALLUCINOGEN</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3510">
+        <xs:annotation>
+          <xs:documentation>HEROIN - SELL</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3511">
+        <xs:annotation>
+          <xs:documentation>HEROIN - SMUGGL</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3512">
+        <xs:annotation>
+          <xs:documentation>HEROIN - POSSESS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3513">
+        <xs:annotation>
+          <xs:documentation>HEROIN</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3520">
+        <xs:annotation>
+          <xs:documentation>OPIUM OR DERIV - SELL</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3521">
+        <xs:annotation>
+          <xs:documentation>OPIUM OR DERIV - SMUGGL</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3522">
+        <xs:annotation>
+          <xs:documentation>OPIUM OR DERIV - POSSESS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3523">
+        <xs:annotation>
+          <xs:documentation>OPIUM OR DERIV</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3530">
+        <xs:annotation>
+          <xs:documentation>COCAINE - SELL</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3531">
+        <xs:annotation>
+          <xs:documentation>COCAINE - SMUGGL</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3532">
+        <xs:annotation>
+          <xs:documentation>COCAINE - POSSESS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3533">
+        <xs:annotation>
+          <xs:documentation>COCAINE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3540">
+        <xs:annotation>
+          <xs:documentation>SYNTH NARCOTIC - SELL</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3541">
+        <xs:annotation>
+          <xs:documentation>SYNTH NARCOTIC - SMUGGL</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3542">
+        <xs:annotation>
+          <xs:documentation>SYNTH NARCOTIC - POSSESS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3543">
+        <xs:annotation>
+          <xs:documentation>SYNTH NARCOTIC</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3550">
+        <xs:annotation>
+          <xs:documentation>NARCOTIC EQUIP - POSSESS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3560">
+        <xs:annotation>
+          <xs:documentation>MARIJUANA - SELL</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3561">
+        <xs:annotation>
+          <xs:documentation>MARIJUANA - SMUGGL</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3562">
+        <xs:annotation>
+          <xs:documentation>MARIJUANA - POSSESS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3563">
+        <xs:annotation>
+          <xs:documentation>MARIJUANA - PRODUCING</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3564">
+        <xs:annotation>
+          <xs:documentation>MARIJUANA</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3570">
+        <xs:annotation>
+          <xs:documentation>AMPHETAMINE - MFR</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3571">
+        <xs:annotation>
+          <xs:documentation>AMPHETAMINE - SELL</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3572">
+        <xs:annotation>
+          <xs:documentation>AMPHETAMINE - POSSESS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3573">
+        <xs:annotation>
+          <xs:documentation>AMPHETAMINE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3580">
+        <xs:annotation>
+          <xs:documentation>BARBITURATE - MFR</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3581">
+        <xs:annotation>
+          <xs:documentation>BARBITURATE - SELL</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3582">
+        <xs:annotation>
+          <xs:documentation>BARBITURATE - POSSESS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3583">
+        <xs:annotation>
+          <xs:documentation>BARBITURATE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3599">
+        <xs:annotation>
+          <xs:documentation>DANGEROUS DRUGS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3601">
+        <xs:annotation>
+          <xs:documentation>SEX OFFENSE - AGAINST CHILD-FONDLING</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3602">
+        <xs:annotation>
+          <xs:documentation>SEX OFFENSE-GIRL</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3603">
+        <xs:annotation>
+          <xs:documentation>SEX OFFENSE-BOY</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3604">
+        <xs:annotation>
+          <xs:documentation>INCEST WITH MINOR</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3605">
+        <xs:annotation>
+          <xs:documentation>INDECENT EXPOSURE (TO MINORS AND ADULTS)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3606">
+        <xs:annotation>
+          <xs:documentation>BESTIALITY</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3607">
+        <xs:annotation>
+          <xs:documentation>INCEST WITH ADULT</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3608">
+        <xs:annotation>
+          <xs:documentation>SEDUCTION OF ADULT</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3609">
+        <xs:annotation>
+          <xs:documentation>SEX OFFENSE-WOMAN</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3610">
+        <xs:annotation>
+          <xs:documentation>SEX OFFENSE-MAN</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3611">
+        <xs:annotation>
+          <xs:documentation>PEEPING TOM</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3612">
+        <xs:annotation>
+          <xs:documentation>FAILURE TO REGISTER AS A SEX OFFENDER</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3613">
+        <xs:annotation>
+          <xs:documentation>SEX OFFENDER REGISTRATION VIOLATION(SEE MIS)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3614">
+        <xs:annotation>
+          <xs:documentation>INDECENT EXPOSURE TO MINOR</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3615">
+        <xs:annotation>
+          <xs:documentation>INDECENT EXPOSURE TO ADULT</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3616">
+        <xs:annotation>
+          <xs:documentation>LEWD OR LASCIVIOUS ACTS WITH MINOR</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3617">
+        <xs:annotation>
+          <xs:documentation>SEXUALLY VIOLATE HUMAN REMAINS/NECROPHILIA</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3618">
+        <xs:annotation>
+          <xs:documentation>MOLESTATION OF MINOR</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3619">
+        <xs:annotation>
+          <xs:documentation>VOYEURISM</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3620">
+        <xs:annotation>
+          <xs:documentation>SEX OFFENSE-ELDERLY</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3621">
+        <xs:annotation>
+          <xs:documentation>SEX OFFENSE-DISABLED</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3622">
+        <xs:annotation>
+          <xs:documentation>TRANSPORT INTERSTATE FOR SEXUAL ACTIVITY</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3623">
+        <xs:annotation>
+          <xs:documentation>INDECENT LIBERTIES</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3699">
+        <xs:annotation>
+          <xs:documentation>SEX OFFENSE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3700">
+        <xs:annotation>
+          <xs:documentation>OBSCENE MATERIAL</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3701">
+        <xs:annotation>
+          <xs:documentation>OBSCENE MATERIAL - MFR</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3702">
+        <xs:annotation>
+          <xs:documentation>OBSCENE MATERIAL - SELL</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3703">
+        <xs:annotation>
+          <xs:documentation>OBSCENE MATERIAL - MAILING</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3704">
+        <xs:annotation>
+          <xs:documentation>OBSCENE MATERIAL - POSSESS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3705">
+        <xs:annotation>
+          <xs:documentation>OBSCENE MATERIAL - DISTRIB</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3706">
+        <xs:annotation>
+          <xs:documentation>OBSCENE MATERIAL - TRANSPORT</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3707">
+        <xs:annotation>
+          <xs:documentation>OBSCENE COMMUNICATION</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3799">
+        <xs:annotation>
+          <xs:documentation>OBSCENITY</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3801">
+        <xs:annotation>
+          <xs:documentation>NEGLECT FAMILY</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3802">
+        <xs:annotation>
+          <xs:documentation>CRUELTY TOWARD CHILD</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3803">
+        <xs:annotation>
+          <xs:documentation>CRUELTY TOWARD WIFE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3804">
+        <xs:annotation>
+          <xs:documentation>BIGAMY</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3805">
+        <xs:annotation>
+          <xs:documentation>CONTRIB DELINQ MINOR</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3806">
+        <xs:annotation>
+          <xs:documentation>NEGLECT CHILD</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3807">
+        <xs:annotation>
+          <xs:documentation>NONPAYMENT OF ALIMONY</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3808">
+        <xs:annotation>
+          <xs:documentation>NONSUPPORT OF PARENT</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3809">
+        <xs:annotation>
+          <xs:documentation>CRUELTY TOWARD ELDERLY</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3810">
+        <xs:annotation>
+          <xs:documentation>CRUELTY TOWARD DISABLED</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3811">
+        <xs:annotation>
+          <xs:documentation>NEGLECT ELDERLY</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3812">
+        <xs:annotation>
+          <xs:documentation>NEGLECT DISABLED</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3899">
+        <xs:annotation>
+          <xs:documentation>FAMILY OFFENSE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3901">
+        <xs:annotation>
+          <xs:documentation>BOOKMAKING</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3902">
+        <xs:annotation>
+          <xs:documentation>CARD GAME - OPERATING</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3904">
+        <xs:annotation>
+          <xs:documentation>CARD GAME</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3905">
+        <xs:annotation>
+          <xs:documentation>DICE GAME - OPERATING</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3907">
+        <xs:annotation>
+          <xs:documentation>DICE GAME</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3908">
+        <xs:annotation>
+          <xs:documentation>GAMBLING DEVICE - POSSESS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3909">
+        <xs:annotation>
+          <xs:documentation>GAMBLING DEVICE - TRANSPORT</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3910">
+        <xs:annotation>
+          <xs:documentation>GAMBLING DEVICE - NOT REGISTERED</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3911">
+        <xs:annotation>
+          <xs:documentation>GAMBLING DEVICE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3912">
+        <xs:annotation>
+          <xs:documentation>GAMBLING GOODS - POSSESS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3913">
+        <xs:annotation>
+          <xs:documentation>GAMBLING GOODS - TRANSPORT</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3914">
+        <xs:annotation>
+          <xs:documentation>GAMBLING GOODS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3915">
+        <xs:annotation>
+          <xs:documentation>LOTTERY - OPERATING</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3916">
+        <xs:annotation>
+          <xs:documentation>LOTTERY - RUNNER</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3918">
+        <xs:annotation>
+          <xs:documentation>LOTTERY</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3919">
+        <xs:annotation>
+          <xs:documentation>SPORTS TAMPERING</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3920">
+        <xs:annotation>
+          <xs:documentation>TRANSMIT WAGER INFORMATION</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3921">
+        <xs:annotation>
+          <xs:documentation>ESTABLISH GAMBLING PLACE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="3999">
+        <xs:annotation>
+          <xs:documentation>GAMBLING</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4001">
+        <xs:annotation>
+          <xs:documentation>KEEPING HOUSE ILL FAME</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4002">
+        <xs:annotation>
+          <xs:documentation>PROCURE FOR PROSTITUTE (PIMPING)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4003">
+        <xs:annotation>
+          <xs:documentation>RETIRED DO NOT USE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4004">
+        <xs:annotation>
+          <xs:documentation>PROSTITUTION</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4005">
+        <xs:annotation>
+          <xs:documentation>FREQUENT HOUSE ILL FAME</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4006">
+        <xs:annotation>
+          <xs:documentation>TRNSP FEMALE INTERSTATE FOR IMMORAL PURP</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4007">
+        <xs:annotation>
+          <xs:documentation>PROCURE FOR PROSTITUTE WHO IS A MINOR</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4008">
+        <xs:annotation>
+          <xs:documentation>PROCURE FOR PROSTITUTE WHO IS AN ADULT</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4009">
+        <xs:annotation>
+          <xs:documentation>TRANSPORT INTERSTATE FOR COMMERCIALIZED SEX</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4099">
+        <xs:annotation>
+          <xs:documentation>COMMERCIAL SEX</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4101">
+        <xs:annotation>
+          <xs:documentation>LIQUOR - MFR</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4102">
+        <xs:annotation>
+          <xs:documentation>LIQUOR - SELL</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4103">
+        <xs:annotation>
+          <xs:documentation>LIQUOR - TRANSPORT</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4104">
+        <xs:annotation>
+          <xs:documentation>LIQUOR - POSSESS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4199">
+        <xs:annotation>
+          <xs:documentation>LIQUOR</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4801">
+        <xs:annotation>
+          <xs:documentation>RESISTING OFFICER</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4802">
+        <xs:annotation>
+          <xs:documentation>OBSTRUCT CRIMINAL INVEST</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4803">
+        <xs:annotation>
+          <xs:documentation>MAKING FALSE REPORT</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4804">
+        <xs:annotation>
+          <xs:documentation>EVIDENCE - DESTROYING</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4805">
+        <xs:annotation>
+          <xs:documentation>WITNESS - DISSUADING</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4806">
+        <xs:annotation>
+          <xs:documentation>WITNESS - DECEIVING</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4807">
+        <xs:annotation>
+          <xs:documentation>REFUSING TO AID OFFICER</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4808">
+        <xs:annotation>
+          <xs:documentation>COMPOUNDING CRIME</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4809">
+        <xs:annotation>
+          <xs:documentation>UNAUTH COMMUNICATION WITH PRISONER</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4810">
+        <xs:annotation>
+          <xs:documentation>ILLEGAL ARREST</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4811">
+        <xs:annotation>
+          <xs:documentation>CROSSING POLICE LINES</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4812">
+        <xs:annotation>
+          <xs:documentation>FAILURE REPORT CRIME</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4813">
+        <xs:annotation>
+          <xs:documentation>FAILURE TO MOVE ON</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4899">
+        <xs:annotation>
+          <xs:documentation>OBSTRUCT POLICE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4901">
+        <xs:annotation>
+          <xs:documentation>ESCAPE SEE MIS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4902">
+        <xs:annotation>
+          <xs:documentation>FLIGHT TO AVOID SEE MIS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4903">
+        <xs:annotation>
+          <xs:documentation>AIDING PRISONER ESCAPE SEE MIS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4904">
+        <xs:annotation>
+          <xs:documentation>HARBORING ESCAPE/FUGITIVE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4999">
+        <xs:annotation>
+          <xs:documentation>FLIGHT-ESCAPE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5001">
+        <xs:annotation>
+          <xs:documentation>BAIL - SECURED BOND</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5002">
+        <xs:annotation>
+          <xs:documentation>BAIL - PERSONAL RECOG</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5003">
+        <xs:annotation>
+          <xs:documentation>PERJURY</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5004">
+        <xs:annotation>
+          <xs:documentation>PERJURY - SUBORNATION OF</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5005">
+        <xs:annotation>
+          <xs:documentation>CONTEMPT OF COURT - SEE MIS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5006">
+        <xs:annotation>
+          <xs:documentation>OBSTRUCTING JUSTICE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5007">
+        <xs:annotation>
+          <xs:documentation>OBSTRUCTING COURT ORDER</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5008">
+        <xs:annotation>
+          <xs:documentation>MISCONDUCT - JUDIC OFFICER</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5009">
+        <xs:annotation>
+          <xs:documentation>CONTEMPT OF CONGRESS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5010">
+        <xs:annotation>
+          <xs:documentation>CONTEMPT OF LEGISLATURE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5011">
+        <xs:annotation>
+          <xs:documentation>PAROLE VIOLATION - SEE MIS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5012">
+        <xs:annotation>
+          <xs:documentation>PROB VIOLATION - SEE MIS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5013">
+        <xs:annotation>
+          <xs:documentation>CONDIT RELEASE VIOLATION</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5014">
+        <xs:annotation>
+          <xs:documentation>MANDATORY RELEASE VIOLATION</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5015">
+        <xs:annotation>
+          <xs:documentation>FAILURE TO APPEAR - SEE MIS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5016">
+        <xs:annotation>
+          <xs:documentation>VIOLATION OF A COURT ORDER</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5099">
+        <xs:annotation>
+          <xs:documentation>OBSTRUCT SEE MIS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5101">
+        <xs:annotation>
+          <xs:documentation>BRIBE - GIVING</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5102">
+        <xs:annotation>
+          <xs:documentation>BRIBE - OFFERING</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5103">
+        <xs:annotation>
+          <xs:documentation>BRIBE - RECEIVING</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5104">
+        <xs:annotation>
+          <xs:documentation>BRIBE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5105">
+        <xs:annotation>
+          <xs:documentation>CONFLICT OF INTEREST</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5106">
+        <xs:annotation>
+          <xs:documentation>GRATUITY - GIVING</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5107">
+        <xs:annotation>
+          <xs:documentation>GRATUITY - OFFERING</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5108">
+        <xs:annotation>
+          <xs:documentation>GRATUITY - RECEIVING</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5109">
+        <xs:annotation>
+          <xs:documentation>GRATUITY</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5110">
+        <xs:annotation>
+          <xs:documentation>KICKBACK - GIVING</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5111">
+        <xs:annotation>
+          <xs:documentation>KICKBACK - OFFERING</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5112">
+        <xs:annotation>
+          <xs:documentation>KICKBACK - RECEIVING</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5113">
+        <xs:annotation>
+          <xs:documentation>KICKBACK</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5199">
+        <xs:annotation>
+          <xs:documentation>BRIBERY</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5201">
+        <xs:annotation>
+          <xs:documentation>ALTERING IDENTIFICATION ON WEAPON</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5202">
+        <xs:annotation>
+          <xs:documentation>CARRYING CONCEALED WEAPON</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5203">
+        <xs:annotation>
+          <xs:documentation>CARRYING PROHIBITED WEAPON</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5204">
+        <xs:annotation>
+          <xs:documentation>EXPLOSIVES - TEACHING USE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5205">
+        <xs:annotation>
+          <xs:documentation>EXPLOSIVES - TRANSPORTING</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5206">
+        <xs:annotation>
+          <xs:documentation>EXPLOSIVES - USING</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5207">
+        <xs:annotation>
+          <xs:documentation>INCENDIARY DEVICE - POSSESS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5208">
+        <xs:annotation>
+          <xs:documentation>INCENDIARY DEVICE - USING</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5209">
+        <xs:annotation>
+          <xs:documentation>INCENDIARY DEVICE - TEACHING USE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5210">
+        <xs:annotation>
+          <xs:documentation>LICENSING - REGISTRATION WEAPON</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5211">
+        <xs:annotation>
+          <xs:documentation>EXPLOSIVES - POSSESSING</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5212">
+        <xs:annotation>
+          <xs:documentation>POSSESSION OF WEAPON</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5213">
+        <xs:annotation>
+          <xs:documentation>FIRING WEAPON</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5214">
+        <xs:annotation>
+          <xs:documentation>SELLING WEAPON</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5215">
+        <xs:annotation>
+          <xs:documentation>THREAT TO BOMB</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5216">
+        <xs:annotation>
+          <xs:documentation>THREAT TO BURN</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5217">
+        <xs:annotation>
+          <xs:documentation>WEAPON TRAFFICKING</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5299">
+        <xs:annotation>
+          <xs:documentation>WEAPON OFFENSE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5301">
+        <xs:annotation>
+          <xs:documentation>ANARCHISM</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5302">
+        <xs:annotation>
+          <xs:documentation>RIOT - INCITING</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5303">
+        <xs:annotation>
+          <xs:documentation>RIOT - ENGAGING IN</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5304">
+        <xs:annotation>
+          <xs:documentation>RIOT - INTERFERE FIREMAN</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5305">
+        <xs:annotation>
+          <xs:documentation>RIOT - INTERFERE OFFICER</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5306">
+        <xs:annotation>
+          <xs:documentation>RIOT</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5307">
+        <xs:annotation>
+          <xs:documentation>ASSEMBLY - UNLAWFUL</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5309">
+        <xs:annotation>
+          <xs:documentation>HARASSING COMMUNICATION</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5310">
+        <xs:annotation>
+          <xs:documentation>DESECRATING FLAG</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5311">
+        <xs:annotation>
+          <xs:documentation>DISORD CONDUCT</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5312">
+        <xs:annotation>
+          <xs:documentation>INTERFERENCE WITH FLIGHT CREW MEMBERS AND ATTENDANTS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5399">
+        <xs:annotation>
+          <xs:documentation>PUBLIC PEACE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5401">
+        <xs:annotation>
+          <xs:documentation>HIT AND RUN</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5402">
+        <xs:annotation>
+          <xs:documentation>TRANSP DANGEROUS MATERIAL</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5403">
+        <xs:annotation>
+          <xs:documentation>DRIVING UNDER INFLUENCE DRUGS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5404">
+        <xs:annotation>
+          <xs:documentation>DRIVING UNDER INFLUENCE ALCOHOL</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5499">
+        <xs:annotation>
+          <xs:documentation>TRAFFIC OFFENSE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5501">
+        <xs:annotation>
+          <xs:documentation>DRUGS - ADULTERATED</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5502">
+        <xs:annotation>
+          <xs:documentation>DRUGS - MISBRANDED</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5503">
+        <xs:annotation>
+          <xs:documentation>DRUGS - HEALTH OR SAFETY</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5510">
+        <xs:annotation>
+          <xs:documentation>FOOD - ADULTERATED</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5511">
+        <xs:annotation>
+          <xs:documentation>FOOD - MISBRANDED</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5512">
+        <xs:annotation>
+          <xs:documentation>FOOD - HEALTH OR SAFETY</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5520">
+        <xs:annotation>
+          <xs:documentation>COSMETICS - ADULTERATED</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5521">
+        <xs:annotation>
+          <xs:documentation>COSMETICS - MISBRANDED</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5522">
+        <xs:annotation>
+          <xs:documentation>COSMETICS - HEALTH OR SAFETY</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5599">
+        <xs:annotation>
+          <xs:documentation>HEALTH - SAFETY</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5699">
+        <xs:annotation>
+          <xs:documentation>CIVIL RIGHTS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5701">
+        <xs:annotation>
+          <xs:documentation>DIVULGE EAVESDROP INFO</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5702">
+        <xs:annotation>
+          <xs:documentation>DIVULGE EAVESDROP ORDER</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5703">
+        <xs:annotation>
+          <xs:documentation>DIVULGE MESSAGE CONTENTS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5704">
+        <xs:annotation>
+          <xs:documentation>EAVESDROPPING</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5705">
+        <xs:annotation>
+          <xs:documentation>EAVESDROP EQUIP</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5706">
+        <xs:annotation>
+          <xs:documentation>OPENING SEALED COMMUNICATION</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5707">
+        <xs:annotation>
+          <xs:documentation>TRESPASSING</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5708">
+        <xs:annotation>
+          <xs:documentation>WIRETAP - FAILURE TO REPORT</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5799">
+        <xs:annotation>
+          <xs:documentation>INVADE PRIVACY</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5801">
+        <xs:annotation>
+          <xs:documentation>SMUGGLE CONTRABAND</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5802">
+        <xs:annotation>
+          <xs:documentation>SMUGGLE CONTRABAND INTO PRISON</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5803">
+        <xs:annotation>
+          <xs:documentation>SMUGGLE TO AVOID PAYING DUTY</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5899">
+        <xs:annotation>
+          <xs:documentation>SMUGGLING</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="5999">
+        <xs:annotation>
+          <xs:documentation>ELECTION LAWS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="6099">
+        <xs:annotation>
+          <xs:documentation>ANTITRUST</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="6101">
+        <xs:annotation>
+          <xs:documentation>INCOME TAX</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="6102">
+        <xs:annotation>
+          <xs:documentation>SALES TAX</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="6103">
+        <xs:annotation>
+          <xs:documentation>LIQUOR TAX</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="6199">
+        <xs:annotation>
+          <xs:documentation>TAX REVENUE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="6201">
+        <xs:annotation>
+          <xs:documentation>CONSERVATION - ANIMALS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="6202">
+        <xs:annotation>
+          <xs:documentation>CONSERVATION - FISH</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="6203">
+        <xs:annotation>
+          <xs:documentation>CONSERVATION - BIRDS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="6204">
+        <xs:annotation>
+          <xs:documentation>CONSERVATION - LICENSE-STAMP</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="6205">
+        <xs:annotation>
+          <xs:documentation>CONSERVATION - ENVIRONMENT</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="6299">
+        <xs:annotation>
+          <xs:documentation>CONSERVATION</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="6300">
+        <xs:annotation>
+          <xs:documentation>MONEY LAUNDERING</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="6401">
+        <xs:annotation>
+          <xs:documentation>SEXUAL EXPLOITATION OF MINOR-MATERIAL-TRANSPORT</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="6402">
+        <xs:annotation>
+          <xs:documentation>SEXUAL EXPLOITATION OF MINOR-MATERIAL-PHOTOGRAPH</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="6403">
+        <xs:annotation>
+          <xs:documentation>SEXUAL EXPLOITATION OF MINOR-MATERIAL-FILM</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="6404">
+        <xs:annotation>
+          <xs:documentation>SEXUAL EXPLOITATION OF MINOR-EXHIBITION OF MINOR</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="6405">
+        <xs:annotation>
+          <xs:documentation>SEXUAL EXPLOITATION OF MINOR-SEX PERFORMANCE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="6406">
+        <xs:annotation>
+          <xs:documentation>SEXUAL EXPLOITATION OF MINOR-VIA TELECOMMUNICATIONS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="6407">
+        <xs:annotation>
+          <xs:documentation>SEXUAL EXPLOITATION OF MINOR-PROSTITUTION</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="6408">
+        <xs:annotation>
+          <xs:documentation>ENTICEMENT OF MINOR FOR INDECENT PURPOSES-VIA TELECOMMUNICATIONS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="6409">
+        <xs:annotation>
+          <xs:documentation>ENTICEMENT OF MINOR FOR PROSTITUTION</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="6410">
+        <xs:annotation>
+          <xs:documentation>ENTICEMENT OF MINOR FOR INDECENT PURPOSES</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="6411">
+        <xs:annotation>
+          <xs:documentation>HUMAN TRAFFICKING</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="6499">
+        <xs:annotation>
+          <xs:documentation>EXPLOITATION/ENTICEMENT</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="7099">
+        <xs:annotation>
+          <xs:documentation>CRIMES AGAINST PERSON SEE MIS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="7199">
+        <xs:annotation>
+          <xs:documentation>PROPERTY CRIMES SEE MIS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="7201">
+        <xs:annotation>
+          <xs:documentation>ANIMAL CRUELTY</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="7299">
+        <xs:annotation>
+          <xs:documentation>MORALS - DECENCY CRIMES SEE MIS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="7399">
+        <xs:annotation>
+          <xs:documentation>PUBLIC ORDER CRIMES SEE MIS</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="8001">
+        <xs:annotation>
+          <xs:documentation>SUBJECT IS A THREAT TO A U.S. SECRET SERVICE PROTECTEE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="8003">
+        <xs:annotation>
+          <xs:documentation>SUBJECT IS A DEPORTED CRIMINAL/AGGRAVATED FELON</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="8004">
+        <xs:annotation>
+          <xs:documentation>ALIEN UNLAWFULLY PRESENT DUE TO ORDER OF REMOVAL OR EXCLUSION FROM THE USA</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="8005">
+        <xs:annotation>
+          <xs:documentation>SOUGHT FOR VIOLATION OF NATIONAL SECURITY REGISTRATION</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="8100">
+        <xs:annotation>
+          <xs:documentation>JUVENILE ESCAPE FROM CUSTODY</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="8101">
+        <xs:annotation>
+          <xs:documentation>JUVENILE ABSCOND WHILE ON PAROLE</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="8102">
+        <xs:annotation>
+          <xs:documentation>JUVENILE ABSCOND WHILE ON PROBATION</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="OFFCodeType">
+    <xs:annotation>
+      <xs:documentation>A data type for 3 - Uniform Offense Classification (OFF, OOC, and CRR) Field Codes</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="ncic:OFFCodeSimpleType">
+        <xs:attributeGroup ref="structures:SimpleObjectAttributeGroup"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:element name="ChargeCode" type="ncic:OFFCodeType" substitutionGroup="j:ChargeNCICAbstract">
+    <xs:annotation>
+      <xs:documentation>An offense within the National Crime Information Center (NCIC) system.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+</xs:schema>

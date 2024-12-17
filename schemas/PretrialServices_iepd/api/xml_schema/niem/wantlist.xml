@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<w:WantList w:release="5.2" w:product="NIEM" w:nillableDefault="true"
+  xmlns:hs="http://release.niem.gov/niem/domains/humanServices/5.2/"
+  xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/"
+  xmlns:w="http://niem.gov/niem/wantlist/2.2"
+  xmlns:j="http://release.niem.gov/niem/domains/jxdm/7.2/" xmlns:ncic="http://release.niem.gov/niem/codes/ncic/5.2/">
+  <w:Element w:name="hs:PersonAugmentation" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="j:ActivityCaseAssociation" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="j:Booking" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="j:CaseAugmentation" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="nc:Assessment" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:Base64BinaryObject" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="nc:Date" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="nc:DocumentBinary" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="nc:EntityPerson" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="nc:JurisdictionText" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="nc:LanguageName" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="ncic:ChargeCode" w:isReference="false" w:nillable="false"/>
+  <w:Type w:name="hs:PersonAugmentationType" w:isRequested="false">
+    <w:ElementInType w:name="hs:EnglishInterpreterRequiredIndicator"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="j:ActivityCaseAssociationType" w:isRequested="false">
+    <w:ElementInType w:name="nc:Case" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="j:ArrestType" w:isRequested="false">
+    <w:ElementInType w:name="j:ArrestCharge" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="unbounded"/>
+  </w:Type>
+  <w:Type w:name="j:BookingType" w:isRequested="false">
+    <w:ElementInType w:name="j:BookingAgencyRecordIdentification"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="j:BookingCourtCaseIdentification"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="j:BookingDocumentControlIdentification"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="j:Arrest" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="j:CaseAugmentationType" w:isRequested="false">
+    <w:ElementInType w:name="j:CaseCourt" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="j:CaseCourtEvent" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="j:ChargeType" w:isRequested="false">
+    <w:ElementInType w:name="j:ChargeCountQuantity"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="j:ChargeDescriptionText"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="j:ChargeNCICAbstract" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="j:CourtAppearanceType" w:isRequested="false">
+    <w:ElementInType w:name="j:CourtAppearanceDate"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="j:CourtAppearanceCategoryText"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="j:CourtEventType" w:isRequested="false">
+    <w:ElementInType w:name="j:CourtEventAppearance"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="j:CourtType" w:isRequested="false">
+    <w:ElementInType w:name="j:CourtName" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:AssessmentType" w:isRequested="false">
+    <w:ElementInType w:name="nc:AssessmentAssessor"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:AssessmentPerson" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:AssessmentRecommendation"
+      w:isReference="false" w:minOccurs="1" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:AssessmentReport" w:isReference="false"
+      w:minOccurs="1" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:AssessmentSummaryText"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:AssessmentAugmentationPoint"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="unbounded"/>
+  </w:Type>
+  <w:Type w:name="nc:BinaryType" w:isRequested="false">
+    <w:ElementInType w:name="nc:BinaryObjectAbstract"
+      w:isReference="false" w:minOccurs="1" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:CaseType" w:isRequested="false">
+    <w:ElementInType w:name="nc:CaseAugmentationPoint"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:CommentType" w:isRequested="false">
+    <w:ElementInType w:name="nc:CommentText" w:isReference="false"
+      w:minOccurs="1" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:DateType" w:isRequested="false">
+    <w:ElementInType w:name="nc:DateRepresentation"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:DocumentType" w:isRequested="false">
+    <w:ElementInType w:name="nc:DocumentContentAbstract"
+      w:isReference="false" w:minOccurs="1" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:EntityType" w:isRequested="false">
+    <w:ElementInType w:name="nc:EntityRepresentation"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:IdentificationType" w:isRequested="false">
+    <w:ElementInType w:name="nc:IdentificationID" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:JurisdictionType" w:isRequested="false">
+    <w:ElementInType w:name="nc:JurisdictionAbstract"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:LanguageType" w:isRequested="false">
+    <w:ElementInType w:name="nc:LanguageRepresentation"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:LocationPartType" w:isRequested="false">
+    <w:ElementInType w:name="nc:LocationRoomText" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:LocationSectionText"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:LocationType" w:isRequested="false">
+    <w:ElementInType w:name="nc:LocationPart" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:OrganizationType" w:isRequested="true">
+    <w:ElementInType w:name="nc:OrganizationBranchName"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:OrganizationJurisdiction"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:OrganizationLocation"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:PersonLanguageType" w:isRequested="false">
+    <w:ElementInType w:name="nc:Language" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:PersonNameType" w:isRequested="false">
+    <w:ElementInType w:name="nc:PersonFullName" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:PersonType" w:isRequested="false">
+    <w:ElementInType w:name="nc:PersonBirthDate" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:PersonName" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:PersonPrimaryLanguage"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:PersonAugmentationPoint"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="ncic:OFFCodeSimpleType" w:isRequested="false">
+    <w:Facet w:facet="enumeration" w:value="0101"/>
+    <w:Facet w:facet="enumeration" w:value="0102"/>
+    <w:Facet w:facet="enumeration" w:value="0103"/>
+    <w:Facet w:facet="enumeration" w:value="0104"/>
+    <w:Facet w:facet="enumeration" w:value="0105"/>
+    <w:Facet w:facet="enumeration" w:value="0106"/>
+    <w:Facet w:facet="enumeration" w:value="0199"/>
+    <w:Facet w:facet="enumeration" w:value="0201"/>
+    <w:Facet w:facet="enumeration" w:value="0299"/>
+    <w:Facet w:facet="enumeration" w:value="0301"/>
+    <w:Facet w:facet="enumeration" w:value="0302"/>
+    <w:Facet w:facet="enumeration" w:value="0303"/>
+    <w:Facet w:facet="enumeration" w:value="0399"/>
+    <w:Facet w:facet="enumeration" w:value="0901"/>
+    <w:Facet w:facet="enumeration" w:value="0902"/>
+    <w:Facet w:facet="enumeration" w:value="0903"/>
+    <w:Facet w:facet="enumeration" w:value="0904"/>
+    <w:Facet w:facet="enumeration" w:value="0905"/>
+    <w:Facet w:facet="enumeration" w:value="0906"/>
+    <w:Facet w:facet="enumeration" w:value="0907"/>
+    <w:Facet w:facet="enumeration" w:value="0908"/>
+    <w:Facet w:facet="enumeration" w:value="0909"/>
+    <w:Facet w:facet="enumeration" w:value="0910"/>
+    <w:Facet w:facet="enumeration" w:value="0911"/>
+    <w:Facet w:facet="enumeration" w:value="0912"/>
+    <w:Facet w:facet="enumeration" w:value="0913"/>
+    <w:Facet w:facet="enumeration" w:value="0999"/>
+    <w:Facet w:facet="enumeration" w:value="1001"/>
+    <w:Facet w:facet="enumeration" w:value="1002"/>
+    <w:Facet w:facet="enumeration" w:value="1003"/>
+    <w:Facet w:facet="enumeration" w:value="1004"/>
+    <w:Facet w:facet="enumeration" w:value="1005"/>
+    <w:Facet w:facet="enumeration" w:value="1006"/>
+    <w:Facet w:facet="enumeration" w:value="1007"/>
+    <w:Facet w:facet="enumeration" w:value="1008"/>
+    <w:Facet w:facet="enumeration" w:value="1009"/>
+    <w:Facet w:facet="enumeration" w:value="1010"/>
+    <w:Facet w:facet="enumeration" w:value="1011"/>
+    <w:Facet w:facet="enumeration" w:value="1020"/>
+    <w:Facet w:facet="enumeration" w:value="1021"/>
+    <w:Facet w:facet="enumeration" w:value="1099"/>
+    <w:Facet w:facet="enumeration" w:value="1101"/>
+    <w:Facet w:facet="enumeration" w:value="1102"/>
+    <w:Facet w:facet="enumeration" w:value="1103"/>
+    <w:Facet w:facet="enumeration" w:value="1104"/>
+    <w:Facet w:facet="enumeration" w:value="1105"/>
+    <w:Facet w:facet="enumeration" w:value="1106"/>
+    <w:Facet w:facet="enumeration" w:value="1107"/>
+    <w:Facet w:facet="enumeration" w:value="1108"/>
+    <w:Facet w:facet="enumeration" w:value="1109"/>
+    <w:Facet w:facet="enumeration" w:value="1110"/>
+    <w:Facet w:facet="enumeration" w:value="1111"/>
+    <w:Facet w:facet="enumeration" w:value="1112"/>
+    <w:Facet w:facet="enumeration" w:value="1113"/>
+    <w:Facet w:facet="enumeration" w:value="1114"/>
+    <w:Facet w:facet="enumeration" w:value="1115"/>
+    <w:Facet w:facet="enumeration" w:value="1116"/>
+    <w:Facet w:facet="enumeration" w:value="1117"/>
+    <w:Facet w:facet="enumeration" w:value="1118"/>
+    <w:Facet w:facet="enumeration" w:value="1119"/>
+    <w:Facet w:facet="enumeration" w:value="1120"/>
+    <w:Facet w:facet="enumeration" w:value="1121"/>
+    <w:Facet w:facet="enumeration" w:value="1122"/>
+    <w:Facet w:facet="enumeration" w:value="1123"/>
+    <w:Facet w:facet="enumeration" w:value="1198"/>
+    <w:Facet w:facet="enumeration" w:value="1199"/>
+    <w:Facet w:facet="enumeration" w:value="1201"/>
+    <w:Facet w:facet="enumeration" w:value="1202"/>
+    <w:Facet w:facet="enumeration" w:value="1203"/>
+    <w:Facet w:facet="enumeration" w:value="1204"/>
+    <w:Facet w:facet="enumeration" w:value="1205"/>
+    <w:Facet w:facet="enumeration" w:value="1206"/>
+    <w:Facet w:facet="enumeration" w:value="1207"/>
+    <w:Facet w:facet="enumeration" w:value="1208"/>
+    <w:Facet w:facet="enumeration" w:value="1209"/>
+    <w:Facet w:facet="enumeration" w:value="1210"/>
+    <w:Facet w:facet="enumeration" w:value="1211"/>
+    <w:Facet w:facet="enumeration" w:value="1212"/>
+    <w:Facet w:facet="enumeration" w:value="1299"/>
+    <w:Facet w:facet="enumeration" w:value="1301"/>
+    <w:Facet w:facet="enumeration" w:value="1302"/>
+    <w:Facet w:facet="enumeration" w:value="1303"/>
+    <w:Facet w:facet="enumeration" w:value="1304"/>
+    <w:Facet w:facet="enumeration" w:value="1305"/>
+    <w:Facet w:facet="enumeration" w:value="1306"/>
+    <w:Facet w:facet="enumeration" w:value="1307"/>
+    <w:Facet w:facet="enumeration" w:value="1308"/>
+    <w:Facet w:facet="enumeration" w:value="1309"/>
+    <w:Facet w:facet="enumeration" w:value="1310"/>
+    <w:Facet w:facet="enumeration" w:value="1311"/>
+    <w:Facet w:facet="enumeration" w:value="1312"/>
+    <w:Facet w:facet="enumeration" w:value="1313"/>
+    <w:Facet w:facet="enumeration" w:value="1314"/>
+    <w:Facet w:facet="enumeration" w:value="1315"/>
+    <w:Facet w:facet="enumeration" w:value="1316"/>
+    <w:Facet w:facet="enumeration" w:value="1399"/>
+    <w:Facet w:facet="enumeration" w:value="1401"/>
+    <w:Facet w:facet="enumeration" w:value="1402"/>
+    <w:Facet w:facet="enumeration" w:value="1403"/>
+    <w:Facet w:facet="enumeration" w:value="1404"/>
+    <w:Facet w:facet="enumeration" w:value="1499"/>
+    <w:Facet w:facet="enumeration" w:value="1601"/>
+    <w:Facet w:facet="enumeration" w:value="1602"/>
+    <w:Facet w:facet="enumeration" w:value="1603"/>
+    <w:Facet w:facet="enumeration" w:value="1701"/>
+    <w:Facet w:facet="enumeration" w:value="1702"/>
+    <w:Facet w:facet="enumeration" w:value="2001"/>
+    <w:Facet w:facet="enumeration" w:value="2002"/>
+    <w:Facet w:facet="enumeration" w:value="2003"/>
+    <w:Facet w:facet="enumeration" w:value="2004"/>
+    <w:Facet w:facet="enumeration" w:value="2005"/>
+    <w:Facet w:facet="enumeration" w:value="2006"/>
+    <w:Facet w:facet="enumeration" w:value="2007"/>
+    <w:Facet w:facet="enumeration" w:value="2008"/>
+    <w:Facet w:facet="enumeration" w:value="2009"/>
+    <w:Facet w:facet="enumeration" w:value="2099"/>
+    <w:Facet w:facet="enumeration" w:value="2101"/>
+    <w:Facet w:facet="enumeration" w:value="2102"/>
+    <w:Facet w:facet="enumeration" w:value="2103"/>
+    <w:Facet w:facet="enumeration" w:value="2104"/>
+    <w:Facet w:facet="enumeration" w:value="2105"/>
+    <w:Facet w:facet="enumeration" w:value="2199"/>
+    <w:Facet w:facet="enumeration" w:value="2201"/>
+    <w:Facet w:facet="enumeration" w:value="2202"/>
+    <w:Facet w:facet="enumeration" w:value="2203"/>
+    <w:Facet w:facet="enumeration" w:value="2204"/>
+    <w:Facet w:facet="enumeration" w:value="2205"/>
+    <w:Facet w:facet="enumeration" w:value="2206"/>
+    <w:Facet w:facet="enumeration" w:value="2207"/>
+    <w:Facet w:facet="enumeration" w:value="2299"/>
+    <w:Facet w:facet="enumeration" w:value="2301"/>
+    <w:Facet w:facet="enumeration" w:value="2302"/>
+    <w:Facet w:facet="enumeration" w:value="2303"/>
+    <w:Facet w:facet="enumeration" w:value="2304"/>
+    <w:Facet w:facet="enumeration" w:value="2305"/>
+    <w:Facet w:facet="enumeration" w:value="2306"/>
+    <w:Facet w:facet="enumeration" w:value="2307"/>
+    <w:Facet w:facet="enumeration" w:value="2308"/>
+    <w:Facet w:facet="enumeration" w:value="2309"/>
+    <w:Facet w:facet="enumeration" w:value="2310"/>
+    <w:Facet w:facet="enumeration" w:value="2311"/>
+    <w:Facet w:facet="enumeration" w:value="2312"/>
+    <w:Facet w:facet="enumeration" w:value="2313"/>
+    <w:Facet w:facet="enumeration" w:value="2314"/>
+    <w:Facet w:facet="enumeration" w:value="2315"/>
+    <w:Facet w:facet="enumeration" w:value="2316"/>
+    <w:Facet w:facet="enumeration" w:value="2399"/>
+    <w:Facet w:facet="enumeration" w:value="2401"/>
+    <w:Facet w:facet="enumeration" w:value="2402"/>
+    <w:Facet w:facet="enumeration" w:value="2403"/>
+    <w:Facet w:facet="enumeration" w:value="2404"/>
+    <w:Facet w:facet="enumeration" w:value="2405"/>
+    <w:Facet w:facet="enumeration" w:value="2406"/>
+    <w:Facet w:facet="enumeration" w:value="2407"/>
+    <w:Facet w:facet="enumeration" w:value="2408"/>
+    <w:Facet w:facet="enumeration" w:value="2409"/>
+    <w:Facet w:facet="enumeration" w:value="2410"/>
+    <w:Facet w:facet="enumeration" w:value="2411"/>
+    <w:Facet w:facet="enumeration" w:value="2499"/>
+    <w:Facet w:facet="enumeration" w:value="2501"/>
+    <w:Facet w:facet="enumeration" w:value="2502"/>
+    <w:Facet w:facet="enumeration" w:value="2503"/>
+    <w:Facet w:facet="enumeration" w:value="2504"/>
+    <w:Facet w:facet="enumeration" w:value="2505"/>
+    <w:Facet w:facet="enumeration" w:value="2506"/>
+    <w:Facet w:facet="enumeration" w:value="2507"/>
+    <w:Facet w:facet="enumeration" w:value="2508"/>
+    <w:Facet w:facet="enumeration" w:value="2509"/>
+    <w:Facet w:facet="enumeration" w:value="2510"/>
+    <w:Facet w:facet="enumeration" w:value="2511"/>
+    <w:Facet w:facet="enumeration" w:value="2589"/>
+    <w:Facet w:facet="enumeration" w:value="2599"/>
+    <w:Facet w:facet="enumeration" w:value="2601"/>
+    <w:Facet w:facet="enumeration" w:value="2602"/>
+    <w:Facet w:facet="enumeration" w:value="2603"/>
+    <w:Facet w:facet="enumeration" w:value="2604"/>
+    <w:Facet w:facet="enumeration" w:value="2605"/>
+    <w:Facet w:facet="enumeration" w:value="2606"/>
+    <w:Facet w:facet="enumeration" w:value="2607"/>
+    <w:Facet w:facet="enumeration" w:value="2608"/>
+    <w:Facet w:facet="enumeration" w:value="2609"/>
+    <w:Facet w:facet="enumeration" w:value="2610"/>
+    <w:Facet w:facet="enumeration" w:value="2699"/>
+    <w:Facet w:facet="enumeration" w:value="2701"/>
+    <w:Facet w:facet="enumeration" w:value="2702"/>
+    <w:Facet w:facet="enumeration" w:value="2703"/>
+    <w:Facet w:facet="enumeration" w:value="2704"/>
+    <w:Facet w:facet="enumeration" w:value="2705"/>
+    <w:Facet w:facet="enumeration" w:value="2799"/>
+    <w:Facet w:facet="enumeration" w:value="2801"/>
+    <w:Facet w:facet="enumeration" w:value="2802"/>
+    <w:Facet w:facet="enumeration" w:value="2803"/>
+    <w:Facet w:facet="enumeration" w:value="2804"/>
+    <w:Facet w:facet="enumeration" w:value="2805"/>
+    <w:Facet w:facet="enumeration" w:value="2899"/>
+    <w:Facet w:facet="enumeration" w:value="2901"/>
+    <w:Facet w:facet="enumeration" w:value="2902"/>
+    <w:Facet w:facet="enumeration" w:value="2903"/>
+    <w:Facet w:facet="enumeration" w:value="2904"/>
+    <w:Facet w:facet="enumeration" w:value="2905"/>
+    <w:Facet w:facet="enumeration" w:value="2906"/>
+    <w:Facet w:facet="enumeration" w:value="2999"/>
+    <w:Facet w:facet="enumeration" w:value="3501"/>
+    <w:Facet w:facet="enumeration" w:value="3502"/>
+    <w:Facet w:facet="enumeration" w:value="3503"/>
+    <w:Facet w:facet="enumeration" w:value="3504"/>
+    <w:Facet w:facet="enumeration" w:value="3505"/>
+    <w:Facet w:facet="enumeration" w:value="3510"/>
+    <w:Facet w:facet="enumeration" w:value="3511"/>
+    <w:Facet w:facet="enumeration" w:value="3512"/>
+    <w:Facet w:facet="enumeration" w:value="3513"/>
+    <w:Facet w:facet="enumeration" w:value="3520"/>
+    <w:Facet w:facet="enumeration" w:value="3521"/>
+    <w:Facet w:facet="enumeration" w:value="3522"/>
+    <w:Facet w:facet="enumeration" w:value="3523"/>
+    <w:Facet w:facet="enumeration" w:value="3530"/>
+    <w:Facet w:facet="enumeration" w:value="3531"/>
+    <w:Facet w:facet="enumeration" w:value="3532"/>
+    <w:Facet w:facet="enumeration" w:value="3533"/>
+    <w:Facet w:facet="enumeration" w:value="3540"/>
+    <w:Facet w:facet="enumeration" w:value="3541"/>
+    <w:Facet w:facet="enumeration" w:value="3542"/>
+    <w:Facet w:facet="enumeration" w:value="3543"/>
+    <w:Facet w:facet="enumeration" w:value="3550"/>
+    <w:Facet w:facet="enumeration" w:value="3560"/>
+    <w:Facet w:facet="enumeration" w:value="3561"/>
+    <w:Facet w:facet="enumeration" w:value="3562"/>
+    <w:Facet w:facet="enumeration" w:value="3563"/>
+    <w:Facet w:facet="enumeration" w:value="3564"/>
+    <w:Facet w:facet="enumeration" w:value="3570"/>
+    <w:Facet w:facet="enumeration" w:value="3571"/>
+    <w:Facet w:facet="enumeration" w:value="3572"/>
+    <w:Facet w:facet="enumeration" w:value="3573"/>
+    <w:Facet w:facet="enumeration" w:value="3580"/>
+    <w:Facet w:facet="enumeration" w:value="3581"/>
+    <w:Facet w:facet="enumeration" w:value="3582"/>
+    <w:Facet w:facet="enumeration" w:value="3583"/>
+    <w:Facet w:facet="enumeration" w:value="3599"/>
+    <w:Facet w:facet="enumeration" w:value="3601"/>
+    <w:Facet w:facet="enumeration" w:value="3602"/>
+    <w:Facet w:facet="enumeration" w:value="3603"/>
+    <w:Facet w:facet="enumeration" w:value="3604"/>
+    <w:Facet w:facet="enumeration" w:value="3605"/>
+    <w:Facet w:facet="enumeration" w:value="3606"/>
+    <w:Facet w:facet="enumeration" w:value="3607"/>
+    <w:Facet w:facet="enumeration" w:value="3608"/>
+    <w:Facet w:facet="enumeration" w:value="3609"/>
+    <w:Facet w:facet="enumeration" w:value="3610"/>
+    <w:Facet w:facet="enumeration" w:value="3611"/>
+    <w:Facet w:facet="enumeration" w:value="3612"/>
+    <w:Facet w:facet="enumeration" w:value="3613"/>
+    <w:Facet w:facet="enumeration" w:value="3614"/>
+    <w:Facet w:facet="enumeration" w:value="3615"/>
+    <w:Facet w:facet="enumeration" w:value="3616"/>
+    <w:Facet w:facet="enumeration" w:value="3617"/>
+    <w:Facet w:facet="enumeration" w:value="3618"/>
+    <w:Facet w:facet="enumeration" w:value="3619"/>
+    <w:Facet w:facet="enumeration" w:value="3620"/>
+    <w:Facet w:facet="enumeration" w:value="3621"/>
+    <w:Facet w:facet="enumeration" w:value="3622"/>
+    <w:Facet w:facet="enumeration" w:value="3623"/>
+    <w:Facet w:facet="enumeration" w:value="3699"/>
+    <w:Facet w:facet="enumeration" w:value="3700"/>
+    <w:Facet w:facet="enumeration" w:value="3701"/>
+    <w:Facet w:facet="enumeration" w:value="3702"/>
+    <w:Facet w:facet="enumeration" w:value="3703"/>
+    <w:Facet w:facet="enumeration" w:value="3704"/>
+    <w:Facet w:facet="enumeration" w:value="3705"/>
+    <w:Facet w:facet="enumeration" w:value="3706"/>
+    <w:Facet w:facet="enumeration" w:value="3707"/>
+    <w:Facet w:facet="enumeration" w:value="3799"/>
+    <w:Facet w:facet="enumeration" w:value="3801"/>
+    <w:Facet w:facet="enumeration" w:value="3802"/>
+    <w:Facet w:facet="enumeration" w:value="3803"/>
+    <w:Facet w:facet="enumeration" w:value="3804"/>
+    <w:Facet w:facet="enumeration" w:value="3805"/>
+    <w:Facet w:facet="enumeration" w:value="3806"/>
+    <w:Facet w:facet="enumeration" w:value="3807"/>
+    <w:Facet w:facet="enumeration" w:value="3808"/>
+    <w:Facet w:facet="enumeration" w:value="3809"/>
+    <w:Facet w:facet="enumeration" w:value="3810"/>
+    <w:Facet w:facet="enumeration" w:value="3811"/>
+    <w:Facet w:facet="enumeration" w:value="3812"/>
+    <w:Facet w:facet="enumeration" w:value="3899"/>
+    <w:Facet w:facet="enumeration" w:value="3901"/>
+    <w:Facet w:facet="enumeration" w:value="3902"/>
+    <w:Facet w:facet="enumeration" w:value="3904"/>
+    <w:Facet w:facet="enumeration" w:value="3905"/>
+    <w:Facet w:facet="enumeration" w:value="3907"/>
+    <w:Facet w:facet="enumeration" w:value="3908"/>
+    <w:Facet w:facet="enumeration" w:value="3909"/>
+    <w:Facet w:facet="enumeration" w:value="3910"/>
+    <w:Facet w:facet="enumeration" w:value="3911"/>
+    <w:Facet w:facet="enumeration" w:value="3912"/>
+    <w:Facet w:facet="enumeration" w:value="3913"/>
+    <w:Facet w:facet="enumeration" w:value="3914"/>
+    <w:Facet w:facet="enumeration" w:value="3915"/>
+    <w:Facet w:facet="enumeration" w:value="3916"/>
+    <w:Facet w:facet="enumeration" w:value="3918"/>
+    <w:Facet w:facet="enumeration" w:value="3919"/>
+    <w:Facet w:facet="enumeration" w:value="3920"/>
+    <w:Facet w:facet="enumeration" w:value="3921"/>
+    <w:Facet w:facet="enumeration" w:value="3999"/>
+    <w:Facet w:facet="enumeration" w:value="4001"/>
+    <w:Facet w:facet="enumeration" w:value="4002"/>
+    <w:Facet w:facet="enumeration" w:value="4003"/>
+    <w:Facet w:facet="enumeration" w:value="4004"/>
+    <w:Facet w:facet="enumeration" w:value="4005"/>
+    <w:Facet w:facet="enumeration" w:value="4006"/>
+    <w:Facet w:facet="enumeration" w:value="4007"/>
+    <w:Facet w:facet="enumeration" w:value="4008"/>
+    <w:Facet w:facet="enumeration" w:value="4009"/>
+    <w:Facet w:facet="enumeration" w:value="4099"/>
+    <w:Facet w:facet="enumeration" w:value="4101"/>
+    <w:Facet w:facet="enumeration" w:value="4102"/>
+    <w:Facet w:facet="enumeration" w:value="4103"/>
+    <w:Facet w:facet="enumeration" w:value="4104"/>
+    <w:Facet w:facet="enumeration" w:value="4199"/>
+    <w:Facet w:facet="enumeration" w:value="4801"/>
+    <w:Facet w:facet="enumeration" w:value="4802"/>
+    <w:Facet w:facet="enumeration" w:value="4803"/>
+    <w:Facet w:facet="enumeration" w:value="4804"/>
+    <w:Facet w:facet="enumeration" w:value="4805"/>
+    <w:Facet w:facet="enumeration" w:value="4806"/>
+    <w:Facet w:facet="enumeration" w:value="4807"/>
+    <w:Facet w:facet="enumeration" w:value="4808"/>
+    <w:Facet w:facet="enumeration" w:value="4809"/>
+    <w:Facet w:facet="enumeration" w:value="4810"/>
+    <w:Facet w:facet="enumeration" w:value="4811"/>
+    <w:Facet w:facet="enumeration" w:value="4812"/>
+    <w:Facet w:facet="enumeration" w:value="4813"/>
+    <w:Facet w:facet="enumeration" w:value="4899"/>
+    <w:Facet w:facet="enumeration" w:value="4901"/>
+    <w:Facet w:facet="enumeration" w:value="4902"/>
+    <w:Facet w:facet="enumeration" w:value="4903"/>
+    <w:Facet w:facet="enumeration" w:value="4904"/>
+    <w:Facet w:facet="enumeration" w:value="4999"/>
+    <w:Facet w:facet="enumeration" w:value="5001"/>
+    <w:Facet w:facet="enumeration" w:value="5002"/>
+    <w:Facet w:facet="enumeration" w:value="5003"/>
+    <w:Facet w:facet="enumeration" w:value="5004"/>
+    <w:Facet w:facet="enumeration" w:value="5005"/>
+    <w:Facet w:facet="enumeration" w:value="5006"/>
+    <w:Facet w:facet="enumeration" w:value="5007"/>
+    <w:Facet w:facet="enumeration" w:value="5008"/>
+    <w:Facet w:facet="enumeration" w:value="5009"/>
+    <w:Facet w:facet="enumeration" w:value="5010"/>
+    <w:Facet w:facet="enumeration" w:value="5011"/>
+    <w:Facet w:facet="enumeration" w:value="5012"/>
+    <w:Facet w:facet="enumeration" w:value="5013"/>
+    <w:Facet w:facet="enumeration" w:value="5014"/>
+    <w:Facet w:facet="enumeration" w:value="5015"/>
+    <w:Facet w:facet="enumeration" w:value="5016"/>
+    <w:Facet w:facet="enumeration" w:value="5099"/>
+    <w:Facet w:facet="enumeration" w:value="5101"/>
+    <w:Facet w:facet="enumeration" w:value="5102"/>
+    <w:Facet w:facet="enumeration" w:value="5103"/>
+    <w:Facet w:facet="enumeration" w:value="5104"/>
+    <w:Facet w:facet="enumeration" w:value="5105"/>
+    <w:Facet w:facet="enumeration" w:value="5106"/>
+    <w:Facet w:facet="enumeration" w:value="5107"/>
+    <w:Facet w:facet="enumeration" w:value="5108"/>
+    <w:Facet w:facet="enumeration" w:value="5109"/>
+    <w:Facet w:facet="enumeration" w:value="5110"/>
+    <w:Facet w:facet="enumeration" w:value="5111"/>
+    <w:Facet w:facet="enumeration" w:value="5112"/>
+    <w:Facet w:facet="enumeration" w:value="5113"/>
+    <w:Facet w:facet="enumeration" w:value="5199"/>
+    <w:Facet w:facet="enumeration" w:value="5201"/>
+    <w:Facet w:facet="enumeration" w:value="5202"/>
+    <w:Facet w:facet="enumeration" w:value="5203"/>
+    <w:Facet w:facet="enumeration" w:value="5204"/>
+    <w:Facet w:facet="enumeration" w:value="5205"/>
+    <w:Facet w:facet="enumeration" w:value="5206"/>
+    <w:Facet w:facet="enumeration" w:value="5207"/>
+    <w:Facet w:facet="enumeration" w:value="5208"/>
+    <w:Facet w:facet="enumeration" w:value="5209"/>
+    <w:Facet w:facet="enumeration" w:value="5210"/>
+    <w:Facet w:facet="enumeration" w:value="5211"/>
+    <w:Facet w:facet="enumeration" w:value="5212"/>
+    <w:Facet w:facet="enumeration" w:value="5213"/>
+    <w:Facet w:facet="enumeration" w:value="5214"/>
+    <w:Facet w:facet="enumeration" w:value="5215"/>
+    <w:Facet w:facet="enumeration" w:value="5216"/>
+    <w:Facet w:facet="enumeration" w:value="5217"/>
+    <w:Facet w:facet="enumeration" w:value="5299"/>
+    <w:Facet w:facet="enumeration" w:value="5301"/>
+    <w:Facet w:facet="enumeration" w:value="5302"/>
+    <w:Facet w:facet="enumeration" w:value="5303"/>
+    <w:Facet w:facet="enumeration" w:value="5304"/>
+    <w:Facet w:facet="enumeration" w:value="5305"/>
+    <w:Facet w:facet="enumeration" w:value="5306"/>
+    <w:Facet w:facet="enumeration" w:value="5307"/>
+    <w:Facet w:facet="enumeration" w:value="5309"/>
+    <w:Facet w:facet="enumeration" w:value="5310"/>
+    <w:Facet w:facet="enumeration" w:value="5311"/>
+    <w:Facet w:facet="enumeration" w:value="5312"/>
+    <w:Facet w:facet="enumeration" w:value="5399"/>
+    <w:Facet w:facet="enumeration" w:value="5401"/>
+    <w:Facet w:facet="enumeration" w:value="5402"/>
+    <w:Facet w:facet="enumeration" w:value="5403"/>
+    <w:Facet w:facet="enumeration" w:value="5404"/>
+    <w:Facet w:facet="enumeration" w:value="5499"/>
+    <w:Facet w:facet="enumeration" w:value="5501"/>
+    <w:Facet w:facet="enumeration" w:value="5502"/>
+    <w:Facet w:facet="enumeration" w:value="5503"/>
+    <w:Facet w:facet="enumeration" w:value="5510"/>
+    <w:Facet w:facet="enumeration" w:value="5511"/>
+    <w:Facet w:facet="enumeration" w:value="5512"/>
+    <w:Facet w:facet="enumeration" w:value="5520"/>
+    <w:Facet w:facet="enumeration" w:value="5521"/>
+    <w:Facet w:facet="enumeration" w:value="5522"/>
+    <w:Facet w:facet="enumeration" w:value="5599"/>
+    <w:Facet w:facet="enumeration" w:value="5699"/>
+    <w:Facet w:facet="enumeration" w:value="5701"/>
+    <w:Facet w:facet="enumeration" w:value="5702"/>
+    <w:Facet w:facet="enumeration" w:value="5703"/>
+    <w:Facet w:facet="enumeration" w:value="5704"/>
+    <w:Facet w:facet="enumeration" w:value="5705"/>
+    <w:Facet w:facet="enumeration" w:value="5706"/>
+    <w:Facet w:facet="enumeration" w:value="5707"/>
+    <w:Facet w:facet="enumeration" w:value="5708"/>
+    <w:Facet w:facet="enumeration" w:value="5799"/>
+    <w:Facet w:facet="enumeration" w:value="5801"/>
+    <w:Facet w:facet="enumeration" w:value="5802"/>
+    <w:Facet w:facet="enumeration" w:value="5803"/>
+    <w:Facet w:facet="enumeration" w:value="5899"/>
+    <w:Facet w:facet="enumeration" w:value="5999"/>
+    <w:Facet w:facet="enumeration" w:value="6099"/>
+    <w:Facet w:facet="enumeration" w:value="6101"/>
+    <w:Facet w:facet="enumeration" w:value="6102"/>
+    <w:Facet w:facet="enumeration" w:value="6103"/>
+    <w:Facet w:facet="enumeration" w:value="6199"/>
+    <w:Facet w:facet="enumeration" w:value="6201"/>
+    <w:Facet w:facet="enumeration" w:value="6202"/>
+    <w:Facet w:facet="enumeration" w:value="6203"/>
+    <w:Facet w:facet="enumeration" w:value="6204"/>
+    <w:Facet w:facet="enumeration" w:value="6205"/>
+    <w:Facet w:facet="enumeration" w:value="6299"/>
+    <w:Facet w:facet="enumeration" w:value="6300"/>
+    <w:Facet w:facet="enumeration" w:value="6401"/>
+    <w:Facet w:facet="enumeration" w:value="6402"/>
+    <w:Facet w:facet="enumeration" w:value="6403"/>
+    <w:Facet w:facet="enumeration" w:value="6404"/>
+    <w:Facet w:facet="enumeration" w:value="6405"/>
+    <w:Facet w:facet="enumeration" w:value="6406"/>
+    <w:Facet w:facet="enumeration" w:value="6407"/>
+    <w:Facet w:facet="enumeration" w:value="6408"/>
+    <w:Facet w:facet="enumeration" w:value="6409"/>
+    <w:Facet w:facet="enumeration" w:value="6410"/>
+    <w:Facet w:facet="enumeration" w:value="6411"/>
+    <w:Facet w:facet="enumeration" w:value="6499"/>
+    <w:Facet w:facet="enumeration" w:value="7099"/>
+    <w:Facet w:facet="enumeration" w:value="7199"/>
+    <w:Facet w:facet="enumeration" w:value="7201"/>
+    <w:Facet w:facet="enumeration" w:value="7299"/>
+    <w:Facet w:facet="enumeration" w:value="7399"/>
+    <w:Facet w:facet="enumeration" w:value="8001"/>
+    <w:Facet w:facet="enumeration" w:value="8003"/>
+    <w:Facet w:facet="enumeration" w:value="8004"/>
+    <w:Facet w:facet="enumeration" w:value="8005"/>
+    <w:Facet w:facet="enumeration" w:value="8100"/>
+    <w:Facet w:facet="enumeration" w:value="8101"/>
+    <w:Facet w:facet="enumeration" w:value="8102"/>
+  </w:Type>
+</w:WantList>
