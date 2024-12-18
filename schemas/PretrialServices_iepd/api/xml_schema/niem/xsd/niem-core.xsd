@@ -125,7 +125,16 @@
     <xs:complexContent>
       <xs:extension base="structures:ObjectType">
         <xs:sequence>
+          <xs:element ref="nc:DocumentAuthor" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="nc:DocumentCategoryAbstract" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="nc:DocumentContentAbstract" minOccurs="1" maxOccurs="1"/>
+          <xs:element ref="nc:DocumentContributor" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="nc:DocumentCreationDate" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="nc:DocumentFileControlID" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="nc:DocumentFormatAbstract" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="nc:DocumentLastModifiedDate" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="nc:DocumentLocationURI" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="nc:DocumentSequenceID" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -350,14 +359,74 @@
       <xs:documentation>A data concept for a representation of a date.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="DateTime" type="niem-xs:dateTime" substitutionGroup="nc:DateRepresentation">
+    <xs:annotation>
+      <xs:documentation>A full date and time.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="DocumentAuthor" type="nc:EntityType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>An entity primarily responsible for creating the intellectual content of the resource.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="DocumentBinary" type="nc:BinaryType" substitutionGroup="nc:DocumentContentAbstract">
     <xs:annotation>
       <xs:documentation>A binary encoding of the content of a document.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="DocumentCategoryAbstract" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A data concept for a kind of document.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="DocumentCategoryText" type="nc:TextType" substitutionGroup="nc:DocumentCategoryAbstract">
+    <xs:annotation>
+      <xs:documentation>A kind of document; a nature or genre of the content.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="DocumentContentAbstract" abstract="true">
     <xs:annotation>
       <xs:documentation>A data concept for the content of a document.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="DocumentContributor" type="nc:EntityType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>An entity responsible for making contributions to the content of the resource.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="DocumentCreationDate" type="nc:DateType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A date a document was created.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="DocumentFileControlID" type="niem-xs:string" nillable="true">
+    <xs:annotation>
+      <xs:documentation>An identifier assigned to a document to locate it within a file control system.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="DocumentFormatAbstract" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A data concept for a file format, content type (e.g., a MIME type), or physical format of a document.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="DocumentLastModifiedDate" type="nc:DateType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A date a document was last changed.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="DocumentLocationURI" type="niem-xs:anyURI" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A location of an electronic representation of a document.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="DocumentMediaCategoryText" type="nc:TextType" substitutionGroup="nc:DocumentFormatAbstract">
+    <xs:annotation>
+      <xs:documentation>A kind of media type, also known as a MIME type, which indicates the nature and format of a document.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="DocumentSequenceID" type="niem-xs:string" nillable="true">
+    <xs:annotation>
+      <xs:documentation>An identifier that determines the document order in a set of related documents.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="EntityPerson" type="nc:PersonType" substitutionGroup="nc:EntityRepresentation">

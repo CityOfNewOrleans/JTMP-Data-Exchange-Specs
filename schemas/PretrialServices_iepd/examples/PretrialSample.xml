@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<nola:PretrialAssessmentExchange xmlns:clsa="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-schema-appinfo/"
- xmlns:hs="http://release.niem.gov/niem/domains/humanServices/5.2/"
- xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/"
+<nola:PretrialAssessmentExchange xmlns:j="http://release.niem.gov/niem/domains/jxdm/7.2/"
+ xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/"
+ xmlns:nola="http://mcp.com/nola/v/1.0/"
  xmlns:structures="http://release.niem.gov/niem/structures/5.0/"
  xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/"
- xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/"
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:hs="http://release.niem.gov/niem/domains/humanServices/5.2/"
+ xmlns:clsa="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-schema-appinfo/"
  xmlns:niem-xs="http://release.niem.gov/niem/proxy/niem-xs/5.0/"
- xmlns:j="http://release.niem.gov/niem/domains/jxdm/7.2/"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xmlns:ncic="http://release.niem.gov/niem/codes/ncic/5.2/"
- xmlns:nola="http://mcp.com/nola/v/1.0/"
+ xmlns:nola-ext="http://mcp.com/nola/extension/v/1.0/"
  xmlns:cls="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-instance/"
- xmlns="http://mcp.com/nola/extension/v/1.0/"
+ xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/"
  xsi:schemaLocation="http://mcp.com/nola/v/1.0/ file:/C:/Users/gjsadmin/Documents/OxygenXMLEditor/PretrialExchange/PretrialAssessment_NOLA.xsd">
     <j:Booking>
         <j:BookingAgencyRecordIdentification>
@@ -38,15 +38,28 @@
     </j:Booking>
     <nc:Assessment>
         <nc:AssessmentAssessor>
-            <nc:EntityPerson>                
+            <nc:EntityPerson>
+                <nc:PersonBirthDate>
+                    <nc:Date>2006-05-04</nc:Date>
+<!--                    <nc:DateTime>2006-05-04T18:13:51.0</nc:DateTime>-->
+                </nc:PersonBirthDate>
                 <nc:PersonName>
                     <nc:PersonFullName>string</nc:PersonFullName>
                 </nc:PersonName>
+                <nc:PersonPrimaryLanguage>
+                    <nc:Language>
+                        <nc:LanguageName>string</nc:LanguageName>
+                    </nc:Language>
+                </nc:PersonPrimaryLanguage>
+                <hs:PersonAugmentation>
+                    <hs:EnglishInterpreterRequiredIndicator>false</hs:EnglishInterpreterRequiredIndicator>
+                </hs:PersonAugmentation>
             </nc:EntityPerson>
         </nc:AssessmentAssessor>
         <nc:AssessmentPerson>
             <nc:PersonBirthDate>
-                <nc:Date>2006-05-04</nc:Date>
+<!--                <nc:Date>2006-05-04</nc:Date>-->
+                <nc:DateTime>2006-05-04T18:13:51.0</nc:DateTime>
             </nc:PersonBirthDate>
             <nc:PersonName>
                 <nc:PersonFullName>string</nc:PersonFullName>
@@ -64,41 +77,105 @@
             <nc:CommentText>string</nc:CommentText>
         </nc:AssessmentRecommendation>
         <nc:AssessmentReport>
+            <nc:DocumentAuthor>
+                <nc:EntityPerson>
+                    <nc:PersonBirthDate>
+<!--                        <nc:Date>2006-05-04</nc:Date>-->
+                        <nc:DateTime>2006-05-04T18:13:51.0</nc:DateTime>
+                    </nc:PersonBirthDate>
+                    <nc:PersonName>
+                        <nc:PersonFullName>string</nc:PersonFullName>
+                    </nc:PersonName>
+                    <nc:PersonPrimaryLanguage>
+                        <nc:Language>
+                            <nc:LanguageName>string</nc:LanguageName>
+                        </nc:Language>
+                    </nc:PersonPrimaryLanguage>
+                    <hs:PersonAugmentation>
+                        <hs:EnglishInterpreterRequiredIndicator>false</hs:EnglishInterpreterRequiredIndicator>
+                    </hs:PersonAugmentation>
+                </nc:EntityPerson>
+            </nc:DocumentAuthor>
+            <nc:DocumentCategoryText>string</nc:DocumentCategoryText>
             <nc:DocumentBinary>
                 <nc:Base64BinaryObject>ZGVmYXVsdA==</nc:Base64BinaryObject>
             </nc:DocumentBinary>
+            <nc:DocumentContributor>
+                <nc:EntityPerson>
+                    <nc:PersonBirthDate>
+                        <nc:Date>2006-05-04</nc:Date>
+<!--                        <nc:DateTime>2006-05-04T18:13:51.0</nc:DateTime>-->
+                    </nc:PersonBirthDate>
+                    <nc:PersonName>
+                        <nc:PersonFullName>string</nc:PersonFullName>
+                    </nc:PersonName>
+                    <nc:PersonPrimaryLanguage>
+                        <nc:Language>
+                            <nc:LanguageName>string</nc:LanguageName>
+                        </nc:Language>
+                    </nc:PersonPrimaryLanguage>
+                    <hs:PersonAugmentation>
+                        <hs:EnglishInterpreterRequiredIndicator>false</hs:EnglishInterpreterRequiredIndicator>
+                    </hs:PersonAugmentation>
+                </nc:EntityPerson>
+            </nc:DocumentContributor>
+            <nc:DocumentCreationDate>
+                <nc:Date>2006-05-04</nc:Date>
+<!--                <nc:DateTime>2006-05-04T18:13:51.0</nc:DateTime>-->
+            </nc:DocumentCreationDate>
+            <nc:DocumentFileControlID>string</nc:DocumentFileControlID>
+            <nc:DocumentMediaCategoryText>string</nc:DocumentMediaCategoryText>
+            <nc:DocumentLastModifiedDate>
+<!--                <nc:Date>2006-05-04</nc:Date>-->
+                <nc:DateTime>2006-05-04T18:13:51.0</nc:DateTime>
+            </nc:DocumentLastModifiedDate>
+            <nc:DocumentLocationURI>http://www.oxygenxml.com/</nc:DocumentLocationURI>
+            <nc:DocumentSequenceID>string</nc:DocumentSequenceID>
         </nc:AssessmentReport>
         <nc:AssessmentSummaryText>string</nc:AssessmentSummaryText>
-        <AssessmentAugmentation>
+        <nola-ext:AssessmentAugmentation>
             <j:ActivityCaseAssociation>
                 <nc:Case>
                     <j:CaseAugmentation>
                         <j:CaseCourt>
                             <nc:OrganizationBranchName>string</nc:OrganizationBranchName>
                             <nc:OrganizationJurisdiction>
-                                <nc:JurisdictionText>string</nc:JurisdictionText>
                             </nc:OrganizationJurisdiction>
                             <nc:OrganizationLocation>
-                                <nc:LocationPart>
-                                    <nc:LocationRoomText>string</nc:LocationRoomText>
-                                    <nc:LocationSectionText>string</nc:LocationSectionText>
-                                </nc:LocationPart>
                             </nc:OrganizationLocation>
                             <j:CourtName>string</j:CourtName>
                         </j:CaseCourt>
                         <j:CaseCourtEvent>
                             <j:CourtEventAppearance>
-                                <j:CourtAppearanceDate>
-                                    <nc:Date>2006-05-04</nc:Date>
-                                </j:CourtAppearanceDate>
-                                <j:CourtAppearanceCategoryText>string</j:CourtAppearanceCategoryText>
                             </j:CourtEventAppearance>
                         </j:CaseCourtEvent>
                     </j:CaseAugmentation>
                 </nc:Case>
             </j:ActivityCaseAssociation>
-            <ReleaseCondition>string</ReleaseCondition>
-            <ReleaseCondition>string</ReleaseCondition>
-        </AssessmentAugmentation>
+            <nola-ext:ReleaseCondition>string</nola-ext:ReleaseCondition>
+            <nola-ext:ReleaseCondition>string</nola-ext:ReleaseCondition>
+        </nola-ext:AssessmentAugmentation>
+        <nola-ext:AssessmentAugmentation>
+            <j:ActivityCaseAssociation>
+                <nc:Case>
+                    <j:CaseAugmentation>
+                        <j:CaseCourt>
+                            <nc:OrganizationBranchName>string</nc:OrganizationBranchName>
+                            <nc:OrganizationJurisdiction>
+                            </nc:OrganizationJurisdiction>
+                            <nc:OrganizationLocation>
+                            </nc:OrganizationLocation>
+                            <j:CourtName>string</j:CourtName>
+                        </j:CaseCourt>
+                        <j:CaseCourtEvent>
+                            <j:CourtEventAppearance>
+                            </j:CourtEventAppearance>
+                        </j:CaseCourtEvent>
+                    </j:CaseAugmentation>
+                </nc:Case>
+            </j:ActivityCaseAssociation>
+            <nola-ext:ReleaseCondition>string</nola-ext:ReleaseCondition>
+            <nola-ext:ReleaseCondition>string</nola-ext:ReleaseCondition>
+        </nola-ext:AssessmentAugmentation>
     </nc:Assessment>
 </nola:PretrialAssessmentExchange>
