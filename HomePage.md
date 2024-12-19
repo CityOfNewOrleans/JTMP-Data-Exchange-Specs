@@ -8,7 +8,7 @@ The following diagram provides an overview of the JTMP Service Bus. ​</p>
 <h2>Data Exchange Specifications </h2>
 <p>JTMP has identified a set of Priority Data Exchanges between these systems that drive us toward that vision.  
  
-[Click here](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/resources/Orleans%20JTMP%20ESB%20Exchange%20List-20241218.xlsx) for the latest prioritized list of exchanges to be implemented.  
+<b>NEW!</b> [Click here](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/resources/Orleans%20JTMP%20ESB%20Exchange%20List-20241219.xlsx) for the latest prioritized list of exchanges to be implemented.  
  
  JTMP follows the National Information Exchange Model (NIEM) in building and publishing specificaitons for each data exchange. The requirements for building each data exchange are communicated in a Message Specification (formally known as Information Exchange Package Documentation, or IEPDs). The table below lists the Publishing system or systems for each data exchange. The right-most column provides the link to the IEPD in the repository.</p>
  
