@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:structures="http://release.niem.gov/niem/structures/5.0/" xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/" xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:niem-xs="http://release.niem.gov/niem/proxy/niem-xs/5.0/" xmlns:j="http://release.niem.gov/niem/domains/jxdm/7.2/" xmlns:hs="http://release.niem.gov/niem/domains/humanServices/5.2/" xmlns:em="http://release.niem.gov/niem/domains/emergencyManagement/5.2/" xmlns:im="http://release.niem.gov/niem/domains/immigration/5.2/" xmlns:nola-ext="http://mcp.com/nola/extension/v/1.0/" xmlns:clsa="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-schema-appinfo/" xmlns:ncic="http://release.niem.gov/niem/codes/ncic/5.2/" xmlns:cls="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-instance/" targetNamespace="http://mcp.com/nola/extension/v/1.0/" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1" xml:lang="en-US" ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ExtensionDocument">
+    <!-- NIEM schema imports -->
+    <xs:import namespace="http://release.niem.gov/niem/niem-core/5.0/" schemaLocation="./niem\xsd\niem-core.xsd"/>
+    <xs:import namespace="http://release.niem.gov/niem/proxy/niem-xs/5.0/" schemaLocation="./niem\xsd\adapters\niem-xs.xsd"/>
+    <xs:import namespace="http://release.niem.gov/niem/domains/jxdm/7.2/" schemaLocation="./niem\xsd\domains\jxdm.xsd"/>
+    <xs:import namespace="http://release.niem.gov/niem/domains/humanServices/5.2/" schemaLocation="./niem\xsd\domains\hs.xsd"/>
+    <xs:import namespace="http://release.niem.gov/niem/domains/emergencyManagement/5.2/" schemaLocation="./niem\xsd\domains\emergencyManagement.xsd"/>
+    <xs:import namespace="http://release.niem.gov/niem/domains/immigration/5.2/" schemaLocation="./niem\xsd\domains\immigration.xsd"/>
+    <xs:import namespace="http://release.niem.gov/niem/appinfo/5.0/" schemaLocation="./niem/xsd/utility/appinfo.xsd"/>
+    <xs:import namespace="http://release.niem.gov/niem/conformanceTargets/3.0/" schemaLocation="./niem\xsd\utility\conformanceTargets.xsd"/>
+    <xs:import namespace="http://release.niem.gov/niem/structures/5.0/" schemaLocation="./niem\xsd\utility\structures.xsd"/>
+    <xs:import namespace="http://release.niem.gov/niem/codes/ncic/5.2/" schemaLocation="./niem\xsd\codes\ncic.xsd"/>
+    <xs:import namespace="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-schema-appinfo/" schemaLocation="./niem\xsd\utility\code-lists-schema-appinfo.xsd"/>
+    <xs:import namespace="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-instance/" schemaLocation="./niem\xsd\utility\code-lists-instance.xsd"/>
+    <!-- complexType Definitions, NIEM mapping ======================================================================== -->
+    <xs:complexType name="PersonNameAugmentationType">
+        <xs:annotation>
+            <xs:documentation>A data type for additional data for person name information in NOLA.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="structures:AugmentationType">
+                <xs:sequence>
+                    <xs:element ref="em:PersonAlternateName" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element ref="nola-ext:AliasNameSequenceNumber" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:DefendantNameSequenceNumber" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="ArrestAugmentationType">
+        <xs:annotation>
+            <xs:documentation>A data type for additional data for an arrest information in NOLA.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="structures:AugmentationType">
+                <xs:sequence>
+                    <xs:element ref="j:OffenseArrestAssociation" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="j:ActivityForceAssociation" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="j:IncidentArrestAssociation" minOccurs="0" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="LocationAugmentationType">
+        <xs:annotation>
+            <xs:documentation>A data type for additional data for a location information in NOLA.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="structures:AugmentationType">
+                <xs:sequence>
+                    <xs:element ref="nola-ext:CrossStreetIntersectionText" minOccurs="0" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="ForceAugmentationType">
+        <xs:annotation>
+            <xs:documentation>A data type for additional data for an Force information in NOLA.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="structures:AugmentationType">
+                <xs:sequence>
+                    <xs:element ref="nola-ext:ActivityReasonOtherText" minOccurs="0" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="IncidentAugmentationType">
+        <xs:annotation>
+            <xs:documentation>A data type for additional data for an incident information in NOLA.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="structures:AugmentationType">
+                <xs:sequence>
+                    <xs:element ref="nc:IncidentVehicleAssociation" minOccurs="0" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="ConveyanceAugmentationType">
+        <xs:annotation>
+            <xs:documentation>A data type for additional data for conveyance information in NOLA.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="structures:AugmentationType">
+                <xs:sequence>
+                    <xs:element ref="nola-ext:KeysInVehicle" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:NICNumberCancellation" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:NICNumberCancellationDateUTC" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:NICNumberCancellationIsLocal" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:NICNumberOriginal" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:NICNumberOriginalDateUTC" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:NICNumberOriginalIsLocal" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:OCANumberCancellation" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:OCANumberOriginal" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:OriginatingAgencyCancellation" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:OriginatingAgencyOriginal" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:VehicleLocked" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:VehicleDamageLevel" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:VehicleDamageLevelTypeID" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:VehicleDamageZone" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:VehicleRecoveredType" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:VehicleStatusTypeID" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:VehicleWantedStolen" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:VehicleWantedStolenStatus" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:DateLocated" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:VehicleDocument" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:RAWMake" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:RAWModel" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:VehicleType" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:VehicleReport" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="j:ConveyanceRegistration" minOccurs="0" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="ArrestWarrantAugmentationType">
+        <xs:annotation>
+            <xs:documentation>A data type for additional data for an arrest warrant information in NOLA.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="structures:AugmentationType">
+                <xs:sequence>
+                    <xs:element ref="nola-ext:WarrantUpdated" minOccurs="0" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="ChargeAugmentationType">
+        <xs:annotation>
+            <xs:documentation>A data type for additional data for charge information in NOLA.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="structures:AugmentationType">
+                <xs:sequence>
+                    <xs:element ref="nola-ext:CollateralBondAmountPaid" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:CollateralBondReceiptNumber" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:ChargeKey" minOccurs="0" maxOccurs="1"/>                    
+                    <xs:element ref="nc:SourceText" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="j:OffenseUCRCode" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:JMSChargeNumber" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:OffenseNIBRSCode" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:ChargeLIBRSCode" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:StatewideArrestTrackingNumber" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:StatewideATNChargeSequenceID" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="j:OffenseChargeAssociation" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:ClearedType" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:ClearedComments" minOccurs="0" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="ChargeVictimAugmentationType">
+        <xs:annotation>
+            <xs:documentation>A data type for additional data for charge victim information in NOLA.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="structures:AugmentationType">
+                <xs:sequence>
+                    <xs:element ref="nola-ext:VictimOffenderRelationshipTypeID" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:VictimPersonTypeID" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:VictimReportID" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element ref="nola-ext:VictimNumber" minOccurs="0" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="ItemAugmentationType">
+        <xs:annotation>
+            <xs:documentation>A data type for additional data for item information in NOLA.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="structures:AugmentationType">
+                <xs:sequence>
+                    <xs:element ref="nola-ext:IsBioHazard" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:IsInPoliceCustody" minOccurs="0" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="EnforcementOfficialAugmentationType">
+        <xs:annotation>
+            <xs:documentation>A data type for additional data for arrest official information in NOLA.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="structures:AugmentationType">
+                <xs:sequence>
+                    <xs:element ref="nola-ext:ApprovalDate" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:Comments" minOccurs="0" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>    
+    <xs:complexType name="PersonMedicalConditionAugmentationType">
+        <xs:annotation>
+            <xs:documentation>A data type for additional data for person medical condition information in NOLA.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="structures:AugmentationType">
+                <xs:sequence>
+                    <xs:element ref="nola-ext:SobrietyTypeID" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:TreatedTypeID" minOccurs="0" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType> 
+    <xs:complexType name="PersonHealthDetailsAugmentationType">
+        <xs:annotation>
+            <xs:documentation>A data type for additional data for person health information in NOLA.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="structures:AugmentationType">
+                <xs:sequence>
+                    <xs:element ref="em:PatientDiagnosisICDCodeID" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="em:PatientConditionName" minOccurs="0" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="PersonMilitarySummaryAugmentationType">
+        <xs:annotation>
+            <xs:documentation>A data type for additional data for person military summary information in NOLA.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="structures:AugmentationType">
+                <xs:sequence>
+                    <xs:element ref="nola-ext:VeteranCode" minOccurs="0" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>    
+    <xs:complexType name="PersonAugmentationType">
+        <xs:annotation>
+            <xs:documentation>A data type for additional information about a person.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="structures:AugmentationType">
+                <xs:sequence>
+                    <xs:element ref="j:PersonGangAssociation" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nc:PersonEmploymentAssociation" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:CaseDefendantNumber" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:InmateDefendant" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:IsWanted" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:OffendersReportID" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:OffenderStatusTypeID" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:RepeatOffender" minOccurs="0" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="OrganizationAugmentationType">
+        <xs:annotation>
+            <xs:documentation>A data type for additional information about an organization.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="structures:AugmentationType">
+                <xs:sequence>
+                    <xs:element ref="nola-ext:GangTrackingCriteria" minOccurs="0" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="LengthMeasureAugmentationType">
+        <xs:annotation>
+            <xs:documentation>A data type for additional information about length.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="structures:AugmentationType">
+                <xs:sequence>
+                    <xs:element ref="nola-ext:HeightUnit" minOccurs="0" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="NOLAExchangeType">
+        <xs:annotation>
+            <xs:documentation>A data type for a common ancestor containing exchange level data relevant to exchanges in NOLA.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="structures:ObjectType">
+                <xs:sequence/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- Augmentation Elements ======================================================================== -->
+    <xs:element name="PersonNameAugmentation" type="nola-ext:PersonNameAugmentationType" substitutionGroup="nc:PersonNameAugmentationPoint">
+        <xs:annotation>
+            <xs:documentation>Additional information about an Person Name in the NOLA.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="ArrestAugmentation" type="nola-ext:ArrestAugmentationType" substitutionGroup="j:ArrestAugmentationPoint">
+        <xs:annotation>
+            <xs:documentation>Additional information about an arrest in the NOLA.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="LocationAugmentation" type="nola-ext:LocationAugmentationType" substitutionGroup="nc:LocationAugmentationPoint">
+        <xs:annotation>
+            <xs:documentation>Additional information about a location in the NOLA.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="ForceAugmentation" type="nola-ext:ForceAugmentationType" substitutionGroup="j:ForceAugmentationPoint">
+        <xs:annotation>
+            <xs:documentation>Additional information about use of force in the NOLA.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="IncidentAugmentation" type="nola-ext:IncidentAugmentationType" substitutionGroup="nc:IncidentAugmentationPoint">
+        <xs:annotation>
+            <xs:documentation>Additional information about an incident in the NOLA.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="ConveyanceAugmentation" type="nola-ext:ConveyanceAugmentationType" substitutionGroup="nc:ConveyanceAugmentationPoint">
+        <xs:annotation>
+            <xs:documentation>Additional information about conveyance in the NOLA.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="ArrestWarrantAugmentation" type="nola-ext:ArrestWarrantAugmentationType" substitutionGroup="j:WarrantAugmentationPoint">
+        <xs:annotation>
+            <xs:documentation>Additional information about an Arrest Warrant in the NOLA.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="ChargeAugmentation" type="nola-ext:ChargeAugmentationType" substitutionGroup="j:ChargeAugmentationPoint">
+        <xs:annotation>
+            <xs:documentation>Additional information about a charge in the NOLA.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="ChargeVictimAugmentation" type="nola-ext:ChargeVictimAugmentationType" substitutionGroup="j:VictimAugmentationPoint">
+        <xs:annotation>
+            <xs:documentation>Additional information about a charge victim in the NOLA.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="ItemAugmentation" type="nola-ext:ItemAugmentationType" substitutionGroup="nc:ItemAugmentationPoint">
+        <xs:annotation>
+            <xs:documentation>Additional information about an item in the NOLA.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="EnforcementOfficialAugmentation" type="nola-ext:EnforcementOfficialAugmentationType" substitutionGroup="j:EnforcementOfficialAugmentationPoint">
+        <xs:annotation>
+            <xs:documentation>Additional information about an arrest official in the NOLA.</xs:documentation>
+        </xs:annotation>
+    </xs:element>    
+    <xs:element name="PersonMedicalConditionAugmentation" type="nola-ext:PersonMedicalConditionAugmentationType" substitutionGroup="nc:MedicalConditionAugmentationPoint">
+        <xs:annotation>
+            <xs:documentation>Additional information about a person medical condition information in the NOLA.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="PersonHealthDetailsAugmentation" type="nola-ext:PersonHealthDetailsAugmentationType" substitutionGroup="hs:HealthDetailsAugmentationPoint">
+        <xs:annotation>
+            <xs:documentation>Additional information about a Person Health in the NOLA.</xs:documentation>
+        </xs:annotation>
+    </xs:element>    
+    <xs:element name="PersonMilitarySummaryAugmentation" type="nola-ext:PersonMilitarySummaryAugmentationType" substitutionGroup="nc:MilitarySummaryAugmentationPoint">
+        <xs:annotation>
+            <xs:documentation>Additional information about a person military summary information in the NOLA.</xs:documentation>
+        </xs:annotation>
+    </xs:element>    
+    <xs:element name="PersonAugmentation" type="nola-ext:PersonAugmentationType" substitutionGroup="nc:PersonAugmentationPoint">
+        <xs:annotation>
+            <xs:documentation>Additional information about a person in the NOLA.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="OrganizationAugmentation" type="nola-ext:OrganizationAugmentationType" substitutionGroup="nc:OrganizationAugmentationPoint">
+        <xs:annotation>
+            <xs:documentation>Additional information about an organization in the NOLA.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="LengthMeasureAugmentation" type="nola-ext:LengthMeasureAugmentationType" substitutionGroup="nc:LengthMeasureAugmentationPoint">
+        <xs:annotation>
+            <xs:documentation>Additional information about length measure in the NOLA.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <!-- New Element definitions ======================================================================== -->
+    <xs:element name="AliasNameSequenceNumber" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation>Alias Name Sequence Number belongs to Defendent Charge file.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="DefendantNameSequenceNumber" type="niem-xs:integer">
+        <xs:annotation>
+            <xs:documentation>Used by CDC magistrate log Charges Changed by Minute Clerk.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="CrossStreetIntersectionText" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation>.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="ActivityReasonOtherText" type="nc:TextType">
+        <xs:annotation>
+            <xs:documentation>Other Reason for use of force.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="KeysInVehicle" type="niem-xs:boolean">
+        <xs:annotation>
+            <xs:documentation>True if keys were in the vehicle when impounded</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="NICNumberCancellation" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation>Manner in which impound was cleared.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="NICNumberCancellationDateUTC" type="niem-xs:dateTime">
+        <xs:annotation>
+            <xs:documentation>Date/time NIC number cancellation was entered in UTC</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="NICNumberCancellationIsLocal" type="niem-xs:boolean">
+        <xs:annotation>
+            <xs:documentation>True if cancellation NIC number is local (i.e. the canceling agency is your agency).</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="NICNumberOriginal" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation>NIC number of vehicle at the time it was reported stolen.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="NICNumberOriginalDateUTC" type="niem-xs:dateTime">
+        <xs:annotation>
+            <xs:documentation>Date/time the original NIC number was entered in UTC.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="NICNumberOriginalIsLocal" type="niem-xs:boolean">
+        <xs:annotation>
+            <xs:documentation>True if original NIC number is local (i.e. the originating agency is your agency).</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="OCANumberCancellation" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation>REN of the recovery event of vehicle.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="OCANumberOriginal" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation>REN as originally entered. If another agency reported the vehicle stolen, enter their REN equivalent here.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="OriginatingAgencyCancellation" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation>Originating agency that recovered the vehicle.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="OriginatingAgencyOriginal" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation>Originating agency that reported the vehicle stolen.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="VehicleLocked" type="niem-xs:boolean">
+        <xs:annotation>
+            <xs:documentation>True if vehicle was locked when impounded.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="VehicleDamageLevel" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="VehicleDamageLevelTypeID" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="VehicleDamageZone" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="VehicleRecoveredType" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="VehicleStatusTypeID" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="VehicleWantedStolen" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="VehicleWantedStolenStatus" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="DateLocated" type="niem-xs:dateTime">
+        <xs:annotation>
+            <xs:documentation>Date/time item was recovered in UTC.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="VehicleDocument" type="nc:DocumentType">
+        <xs:annotation>
+            <xs:documentation>Vehicle Wanted Stolen Document flag.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="RAWMake" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation>Rear Axel Wheel (Raw) Make.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="RAWModel" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation>Rear Axel Wheel (Raw) Model.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="VehicleType" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation>Type of Vehicle.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="VehicleReport" type="nc:DocumentType">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="WarrantUpdated" type="niem-xs:boolean">
+        <xs:annotation>
+            <xs:documentation>An Indicator which shows if the warrant was updated or not.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="CollateralBondAmountPaid" type="nc:AmountType">
+        <xs:annotation>
+            <xs:documentation>Amount paid by the defendant if required by disposition.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="CollateralBondReceiptNumber" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation>Receipt number for payment if required by disposition.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="ChargeKey" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation>A UCT Charge Key (Uniform Charge Table) is a shared key or identifier from a shared table that standardizes charge code definitions across the enterprise.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="JMSChargeNumber" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation>A unique identification number assigned to a particular charge by a Jail Management System (JMS).</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="OffenseNIBRSCode" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation>NIBRS Offense Code.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="ChargeLIBRSCode" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation>Name or code of offense.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="StatewideArrestTrackingNumber" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation>The State's Police Automated Fingerprint Inforamtion System (AFIS) generates an ATN to uniquely identify each booking event, often referred to as an Arrest Cycle. The ATN must be communicated from the Sheriff to the Court at a minimum, in order to effectively update the State computerized criminal history (CCH) with dispositions of arrest charges.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="StatewideATNChargeSequenceID" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation>A sequential identifier number assigned to the arrest of a subject i.e ATN. The State's Police Automated Fingerprint Inforamtion System (AFIS) generates an ATN to uniquely identify each booking event, often referred to as an Arrest Cycle. The ATN must be communicated from the Sheriff to the Court at a minimum, in order to effectively update the State computerized criminal history (CCH) with dispositions of arrest charges.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="ClearedType" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation>Cleared Type.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="ClearedComments" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation>Cleared Comments.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="VictimOffenderRelationshipTypeID" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation>An ID for the relationship between the Victim and the Offender.</xs:documentation>
+        </xs:annotation>
+    </xs:element>  
+    <xs:element name="VictimPersonTypeID" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation>An ID for the type of Victim.</xs:documentation>
+        </xs:annotation>
+    </xs:element>  
+    <xs:element name="VictimReportID" type="nc:DocumentType">
+        <xs:annotation>
+            <xs:documentation>Victim Report.</xs:documentation>
+        </xs:annotation>
+    </xs:element>  
+    <xs:element name="VictimNumber" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation>An identification number or string identifying a victim.</xs:documentation>
+        </xs:annotation>
+    </xs:element>  
+    <xs:element name="IsBioHazard" type="niem-xs:boolean">
+        <xs:annotation>
+            <xs:documentation>Indicates whether the item is a biohazard.</xs:documentation>
+        </xs:annotation>
+    </xs:element>  
+    <xs:element name="IsInPoliceCustody" type="niem-xs:boolean">
+        <xs:annotation>
+            <xs:documentation>Indicates whether or not the item is In Police Custody.</xs:documentation>
+        </xs:annotation>
+    </xs:element>  
+    <xs:element name="ApprovalDate" type="niem-xs:dateTime">
+        <xs:annotation>
+            <xs:documentation>.</xs:documentation>
+        </xs:annotation>
+    </xs:element>    
+    <xs:element name="Comments" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation>.</xs:documentation>
+        </xs:annotation>
+    </xs:element>       
+    <xs:element name="SobrietyTypeID" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation>.</xs:documentation>
+        </xs:annotation>
+    </xs:element> 
+    <xs:element name="TreatedTypeID" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation>.</xs:documentation>
+        </xs:annotation>
+    </xs:element> 
+    <xs:element name="VeteranCode" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation>.</xs:documentation>
+        </xs:annotation>
+    </xs:element> 
+    <xs:element name="CaseDefendantNumber" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation>A defandant number associated with a specific criminal court case number.</xs:documentation>
+        </xs:annotation>
+    </xs:element> 
+    <xs:element name="InmateDefendant" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation>An identifier assigned to the detainee by the detention facility.</xs:documentation>
+        </xs:annotation>
+    </xs:element> 
+    <xs:element name="IsWanted" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation>From CastNet I am unsure wanted by court or there was a warrant issued?</xs:documentation>
+        </xs:annotation>
+    </xs:element> 
+    <xs:element name="OffendersReportID" type="niem-xs:integer">
+        <xs:annotation>
+            <xs:documentation>A description of when the court is required to file a report. its a primary key and type Int in EPR.</xs:documentation>
+        </xs:annotation>
+    </xs:element> 
+    <xs:element name="OffenderStatusTypeID" type="niem-xs:boolean">
+        <xs:annotation>
+            <xs:documentation>True if the registered offender status of a Subject is current; false otherwise.</xs:documentation>
+        </xs:annotation>
+    </xs:element> 
+    <xs:element name="RepeatOffender" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation>MultiBillIndicated is used for the repeat offenders.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="GangTrackingCriteria" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation>Criteria used to determine person's gang affiliation.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="HeightUnit" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation>A unit of measure of a length value.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+</xs:schema>

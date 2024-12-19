@@ -1,0 +1,779 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://release.niem.gov/niem/domains/jxdm/7.2/" version="1" xml:lang="en-US" xsi:schemaLocation="http://release.niem.gov/niem/appinfo/5.0/ ../utility/appinfo.xsd http://release.niem.gov/niem/conformanceTargets/3.0/ ../utility/conformanceTargets.xsd" ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ReferenceSchemaDocument" xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/" xmlns:j="http://release.niem.gov/niem/domains/jxdm/7.2/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ucr="http://release.niem.gov/niem/codes/ucr/5.1/" xmlns:ndex="http://release.niem.gov/niem/codes/ndex/5.0/" xmlns:structures="http://release.niem.gov/niem/structures/5.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/" xmlns:niem-xs="http://release.niem.gov/niem/proxy/niem-xs/5.0/" xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/">
+  <xs:annotation>
+    <xs:documentation>Justice</xs:documentation>
+    <xs:appinfo>
+      <appinfo:LocalTerm term="AAMVA" literal="The American Association of Motor Vehicle Administrators"/>
+      <appinfo:LocalTerm term="ACD" literal="AAMVA Code Dictionary"/>
+      <appinfo:LocalTerm term="ADA" literal="Americans with Disabilities Act"/>
+      <appinfo:LocalTerm term="AFIS" literal="Automated Fingerprint Identification System"/>
+      <appinfo:LocalTerm term="Alpha" definition="Letter(s)"/>
+      <appinfo:LocalTerm term="Amber" literal="America's Missing: Broadcast Emergency Response"/>
+      <appinfo:LocalTerm term="ANSID20" literal="The Data Dictionary for Traffic Record Systems, maintained by AAMVA, the American Association of Motor Vehicle Administrators"/>
+      <appinfo:LocalTerm term="APCO" literal="Association of Public-Safety Communications Officials (APCO) - International, Inc."/>
+      <appinfo:LocalTerm term="BAC" literal="Blood Alcohol Concentration"/>
+      <appinfo:LocalTerm term="BOP" literal="Bureau of Prisons"/>
+      <appinfo:LocalTerm term="BPH" literal="Board of Parole Hearings"/>
+      <appinfo:LocalTerm term="Brady" literal="Brady Law"/>
+      <appinfo:LocalTerm term="CDL" literal="Commercial Driver's License"/>
+      <appinfo:LocalTerm term="CFR" definition="Code of Federal Regulations"/>
+      <appinfo:LocalTerm term="CHRI" literal="Criminal History Record Information"/>
+      <appinfo:LocalTerm term="CJIS" literal="Criminal Justice Information System"/>
+      <appinfo:LocalTerm term="CLP" literal="Commercial Learners Permit"/>
+      <appinfo:LocalTerm term="CMV" literal="Commercial Motor Vehicle"/>
+      <appinfo:LocalTerm term="CODIS" literal="Combined DNA Index System"/>
+      <appinfo:LocalTerm term="COMPAS" literal="Correctional Offender Management Profiling for Alternative Sanctions"/>
+      <appinfo:LocalTerm term="DEA" literal="Drug Enforcement Administration"/>
+      <appinfo:LocalTerm term="DHS" literal="Department of Homeland Security"/>
+      <appinfo:LocalTerm term="DMH" literal="Department of Mental Health"/>
+      <appinfo:LocalTerm term="DNA" literal="Deoxyribonucleic acid"/>
+      <appinfo:LocalTerm term="DOT" literal="Department of Transportation"/>
+      <appinfo:LocalTerm term="EMS" literal="Emergency Medical Service"/>
+      <appinfo:LocalTerm term="Enhanceable" definition="An enhanceable offense means that specific factors can increase the severity level of the offense."/>
+      <appinfo:LocalTerm term="FBI" literal="Federal Bureau of Investigation"/>
+      <appinfo:LocalTerm term="FCN" literal="file control number"/>
+      <appinfo:LocalTerm term="FFL" literal="federal firearms license"/>
+      <appinfo:LocalTerm term="FIPS" literal="Federal Information Processing Standards"/>
+      <appinfo:LocalTerm term="GDEP" literal="Geographic-Drug Enforcement Program"/>
+      <appinfo:LocalTerm term="GVWR" literal="gross vehicle weight rating"/>
+      <appinfo:LocalTerm term="HazMat" literal="Hazardous Materials"/>
+      <appinfo:LocalTerm term="HME" literal="Hazardous Material Endorsement"/>
+      <appinfo:LocalTerm term="HRSO" literal="high risk sex offender"/>
+      <appinfo:LocalTerm term="IAFIS" literal="Integrated Automated Fingerprint Identification System"/>
+      <appinfo:LocalTerm term="IBIS" literal="Integrated Ballistic Identification System"/>
+      <appinfo:LocalTerm term="ICC" literal="Interstate Commerce Commission"/>
+      <appinfo:LocalTerm term="ISBN" literal="International Standard Book Number"/>
+      <appinfo:LocalTerm term="JABS" literal="JABS" definition="Joint Automated Booking System"/>
+      <appinfo:LocalTerm term="Keyhea" definition="Under the Keyhea injunction, 'involuntary medication' cannot be administered to a state prisoner for more than three days unless the professional staff of the facility in which the prisoner is incarcerated has analyzed the prisoner's condition and found that the prisoner is, as a result of a mental disorder, 'gravely disabled and incompetent to refuse medication or a danger to others, or a danger to self,' and the prisoner has been 'advised of the need for, but has not been willing to accept medication on a voluntary basis.'"/>
+      <appinfo:LocalTerm term="LEOKA" literal="Law Enforcement Officer Killed or Assaulted"/>
+      <appinfo:LocalTerm term="LIS" literal="License Plate State"/>
+      <appinfo:LocalTerm term="Livescan" definition="An inkless, electronic means of capturing fingerprints in a digitized format and then transmitting them to a state repository and/or the FBI"/>
+      <appinfo:LocalTerm term="LSTA" definition="State/Country Index"/>
+      <appinfo:LocalTerm term="MACR" literal="Monthly Arrest and Citation Register"/>
+      <appinfo:LocalTerm term="MCMIS" literal="Motor Carrier Management Information System"/>
+      <appinfo:LocalTerm term="MCO" literal="Manufacturer's certificate of origin"/>
+      <appinfo:LocalTerm term="MCSIP" literal="Motor Carrier Safety Improvement Process"/>
+      <appinfo:LocalTerm term="MDO" literal="mentally disordered offender"/>
+      <appinfo:LocalTerm term="MHSDS" literal="Mental Health Services Delivery System"/>
+      <appinfo:LocalTerm term="MMUCC" literal="Model Minimum Uniform Crash Criteria"/>
+      <appinfo:LocalTerm term="MO" literal="Modus Operandi"/>
+      <appinfo:LocalTerm term="ModusOperandi" literal="Mode of operating"/>
+      <appinfo:LocalTerm term="Multi" literal="Multiple"/>
+      <appinfo:LocalTerm term="NCIC" literal="National Crime Information Center"/>
+      <appinfo:LocalTerm term="NCMEC" literal="National Center for Missing &amp; Exploited Children"/>
+      <appinfo:LocalTerm term="NDEX" literal="National Data Exchange"/>
+      <appinfo:LocalTerm term="NDEx" literal="National Data Exchange"/>
+      <appinfo:LocalTerm term="NIBRS" literal="National Incident Based Reporting System"/>
+      <appinfo:LocalTerm term="NICB" literal="National Insurance Crime Bureau"/>
+      <appinfo:LocalTerm term="NICS" literal="National Instant Criminal Background Check System"/>
+      <appinfo:LocalTerm term="NLETS" literal="National Law Enforcement Telecommunication Systems"/>
+      <appinfo:LocalTerm term="OCA" literal="Originating Case Agency"/>
+      <appinfo:LocalTerm term="ORI" definition="A nine-character identifier assigned by the FBI Criminal Justice Information Systems (CJIS) staff to an organization, which must have met the established qualifying criteria for ORI assignment to identify the agency in transactions on CJIS Systems."/>
+      <appinfo:LocalTerm term="POST" literal="Peace Official Standards and Training"/>
+      <appinfo:LocalTerm term="Postdirectional" definition="A word following a street name that indicates the directional taken by the thoroughfare from an arbitrary starting point or line, or the sector where it is located."/>
+      <appinfo:LocalTerm term="Predirectional" definition="A word preceding a street name that indicates the directional taken by the thoroughfare from an arbitrary starting point or line, or the sector where it is located."/>
+      <appinfo:LocalTerm term="PRISM" literal="Performance and Registration Information Systems Management"/>
+      <appinfo:LocalTerm term="REALID" definition="Public Law 109–13, 119 Statute 302, enacted May 11, 2005, was an Act of Congress that modified U.S. federal law pertaining to security, authentication, and issuance procedures standards for the state driver's licenses and identification (ID) cards, as well as various immigration issues pertaining to terrorism."/>
+      <appinfo:LocalTerm term="RES" literal="Registration State"/>
+      <appinfo:LocalTerm term="RH" definition="Rhesus (Rh) factor is an inherited protein found on the surface of red blood cells."/>
+      <appinfo:LocalTerm term="RICO" literal="Racketeer Influenced and Corrupt Organizations"/>
+      <appinfo:LocalTerm term="SAFESTAT" literal="Safety Status Measurement System"/>
+      <appinfo:LocalTerm term="Separatee" literal="A person who must be kept separate from another person."/>
+      <appinfo:LocalTerm term="SMT" literal="Scars, Marks, Tattoos, and Other Characteristics"/>
+      <appinfo:LocalTerm term="SSN" literal="Social Security Number"/>
+      <appinfo:LocalTerm term="TCD" literal="traffic control device"/>
+      <appinfo:LocalTerm term="TCN" literal="Transaction Control Number"/>
+      <appinfo:LocalTerm term="TripleI" literal="III - Interstate Identification Index system"/>
+      <appinfo:LocalTerm term="TSA" definition="Transportation Security Administration"/>
+      <appinfo:LocalTerm term="TYP" literal="(Firearm) Type"/>
+      <appinfo:LocalTerm term="TYPA" literal="(Article) Type"/>
+      <appinfo:LocalTerm term="TYPO" literal="(ORI) Type"/>
+      <appinfo:LocalTerm term="UCR" literal="Uniform Crime Reporting"/>
+      <appinfo:LocalTerm term="USDOT" literal="United States Department of Transportation"/>
+      <appinfo:LocalTerm term="USMS" literal="United States Marshal Service"/>
+      <appinfo:LocalTerm term="VICAP" literal="Violent Criminal Apprehension Program"/>
+      <appinfo:LocalTerm term="VIN" literal="Vehicle Identification Number"/>
+      <appinfo:LocalTerm term="VINA" literal="Vehicle Identification Number Analysis"/>
+      <appinfo:LocalTerm term="WHTI" literal="Western Hemisphere Travel Initiative"/>
+      <appinfo:LocalTerm term="XRay" literal="X-Ray"/>
+      <appinfo:LocalTerm term="XRays" literal="X-Rays"/>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:import namespace="http://release.niem.gov/niem/codes/ndex/5.0/" schemaLocation="../codes/ndex.xsd"/>
+  <xs:import namespace="http://release.niem.gov/niem/codes/ucr/5.1/" schemaLocation="../codes/ucr.xsd"/>
+  <xs:import namespace="http://release.niem.gov/niem/niem-core/5.0/" schemaLocation="../niem-core.xsd"/>
+  <xs:import namespace="http://release.niem.gov/niem/proxy/niem-xs/5.0/" schemaLocation="../adapters/niem-xs.xsd"/>
+  <xs:import namespace="http://release.niem.gov/niem/structures/5.0/" schemaLocation="../utility/structures.xsd"/>
+  <xs:complexType name="ActivityForceAssociationType">
+    <xs:annotation>
+      <xs:documentation>A data type for an association between an activity and a use of force.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc:AssociationType">
+        <xs:sequence>
+          <xs:element ref="j:Force" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ArrestType">
+    <xs:annotation>
+      <xs:documentation>A data type for the apprehension of a subject by a peace official.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc:ActivityType">
+        <xs:sequence>
+          <xs:element ref="j:ArrestAgency" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="j:ArrestCharge" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="j:ArrestInvolvedItem" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="j:ArrestInvolvedWeapon" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="j:ArrestOfficial" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="j:ArrestSequenceID" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="j:ArrestSubject" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="j:ArrestSubjectRightsReadIndicator" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="j:ArrestWarrant" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="j:ArrestCategoryJABSAbstract" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="j:ArrestAugmentationPoint" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ChargeType">
+    <xs:annotation>
+      <xs:documentation>A data type for a formal allegation that a specific person has committed a specific offense.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:ObjectType">
+        <xs:sequence>
+          <xs:element ref="j:ChargeCountQuantity" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="j:ChargeDescriptionText" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="j:ChargeIdentification" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="j:ChargeSequenceID" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="j:ChargeSeverityText" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="j:ChargeStatus" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="j:ChargeVictim" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="j:ChargeSeverityDescriptionText" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="j:ChargeNCICAbstract" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="j:ChargeAugmentationPoint" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ConveyanceRegistrationType">
+    <xs:annotation>
+      <xs:documentation>A data type for a registration of a conveyance with an authority.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="j:ItemRegistrationType">
+        <xs:sequence>
+          <xs:element ref="j:ConveyanceRegistrationLocation" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="j:ConveyanceRegistrationPlateIdentification" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CourtOrderType">
+    <xs:annotation>
+      <xs:documentation>A data type for a direction of a judge not including a judgment, which determines some point or directs some steps in proceedings.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc:ActivityType"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="DriverLicenseBaseType">
+    <xs:annotation>
+      <xs:documentation>A data type for an authorization issued to a driver granting driving privileges.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:ObjectType"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="DriverLicenseType">
+    <xs:annotation>
+      <xs:documentation>A data type for a license issued to a person granting driving privileges.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="j:DriverLicenseBaseType">
+        <xs:sequence>
+          <xs:element ref="j:DriverLicenseCommercialClassAbstract" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="j:DriverLicenseCardIdentification" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="EducationAugmentationType">
+    <xs:annotation>
+      <xs:documentation>A data type for additional information about an education.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:AugmentationType">
+        <xs:sequence>
+          <xs:element ref="j:EducationTotalYearsText" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="EnforcementOfficialType">
+    <xs:annotation>
+      <xs:documentation>A data type for a person involved in the enforcement of law.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:ObjectType">
+        <xs:sequence>
+          <xs:element ref="j:EnforcementOfficialAssignmentCategoryAbstract" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="j:EnforcementOfficialBadgeIdentification" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="j:EnforcementOfficialAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ForceType">
+    <xs:annotation>
+      <xs:documentation>A data type for details of a force used, whether physical or aided by a tool or weapon.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc:ActivityType">
+        <xs:sequence>
+          <xs:element ref="j:ForceAugmentationPoint" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="IncidentArrestAssociationType">
+    <xs:annotation>
+      <xs:documentation>A data type for a relationship between an incident and an arrest.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc:AssociationType">
+        <xs:sequence>
+          <xs:element ref="nc:Incident" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ItemAugmentationType">
+    <xs:annotation>
+      <xs:documentation>A data type for additional information about an item.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:AugmentationType">
+        <xs:sequence>
+          <xs:element ref="j:ItemSeizure" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="j:ItemSightedIndicator" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ItemRegistrationType">
+    <xs:annotation>
+      <xs:documentation>A data type for a registration of a property item with an authority.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:ObjectType"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ItemSeizureType">
+    <xs:annotation>
+      <xs:documentation>A data type for the removal of property from the possession of a person or organization.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc:ActivityType"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="LocationAugmentationType">
+    <xs:annotation>
+      <xs:documentation>A data type for additional information about a location.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:AugmentationType">
+        <xs:sequence>
+          <xs:element ref="j:LocationBlockNumberText" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="OffenseArrestAssociationType">
+    <xs:annotation>
+      <xs:documentation>A data type for a relationship between an offense and the arrest of a subject alleged to have committed the offense.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc:AssociationType">
+        <xs:sequence>
+          <xs:element ref="j:Offense" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="OffenseChargeAssociationType">
+    <xs:annotation>
+      <xs:documentation>A data type for a relationship between an offense that occurred and the formal charge that was assigned to it as a result of classifying the offense.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc:AssociationType">
+        <xs:sequence>
+          <xs:element ref="j:Offense" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="OffenseType">
+    <xs:annotation>
+      <xs:documentation>A data type for an alleged violation of a statute, ordinance, or rule.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc:ActivityType">
+        <xs:sequence>
+          <xs:element ref="j:JuvenileOffenderIndicator" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="j:OffenseDomesticViolenceIndicator" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="OrganizationAugmentationType">
+    <xs:annotation>
+      <xs:documentation>A data type for additional information about an organization.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:AugmentationType">
+        <xs:sequence>
+          <xs:element ref="j:OrganizationORIIdentification" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="PersonAugmentationType">
+    <xs:annotation>
+      <xs:documentation>A data type for additional information about a person.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:AugmentationType">
+        <xs:sequence>
+          <xs:element ref="j:DriverLicense" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="j:PersonDrugAlcoholUseFrequencyText" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="j:PersonDrugAlcoholUseIndicator" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="SubjectType">
+    <xs:annotation>
+      <xs:documentation>A data type for a person or organization that is involved or suspected of being involved in a violation of a criminal statute, ordinance or rule.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:ObjectType">
+        <xs:sequence>
+          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="j:SubjectGangAffiliationNoneIndicator" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="j:SubjectDetainmentLocation" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="VictimType">
+    <xs:annotation>
+      <xs:documentation>A data type for a person who suffers injury, loss, or death as a result of an incident.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:ObjectType">
+        <xs:sequence>
+          <xs:element ref="j:VictimIdentification" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="j:VictimCategoryAbstract" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="j:VictimAugmentationPoint" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="WarrantType">
+    <xs:annotation>
+      <xs:documentation>A data type for an authorization for an enforcement official to perform a specified action.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="j:CourtOrderType">
+        <xs:sequence>
+          <xs:element ref="j:WarrantCategoryAbstract" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="j:WarrantAugmentationPoint" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ActivityForceAssociation" type="j:ActivityForceAssociationType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>An association between an activity and a use of force.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="Arrest" type="j:ArrestType">
+    <xs:annotation>
+      <xs:documentation>An apprehension of a subject by a peace official based on an observed or a reported violation of a law or ordinance, an outstanding arrest warrant, or probable cause information.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ArrestAgency" type="nc:OrganizationType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>An agency which employs the arresting official.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ArrestAugmentationPoint" abstract="true">
+    <xs:annotation>
+      <xs:documentation>An augmentation point for ArrestType.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ArrestCategoryJABSAbstract" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A data concept for a kind of apprehension.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ArrestCategoryJABSCode" type="ndex:ArrestCategoryJABSCodeType" substitutionGroup="j:ArrestCategoryJABSAbstract">
+    <xs:annotation>
+      <xs:documentation>A kind of apprehension.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ArrestCharge" type="j:ChargeType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A formal allegation of a violation of a statute and/or ordinance in association with an arrest.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ArrestInvolvedItem" type="nc:ItemType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A piece of property associated with an arrest.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ArrestInvolvedWeapon" type="nc:WeaponType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A description of a weapon associated with an arrested subject.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ArrestOfficial" type="j:EnforcementOfficialType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A peace official who makes an arrest.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ArrestSequenceID" type="niem-xs:string" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A sequential identifier number assigned to the arrest of a subject.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ArrestSubject" type="j:SubjectType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A person who is arrested.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ArrestSubjectRightsReadIndicator" type="niem-xs:boolean" nillable="true">
+    <xs:annotation>
+      <xs:documentation>True if a person's legal rights (Miranda Rights) were read to a subject during an arrest; false otherwise.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ArrestWarrant" type="j:WarrantType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A court authorized order which commands a peace official to arrest a subject and bring that subject before the court.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ChargeAugmentationPoint" abstract="true">
+    <xs:annotation>
+      <xs:documentation>An augmentation point for ChargeType.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ChargeCountQuantity" type="niem-xs:nonNegativeInteger" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A number of times a person is charged with committing the same crime.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ChargeDescriptionText" type="nc:TextType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A plain language description of a charge.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ChargeIdentification" type="nc:IdentificationType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A unique identification number assigned to a particular charge by an arresting agency, prosecuting attorney, or a court for case management purposes.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ChargeNCICAbstract" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A data concept for an offense within the National Crime Information Center (NCIC) system.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ChargeSequenceID" type="niem-xs:string" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A sequentially assigned identifier for charge tracking purposes.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ChargeSeverityDescriptionText" type="nc:TextType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A description of the level of the offense such as Grade A Misdemeanor, Gross Misdemeanor, Aggravated Misdemeanor.  States may transmit numeric grade levels (1, 2, 3) or define degrees alphanumerically (A, B, C.)</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ChargeSeverityText" type="nc:TextType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A level of severity of a charge.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ChargeStatus" type="nc:StatusType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A state of a charge.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ChargeVictim" type="j:VictimType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A person or entity who is the victim of an offense designated by the charge.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ConveyanceRegistration" type="j:ConveyanceRegistrationType">
+    <xs:annotation>
+      <xs:documentation>A registration of a conveyance with an authority.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ConveyanceRegistrationLocation" type="nc:LocationType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A location where a conveyance is registered.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ConveyanceRegistrationPlateIdentification" type="nc:IdentificationType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>An identification on a metal plate fixed to a conveyance.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="DriverLicense" type="j:DriverLicenseType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A license issued to a person granting driving privileges.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="DriverLicenseCardIdentification" type="nc:IdentificationType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>An identification that is affixed to the raw materials (card stock, laminate, etc.) used in producing driver licenses and ID cards. The numbers are issued by the material's manufacturer and provide a unique reference to a card within a jurisdiction.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="DriverLicenseCommercialClassAbstract" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A data concept for a kind of commercial vehicle that a licensed driver has been examined on and approved to operate.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="DriverLicenseCommercialClassText" type="nc:TextType" substitutionGroup="j:DriverLicenseCommercialClassAbstract">
+    <xs:annotation>
+      <xs:documentation>A kind of commercial vehicle that a licensed driver has been examined on and approved to operate.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="DrugCategoryCode" type="ucr:DrugCategoryCodeType" substitutionGroup="nc:SubstanceCategoryAbstract">
+    <xs:annotation>
+      <xs:documentation>A kind of drug.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="EducationAugmentation" type="j:EducationAugmentationType" substitutionGroup="nc:EducationAugmentationPoint">
+    <xs:annotation>
+      <xs:documentation>Additional information about an education.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="EducationTotalYearsText" type="nc:TextType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A total number of years a person has been involved in attaining their education.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="EnforcementOfficialAssignmentCategoryAbstract" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A data concept for a kind of assignment of an enforcement official.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="EnforcementOfficialAssignmentCategoryText" type="nc:TextType" substitutionGroup="j:EnforcementOfficialAssignmentCategoryAbstract">
+    <xs:annotation>
+      <xs:documentation>A kind of assignment of an enforcement official.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="EnforcementOfficialAugmentationPoint" abstract="true">
+    <xs:annotation>
+      <xs:documentation>An augmentation point for EnforcementOfficialType.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="EnforcementOfficialBadgeIdentification" type="nc:IdentificationType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>An identification used to refer to an enforcement official.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="Force" type="j:ForceType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A force used, whether physical or aided by a tool or weapon.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ForceAugmentationPoint" abstract="true">
+    <xs:annotation>
+      <xs:documentation>An augmentation point for ForceType.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="IncidentArrestAssociation" type="j:IncidentArrestAssociationType">
+    <xs:annotation>
+      <xs:documentation>A relationship between an incident and an arrest.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="IncidentStatusCode" type="ndex:IncidentStatusCodeType" substitutionGroup="nc:StatusAbstract">
+    <xs:annotation>
+      <xs:documentation>A status of the current disposition of an incident.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="InjuryCategoryCode" type="ucr:InjuryCategoryCodeType" substitutionGroup="nc:InjuryCategoryAbstract">
+    <xs:annotation>
+      <xs:documentation>A general category of harm or injury.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="InjuryLocationNDExCode" type="ndex:InjuryLocationCodeType" substitutionGroup="nc:InjuryLocationAbstract">
+    <xs:annotation>
+      <xs:documentation>A location of the victim's injury.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ItemAugmentation" type="j:ItemAugmentationType" substitutionGroup="nc:ItemAugmentationPoint">
+    <xs:annotation>
+      <xs:documentation>Additional information about an item.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ItemSeizure" type="j:ItemSeizureType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A removal of property from the possession of a person or organization and placed in custody of the justice system.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ItemSightedIndicator" type="niem-xs:boolean" nillable="true">
+    <xs:annotation>
+      <xs:documentation>True if a piece of property has been sighted; false otherwise.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="JuvenileOffenderIndicator" type="niem-xs:boolean" nillable="true">
+    <xs:annotation>
+      <xs:documentation>True if the legal status of a person is a juvenile; false otherwise.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LocationAugmentation" type="j:LocationAugmentationType" substitutionGroup="nc:LocationAugmentationPoint">
+    <xs:annotation>
+      <xs:documentation>Additional information about a location.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LocationBlockNumberText" type="nc:TextType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A number identifying a section of a city enclosed by intersecting streets.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LocationCategoryCode" type="ndex:LocationCategoryCodeType" substitutionGroup="nc:LocationCategoryAbstract">
+    <xs:annotation>
+      <xs:documentation>A kind of location or area.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MaritalStatusCode" type="ndex:MaritalStatusCodeType" substitutionGroup="nc:PersonUnionStatusAbstract">
+    <xs:annotation>
+      <xs:documentation>A status of a union, such as separated or divorced.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="Offense" type="j:OffenseType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>An act or a course of action which may constitute a violation of a criminal statute, ordinance or rule that occurred during an incident.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="OffenseArrestAssociation" type="j:OffenseArrestAssociationType">
+    <xs:annotation>
+      <xs:documentation>A relationship between an offense and the arrest of a subject alleged to have committed the offense.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="OffenseChargeAssociation" type="j:OffenseChargeAssociationType">
+    <xs:annotation>
+      <xs:documentation>A relationship between an offense that occurred and the formal charge that was assigned to it as a result of classifying the offense.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="OffenseDesignationAbstract" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A data concept for a distinguishing designation of an offense.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="OffenseDomesticViolenceIndicator" type="niem-xs:boolean" nillable="true">
+    <xs:annotation>
+      <xs:documentation>True if an offense involves the infliction of physical injury, or the creation of a reasonable fear that physical injury or harm will be inflicted, by a parent or member or former member of a child's household, against a child or against another member of the household; false otherwise.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="OffenseUCRCode" type="ucr:OffenseCodeType" substitutionGroup="j:OffenseDesignationAbstract" nillable="true">
+    <xs:annotation>
+      <xs:documentation>An offense designation as specified by FBI's Uniform Crime Reporting (UCR) program.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="OrganizationAugmentation" type="j:OrganizationAugmentationType" substitutionGroup="nc:OrganizationAugmentationPoint">
+    <xs:annotation>
+      <xs:documentation>Additional information about an organization.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="OrganizationORIIdentification" type="nc:IdentificationType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A unique nine character NCIC identification (ORI) assigned to a justice-related organization by the FBI CJIS Division.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PersonAugmentation" type="j:PersonAugmentationType" substitutionGroup="nc:PersonAugmentationPoint">
+    <xs:annotation>
+      <xs:documentation>Additional information about a person.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PersonBuildCode" type="ndex:PersonBuildCodeType" substitutionGroup="nc:PersonBuildAbstract">
+    <xs:annotation>
+      <xs:documentation>A person's physique or body shape.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PersonDrugAlcoholUseFrequencyText" type="nc:TextType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A description of the frequency of drug or alcohol use.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PersonDrugAlcoholUseIndicator" type="niem-xs:boolean" nillable="true">
+    <xs:annotation>
+      <xs:documentation>True if a person admits to having used or abused drugs or alcohol; false otherwise.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PersonFacialHairCode" type="ndex:PersonFacialHairCodeType" substitutionGroup="nc:PersonFacialHairAbstract">
+    <xs:annotation>
+      <xs:documentation>A kind of facial hair.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PersonGangAssociation" type="nc:PersonOrganizationAssociationType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>An association between a person and a gang.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PersonHairLengthCode" type="ndex:PersonHairLengthCodeType" substitutionGroup="nc:PersonHairLengthAbstract">
+    <xs:annotation>
+      <xs:documentation>A length of hair of a person.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="SubjectDetainmentLocation" type="nc:LocationType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A specific address of the facility associated with the incarceration.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="SubjectGangAffiliationNoneIndicator" type="niem-xs:boolean" nillable="true">
+    <xs:annotation>
+      <xs:documentation>True if the subject has no known gang affiliation; false otherwise.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VictimAugmentationPoint" abstract="true">
+    <xs:annotation>
+      <xs:documentation>An augmentation point for VictimType.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VictimCategoryAbstract" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A data concept for a kind of victim an offense was committed against.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VictimCategoryCode" type="ucr:VictimCategoryCodeType" substitutionGroup="j:VictimCategoryAbstract">
+    <xs:annotation>
+      <xs:documentation>A kind of victim an offense was committed against.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VictimIdentification" type="nc:IdentificationType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>An identification number or string identifying a victim.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="WarrantAugmentationPoint" abstract="true">
+    <xs:annotation>
+      <xs:documentation>An augmentation point for WarrantType.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="WarrantCategoryAbstract" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A data concept for a kind of warrant.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="WarrantCategoryCode" type="ndex:WarrantCategoryCodeType" substitutionGroup="j:WarrantCategoryAbstract">
+    <xs:annotation>
+      <xs:documentation>A kind of warrant.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+</xs:schema>
