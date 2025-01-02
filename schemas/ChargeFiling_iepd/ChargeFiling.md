@@ -46,7 +46,7 @@ This exchange will also leverage the UCTID from the Uniform Charge Table to impr
 
 ## Data Requirements:
 
-XML Schemas - coming soon. 
+![XML Schemas](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/tree/main/schemas/ChargeFiling_iepd/api/xml_schema) 
 
 ### Key data elements include:
 - Arrest number (enabling the JMS to correlate a new case to a previous Booking or Charge Screening). 
@@ -57,11 +57,12 @@ XML Schemas - coming soon.
 - ATN and Sequence number to correlate each Charge to the value originally assigned in the State's AFIS and CCH. 
 - Prosecuting Attorney
 
-## Artifacts: coming soon. 
+## Artifacts: 
 
-**Mapping Spreadsheet** - coming soon
+![Mapping Spreadsheet](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/ChargeFiling_iepd/artifacts/ChargeFiling_MappingSpreadsheet.xlsx)
 
-**Sample XML Files** - coming soon
+![Sample XML File](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/tree/main/schemas/ChargeFiling_iepd/examples)
 
-**Class Diagram:**  - coming soon
+![Class Diagram](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/ChargeFiling_iepd/artifacts/ChargeFiling_ClassDiagram.svg) 
+
 
