@@ -18,7 +18,7 @@ None
 
 ## Triggering Event
 
-An existing record is modified or a new record is saved to the Orleans Uniform Charge Table.  
+An existing record is modified or a new record is saved to the UCT table in the Orleans Uniform Charge Code database.  
 
 ## Real-World Effects
 
