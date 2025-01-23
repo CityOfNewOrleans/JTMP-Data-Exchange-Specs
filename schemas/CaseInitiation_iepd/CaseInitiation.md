@@ -1,4 +1,4 @@
-![Return to the JTMP landing page](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/tree/main?tab=readme-ov-file)
+![Return to the JTMP landing page](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/README.md)
 
 # New Case Initiation Exchange
 
