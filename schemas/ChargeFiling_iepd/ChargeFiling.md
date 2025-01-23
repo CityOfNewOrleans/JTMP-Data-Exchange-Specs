@@ -1,4 +1,4 @@
-![Return to the JTMP landing page](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/HomePage.md)
+![Return to the JTMP landing page](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/README.md)
 
 # Charge Filing Exchange
 This Message Specification contains the required data elements for a Prosecutor's Case Management or Matter Management System (CMS or MMS) to either file arrest charges to intiate a criminal court case, or to file an Indictment with the Clerk of Courts for Grand Jury review. 
