@@ -78,6 +78,8 @@
 							<nola-ext:EnhancedBond>String</nola-ext:EnhancedBond>
 							<!--  Class: Bond, Attribute: HoldWithoutBond  -->
 							<nola-ext:HoldWithoutBond>true</nola-ext:HoldWithoutBond>
+							<!-- ADD BOND SURETY -->
+							<!-- ADD BOND CONDITIONS -->
 						</nola-ext:BailBondAugmentation>
 					</j:BailBond>
 				</hs:ChargeAugmentation>
