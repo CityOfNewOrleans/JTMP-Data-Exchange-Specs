@@ -15,7 +15,7 @@ JTMP follows the National Information Exchange Model ([NIEM](https://github.com/
 |Data Exchange |Publishing System(s) |IEPD Page |API Topic-exchangeDataType name|
 |-----|------|------|-----|
 |Arrest|Records Management System |[ArrestReport IEPD](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/ArrestReport_iepd/ArrestReport.md)|arrestReport|
-|Booking and Release| Jail Management System|[Booking and Release IEPD](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/booking_iepd/BookingAndRelease.md) |Booking Release (two message types share the same schema|
+|Booking and Release| Jail Management System|[Booking and Release IEPD](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/BookingAndRelease_iepd/BookingAndRelease.md) |Booking Release (two message types share the same schema|
 |Charge Filing (Screening Action/Bill of Information) | Prosecutor CMS|[Charge Filing IEPD](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/ChargeFiling_iepd/ChargeFiling.md)|CaseChargeFiling|
 |New Case Initiation |Court CMS|[Case Initation IEPD](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/CaseInitiation_iepd/CaseInitiation.md) |caseInitiation|
 |Court Event|Court Case Management System (CMS)|[Court Event IEPD](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/CourtEvent_iepd/CourtEventExchange.md) |courtEvent|
