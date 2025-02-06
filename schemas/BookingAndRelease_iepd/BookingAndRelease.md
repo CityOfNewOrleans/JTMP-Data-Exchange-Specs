@@ -43,13 +43,13 @@ Subscribers may create new pending case events or update previously-created even
 
 ## Artifacts:
 **XML Schema:**
-![XML Schemas](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/tree/main/schemas/booking_iepd/api/xml_schema)
+![XML Schemas](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/tree/main/schemas/BookingAndRelease_iepd/api/xml_schema)
 
 **Mapping Spreadsheet:**
-![Mapping Spreadsheet](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2FCityOfNewOrleans%2FJTMP-Data-Exchange-Specs%2Frefs%2Fheads%2Fmain%2Fschemas%2Fbooking_iepd%2Fartifacts%2FBooking_MappingSpreadsheet.xlsx&wdOrigin=BROWSELINK)
+![Mapping Spreadsheet](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/BookingAndRelease_iepd/artifacts/Booking_MappingSpreadsheet.xlsx)
 
 **Sample XML:**
-![Sample XML File](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/tree/main/schemas/booking_iepd/examples)
+![Sample XML File](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/tree/main/schemas/BookingAndRelease_iepd/examples)
 
 **Class Diagram:**
-![Class Diagram](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/booking_iepd/artifacts/Booking_ClassDiagram.svg)
+![Class Diagram](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/BookingAndRelease_iepd/artifacts/Booking_ClassDiagram.svg)
