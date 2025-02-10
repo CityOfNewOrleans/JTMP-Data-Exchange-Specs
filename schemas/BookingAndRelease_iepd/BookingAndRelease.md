@@ -46,7 +46,7 @@ Subscribers may create new pending case events or update previously-created even
 ![XML Schemas](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/tree/main/schemas/BookingAndRelease_iepd/api/xml_schema)
 
 **Mapping Spreadsheet:**
-![Mapping Spreadsheet](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/BookingAndRelease_iepd/artifacts/Arrest_MappingSpreadsheetv2_2025_02_05.xlsx)
+![Mapping Spreadsheet](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/BookingAndRelease_iepd/artifacts/Booking_MappingSpreadsheet.xlsx)
 
 **Sample XML:**
 ![Sample XML File](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/tree/main/schemas/BookingAndRelease_iepd/examples)
