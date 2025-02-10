@@ -8,9 +8,9 @@
  xmlns:j="http://release.niem.gov/niem/domains/jxdm/7.2/"
  xmlns:structures="http://release.niem.gov/niem/structures/5.0/"
  xmlns:hs="http://release.niem.gov/niem/domains/humanServices/5.2/">
-	<nola-ext:MessageUpdateCode structures:id="add">add</nola-ext:MessageUpdateCode>
-	<nola-ext:MessageUpdateCode structures:id="delete">delete</nola-ext:MessageUpdateCode>
-	<nola-ext:MessageUpdateCode structures:id="update">update</nola-ext:MessageUpdateCode>
+	<nola-ext:MessageOperationCode structures:id="add">add</nola-ext:MessageOperationCode>
+	<nola-ext:MessageOperationCode structures:id="delete">delete</nola-ext:MessageOperationCode>
+	<nola-ext:MessageOperationCode structures:id="update">update</nola-ext:MessageOperationCode>
 	<CourtCase>
 		<ActivityStatus>
 			<!--  Class: CourtCase, Attribute: CourtCaseStatus  -->

@@ -22,7 +22,7 @@
 		<xs:complexContent>
 			<xs:extension base="structures:ObjectType">
 				<xs:sequence>
-					<xs:element ref="nola-ext:MessageUpdateCode" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element ref="nola-ext:MessageOperationCode" minOccurs="0" maxOccurs="unbounded"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -94,6 +94,8 @@
 					<xs:element ref="nola-ext:ChargeAffidavitNumber" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element ref="nola-ext:ChargeKey" minOccurs="0" maxOccurs="1"/>
 					<xs:element ref="nola-ext:ChargeLIBRSCode" minOccurs="0" maxOccurs="1"/>
+					<xs:element ref="nola-ext:StatewideArrestTrackingNumber" minOccurs="0" maxOccurs="1"/>
+					<xs:element ref="nola-ext:StatewideATNChargeSequenceID" minOccurs="0" maxOccurs="1"/>
 					<xs:element ref="nola-ext:JMSChargeNumber" minOccurs="0" maxOccurs="1"/>
 					<xs:element ref="nc:SourceText" minOccurs="0" maxOccurs="1"/>
 				</xs:sequence>
@@ -187,7 +189,7 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:simpleType name="MessageUpdateCodeSimpleType">
+	<xs:simpleType name="MessageOperationCodeSimpleType">
 		<xs:annotation>
 			<xs:documentation>A simple data type for a message update code in NOLA.</xs:documentation>
 		</xs:annotation>
@@ -204,17 +206,17 @@
 			</xs:enumeration>
 			<xs:enumeration value="update">
 				<xs:annotation>
-					<xs:documentation>Information previoulsy sent that has changed</xs:documentation>
+					<xs:documentation>Information previously sent that has changed</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="MessageUpdateCodeType">
+	<xs:complexType name="MessageOperationCodeType">
 		<xs:annotation>
 			<xs:documentation>A data type for a message update code in NOLA.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
-			<xs:extension base="nola-ext:MessageUpdateCodeSimpleType">
+			<xs:extension base="nola-ext:MessageOperationCodeSimpleType">
 				<xs:attributeGroup ref="structures:SimpleObjectAttributeGroup"/>
 			</xs:extension>
 		</xs:simpleContent>
@@ -412,7 +414,7 @@
 			<xs:documentation>A unique identification number assigned to a particular charge by an arresting agency.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="MessageUpdateCode" type="nola-ext:MessageUpdateCodeType">
+	<xs:element name="MessageOperationCode" type="nola-ext:MessageOperationCodeType">
 		<xs:annotation>
 			<xs:documentation>A message update code in NOLA.</xs:documentation>
 		</xs:annotation>
@@ -430,6 +432,16 @@
 	<xs:element name="MinuteTextSequenceNumber" type="niem-xs:string">
 		<xs:annotation>
 			<xs:documentation>A sequence identifier that determines the minute text order in a set of related minute documents.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="StatewideArrestTrackingNumber" type="niem-xs:string">
+		<xs:annotation>
+			<xs:documentation>The State's Police Automated Fingerprint Inforamtion System (AFIS) generates an ATN to uniquely identify each booking event, often referred to as an Arrest Cycle. The ATN must be communicated from the Sheriff to the Court at a minimum, in order to effectively update the State computerized criminal history (CCH) with dispositions of arrest charges.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="StatewideATNChargeSequenceID" type="niem-xs:string">
+		<xs:annotation>
+			<xs:documentation>A sequential identifier number assigned to the arrest of a subject i.e ATN. The State's Police Automated Fingerprint Inforamtion System (AFIS) generates an ATN to uniquely identify each booking event, often referred to as an Arrest Cycle. The ATN must be communicated from the Sheriff to the Court at a minimum, in order to effectively update the State computerized criminal history (CCH) with dispositions of arrest charges.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="StatuteCodeSectionSubparagraphIdentification" type="nc:IdentificationType">

@@ -8,9 +8,9 @@
 	xmlns:j="http://release.niem.gov/niem/domains/jxdm/7.2/"
 	xmlns:structures="http://release.niem.gov/niem/structures/5.0/"
 	xmlns:hs="http://release.niem.gov/niem/domains/humanServices/5.2/">
-	<nola-ext:MessageUpdateCode structures:id="add">add</nola-ext:MessageUpdateCode>
-	<nola-ext:MessageUpdateCode structures:id="delete">delete</nola-ext:MessageUpdateCode>
-	<nola-ext:MessageUpdateCode structures:id="update">update</nola-ext:MessageUpdateCode>
+	<nola-ext:MessageOperationCode structures:id="add">add</nola-ext:MessageOperationCode>
+	<nola-ext:MessageOperationCode structures:id="delete">delete</nola-ext:MessageOperationCode>
+	<nola-ext:MessageOperationCode structures:id="update">update</nola-ext:MessageOperationCode>
 	<CourtCase>
 		<CaseDocketID>String</CaseDocketID>
 		<!--  Class: CourtEvent, Attribute: CourtEventResultCodeText  -->
@@ -41,6 +41,20 @@
 								<nola-ext:IdentificationSequenceNumber>String</nola-ext:IdentificationSequenceNumber>
 							</nola-ext:IdentificationAugmentation>
 						</j:BookingAgencyRecordIdentification>
+						<!--  Class: Arrest, Attribute: FolderNumber  -->
+						<j:BookingDocumentControlIdentification>
+							<IdentificationID>String</IdentificationID>
+						</j:BookingDocumentControlIdentification>
+						<j:Arrest>
+							<j:ArrestCharge>
+								<nola-ext:ChargeAugmentation>
+									<!-- Class:Arrest, Attribute:ArrestTrackingNumber  -->
+									<nola-ext:StatewideArrestTrackingNumber>String</nola-ext:StatewideArrestTrackingNumber>
+									<!-- Class:Arrest, Attribute:ATNChargeSequenceID  -->
+									<nola-ext:StatewideATNChargeSequenceID>String</nola-ext:StatewideATNChargeSequenceID>
+								</nola-ext:ChargeAugmentation>
+							</j:ArrestCharge>
+						</j:Arrest>
 					</j:SubjectBooking>
 				</j:ChargeSubject>
 				<hs:ChargeAugmentation>
@@ -67,7 +81,6 @@
 							<!--  Class: Bond, Attribute: BondAmount  -->
 							<Amount>0</Amount>
 						</j:BailBondAmount>
-						<j:BailBondConditionDescriptionText structures:metadata="delete">String</j:BailBondConditionDescriptionText>
 						<j:BailBondConditionDescriptionText structures:metadata="add">String</j:BailBondConditionDescriptionText>
 						<j:BailBondSuretyEntity structures:metadata="update">
 							<EntityPerson>
