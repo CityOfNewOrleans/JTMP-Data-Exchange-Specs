@@ -39,7 +39,7 @@ This exchange may also convey the details of the one or more charges filed on th
 - Court Case ID
 - Created Date (court clerk's staff will determine if this is a machine-generated date-time stamp, or the date of the judicial officer's approval)
 - Current charges (either arrest charges or filed charges if the DA has filed a Screening Action Form). 
-- SCN-Sequence number to correlate each Charge to the value originally assigned in the State's AFIS and CCH. 
+- ATN-Sequence number to correlate each Charge to the value originally assigned in the State's AFIS and CCH. 
 - Judicial Official (the Judge to whom the case has been allotted)
 - Court Section
 
