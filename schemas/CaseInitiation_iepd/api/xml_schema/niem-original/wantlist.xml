@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <w:WantList w:release="5.2" w:product="NIEM" w:nillableDefault="true"
-  xmlns:w="http://niem.gov/niem/wantlist/2.2"
   xmlns:aamva_d20="http://release.niem.gov/niem/codes/aamva_d20/5.0/"
   xmlns:hs="http://release.niem.gov/niem/domains/humanServices/5.2/"
-  xmlns:scr="http://release.niem.gov/niem/domains/screening/5.2/"
+  xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/"
+  xmlns:w="http://niem.gov/niem/wantlist/2.2"
   xmlns:j="http://release.niem.gov/niem/domains/jxdm/7.2/"
-  xmlns:ucr="http://release.niem.gov/niem/codes/ucr/5.1/"
-  xmlns:structures="http://release.niem.gov/niem/structures/5.0/"
-  xmlns:niem-xs="http://release.niem.gov/niem/proxy/niem-xs/5.0/" xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/">
+  xmlns:scr="http://release.niem.gov/niem/domains/screening/5.2/"
+  xmlns:ucr="http://release.niem.gov/niem/codes/ucr/5.1/" xmlns:niem-xs="http://release.niem.gov/niem/proxy/niem-xs/5.0/">
   <w:Element w:name="hs:ChargeAugmentation" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="hs:EmployerAugmentation" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="j:Arrest" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="j:CaseAugmentation" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="j:ChargeIdentification" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="j:ChargeQualifierText" w:isReference="false" w:nillable="true"/>
@@ -78,17 +76,9 @@
     <w:ElementInType w:name="hs:EmployerName" w:isReference="false"
       w:minOccurs="0" w:maxOccurs="1"/>
   </w:Type>
-  <w:Type w:name="j:ArrestType" w:isRequested="false">
-    <w:ElementInType w:name="j:ArrestCharge" w:isReference="false"
-      w:minOccurs="0" w:maxOccurs="unbounded"/>
-  </w:Type>
   <w:Type w:name="j:BailBondType" w:isRequested="false">
     <w:ElementInType w:name="j:BailBondAmount" w:isReference="false"
       w:minOccurs="0" w:maxOccurs="1"/>
-    <w:ElementInType w:name="j:BailBondConditionDescriptionText"
-      w:isReference="false" w:minOccurs="0" w:maxOccurs="unbounded"/>
-    <w:ElementInType w:name="j:BailBondSuretyEntity"
-      w:isReference="false" w:minOccurs="0" w:maxOccurs="unbounded"/>
     <w:ElementInType w:name="j:BailBondAugmentationPoint"
       w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
   </w:Type>
@@ -97,10 +87,6 @@
       w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="j:BookingAgencyRecordIdentification"
       w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
-    <w:ElementInType w:name="j:BookingDocumentControlIdentification"
-      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
-    <w:ElementInType w:name="j:Arrest" w:isReference="false"
-      w:minOccurs="0" w:maxOccurs="1"/>
   </w:Type>
   <w:Type w:name="j:CaseAugmentationType" w:isRequested="false">
     <w:ElementInType w:name="j:CaseCharge" w:isReference="false"
@@ -368,7 +354,6 @@
       w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
   </w:Type>
   <w:Type w:name="niem-xs:decimal" w:isRequested="true"/>
-  <w:Type w:name="structures:MetadataType" w:isRequested="true"/>
   <w:Type w:name="ucr:OffenseCodeSimpleType" w:isRequested="false">
     <w:Facet w:facet="enumeration" w:value="AGGRAVATED_ASSAULT"/>
     <w:Facet w:facet="enumeration" w:value="ALL_OTHER_OFFENSES"/>
