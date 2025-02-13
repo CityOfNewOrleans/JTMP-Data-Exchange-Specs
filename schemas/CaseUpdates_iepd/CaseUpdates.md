@@ -1,9 +1,10 @@
 ![Return to the JTMP landing page](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/HomePage.md)
 
-#Case-Charge Update Exchanges
-A Courts' Case Management (CMS) will publish a New Case Update message each time a Clerk updates a new Criminal case (other case types?). This data exchange serves two purposes: to provide case details and a court case number to parties that need to track or contribute to case processing; and to correlate a court case with a preceeding event sent by another publishing system, for example a Booking message published by the jail management system (JMS). 
+# Case Update Exchanges
+A Courts' Case Management (CMS) will publish a New Case Update message each time a Clerk updates a new court case. This data exchange serves keep all justice partners' systems synchonrized with the Court CMS as Clerks make changes to the details in the court docket. Specific types of updates are triggered, and sent with different data content. This provides both Publisher and Subscribers with greater control over which case details are updated, and how they are reflected in the Subscriber's system. 
 
 The publisher may be the CMS of any court jurisdiction - Criminal, Juvenile, or Municipal & Traffic. 
+Any justice partner agency that manages some level of court-case details in their local system may subscribe. This will include the jail, prosecutor, public defender and possibly law enforcement. 
 
 ## Preceding Exchange: 
 
@@ -11,11 +12,19 @@ Case Initiation
 Court Event
 
 ## Identifying Specific Updates
-This Data Exchange enables communication of updates, adds, or deletes. If one of these messages has previously been sent and information changes, the message can be sent again. Use of MessageOperationCode attributes (add, update, delete) enable the sender to indicate which data objects have changed, and what has changed. The attributes are declared in each relevant schema set and look like this: image
+This Data Exchange enables directed communication of updates, adds, or deletes. 
+
+Further, the types of updates are predefined in this specification to include:
+-Bond
+-Charges
+-Parties on the case
+-Specific changes to Case Activity, including change of court, judge, or case status
+
+If one of these messages has previously been sent and information changes, the message can be sent again. Use of MessageOperationCode attributes (add, update, delete) enable the sender to indicate which data objects have changed, and what has changed. The attributes are declared in each relevant schema set and look like this: image
 
 ### Example Scenarios:
-A previously scheduled Court Event is rescheduled. Courts would send a Court Event message. Set the attribute ..MessageUpdate.. to Update to indicate that the CourtEventDateTime has changed. CourtEventDateTime would have the new date and time of the event.
-After a delay, the State AFIS system has sent an Arrest Tracking Number (ATN) and ATN Sequence Number for a booked charge. In the original Booking message, ArrestTrackingNumber and ATNSequence were Null. A new message should be sent with the same Folder#, and a MessageOperationCode attribute set to Update to for the ATN and each ATNSequence element.
+A previously scheduled Court Event is rescheduled. Courts would send a Court Event message. Set the attribute MessageOperationCode to 'Update' to indicate that the CourtEventDateTime has changed. CourtEventDateTime would have the new date and time of the event.
+After a delay, the State AFIS system has sent an Arrest Tracking Number (ATN) and ATN Sequence Number for a booked charge. In the original Booking message, ArrestTrackingNumber and ATNSequence were Null. A new message should be sent with the same Folder#, and a MessageOperationCode attribute set to 'Add' to for the ATN and each ATNSequence element.
 An updated XML node would be preceded by the appropriate Attribute. For example, an added charge would indicated as follows:
 
 image
