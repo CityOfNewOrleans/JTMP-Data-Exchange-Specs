@@ -4,9 +4,11 @@
   xmlns:aamva_d20="http://release.niem.gov/niem/codes/aamva_d20/5.0/"
   xmlns:hs="http://release.niem.gov/niem/domains/humanServices/5.2/"
   xmlns:unece="http://release.niem.gov/niem/codes/unece_rec20/5.0/"
+  xmlns:scr="http://release.niem.gov/niem/domains/screening/5.2/"
   xmlns:em="http://release.niem.gov/niem/domains/emergencyManagement/5.2/"
   xmlns:j="http://release.niem.gov/niem/domains/jxdm/7.2/"
   xmlns:im="http://release.niem.gov/niem/domains/immigration/5.2/"
+  xmlns:ndex="http://release.niem.gov/niem/codes/ndex/5.0/"
   xmlns:ncic="http://release.niem.gov/niem/codes/ncic/5.2/" xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/">
   <w:Element w:name="em:PersonAlternateName" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="hs:ChargeAugmentation" w:isReference="false" w:nillable="false"/>
@@ -20,9 +22,14 @@
   <w:Element w:name="j:Booking" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="j:CaseAugmentation" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="j:CaseCourtEvent" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="j:CourtCategoryCode" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="j:Offense" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="j:OrganizationAugmentation" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="j:PersonAugmentation" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="j:PersonEyeColorCode" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="j:WarrantCategoryCode" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="nc:Address" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="nc:AddressCrossStreet" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="nc:AddressDeliveryPointID" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="nc:AddressRouteName" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="nc:AddressStreet" w:isReference="false" w:nillable="false"/>
@@ -63,6 +70,8 @@
   <w:Element w:name="nc:StateName" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="nc:StreetDirectionalText" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="nc:YearDate" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="ncic:StateUSCode" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="scr:WarrantAugmentation" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="unece:LengthUnitCode" w:isReference="false" w:nillable="false"/>
   <w:Type w:name="aamva_d20:CourtCategoryCodeSimpleType" w:isRequested="false">
     <w:Facet w:facet="enumeration" w:value="ADM"/>
@@ -145,6 +154,8 @@
       w:minOccurs="0" w:maxOccurs="unbounded"/>
     <w:ElementInType w:name="j:ArrestOfficial" w:isReference="false"
       w:minOccurs="0" w:maxOccurs="unbounded"/>
+    <w:ElementInType w:name="j:ArrestWarrant" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="j:ArrestAugmentationPoint"
       w:isReference="false" w:minOccurs="0" w:maxOccurs="2"/>
   </w:Type>
@@ -255,6 +266,12 @@
     <w:ElementInType w:name="j:SubjectAppointment" w:isReference="false"
       w:minOccurs="0" w:maxOccurs="unbounded"/>
   </w:Type>
+  <w:Type w:name="j:WarrantType" w:isRequested="false">
+    <w:ElementInType w:name="j:WarrantCategoryAbstract"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="j:WarrantAugmentationPoint"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
   <w:Type w:name="nc:ActivityType" w:isRequested="false">
     <w:ElementInType w:name="nc:ActivityIdentification"
       w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
@@ -263,6 +280,8 @@
     <w:ElementInType w:name="nc:ActivityCompletedIndicator"
       w:isReference="false" w:minOccurs="0" w:maxOccurs="unbounded"/>
     <w:ElementInType w:name="nc:ActivityDate" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:ActivityLocation" w:isReference="false"
       w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="nc:ActivityScheduledDate"
       w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
@@ -355,6 +374,10 @@
     <w:ElementInType w:name="nc:IdentificationAugmentationPoint"
       w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
   </w:Type>
+  <w:Type w:name="nc:IncidentType" w:isRequested="false">
+    <w:ElementInType w:name="nc:IncidentAugmentationPoint"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="unbounded"/>
+  </w:Type>
   <w:Type w:name="nc:InternationalTelephoneNumberType" w:isRequested="false">
     <w:ElementInType w:name="nc:TelephoneCountryCodeID"
       w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
@@ -384,6 +407,8 @@
       w:isReference="false" w:minOccurs="0" w:maxOccurs="unbounded"/>
     <w:ElementInType w:name="nc:LocationPart" w:isReference="false"
       w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:LocationAugmentationPoint"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
   </w:Type>
   <w:Type w:name="nc:MeasureType" w:isRequested="false">
     <w:ElementInType w:name="nc:MeasureValueAbstract"
@@ -444,6 +469,8 @@
     <w:ElementInType w:name="nc:PersonEyeColorAbstract"
       w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="nc:PersonHairColorAbstract"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:PersonHeightDescriptionText"
       w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="nc:PersonHeightMeasure"
       w:isReference="false" w:minOccurs="0" w:maxOccurs="unbounded"/>
@@ -560,6 +587,24 @@
     <w:Facet w:facet="enumeration" w:value="WI"/>
     <w:Facet w:facet="enumeration" w:value="WV"/>
     <w:Facet w:facet="enumeration" w:value="WY"/>
+  </w:Type>
+  <w:Type w:name="ndex:WarrantCategoryCodeSimpleType" w:isRequested="false">
+    <w:Facet w:facet="enumeration" w:value="ARREST_WARRANT"/>
+    <w:Facet w:facet="enumeration" w:value="BENCH_WARRANT-NO_BOND"/>
+    <w:Facet w:facet="enumeration" w:value="CAPIAS"/>
+    <w:Facet w:facet="enumeration" w:value="DNA_JOHN_DOE_WARRANT"/>
+    <w:Facet w:facet="enumeration" w:value="FELONY_ARREST"/>
+    <w:Facet w:facet="enumeration" w:value="INSTANTER"/>
+    <w:Facet w:facet="enumeration" w:value="MISDEMEANOR_ARREST"/>
+    <w:Facet w:facet="enumeration" w:value="MULTICASE_WARRANT"/>
+    <w:Facet w:facet="enumeration" w:value="RAMEY_WARRANT"/>
+    <w:Facet w:facet="enumeration" w:value="SCIRE_FACIAS"/>
+    <w:Facet w:facet="enumeration" w:value="TELEPHONE_ARREST_WARRANT"/>
+    <w:Facet w:facet="enumeration" w:value="VIOLATION_OF_PROBATION"/>
+  </w:Type>
+  <w:Type w:name="scr:WarrantAugmentationType" w:isRequested="false">
+    <w:ElementInType w:name="scr:WarrantIdentification"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
   </w:Type>
   <w:Type w:name="unece:LengthCodeSimpleType" w:isRequested="false">
     <w:Facet w:facet="enumeration" w:value="4H"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema targetNamespace="http://release.niem.gov/niem/domains/jxdm/7.2/" version="1" xml:lang="en-US" xsi:schemaLocation="http://release.niem.gov/niem/appinfo/5.0/ ../utility/appinfo.xsd http://release.niem.gov/niem/conformanceTargets/3.0/ ../utility/conformanceTargets.xsd" ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ReferenceSchemaDocument" xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:j="http://release.niem.gov/niem/domains/jxdm/7.2/" xmlns:structures="http://release.niem.gov/niem/structures/5.0/" xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/" xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:niem-xs="http://release.niem.gov/niem/proxy/niem-xs/5.0/">
+<xs:schema targetNamespace="http://release.niem.gov/niem/domains/jxdm/7.2/" version="1" xml:lang="en-US" xsi:schemaLocation="http://release.niem.gov/niem/appinfo/5.0/ ../utility/appinfo.xsd http://release.niem.gov/niem/conformanceTargets/3.0/ ../utility/conformanceTargets.xsd" ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ReferenceSchemaDocument" xmlns:aamva_d20="http://release.niem.gov/niem/codes/aamva_d20/5.0/" xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/" xmlns:j="http://release.niem.gov/niem/domains/jxdm/7.2/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ndex="http://release.niem.gov/niem/codes/ndex/5.0/" xmlns:structures="http://release.niem.gov/niem/structures/5.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/" xmlns:niem-xs="http://release.niem.gov/niem/proxy/niem-xs/5.0/" xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/">
   <xs:annotation>
     <xs:documentation>Justice</xs:documentation>
     <xs:appinfo>
@@ -99,6 +99,8 @@
       <appinfo:LocalTerm term="XRays" literal="X-Rays"/>
     </xs:appinfo>
   </xs:annotation>
+  <xs:import namespace="http://release.niem.gov/niem/codes/aamva_d20/5.0/" schemaLocation="../codes/aamva_d20.xsd"/>
+  <xs:import namespace="http://release.niem.gov/niem/codes/ndex/5.0/" schemaLocation="../codes/ndex.xsd"/>
   <xs:import namespace="http://release.niem.gov/niem/niem-core/5.0/" schemaLocation="../niem-core.xsd"/>
   <xs:import namespace="http://release.niem.gov/niem/proxy/niem-xs/5.0/" schemaLocation="../adapters/niem-xs.xsd"/>
   <xs:import namespace="http://release.niem.gov/niem/structures/5.0/" schemaLocation="../utility/structures.xsd"/>
@@ -125,6 +127,7 @@
           <xs:element ref="j:ArrestAgency" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="j:ArrestCharge" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:ArrestOfficial" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="j:ArrestWarrant" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="j:ArrestAugmentationPoint" minOccurs="0" maxOccurs="2"/>
         </xs:sequence>
       </xs:extension>
@@ -198,6 +201,14 @@
       <xs:extension base="nc:ActivityType"/>
     </xs:complexContent>
   </xs:complexType>
+  <xs:complexType name="CourtOrderType">
+    <xs:annotation>
+      <xs:documentation>A data type for a direction of a judge not including a judgment, which determines some point or directs some steps in proceedings.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc:ActivityType"/>
+    </xs:complexContent>
+  </xs:complexType>
   <xs:complexType name="CourtType">
     <xs:annotation>
       <xs:documentation>A data type for a court or a unit of a court responsible for trying justice proceedings.</xs:documentation>
@@ -265,6 +276,14 @@
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="nc:AssociationType"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="OffenseType">
+    <xs:annotation>
+      <xs:documentation>A data type for an alleged violation of a statute, ordinance, or rule.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc:ActivityType"/>
     </xs:complexContent>
   </xs:complexType>
   <xs:complexType name="OrganizationAugmentationType">
@@ -349,6 +368,16 @@
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
+  <xs:complexType name="PersonEyeColorCodeType">
+    <xs:annotation>
+      <xs:documentation>A data type for a code set identifying an eye color of a person.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="j:PersonEyeColorCodeSimpleType">
+        <xs:attributeGroup ref="structures:SimpleObjectAttributeGroup"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
   <xs:complexType name="StatuteType">
     <xs:annotation>
       <xs:documentation>A data type for a law, rule, or ordinance within a jurisdiction.</xs:documentation>
@@ -374,6 +403,19 @@
         <xs:sequence>
           <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="j:SubjectAppointment" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="WarrantType">
+    <xs:annotation>
+      <xs:documentation>A data type for an authorization for an enforcement official to perform a specified action.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="j:CourtOrderType">
+        <xs:sequence>
+          <xs:element ref="j:WarrantCategoryAbstract" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="j:WarrantAugmentationPoint" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -411,6 +453,11 @@
   <xs:element name="ArrestOfficial" type="j:EnforcementOfficialType" nillable="true">
     <xs:annotation>
       <xs:documentation>A peace official who makes an arrest.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ArrestWarrant" type="j:WarrantType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A court authorized order which commands a peace official to arrest a subject and bring that subject before the court.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="BailBond" type="j:BailBondType">
@@ -508,6 +555,11 @@
       <xs:documentation>A data concept for a kind of court.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="CourtCategoryCode" type="aamva_d20:CourtCategoryCodeType" substitutionGroup="j:CourtCategoryAbstract">
+    <xs:annotation>
+      <xs:documentation>A kind of court.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="CourtDivisionText" type="nc:TextType" nillable="true">
     <xs:annotation>
       <xs:documentation>An area of case processing and the law governing specific types of matters before the court and governed by distinct court rule and processes.</xs:documentation>
@@ -548,6 +600,11 @@
       <xs:documentation>A name of an enforcement unit.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="Offense" type="j:OffenseType">
+    <xs:annotation>
+      <xs:documentation>An act or a course of action which may constitute a violation of a criminal statute, ordinance or rule that occurred during an incident.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="OrganizationAugmentation" type="j:OrganizationAugmentationType" substitutionGroup="nc:OrganizationAugmentationPoint">
     <xs:annotation>
       <xs:documentation>Additional information about an organization.</xs:documentation>
@@ -561,6 +618,11 @@
   <xs:element name="PersonAugmentation" type="j:PersonAugmentationType" substitutionGroup="nc:PersonAugmentationPoint">
     <xs:annotation>
       <xs:documentation>Additional information about a person.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PersonEyeColorCode" type="j:PersonEyeColorCodeType" substitutionGroup="nc:PersonEyeColorAbstract">
+    <xs:annotation>
+      <xs:documentation>A code set identifying an eye color of a person.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="PersonFBIIdentification" type="nc:IdentificationType" nillable="true">
@@ -596,6 +658,21 @@
   <xs:element name="SubjectAppointment" type="j:AppointmentType" nillable="true">
     <xs:annotation>
       <xs:documentation>An event or activity involving the appointment of a corrections subject.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="WarrantAugmentationPoint" abstract="true">
+    <xs:annotation>
+      <xs:documentation>An augmentation point for WarrantType.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="WarrantCategoryAbstract" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A data concept for a kind of warrant.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="WarrantCategoryCode" type="ndex:WarrantCategoryCodeType" substitutionGroup="j:WarrantCategoryAbstract">
+    <xs:annotation>
+      <xs:documentation>A kind of warrant.</xs:documentation>
     </xs:annotation>
   </xs:element>
 </xs:schema>
