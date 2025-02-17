@@ -1,4 +1,4 @@
-![Return to the JTMP landing page](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/HomePage.md)
+![Return to the JTMP landing page](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/README.md)
 
 # Case Update Exchanges
 A Courts' Case Management (CMS) will publish a New Case Update message each time a Clerk updates a new court case. This data exchange serves keep all justice partners' systems synchonrized with the Court CMS as Clerks make changes to the details in the court docket. Specific types of updates are triggered, and sent with different data content. This provides both Publisher and Subscribers with greater control over which case details are updated, and how they are reflected in the Subscriber's system. 
