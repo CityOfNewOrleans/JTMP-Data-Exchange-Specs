@@ -1,23 +1,61 @@
-![Return to the JTMP landing page](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/HomePage.md)
+![Return to the JTMP landing page](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/README.md)
 
-![Return to the JTMP landing page](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/HomePage.md)
-
-# New Case Updates Exchanges
-
-A Courts' Case Management (CMS) will publish a New Case Update message each time a Clerk updates a new Criminal case (other case types?). This data exchange serves two purposes: to provide case details and a court case number to parties that need to track or contribute to case processing; and to correlate a court case with a preceeding event sent by another publishing system, for example a Booking message published by the jail management system (JMS). 
+# Case Update Exchanges
+A Courts' Case Management (CMS) will publish a New Case Update message each time a Clerk updates a new court case. This data exchange serves keep all justice partners' systems synchonrized with the Court CMS as Clerks make changes to the details in the court docket. Specific types of updates are triggered, and sent with different data content. This provides both Publisher and Subscribers with greater control over which case details are updated, and how they are reflected in the Subscriber's system. 
 
 The publisher may be the CMS of any court jurisdiction - Criminal, Juvenile, or Municipal & Traffic. 
+Any justice partner agency that manages some level of court-case details in their local system may subscribe. This will include the jail, prosecutor, public defender and possibly law enforcement. 
 
 ## Preceding Exchange: 
 
 Case Initiation
+Court Event
+
+## Identifying Specific Updates
+This Data Exchange enables directed communication of updates, adds, or deletes. 
+
+Further, the types of updates are predefined in this specification to include:
+-Bond
+-Charges
+-Parties on the case
+-Specific changes to Case Activity, including change of court, judge, or case status
+
+If one of these messages has previously been sent and information changes, the message can be sent again. Use of MessageOperationCode attributes (add, update, delete) enable the sender to indicate which data objects have changed, and what has changed. The attributes are declared in each relevant schema set and look like this: image
+
+### Example Scenarios:
+A previously scheduled Court Event is rescheduled. Courts would send a Court Event message. Set the attribute MessageOperationCode to 'Update' to indicate that the CourtEventDateTime has changed. CourtEventDateTime would have the new date and time of the event.
+After a delay, the State AFIS system has sent an Arrest Tracking Number (ATN) and ATN Sequence Number for a booked charge. In the original Booking message, ArrestTrackingNumber and ATNSequence were Null. A new message should be sent with the same Folder#, and a MessageOperationCode attribute set to 'Add' to for the ATN and each ATNSequence element.
+An updated XML node would be preceded by the appropriate Attribute. For example, an added charge would indicated as follows:
+
+image
+
+## Examples of Case and Charge Updates
+### Adds:
+  New charge added to the case
+  Bond added
+  New party (victim, witness, attorney) added
+
+### Updates:
+  Charge Disposition added
+  Bond updated or canceled
+  Court Event rescheduled. 
+  Lead attorney (prosecutor or defense) changed
+  Judge, Court Section or Courthouse changed
+
+### Deletes 
+Should be used in limited circumstances. Most elements once docketed on a court case are not removed. Exceptions: 
+  Entered in Error
+  Court Event canceled
+  Expunge/Seal Flag Set (Case or Charge Level)
 
 ## Triggering Events:
 
 1. Documents are filed and accepted into the docket
-2. Charges are added, modified or removed
+2. Charges are added, modified or dismissed
 3. A party of entity is added or removed
 4. Bond is ordered, modified or posted
+5. The expunge/seal flag is set at the case or charge level
+6. One of the above items was previously entered in error and should be removed from the case docket
 
 ## Subsequent Events:
 Proposed Motions and Orders filed to the Clerk by case parties
@@ -39,7 +77,7 @@ This exchange may also convey the details of the one or more charges filed on th
 - Court Case ID
 - Created Date (court clerk's staff will determine if this is a machine-generated date-time stamp, or the date of the judicial officer's approval)
 - Current charges (either arrest charges or filed charges if the DA has filed a Screening Action Form). 
-- SCN-Sequence number to correlate each Charge to the value originally assigned in the State's AFIS and CCH. 
+- ATN-Sequence number to correlate each Charge to the value originally assigned in the State's AFIS and CCH. 
 - Judicial Official (the Judge to whom the case has been allotted)
 - Court Section
 
