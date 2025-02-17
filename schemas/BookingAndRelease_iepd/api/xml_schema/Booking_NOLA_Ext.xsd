@@ -15,6 +15,7 @@
 	<xs:import namespace="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-schema-appinfo/" schemaLocation="./niem\xsd\utility\code-lists-schema-appinfo.xsd"/>
 	<xs:import namespace="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-instance/" schemaLocation="./niem\xsd\utility\code-lists-instance.xsd"/>
 	<xs:import namespace="http://release.niem.gov/niem/codes/unece_rec20/5.0/" schemaLocation="./niem\xsd\codes\unece_rec20.xsd"/>
+	<xs:import namespace="http://release.niem.gov/niem/domains/screening/5.2/" schemaLocation="./niem\xsd\domains\screening.xsd"/>
 	<!-- complexType Definitions, NIEM mapping ======================================================================== -->
 	<xs:complexType name="ArrestAugmentationType">
 		<xs:annotation>
@@ -28,6 +29,30 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
+	<xs:complexType name="IncidentAugmentationType">
+		<xs:annotation>
+			<xs:documentation>A data type for additional data incident information in NOLA.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="structures:ObjectType">
+				<xs:sequence>
+					<xs:element ref="j:Offense" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="LocationAugmentationType">
+        <xs:annotation>
+            <xs:documentation>A data type for additional data for a location information in NOLA.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="structures:AugmentationType">
+                <xs:sequence>
+                    <xs:element ref="nola-ext:CrossStreetIntersectionText" minOccurs="0" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
 	<xs:complexType name="ChargeAugmentationType">
 		<xs:annotation>
 			<xs:documentation>A data type for additional data for charge information in NOLA.</xs:documentation>
@@ -123,6 +148,16 @@
 			<xs:documentation>Additional information about an arrest in the NOLA.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
+	<xs:element name="IncidentAugmentation" type="nola-ext:IncidentAugmentationType" substitutionGroup="nc:IncidentAugmentationPoint">
+		<xs:annotation>
+			<xs:documentation>Additional information about an incident in the NOLA.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="LocationAugmentation" type="nola-ext:LocationAugmentationType" substitutionGroup="nc:LocationAugmentationPoint">
+        <xs:annotation>
+            <xs:documentation>Additional information about a location in the NOLA.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
 	<xs:element name="ChargeAugmentation" type="nola-ext:ChargeAugmentationType" substitutionGroup="j:ChargeAugmentationPoint">
 		<xs:annotation>
 			<xs:documentation>Additional information about a charge in the NOLA.</xs:documentation>
@@ -202,6 +237,11 @@
 	<xs:element name="StatuteCodeSectionSubparagraphIdentification" type="nc:IdentificationType">
 		<xs:annotation>
 			<xs:documentation>A name encoding such that similar sounding names with different spellings appear the same.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="CrossStreetIntersectionText" type="niem-xs:string">
+		<xs:annotation>
+			<xs:documentation>Cross Stree Intersection</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 </xs:schema>
