@@ -133,8 +133,8 @@
 						maxOccurs="1"/>
 					<xs:element ref="nola-ext:StatewideATNChargeSequenceID" minOccurs="0"
 						maxOccurs="1"/>
-					<!--					<xs:element ref="nola-ext:JMSChargeNumber" minOccurs="0" maxOccurs="1"/>
-					<xs:element ref="nc:SourceText" minOccurs="0" maxOccurs="1"/>-->
+					<xs:element ref="nola-ext:JMSChargeNumber" minOccurs="0" maxOccurs="1"/>
+					<!--<xs:element ref="nc:SourceText" minOccurs="0" maxOccurs="1"/>-->
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -465,11 +465,12 @@
 				number.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<!--	<xs:element name="JMSChargeNumber" type="niem-xs:string">
+	<xs:element name="JMSChargeNumber" type="niem-xs:string">
 		<xs:annotation>
-			<xs:documentation>A unique identification number assigned to a particular charge by an arresting agency.</xs:documentation>
+			<xs:documentation>A unique identification number assigned to a particular charge by an
+				arresting agency.</xs:documentation>
 		</xs:annotation>
-	</xs:element>-->
+	</xs:element>
 	<xs:element name="MessageOperationCode" type="nola-ext:MessageOperationCodeType">
 		<xs:annotation>
 			<xs:documentation>A message update code in NOLA.</xs:documentation>
