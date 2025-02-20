@@ -36,7 +36,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="PersonNameAugmentation" type="im:PersonNameAugmentationType" substitutionGroup="nc:PersonNameAugmentationPoint">
+  <xs:element name="PersonNameAugmentation" type="im:PersonNameAugmentationType">
     <xs:annotation>
       <xs:documentation>Additional information about a person name.</xs:documentation>
     </xs:annotation>
