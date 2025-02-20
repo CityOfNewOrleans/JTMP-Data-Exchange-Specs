@@ -1,4 +1,4 @@
-name: Validate XML/XSD Files
+name: Validate XML/XSD Files And Examples
 on:
   push:
     branches:
@@ -6,6 +6,7 @@ on:
   pull_request:
     branches:
       - main
+      - remove-unused-substitution-groups-case-init
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -24,6 +25,20 @@ jobs:
             echo "$file is valid."
           else
             echo "$file is not a valid XML or XSD file. Please check your syntax."
+            exit 1
+          fi
+        done
+    - name: Run python example validation scripts
+      run: |
+        set -e
+        pip install lxml
+        find . -type f \( -iname "validate.py" \) | while read file; do
+          echo "Running $file..."
+          python $file
+          if [ $? -eq 0 ]; then
+            echo "$file ran successfully."
+          else
+            echo "$file failed."
             exit 1
           fi
         done
