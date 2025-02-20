@@ -2428,7 +2428,7 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
-  <xs:element name="ChargeCode" type="ncic:OFFCodeType" substitutionGroup="j:ChargeNCICAbstract">
+  <xs:element name="ChargeCode" type="ncic:OFFCodeType">
     <xs:annotation>
       <xs:documentation>An offense within the National Crime Information Center (NCIC) system.</xs:documentation>
     </xs:annotation>
