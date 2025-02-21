@@ -20,7 +20,7 @@ def validate_xml(xml_path, xsd_path):
         return False
 
 
-base_directory = "../../schemas"
+base_directory = '../schemas/'
 pattern = "*_iepd"
 schemas = set()
 for entry in os.listdir(base_directory):

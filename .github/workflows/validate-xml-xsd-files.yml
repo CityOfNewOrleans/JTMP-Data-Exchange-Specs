@@ -29,16 +29,8 @@ jobs:
           fi
         done
     - name: Run python example validation scripts
+      working-directory: ./scripts
       run: |
         set -e
-        pip install lxml
-        find . -type f \( -iname "validate.py" \) | while read file; do
-          echo "Running $file..."
-          python $file
-          if [ $? -eq 0 ]; then
-            echo "$file ran successfully."
-          else
-            echo "$file failed."
-            exit 1
-          fi
-        done
+        pip install lxml && \
+        python validate.py
