@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://release.niem.gov/niem/domains/screening/5.2/" version="1" xml:lang="en-US" xsi:schemaLocation="http://release.niem.gov/niem/appinfo/5.0/ ../utility/appinfo.xsd http://release.niem.gov/niem/conformanceTargets/3.0/ ../utility/conformanceTargets.xsd" ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ReferenceSchemaDocument" xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:structures="http://release.niem.gov/niem/structures/5.0/" xmlns:scr="http://release.niem.gov/niem/domains/screening/5.2/" xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/" xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <xs:annotation>
+    <xs:documentation>The People Screening domain provides harmonized information sharing content within the Screening Portfolio of DHS.  The Screening namespace is initially being populated with person screening information for immigrant and non-immigrant person types who have been encountered and identified by the Screening Portfolio Components.  Screening expands on encounter-related NIEM elements currently included in the Immigration and Intelligence domains.</xs:documentation>
+    <xs:appinfo>
+      <appinfo:LocalTerm term="ASA" literal="Army Security Agency"/>
+      <appinfo:LocalTerm term="CBP" literal="United States Customs and Border Protection"/>
+      <appinfo:LocalTerm term="DoJ" literal="Department of Justice"/>
+      <appinfo:LocalTerm term="EFTS" literal="Electronic Fingerprint Transmission Specification"/>
+      <appinfo:LocalTerm term="IATA" literal="International Air Transport Association"/>
+      <appinfo:LocalTerm term="IDENT" literal="Automated Biometric Identification System"/>
+      <appinfo:LocalTerm term="INS" literal="Immigration and Naturalization Service"/>
+      <appinfo:LocalTerm term="LPR" literal="License Plate Reader"/>
+      <appinfo:LocalTerm term="NCIC" literal="National Crime Information Center"/>
+      <appinfo:LocalTerm term="TECS" literal="Traveler Encounter Compliance System"/>
+      <appinfo:LocalTerm term="USCIS" literal="United States Citizenship and Immigration Services"/>
+      <appinfo:LocalTerm term="Watchlist" definition="A document which contains a nomination list prepared and approved by the National Center of Counter Terrorism."/>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:import namespace="http://release.niem.gov/niem/niem-core/5.0/" schemaLocation="../niem-core.xsd"/>
+  <xs:import namespace="http://release.niem.gov/niem/structures/5.0/" schemaLocation="../utility/structures.xsd"/>
+  <xs:simpleType name="PersonCategoryCodeSimpleType">
+    <xs:annotation>
+      <xs:documentation>A data type for a kind of person type.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="Alien">
+        <xs:annotation>
+          <xs:documentation>Alien</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Asylumee">
+        <xs:annotation>
+          <xs:documentation>Asylumee</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Parolee">
+        <xs:annotation>
+          <xs:documentation>Parolee</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Protected">
+        <xs:annotation>
+          <xs:documentation>Protected</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Refugee">
+        <xs:annotation>
+          <xs:documentation>Refugee</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="US CItizen">
+        <xs:annotation>
+          <xs:documentation>US CItizen</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="US National">
+        <xs:annotation>
+          <xs:documentation>US National</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="PersonCategoryCodeType">
+    <xs:annotation>
+      <xs:documentation>A data type for a kind of person type.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="scr:PersonCategoryCodeSimpleType">
+        <xs:attributeGroup ref="structures:SimpleObjectAttributeGroup"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="PersonCategoryType">
+    <xs:annotation>
+      <xs:documentation>A data type for the category of a PERSON.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:ObjectType">
+        <xs:sequence>
+          <xs:element ref="scr:PersonCategoryCodeAbstract" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PersonCategory" type="scr:PersonCategoryType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A classification of PERSON.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PersonCategoryCode" type="scr:PersonCategoryCodeType" substitutionGroup="scr:PersonCategoryCodeAbstract">
+    <xs:annotation>
+      <xs:documentation>A kind of person type.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PersonCategoryCodeAbstract" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A data concept for a kind of person type.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PersonIdentification" type="nc:IdentificationType">
+    <xs:annotation>
+      <xs:documentation>An identification enumerator that represents a PERSON.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+</xs:schema>
