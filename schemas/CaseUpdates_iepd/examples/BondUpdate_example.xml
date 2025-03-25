@@ -52,6 +52,8 @@
 									<nola-ext:StatewideArrestTrackingNumber>String</nola-ext:StatewideArrestTrackingNumber>
 									<!-- Class:Arrest, Attribute:ATNChargeSequenceID  -->
 									<nola-ext:StatewideATNChargeSequenceID>String</nola-ext:StatewideATNChargeSequenceID>
+									<!-- Class:Charge, Attribute:ChargeNumber  -->
+									<nola-ext:JMSChargeNumber>String</nola-ext:JMSChargeNumber>
 								</nola-ext:ChargeAugmentation>
 							</j:ArrestCharge>
 						</j:Arrest>
