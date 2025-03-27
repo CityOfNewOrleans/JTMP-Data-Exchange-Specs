@@ -208,6 +208,11 @@
 				arresting agency.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
+	<xs:element name="ChargeFilingDocument" type="nc:DocumentType">
+		<xs:annotation>
+			<xs:documentation>A document that includes charge filing information.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 	<xs:element name="CourtCaseFollowCaseIdentification" type="nc:IdentificationType">
 		<xs:annotation>
 			<xs:documentation>Identifies an existing court case that this case should
@@ -258,7 +263,6 @@
 			<xs:documentation>The prosecutor who reviewed this case.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-
 	<xs:element name="ProsecutionCaseScreenedByPerson" type="nc:PersonType">
 		<xs:annotation>
 			<xs:documentation>The prosecutor who screened this case.</xs:documentation>
