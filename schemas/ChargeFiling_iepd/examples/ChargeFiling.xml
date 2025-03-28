@@ -152,6 +152,22 @@
    </nola-ext:CourtCaseTransfertoSectionIdentification>
   </nola-ext:CaseAugmentation>
  </nc:CourtCase>
+ <nola-ext:ChargeFilingDocument>
+  <!-- DocumentType -->
+  <nc:DocumentCategoryText>Charge Filing</nc:DocumentCategoryText>
+  <nc:DocumentBinary>
+   <!-- AttachmentID -->
+   <nc:BinaryID>String</nc:BinaryID>
+   <!-- BinaryObject -->
+   <nc:Base64BinaryObject>UjBsR09EbGhjZ0dTQUxNQUFBUUNBRU1tQ1p0dU1GUXhEUzhi</nc:Base64BinaryObject>
+   <!-- AttachmentFormat -->
+   <nc:BinaryFormatText>String</nc:BinaryFormatText>
+   <!-- AttachmentURI -->
+   <nc:BinaryURI>http://www.altova.com/</nc:BinaryURI>
+   <!-- AtachmentSize -->
+   <nc:BinarySizeValue>0</nc:BinarySizeValue>
+  </nc:DocumentBinary>
+ </nola-ext:ChargeFilingDocument>
  <nola-ext:ProsecutionCase>
   <!-- PBK system -->
   <nc:CaseTrackingID>9999999</nc:CaseTrackingID>

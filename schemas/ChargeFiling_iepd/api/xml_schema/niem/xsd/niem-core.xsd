@@ -62,6 +62,22 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  <xs:complexType name="BinaryType">
+    <xs:annotation>
+      <xs:documentation>A data type for a digital representation of an object encoded in a binary format.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:ObjectType">
+        <xs:sequence>
+          <xs:element ref="nc:BinaryID" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="nc:BinaryObjectAbstract" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="nc:BinaryFormatAbstract" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="nc:BinaryURI" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="nc:BinarySizeValue" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
   <xs:complexType name="CaseType">
     <xs:annotation>
       <xs:documentation>A data type for an aggregation of information about a set of related activities and events.</xs:documentation>
@@ -101,6 +117,19 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  <xs:complexType name="DocumentType">
+    <xs:annotation>
+      <xs:documentation>A data type for a paper or electronic document.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:ObjectType">
+        <xs:sequence>
+          <xs:element ref="nc:DocumentCategoryAbstract" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="nc:DocumentContentAbstract" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
   <xs:complexType name="EntityType">
     <xs:annotation>
       <xs:documentation>A data type for a person, organization, or item.</xs:documentation>
@@ -132,6 +161,28 @@
     <xs:complexContent>
       <xs:extension base="nc:ActivityType"/>
     </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="NonNegativeDecimalSimpleType">
+    <xs:annotation>
+      <xs:documentation>A data type for a decimal value with a minimum value of 0.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:decimal">
+      <xs:minInclusive value="0">
+        <xs:annotation>
+          <xs:documentation>The lowest value allowed (inclusive).</xs:documentation>
+        </xs:annotation>
+      </xs:minInclusive>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="NonNegativeDecimalType">
+    <xs:annotation>
+      <xs:documentation>A data type for a decimal value with a minimum value of 0.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="nc:NonNegativeDecimalSimpleType">
+        <xs:attributeGroup ref="structures:SimpleObjectAttributeGroup"/>
+      </xs:extension>
+    </xs:simpleContent>
   </xs:complexType>
   <xs:complexType name="OrganizationType">
     <xs:annotation>
@@ -230,6 +281,41 @@
       <xs:documentation>A complete address.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="Base64BinaryObject" type="niem-xs:base64Binary" substitutionGroup="nc:BinaryObjectAbstract">
+    <xs:annotation>
+      <xs:documentation>A base64 binary encoding of data.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="BinaryFormatAbstract" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A data concept for a file format or content type of a binary object.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="BinaryFormatText" type="nc:TextType" substitutionGroup="nc:BinaryFormatAbstract">
+    <xs:annotation>
+      <xs:documentation>A file format or content type of a binary object.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="BinaryID" type="niem-xs:string" nillable="true">
+    <xs:annotation>
+      <xs:documentation>An identifier that references a binary object.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="BinaryObjectAbstract" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A data concept for a binary encoding of data.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="BinarySizeValue" type="nc:NonNegativeDecimalType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A size of a binary object in kilobytes.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="BinaryURI" type="niem-xs:anyURI" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A URL or file reference of a binary object.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="CaseAugmentationPoint" abstract="true">
     <xs:annotation>
       <xs:documentation>An augmentation point for CaseType.</xs:documentation>
@@ -293,6 +379,26 @@
   <xs:element name="DateTime" type="niem-xs:dateTime" substitutionGroup="nc:DateRepresentation">
     <xs:annotation>
       <xs:documentation>A full date and time.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="DocumentBinary" type="nc:BinaryType" substitutionGroup="nc:DocumentContentAbstract">
+    <xs:annotation>
+      <xs:documentation>A binary encoding of the content of a document.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="DocumentCategoryAbstract" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A data concept for a kind of document.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="DocumentCategoryText" type="nc:TextType" substitutionGroup="nc:DocumentCategoryAbstract">
+    <xs:annotation>
+      <xs:documentation>A kind of document; a nature or genre of the content.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="DocumentContentAbstract" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A data concept for the content of a document.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="EntityPerson" type="nc:PersonType" substitutionGroup="nc:EntityRepresentation">
