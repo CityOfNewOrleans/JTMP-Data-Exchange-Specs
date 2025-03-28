@@ -137,6 +137,7 @@
     <xs:complexContent>
       <xs:extension base="structures:ObjectType">
         <xs:sequence>
+          <xs:element ref="nc:DocumentCategoryAbstract" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="nc:DocumentContentAbstract" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:DocumentSubmitter" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
@@ -454,6 +455,16 @@
   <xs:element name="DocumentBinary" type="nc:BinaryType" substitutionGroup="nc:DocumentContentAbstract">
     <xs:annotation>
       <xs:documentation>A binary encoding of the content of a document.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="DocumentCategoryAbstract" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A data concept for a kind of document.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="DocumentCategoryText" type="nc:TextType" substitutionGroup="nc:DocumentCategoryAbstract">
+    <xs:annotation>
+      <xs:documentation>A kind of document; a nature or genre of the content.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="DocumentContentAbstract" abstract="true">

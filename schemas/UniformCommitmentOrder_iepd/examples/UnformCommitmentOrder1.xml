@@ -183,6 +183,8 @@
                             </j:CaseAugmentation>
                         </nc:Case>
                         <nc:Document>
+                            <!-- DocumentType -->
+                            <nc:DocumentCategoryText>Uniform Commitment Order</nc:DocumentCategoryText>
                             <nc:DocumentBinary>
                                 <!-- AttachmentID -->
                                 <nc:BinaryID>String</nc:BinaryID>

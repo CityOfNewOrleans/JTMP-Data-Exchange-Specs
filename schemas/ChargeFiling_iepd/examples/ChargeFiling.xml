@@ -153,6 +153,8 @@
   </nola-ext:CaseAugmentation>
  </nc:CourtCase>
  <nola-ext:ChargeFilingDocument>
+  <!-- DocumentType -->
+  <nc:DocumentCategoryText>Charge Filing</nc:DocumentCategoryText>
   <nc:DocumentBinary>
    <!-- AttachmentID -->
    <nc:BinaryID>String</nc:BinaryID>
