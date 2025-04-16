@@ -32,64 +32,64 @@ for entry in os.listdir(base_directory):
 
 exmaples_and_schemas = {
     # ArrestReport
-    "../../schemas/ArrestReport_iepd/examples/ArrestSample.xml":
-        "../../schemas/ArrestReport_iepd/api/xml_schema/Arrest_NOLA.xsd",
-    "../../schemas/ArrestReport_iepd/examples/ArrestSampleConcise.xml":
-        "../../schemas/ArrestReport_iepd/api/xml_schema/Arrest_NOLA.xsd",
+    "../schemas/ArrestReport_iepd/examples/ArrestSample.xml":
+        "../schemas/ArrestReport_iepd/api/xml_schema/Arrest_NOLA.xsd",
+    "../schemas/ArrestReport_iepd/examples/ArrestSampleConcise.xml":
+        "../schemas/ArrestReport_iepd/api/xml_schema/Arrest_NOLA.xsd",
 
     # AsyncResponse
-    "../../schemas/AsyncResponse_iepd/examples/Complete_AsyncResponse.xml":
-        "../../schemas/AsyncResponse_iepd/api/xml_schema/Asynchronous_NOLA.xsd",
-    "../../schemas/AsyncResponse_iepd/examples/ContentError_AsyncResponse.xml":
-        "../../schemas/AsyncResponse_iepd/api/xml_schema/Asynchronous_NOLA.xsd",
-    "../../schemas/AsyncResponse_iepd/examples/EndpointError_AsyncResponse.xml":
-        "../../schemas/AsyncResponse_iepd/api/xml_schema/Asynchronous_NOLA.xsd",
-    "../../schemas/AsyncResponse_iepd/examples/FinalAccept_AsyncResponse.xml":
-        "../../schemas/AsyncResponse_iepd/api/xml_schema/Asynchronous_NOLA.xsd",
-    "../../schemas/AsyncResponse_iepd/examples/Intermediate_AsyncResponse.xml":
-        "../../schemas/AsyncResponse_iepd/api/xml_schema/Asynchronous_NOLA.xsd",
+    "../schemas/AsyncResponse_iepd/examples/Complete_AsyncResponse.xml":
+        "../schemas/AsyncResponse_iepd/api/xml_schema/Asynchronous_NOLA.xsd",
+    "../schemas/AsyncResponse_iepd/examples/ContentError_AsyncResponse.xml":
+        "../schemas/AsyncResponse_iepd/api/xml_schema/Asynchronous_NOLA.xsd",
+    "../schemas/AsyncResponse_iepd/examples/EndpointError_AsyncResponse.xml":
+        "../schemas/AsyncResponse_iepd/api/xml_schema/Asynchronous_NOLA.xsd",
+    "../schemas/AsyncResponse_iepd/examples/FinalAccept_AsyncResponse.xml":
+        "../schemas/AsyncResponse_iepd/api/xml_schema/Asynchronous_NOLA.xsd",
+    "../schemas/AsyncResponse_iepd/examples/Intermediate_AsyncResponse.xml":
+        "../schemas/AsyncResponse_iepd/api/xml_schema/Asynchronous_NOLA.xsd",
 
     # BookingAndRelease
-    "../../schemas/BookingAndRelease_iepd/examples/Booking Sample.xml":
-        "../../schemas/BookingAndRelease_iepd/api/xml_schema/Booking_NOLA.xsd",
+    "../schemas/BookingAndRelease_iepd/examples/Booking Sample.xml":
+        "../schemas/BookingAndRelease_iepd/api/xml_schema/Booking_NOLA.xsd",
 
     # CaseInitiation
-    "../../schemas/CaseInitiation_iepd/examples/CaseInitiation_Annotated.xml":
-        "../../schemas/CaseInitiation_iepd/api/xml_schema/CaseInitiation_NOLA.xsd",
+    "../schemas/CaseInitiation_iepd/examples/CaseInitiation_Annotated.xml":
+        "../schemas/CaseInitiation_iepd/api/xml_schema/CaseInitiation_NOLA.xsd",
 
     # CaseUpdates
-    "../../schemas/CaseUpdates_iepd/examples/BondUpdate_example.xml":
-        "../../schemas/CaseUpdates_iepd/api/xml_schema/BondUpdate_NOLA.xsd",
-    "../../schemas/CaseUpdates_iepd/examples/CaseActivityUpdate_example.xml":
-        "../../schemas/CaseUpdates_iepd/api/xml_schema/CaseActivityUpdate_NOLA.xsd",
-    "../../schemas/CaseUpdates_iepd/examples/ChargeUpdate_example.xml":
-        "../../schemas/CaseUpdates_iepd/api/xml_schema/ChargeUpdate_NOLA.xsd",
-    "../../schemas/CaseUpdates_iepd/examples/EntityUpdate_example.xml":
-        "../../schemas/CaseUpdates_iepd/api/xml_schema/EntityUpdate_NOLA.xsd",
+    "../schemas/CaseUpdates_iepd/examples/BondUpdate_example.xml":
+        "../schemas/CaseUpdates_iepd/api/xml_schema/BondUpdate_NOLA.xsd",
+    "../schemas/CaseUpdates_iepd/examples/CaseActivityUpdate_example.xml":
+        "../schemas/CaseUpdates_iepd/api/xml_schema/CaseActivityUpdate_NOLA.xsd",
+    "../schemas/CaseUpdates_iepd/examples/ChargeUpdate_example.xml":
+        "../schemas/CaseUpdates_iepd/api/xml_schema/ChargeUpdate_NOLA.xsd",
+    "../schemas/CaseUpdates_iepd/examples/EntityUpdate_example.xml":
+        "../schemas/CaseUpdates_iepd/api/xml_schema/EntityUpdate_NOLA.xsd",
 
     # ChargeFiling
-    "../../schemas/ChargeFiling_iepd/examples/ChargeFiling.xml":
-        "../../schemas/ChargeFiling_iepd/api/xml_schema/ChargeFiling_NOLA.xsd",
+    "../schemas/ChargeFiling_iepd/examples/ChargeFiling.xml":
+        "../schemas/ChargeFiling_iepd/api/xml_schema/ChargeFiling_NOLA.xsd",
 
     # CourtEvent
-    "../../schemas/CourtEvent_iepd/examples/SampleCourtEventXML.xml":
-        "../../schemas/CourtEvent_iepd/api/xml_schema/CourtEvent_NOLA.xsd",
+    "../schemas/CourtEvent_iepd/examples/SampleCourtEventXML.xml":
+        "../schemas/CourtEvent_iepd/api/xml_schema/CourtEvent_NOLA.xsd",
 
     # CourtOrder
-    "../../schemas/CourtOrder_iepd/examples/Annotated_CourtOrder.xml":
-        "../../schemas/CourtOrder_iepd/api/xml_schema/CourtOrder_NOLA.xsd",
+    "../schemas/CourtOrder_iepd/examples/Annotated_CourtOrder.xml":
+        "../schemas/CourtOrder_iepd/api/xml_schema/CourtOrder_NOLA.xsd",
 
     # Subpoena
-    "../../schemas/Subpoena_iepd/examples/SubpoenaSample.xml":
-        "../../schemas/Subpoena_iepd/api/xml_schema/Subpoena_NOLA.xsd",
+    "../schemas/Subpoena_iepd/examples/SubpoenaSample.xml":
+        "../schemas/Subpoena_iepd/api/xml_schema/Subpoena_NOLA.xsd",
 
     # UniformChargeTable
-    "../../schemas/UniformChargeTable_iepd/examples/ChargeTableUpdate1.xml":
-        "../../schemas/UniformChargeTable_iepd/api/xml_schema/ChargeTableUpdate_NOLA.xsd",
+    "../schemas/UniformChargeTable_iepd/examples/ChargeTableUpdate1.xml":
+        "../schemas/UniformChargeTable_iepd/api/xml_schema/ChargeTableUpdate_NOLA.xsd",
 
     # UniformCommitmentOrder
-    "../../schemas/UniformCommitmentOrder_iepd/examples/UnformCommitmentOrder1.xml":
-        "../../schemas/UniformCommitmentOrder_iepd/api/xml_schema/UniformCommitmentOrder_NOLA.xsd"
+    "../schemas/UniformCommitmentOrder_iepd/examples/UnformCommitmentOrder1.xml":
+        "../schemas/UniformCommitmentOrder_iepd/api/xml_schema/UniformCommitmentOrder_NOLA.xsd"
 }
 
 schema_keys = set([os.path.dirname(key) for key in exmaples_and_schemas if key.count("_iepd")>0])
