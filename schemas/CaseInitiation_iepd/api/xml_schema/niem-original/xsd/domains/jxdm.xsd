@@ -104,18 +104,6 @@
   <xs:import namespace="http://release.niem.gov/niem/niem-core/5.0/" schemaLocation="../niem-core.xsd"/>
   <xs:import namespace="http://release.niem.gov/niem/proxy/niem-xs/5.0/" schemaLocation="../adapters/niem-xs.xsd"/>
   <xs:import namespace="http://release.niem.gov/niem/structures/5.0/" schemaLocation="../utility/structures.xsd"/>
-  <xs:complexType name="ArrestType">
-    <xs:annotation>
-      <xs:documentation>A data type for the apprehension of a subject by a peace official.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="nc:ActivityType">
-        <xs:sequence>
-          <xs:element ref="j:ArrestCharge" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
   <xs:complexType name="BailBondType">
     <xs:annotation>
       <xs:documentation>A data type for an agreement between a bondsman and a subject in which a bondsman pays the subject's bail or portion of the bail in exchange for certain conditions.</xs:documentation>
@@ -124,8 +112,6 @@
       <xs:extension base="nc:ActivityType">
         <xs:sequence>
           <xs:element ref="j:BailBondAmount" minOccurs="0" maxOccurs="1"/>
-          <xs:element ref="j:BailBondConditionDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:BailBondSuretyEntity" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:BailBondAugmentationPoint" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
       </xs:extension>
@@ -140,8 +126,6 @@
         <xs:sequence>
           <xs:element ref="j:BookingAgency" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="j:BookingAgencyRecordIdentification" minOccurs="0" maxOccurs="1"/>
-          <xs:element ref="j:BookingDocumentControlIdentification" minOccurs="0" maxOccurs="1"/>
-          <xs:element ref="j:Arrest" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -375,16 +359,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="Arrest" type="j:ArrestType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>An apprehension of a subject by a peace official based on an observed or a reported violation of a law or ordinance, an outstanding arrest warrant, or probable cause information.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="ArrestCharge" type="j:ChargeType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A formal allegation of a violation of a statute and/or ordinance in association with an arrest.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
   <xs:element name="BailBond" type="j:BailBondType" nillable="true">
     <xs:annotation>
       <xs:documentation>An agreement between a bondsman and a subject in which a bondsman pays the subject's bail or portion of the bail in exchange for certain conditions, including the payment of a certain amount of money and the reappearance of the subject</xs:documentation>
@@ -400,16 +374,6 @@
       <xs:documentation>An augmentation point for BailBondType.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="BailBondConditionDescriptionText" type="nc:TextType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>A description of a condition or requirement for a subject attached to a bond.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="BailBondSuretyEntity" type="nc:EntityType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>An entity who has agreed to be responsible for a subject.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
   <xs:element name="BookingAgency" type="nc:OrganizationType" nillable="true">
     <xs:annotation>
       <xs:documentation>An organization which processes a booking.</xs:documentation>
@@ -418,11 +382,6 @@
   <xs:element name="BookingAgencyRecordIdentification" type="nc:IdentificationType" nillable="true">
     <xs:annotation>
       <xs:documentation>A booking identification of the originating case agency.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:element name="BookingDocumentControlIdentification" type="nc:IdentificationType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>An identification assigned by a booking system to identify a unique booking event within a specific jail.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="CaseAugmentation" type="j:CaseAugmentationType" substitutionGroup="nc:CaseAugmentationPoint">

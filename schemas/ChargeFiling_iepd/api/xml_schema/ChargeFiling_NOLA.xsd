@@ -22,6 +22,7 @@
 				<xs:sequence>
 					<xs:element ref="j:Arrest" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element ref="nc:CourtCase" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element ref="nola-ext:ChargeFilingDocument" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element ref="nola-ext:ProsecutionCase" minOccurs="0" maxOccurs="unbounded"/>
 				</xs:sequence>
 			</xs:extension>

@@ -46,22 +46,22 @@
   </j:ArrestCharge>
   <j:ArrestCharge>
    <!-- Charge Modifier -->
-   <j:ChargeApplicabilityText>0</j:ChargeApplicabilityText>
+   <j:ChargeApplicabilityText>14:25</j:ChargeApplicabilityText>
    <!-- Charge Name -->
-   <j:ChargeDescriptionText>CRUELTY TO ANIMALS - SIMPLE</j:ChargeDescriptionText>
+   <j:ChargeDescriptionText>ACC SIMPLE BURGLARY</j:ChargeDescriptionText>
    <j:ChargeStatute>
     <j:StatuteCodeIdentification>
      <!-- Charge Statute -->
-     <nc:IdentificationID>14.102.1(A)</nc:IdentificationID>
+     <nc:IdentificationID>14.8</nc:IdentificationID>
     </j:StatuteCodeIdentification>
    </j:ChargeStatute>
    <!-- Charge Class -->
-   <j:ChargeSeverityDescriptionText>4</j:ChargeSeverityDescriptionText>
+   <j:ChargeSeverityDescriptionText>3</j:ChargeSeverityDescriptionText>
    <nola-ext:ChargeAugmentation>
     <!-- Refused Charge Disposition RefusalCode -->
     <nola-ext:ChargeDispositionCode>accepted</nola-ext:ChargeDispositionCode>
     <!-- Charge Key -->
-    <nola-ext:ChargeKey>1154</nola-ext:ChargeKey>
+    <nola-ext:ChargeKey>1058</nola-ext:ChargeKey>
     <!-- JMSChargeNumnber -->
     <nola-ext:JMSChargeNumber>H-26560-24</nola-ext:JMSChargeNumber>
     <!-- Date of offense -->
@@ -152,7 +152,25 @@
    </nola-ext:CourtCaseTransfertoSectionIdentification>
   </nola-ext:CaseAugmentation>
  </nc:CourtCase>
+ <nola-ext:ChargeFilingDocument>
+  <!-- DocumentType -->
+  <nc:DocumentCategoryText>Charge Filing</nc:DocumentCategoryText>
+  <nc:DocumentBinary>
+   <!-- AttachmentID -->
+   <nc:BinaryID>String</nc:BinaryID>
+   <!-- BinaryObject -->
+   <nc:Base64BinaryObject>UjBsR09EbGhjZ0dTQUxNQUFBUUNBRU1tQ1p0dU1GUXhEUzhi</nc:Base64BinaryObject>
+   <!-- AttachmentFormat -->
+   <nc:BinaryFormatText>String</nc:BinaryFormatText>
+   <!-- AttachmentURI -->
+   <nc:BinaryURI>http://www.altova.com/</nc:BinaryURI>
+   <!-- AtachmentSize -->
+   <nc:BinarySizeValue>0</nc:BinarySizeValue>
+  </nc:DocumentBinary>
+ </nola-ext:ChargeFilingDocument>
  <nola-ext:ProsecutionCase>
+  <!-- PBK system -->
+  <nc:CaseTrackingID>9999999</nc:CaseTrackingID>
   <nola-ext:ProsecutionCaseReviewedByPerson>
    <!-- Reviewed by -->
    <nc:PersonName>
