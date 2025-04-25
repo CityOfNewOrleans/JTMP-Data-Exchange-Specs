@@ -173,7 +173,7 @@
 			<xs:documentation>Additional information about a kind of court in the NOLA.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="EmployerAugmentation" type="nola-ext:EmployerAugmentationType" substitutionGroup=" nc:EmployerAugmentationPoint">
+	<xs:element name="EmployerAugmentation" type="nola-ext:EmployerAugmentationType" substitutionGroup="nc:EmployerAugmentationPoint">
 		<xs:annotation>
 			<xs:documentation>Additional information about an employer in the NOLA.</xs:documentation>
 		</xs:annotation>
