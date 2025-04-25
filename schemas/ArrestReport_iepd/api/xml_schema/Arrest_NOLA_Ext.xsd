@@ -24,6 +24,7 @@
                     <xs:element ref="em:PersonAlternateName" minOccurs="0" maxOccurs="unbounded"/>
                     <xs:element ref="nola-ext:AliasNameSequenceNumber" minOccurs="0" maxOccurs="1"/>
                     <xs:element ref="nola-ext:DefendantNameSequenceNumber" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element ref="nola-ext:PersonNameSequenceNumber" minOccurs="0" maxOccurs="unbounded"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -38,6 +39,7 @@
                     <xs:element ref="j:OffenseArrestAssociation" minOccurs="0" maxOccurs="1"/>
                     <xs:element ref="j:ActivityForceAssociation" minOccurs="0" maxOccurs="1"/>
                     <xs:element ref="j:IncidentArrestAssociation" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="j:OtherInvolvedPerson" minOccurs="0" maxOccurs="unbounded"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -376,6 +378,11 @@
         </xs:annotation>
     </xs:element>
     <xs:element name="DefendantNameSequenceNumber" type="niem-xs:integer">
+        <xs:annotation>
+            <xs:documentation>Used by CDC magistrate log Charges Changed by Minute Clerk.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="PersonNameSequenceNumber" type="niem-xs:integer">
         <xs:annotation>
             <xs:documentation>Used by CDC magistrate log Charges Changed by Minute Clerk.</xs:documentation>
         </xs:annotation>

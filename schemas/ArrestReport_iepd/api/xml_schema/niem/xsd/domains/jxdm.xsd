@@ -129,7 +129,7 @@
           <xs:element ref="j:ArrestInvolvedWeapon" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:ArrestOfficial" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:ArrestSequenceID" minOccurs="0" maxOccurs="1"/>
-          <xs:element ref="j:ArrestSubject" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="j:ArrestSubject" minOccurs="1" maxOccurs="unbounded"/>
           <xs:element ref="j:ArrestSubjectRightsReadIndicator" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="j:ArrestWarrant" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:ArrestCategoryJABSAbstract" minOccurs="0" maxOccurs="unbounded"/>
@@ -251,6 +251,18 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  <xs:complexType name="IncidentAugmentationType">
+    <xs:annotation>
+      <xs:documentation>A data type for additional information about an incident.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:AugmentationType">
+        <xs:sequence>
+          <xs:element ref="j:IncidentParticipant" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
   <xs:complexType name="ItemAugmentationType">
     <xs:annotation>
       <xs:documentation>A data type for additional information about an item.</xs:documentation>
@@ -337,6 +349,32 @@
       <xs:extension base="structures:AugmentationType">
         <xs:sequence>
           <xs:element ref="j:OrganizationORIIdentification" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="OtherInvolvedPersonType">
+    <xs:annotation>
+      <xs:documentation>A data type for a person who is involved in an activity, but does not meet the criteria for other roles.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:ObjectType">
+        <xs:sequence>
+          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="j:InvolvementAbstract" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ParticipantType">
+    <xs:annotation>
+      <xs:documentation>A data type for a person who takes part in something.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:ObjectType">
+        <xs:sequence>
+          <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="j:ParticipantRoleCategoryAbstract" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -601,6 +639,16 @@
       <xs:documentation>A relationship between an incident and an arrest.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="IncidentAugmentation" type="j:IncidentAugmentationType" substitutionGroup="nc:IncidentAugmentationPoint">
+    <xs:annotation>
+      <xs:documentation>Additional information about an incident.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="IncidentParticipant" type="j:ParticipantType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A name of a participant associated with an incident.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="IncidentStatusCode" type="ndex:IncidentStatusCodeType" substitutionGroup="nc:StatusAbstract">
     <xs:annotation>
       <xs:documentation>A status of the current disposition of an incident.</xs:documentation>
@@ -614,6 +662,16 @@
   <xs:element name="InjuryLocationNDExCode" type="ndex:InjuryLocationCodeType" substitutionGroup="nc:InjuryLocationAbstract">
     <xs:annotation>
       <xs:documentation>A location of the victim's injury.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="InvolvementAbstract" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A data concept for a person's or organization's involvement in something.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="InvolvementText" type="nc:TextType" substitutionGroup="j:InvolvementAbstract">
+    <xs:annotation>
+      <xs:documentation>A status or level of involvement.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="ItemAugmentation" type="j:ItemAugmentationType" substitutionGroup="nc:ItemAugmentationPoint">
@@ -694,6 +752,21 @@
   <xs:element name="OrganizationORIIdentification" type="nc:IdentificationType" nillable="true">
     <xs:annotation>
       <xs:documentation>A unique nine character NCIC identification (ORI) assigned to a justice-related organization by the FBI CJIS Division.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="OtherInvolvedPerson" type="j:OtherInvolvedPersonType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A person who is involved in an activity, but does not meet the criteria for other roles.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ParticipantRoleCategoryAbstract" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A data concept for a kind of role of a participant.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ParticipantRoleCategoryText" type="nc:TextType" substitutionGroup="j:ParticipantRoleCategoryAbstract">
+    <xs:annotation>
+      <xs:documentation>A kind of role of a participant.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="PersonAugmentation" type="j:PersonAugmentationType" substitutionGroup="nc:PersonAugmentationPoint">
