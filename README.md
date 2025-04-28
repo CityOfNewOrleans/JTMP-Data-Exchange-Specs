@@ -3,7 +3,7 @@
 <p>Developers who provide these systems will interact with application programming interfaces (APIs) that JTMP will expose via Azure’s API Gateway. ​JTMP will follow a Publish/Subscribe model. ​A system or application sending data to shared with partner agencies/systems will call an API to Publish a message. ​The message metadata will indicate which DataExchangeType is published in the message body (see table below). ​The Service Bus will call an API hosted at the Subscriber’s system to deliver Subscribed messages. ​These interactions are illustrated below. <br>
 The following diagram provides an overview of the JTMP Service Bus. ​</p>
 
-![AzureServiceBusIntegration_032024](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/assets/164246967/b57a533a-3345-4b62-a3b8-5c11cf4c4e98 "Azure Service Bus")
+![AzureServiceBusIntegration_032024](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/resources/2025-04-28-AzureServiceBusIntegration.jpg) 
 
 <h2>Data Exchange Specifications </h2>
 <p>JTMP has identified a set of Priority Data Exchanges between these systems that drive us toward that vision.  
