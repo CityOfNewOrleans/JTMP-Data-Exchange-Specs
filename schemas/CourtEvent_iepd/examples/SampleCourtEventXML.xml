@@ -17,7 +17,7 @@
 		<j:CourtEventCase>
 			<ActivityStatus>
 				<!--  Class: CourtCase, Attribute: CourtCaseStatus  -->
-				<StatusText>String</StatusText>
+				<StatusText structures:metadata="update">String</StatusText>
 			</ActivityStatus>
 			<!--  Class: CourtCase, Attribute: CourtCaseType  -->
 			<CaseGeneralCategoryText>String</CaseGeneralCategoryText>
@@ -29,7 +29,7 @@
 					<!--  Class: CourtCase, Attribute: CoutCaseDefendant  -->
 					<EntityPerson>
 						<PersonBirthDate>
-							<Date>1957-08-13</Date>
+							<Date structures:metadata="add">1957-08-13</Date>
 						</PersonBirthDate>
 						<!--  Class: Defendant, Attribute: OffenderDescription  -->
 						<PersonDescriptionText>String</PersonDescriptionText>
@@ -119,7 +119,7 @@
 			<!--  Class: Judge, Attribute: JudgeType  -->
 			<j:JudicialOfficialCategoryText>String</j:JudicialOfficialCategoryText>
 		</j:CourtEventJudge>
-		<j:CourtEventSchedule>
+		<j:CourtEventSchedule structures:metadata="add">
 			<ScheduleDate>
 				<!--  Class: CourtEvent, Attribute: CourtEventDateTime  -->
 				<DateTime>2001-12-17T09:30:47Z</DateTime>
