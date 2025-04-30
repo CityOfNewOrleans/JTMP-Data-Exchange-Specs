@@ -398,6 +398,7 @@
                     <nola-ext:StatewideArrestTrackingNumber>String</nola-ext:StatewideArrestTrackingNumber>
                     <nola-ext:StatewideATNChargeSequenceID>String</nola-ext:StatewideATNChargeSequenceID>
                     <nola-ext:JMSChargeNumber>String</nola-ext:JMSChargeNumber>
+                    <nola-ext:CourtType>MUN</nola-ext:CourtType>
                 </nola-ext:ChargeAugmentation>
             </j:ArrestCharge>
             <j:ArrestCharge>
@@ -436,6 +437,7 @@
                     <nola-ext:StatewideArrestTrackingNumber>String</nola-ext:StatewideArrestTrackingNumber>
                     <nola-ext:StatewideATNChargeSequenceID>String</nola-ext:StatewideATNChargeSequenceID>
                     <nola-ext:JMSChargeNumber>String</nola-ext:JMSChargeNumber>
+                    <nola-ext:CourtType>JUV</nola-ext:CourtType>
                 </nola-ext:ChargeAugmentation>
             </j:ArrestCharge>
             <j:ArrestOfficial>
@@ -595,11 +597,6 @@
                 </j:OrganizationAugmentation>
                 <j:CourtName>String</j:CourtName>
                 <j:CourtDivisionText>String</j:CourtDivisionText>
-                <j:CourtCategoryCode>ADM</j:CourtCategoryCode>
-                <!-- DO we need to have this? Mapping spreadsheet has j:CourtCategoryCode -->
-                <!-- <nola-ext:CourtCategoryAbstract>
-                    <nola-ext:CourtCategoryText>String</nola-ext:CourtCategoryText>
-                </nola-ext:CourtCategoryAbstract> -->
             </j:CaseCourt>
             <j:CaseCourtEvent>
                 <nc:ActivityComment>

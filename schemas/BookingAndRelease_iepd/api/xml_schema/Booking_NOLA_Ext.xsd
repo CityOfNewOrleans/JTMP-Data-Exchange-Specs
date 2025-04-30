@@ -65,6 +65,7 @@
 					<xs:element ref="nola-ext:StatewideArrestTrackingNumber" minOccurs="0" maxOccurs="1"/>
 					<xs:element ref="nola-ext:StatewideATNChargeSequenceID" minOccurs="0" maxOccurs="1"/>
 					<xs:element ref="nola-ext:JMSChargeNumber" minOccurs="0" maxOccurs="1"/>
+					<xs:element ref="nola-ext:CourtType" minOccurs="0" maxOccurs="1"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -77,18 +78,6 @@
 			<xs:extension base="structures:ObjectType">
 				<xs:sequence>
 					<xs:element ref="nola-ext:StatuteCodeSectionSubparagraphIdentification" minOccurs="0" maxOccurs="unbounded"/>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:complexType name="CourtCategoryAbstractType">
-		<xs:annotation>
-			<xs:documentation>A data type for additional data for a kind of court information in NOLA.</xs:documentation>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="structures:ObjectType">
-				<xs:sequence>
-					<xs:element ref="nola-ext:CourtCategoryText" minOccurs="0" maxOccurs="1"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -168,11 +157,6 @@
 			<xs:documentation>Additional information about a charge statute in the NOLA.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="CourtCategoryAbstract" type="nola-ext:CourtCategoryAbstractType" substitutionGroup="j:CourtCategoryAbstract">
-		<xs:annotation>
-			<xs:documentation>Additional information about a kind of court in the NOLA.</xs:documentation>
-		</xs:annotation>
-	</xs:element>
 	<xs:element name="EmployerAugmentation" type="nola-ext:EmployerAugmentationType" substitutionGroup=" nc:EmployerAugmentationPoint">
 		<xs:annotation>
 			<xs:documentation>Additional information about an employer in the NOLA.</xs:documentation>
@@ -204,14 +188,14 @@
 			<xs:documentation>A LIBRS code associated with a charge.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="CourtCategoryText" type="niem-xs:string">
-		<xs:annotation>
-			<xs:documentation>A kind of court.</xs:documentation>
-		</xs:annotation>
-	</xs:element>
 	<xs:element name="JMSChargeNumber" type="niem-xs:string">
 		<xs:annotation>
 			<xs:documentation>A unique identification number assigned to a particular charge by a Jail Management System (JMS).</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="CourtType" type="aamva_d20:CourtCategoryCodeSimpleType">
+		<xs:annotation>
+			<xs:documentation>A data type for kinds of courts.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="PersonComputerControlIdentifier" type="niem-xs:string">

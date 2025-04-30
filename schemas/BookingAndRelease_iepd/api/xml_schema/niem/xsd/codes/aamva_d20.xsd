@@ -197,14 +197,4 @@
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-  <xs:complexType name="CourtCategoryCodeType">
-    <xs:annotation>
-      <xs:documentation>A data type for kinds of courts.</xs:documentation>
-    </xs:annotation>
-    <xs:simpleContent>
-      <xs:extension base="aamva_d20:CourtCategoryCodeSimpleType">
-        <xs:attributeGroup ref="structures:SimpleObjectAttributeGroup"/>
-      </xs:extension>
-    </xs:simpleContent>
-  </xs:complexType>
 </xs:schema>
