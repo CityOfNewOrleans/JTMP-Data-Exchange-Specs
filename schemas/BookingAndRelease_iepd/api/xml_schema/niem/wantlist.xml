@@ -22,7 +22,6 @@
   <w:Element w:name="j:Booking" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="j:CaseAugmentation" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="j:CaseCourtEvent" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="j:CourtCategoryCode" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="j:Offense" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="j:OrganizationAugmentation" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="j:PersonAugmentation" w:isReference="false" w:nillable="false"/>
@@ -204,8 +203,6 @@
       w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="j:CourtDivisionText" w:isReference="false"
       w:minOccurs="0" w:maxOccurs="1"/>
-    <w:ElementInType w:name="j:CourtCategoryAbstract"
-      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
   </w:Type>
   <w:Type w:name="j:DriverLicenseType" w:isRequested="false">
     <w:ElementInType w:name="j:DriverLicenseCardIdentification"
