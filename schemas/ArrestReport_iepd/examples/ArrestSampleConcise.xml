@@ -383,6 +383,7 @@
         </j:ArrestOfficial>
         <j:ArrestSequenceID>string</j:ArrestSequenceID>
         <j:ArrestSubject>
+            <j:InvolvementText>string</j:InvolvementText>
             <nc:RoleOfPerson>
                 <nc:PersonBirthDate>
                     <nc:Date>2006-05-04</nc:Date>
@@ -744,6 +745,7 @@
             </j:SubjectDetainmentLocation>
         </j:ArrestSubject>
         <j:ArrestSubject>
+            <j:InvolvementText>string</j:InvolvementText>
             <nc:RoleOfPerson>
                 <nc:PersonBirthDate>
                     <nc:Date>2006-05-04</nc:Date>

@@ -403,6 +403,7 @@
           <xs:element ref="nc:RoleOfPerson" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="j:SubjectGangAffiliationNoneIndicator" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="j:SubjectDetainmentLocation" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="j:InvolvementAbstract" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
