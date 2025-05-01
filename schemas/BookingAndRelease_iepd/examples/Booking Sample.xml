@@ -398,7 +398,7 @@
                     <nola-ext:StatewideArrestTrackingNumber>String</nola-ext:StatewideArrestTrackingNumber>
                     <nola-ext:StatewideATNChargeSequenceID>String</nola-ext:StatewideATNChargeSequenceID>
                     <nola-ext:JMSChargeNumber>String</nola-ext:JMSChargeNumber>
-                    <nola-ext:CourtType>MUN</nola-ext:CourtType>
+                    <nola-ext:CourtType>CRI</nola-ext:CourtType>
                 </nola-ext:ChargeAugmentation>
             </j:ArrestCharge>
             <j:ArrestCharge>
@@ -437,7 +437,7 @@
                     <nola-ext:StatewideArrestTrackingNumber>String</nola-ext:StatewideArrestTrackingNumber>
                     <nola-ext:StatewideATNChargeSequenceID>String</nola-ext:StatewideATNChargeSequenceID>
                     <nola-ext:JMSChargeNumber>String</nola-ext:JMSChargeNumber>
-                    <nola-ext:CourtType>JUV</nola-ext:CourtType>
+                    <nola-ext:CourtType>MUN</nola-ext:CourtType>
                 </nola-ext:ChargeAugmentation>
             </j:ArrestCharge>
             <j:ArrestOfficial>
