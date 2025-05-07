@@ -22,6 +22,17 @@ The purpose of this data exchange is to notify Subscriber systems of a new jail 
 
 Subscribers may create new pending case events or update previously-created events. Many Subscriber systems will opt to stage incoming events in a queue or review screen pending human action to import into the case management system. 
 
+### Determining Court of Jurisdiction
+The jail will set a "CourtTYpe" value for each charge. This is the jail staff's understanding of the court that will have jurisdiction. It is functinoally the equivalent of the legacy AS400 system creating and "Arrest Register Number" for each set of charges, destined for a specific court. 
+
+The values for CourtType follow a national standard. Our implementation uses the following values:
+
+|XML Value|Court of Jurisdiction|
+|-------|-----|
+|CRI|Criinal District Court (CDC)|
+|MUNMunicipal and Traffic Court (|MCTNO)|
+|JUV|Juvenile Court (OJC)|
+
 ## Data Requirements:
 
 ### Key Booking data elements include:
