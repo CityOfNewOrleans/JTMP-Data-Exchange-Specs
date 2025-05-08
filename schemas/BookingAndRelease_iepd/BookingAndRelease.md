@@ -27,11 +27,14 @@ The jail will set a "CourtTYpe" value for each charge. This is the jail staff's 
 
 The values for CourtType follow a national standard. Our implementation uses the following values:
 
-|XML Value|Court of Jurisdiction|
-|-------|-----|
-|CRI|Criinal District Court (CDC)|
-|MUNMunicipal and Traffic Court (|MCTNO)|
-|JUV|Juvenile Court (OJC)|
+|CourtType value from the XML|	Court of Jurisdiction-commonly-used agency name|	Commonly-Used Abbreviation
+|-------|-----|--------|
+|CRI|	Criminal District Court|	CDC|
+|MUN|	Municipal and Traffic Court of New Orleans|	MCTNO|
+|TRA|	Municipal and Traffic Court of New Orleans|	MCTNO|
+|JUV|	Juvenile Court , or Orleans Juvenile Court|	OJC|
+
+
 
 ## Data Requirements:
 
