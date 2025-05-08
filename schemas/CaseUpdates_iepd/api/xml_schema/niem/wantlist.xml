@@ -118,13 +118,13 @@
     <w:ElementInType w:name="j:CaseExhibit" w:isReference="false"
       w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="j:CaseJudge" w:isReference="false"
-      w:minOccurs="0" w:maxOccurs="1"/>
+      w:minOccurs="0" w:maxOccurs="2"/>
     <w:ElementInType w:name="j:CaseOfficial" w:isReference="false"
       w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="j:CaseOtherEntity" w:isReference="false"
       w:minOccurs="0" w:maxOccurs="unbounded"/>
     <w:ElementInType w:name="j:CaseProsecutionAttorney"
-      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="2"/>
     <w:ElementInType w:name="j:CaseWitness" w:isReference="false"
       w:minOccurs="0" w:maxOccurs="unbounded"/>
   </w:Type>

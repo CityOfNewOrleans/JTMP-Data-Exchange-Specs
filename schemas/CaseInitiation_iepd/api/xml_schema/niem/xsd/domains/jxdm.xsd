@@ -160,10 +160,10 @@
           <xs:element ref="j:CaseDefendantParty" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="j:CaseDefenseAttorney" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="j:CaseExhibit" minOccurs="0" maxOccurs="1"/>
-          <xs:element ref="j:CaseJudge" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="j:CaseJudge" minOccurs="0" maxOccurs="2"/>
           <xs:element ref="j:CaseOfficial" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="j:CaseOtherEntity" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element ref="j:CaseProsecutionAttorney" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="j:CaseProsecutionAttorney" minOccurs="0" maxOccurs="2"/>
           <xs:element ref="j:CaseWitness" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
