@@ -124,7 +124,7 @@
   <w:Element w:name="ncic:VehicleStyleCode" w:isReference="false" w:nillable="false"/>
   <w:Type w:name="em:ActivityAugmentationType" w:isRequested="false">
     <w:ElementInType w:name="em:ActivityReport" w:isReference="false"
-      w:minOccurs="0" w:maxOccurs="1"/>
+      w:minOccurs="0" w:maxOccurs="unbounded"/>
   </w:Type>
   <w:Type w:name="hs:EmployerAugmentationType" w:isRequested="false">
     <w:ElementInType w:name="hs:EmployerName" w:isReference="false"

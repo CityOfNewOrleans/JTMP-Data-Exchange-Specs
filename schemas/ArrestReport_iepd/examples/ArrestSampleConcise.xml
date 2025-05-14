@@ -81,7 +81,40 @@
             </nola-ext:LocationAugmentation>
         </nc:ActivityLocation>
         <em:ActivityAugmentation>
-            <em:ActivityReport>
+            <em:ActivityReport>                
+                <nc:RoleOfDocument>
+                    <nc:DocumentAuthor>
+                        <nc:EntityPerson>
+                            <nc:PersonName>
+                                <nc:PersonFullName>string</nc:PersonFullName>
+                            </nc:PersonName>
+                        </nc:EntityPerson>
+                    </nc:DocumentAuthor>
+                    <nc:DocumentCategoryText>string</nc:DocumentCategoryText>
+                    <nc:DocumentBinary>
+                        <nc:Base64BinaryObject>ZGVmYXVsdA==</nc:Base64BinaryObject>
+                    </nc:DocumentBinary>
+                    <nc:DocumentContributor>
+                        <nc:EntityPerson>
+                            <nc:PersonName>
+                                <nc:PersonFullName>string</nc:PersonFullName>
+                            </nc:PersonName>
+                        </nc:EntityPerson>
+                    </nc:DocumentContributor>
+                    <nc:DocumentCreationDate>
+                        <nc:DateTime>2006-05-04T18:13:51.0</nc:DateTime>
+                    </nc:DocumentCreationDate>
+                    <nc:DocumentFileControlID>string</nc:DocumentFileControlID>
+                    <nc:DocumentMediaCategoryText>string</nc:DocumentMediaCategoryText>
+                    <nc:DocumentLastModifiedDate>
+                        <nc:DateTime>2006-05-04T18:13:51.0</nc:DateTime>
+                    </nc:DocumentLastModifiedDate>
+                    <nc:DocumentLocationURI>http://www.oxygenxml.com/</nc:DocumentLocationURI>
+                    <nc:DocumentSequenceID>string</nc:DocumentSequenceID>
+                    <nc:DocumentSummaryText>string</nc:DocumentSummaryText>
+                </nc:RoleOfDocument>
+            </em:ActivityReport>
+            <em:ActivityReport>                
                 <nc:RoleOfDocument>
                     <nc:DocumentAuthor>
                         <nc:EntityPerson>
