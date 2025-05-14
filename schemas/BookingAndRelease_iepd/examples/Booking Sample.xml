@@ -396,8 +396,9 @@
                     </j:BailBond>
                 </hs:ChargeAugmentation>
                 <nola-ext:ChargeAugmentation>
-                    <nola-ext:ChargeLIBRSCode>String</nola-ext:ChargeLIBRSCode>
+                    <nola-ext:ChargeAffidavitNumber>String</nola-ext:ChargeAffidavitNumber>
                     <nola-ext:ChargeKey>String</nola-ext:ChargeKey>
+                    <nola-ext:ChargeLIBRSCode>String</nola-ext:ChargeLIBRSCode>
                     <nola-ext:StatewideArrestTrackingNumber>String</nola-ext:StatewideArrestTrackingNumber>
                     <nola-ext:StatewideATNChargeSequenceID>String</nola-ext:StatewideATNChargeSequenceID>
                     <nola-ext:JMSChargeNumber>String</nola-ext:JMSChargeNumber>
@@ -413,11 +414,6 @@
                 <j:ChargeIdentification>
                     <nc:IdentificationID>String</nc:IdentificationID>
                 </j:ChargeIdentification>
-                <j:ChargeInstrument>
-                    <nc:DocumentIdentification>
-                        <nc:IdentificationID>String</nc:IdentificationID>
-                    </nc:DocumentIdentification>
-                </j:ChargeInstrument>
                 <j:ChargeSequenceID>String</j:ChargeSequenceID>
                 <j:ChargeStatute>
                     <j:StatuteCodeIdentification>
@@ -442,8 +438,9 @@
                     </j:BailBond>
                 </hs:ChargeAugmentation>
                 <nola-ext:ChargeAugmentation>
-                    <nola-ext:ChargeLIBRSCode>String</nola-ext:ChargeLIBRSCode>
+                    <nola-ext:ChargeAffidavitNumber>String</nola-ext:ChargeAffidavitNumber>
                     <nola-ext:ChargeKey>String</nola-ext:ChargeKey>
+                    <nola-ext:ChargeLIBRSCode>String</nola-ext:ChargeLIBRSCode>
                     <nola-ext:StatewideArrestTrackingNumber>String</nola-ext:StatewideArrestTrackingNumber>
                     <nola-ext:StatewideATNChargeSequenceID>String</nola-ext:StatewideATNChargeSequenceID>
                     <nola-ext:JMSChargeNumber>String</nola-ext:JMSChargeNumber>

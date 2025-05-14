@@ -48,6 +48,8 @@
 						<j:Arrest>
 							<j:ArrestCharge>
 								<nola-ext:ChargeAugmentation>
+									<!--  Class: Charge, Attribute: ChargeKey  -->
+									<nola-ext:ChargeKey>String</nola-ext:ChargeKey>
 									<!-- Class:Arrest, Attribute:ArrestTrackingNumber  -->
 									<nola-ext:StatewideArrestTrackingNumber>String</nola-ext:StatewideArrestTrackingNumber>
 									<!-- Class:Arrest, Attribute:ATNChargeSequenceID  -->

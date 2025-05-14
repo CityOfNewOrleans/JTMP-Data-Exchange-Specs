@@ -194,8 +194,6 @@
       w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="j:ChargeIdentification"
       w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
-    <w:ElementInType w:name="j:ChargeInstrument" w:isReference="false"
-      w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="j:ChargeSequenceID" w:isReference="false"
       w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="j:ChargeStatute" w:isReference="false"

@@ -60,8 +60,10 @@
 		<xs:complexContent>
 			<xs:extension base="structures:ObjectType">
 				<xs:sequence>
-					<xs:element ref="nola-ext:ChargeLIBRSCode" minOccurs="0" maxOccurs="1"/>
+					<xs:element ref="nola-ext:ChargeAffidavitNumber" minOccurs="0"
+						maxOccurs="unbounded"/>
 					<xs:element ref="nola-ext:ChargeKey" minOccurs="0" maxOccurs="1"/>
+					<xs:element ref="nola-ext:ChargeLIBRSCode" minOccurs="0" maxOccurs="1"/>
 					<xs:element ref="nola-ext:StatewideArrestTrackingNumber" minOccurs="0" maxOccurs="1"/>
 					<xs:element ref="nola-ext:StatewideATNChargeSequenceID" minOccurs="0" maxOccurs="1"/>
 					<xs:element ref="nola-ext:JMSChargeNumber" minOccurs="0" maxOccurs="1"/>
@@ -230,6 +232,12 @@
 	<xs:element name="CaseDefendantNumber" type="niem-xs:string">
 		<xs:annotation>
 			<xs:documentation>A case defandant-number associated with a specific criminal court case number.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="ChargeAffidavitNumber" type="niem-xs:string">
+		<xs:annotation>
+			<xs:documentation>An affidavit is a sworn statement a person an official document filed
+				to formally accuse a person of committing a specific offense.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="ChargeKey" type="niem-xs:string">
