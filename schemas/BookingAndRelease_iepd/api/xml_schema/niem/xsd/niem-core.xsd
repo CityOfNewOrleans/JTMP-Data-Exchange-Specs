@@ -44,7 +44,6 @@
     <xs:complexContent>
       <xs:extension base="structures:ObjectType">
         <xs:sequence>
-          <xs:element ref="nc:ActivityIdentification" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="nc:ActivityComment" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:ActivityCompletedIndicator" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="nc:ActivityDate" minOccurs="0" maxOccurs="1"/>
@@ -178,6 +177,18 @@
       <xs:extension base="structures:ObjectType">
         <xs:sequence>
           <xs:element ref="nc:DateRepresentation" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="DocumentType">
+    <xs:annotation>
+      <xs:documentation>A data type for a paper or electronic document.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:ObjectType">
+        <xs:sequence>
+          <xs:element ref="nc:DocumentIdentification" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -608,11 +619,6 @@
       <xs:documentation>A date of an activity.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="ActivityIdentification" type="nc:IdentificationType" nillable="true">
-    <xs:annotation>
-      <xs:documentation>An identification that references an activity.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
   <xs:element name="ActivityLocation" type="nc:LocationType" nillable="true">
     <xs:annotation>
       <xs:documentation>A location of an activity.</xs:documentation>
@@ -796,6 +802,11 @@
   <xs:element name="DayDate" type="niem-xs:gDay" substitutionGroup="nc:DateRepresentation">
     <xs:annotation>
       <xs:documentation>A day date.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="DocumentIdentification" type="nc:IdentificationType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>An identification that references a document.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="EmployeeContactInformation" type="nc:ContactInformationType" nillable="true">

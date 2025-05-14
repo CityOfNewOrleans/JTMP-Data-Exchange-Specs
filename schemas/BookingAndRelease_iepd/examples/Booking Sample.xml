@@ -1,25 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <nola:BookingExchange xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/"
- xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/"
- xmlns:structures="http://release.niem.gov/niem/structures/5.0/"
- xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/"
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xmlns:niem-xs="http://release.niem.gov/niem/proxy/niem-xs/5.0/"
- xmlns:hs="http://release.niem.gov/niem/domains/humanServices/5.2/"
- xmlns:j="http://release.niem.gov/niem/domains/jxdm/7.2/"
- xmlns:clsa="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-schema-appinfo/"
- xmlns:em="http://release.niem.gov/niem/domains/emergencyManagement/5.2/"
- xmlns:im="http://release.niem.gov/niem/domains/immigration/5.2/"
- xmlns:nola-ext="http://mcp.com/nola/extension/v/1.0/"
- xmlns:aamva_d20="http://release.niem.gov/niem/codes/aamva_d20/5.0/"
- xmlns:ncic="http://release.niem.gov/niem/codes/ncic/5.2/"
- xmlns:cls="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-instance/"
- xmlns:unece="http://release.niem.gov/niem/codes/unece_rec20/5.0/"
- xmlns:nola="http://mcp.com/nola/v/1.0/"
- xmlns:ndex="http://release.niem.gov/niem/codes/ndex/5.0/"
- xmlns:scr="http://release.niem.gov/niem/domains/screening/5.2/"
- xsi:schemaLocation="http://mcp.com/nola/v/1.0/ file:/C:/Users/gjsadmin/Documents/OxygenXMLEditor/BookingExchange/Booking_NOLA.xsd">
-    <j:Booking>
+    xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/"
+    xmlns:structures="http://release.niem.gov/niem/structures/5.0/"
+    xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:niem-xs="http://release.niem.gov/niem/proxy/niem-xs/5.0/"
+    xmlns:hs="http://release.niem.gov/niem/domains/humanServices/5.2/"
+    xmlns:j="http://release.niem.gov/niem/domains/jxdm/7.2/"
+    xmlns:clsa="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-schema-appinfo/"
+    xmlns:em="http://release.niem.gov/niem/domains/emergencyManagement/5.2/"
+    xmlns:im="http://release.niem.gov/niem/domains/immigration/5.2/"
+    xmlns:nola-ext="http://mcp.com/nola/extension/v/1.0/"
+    xmlns:aamva_d20="http://release.niem.gov/niem/codes/aamva_d20/5.0/"
+    xmlns:ncic="http://release.niem.gov/niem/codes/ncic/5.2/"
+    xmlns:cls="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-instance/"
+    xmlns:unece="http://release.niem.gov/niem/codes/unece_rec20/5.0/"
+    xmlns:nola="http://mcp.com/nola/v/1.0/"
+    xmlns:ndex="http://release.niem.gov/niem/codes/ndex/5.0/"
+    xmlns:scr="http://release.niem.gov/niem/domains/screening/5.2/"
+    xsi:schemaLocation="http://mcp.com/nola/v/1.0/ ../api/xml_schema/Booking_NOLA.xsd">
+    <nola-ext:MessageOperationCode structures:id="add">add</nola-ext:MessageOperationCode>
+    <nola-ext:MessageOperationCode structures:id="delete">delete</nola-ext:MessageOperationCode>
+    <nola-ext:MessageOperationCode structures:id="update">update</nola-ext:MessageOperationCode>
+    <j:Booking structures:ref="add">
         <nc:ActivityDate>
             <nc:DateTime>2001-12-17T09:30:47Z</nc:DateTime>
         </nc:ActivityDate>
@@ -153,7 +156,7 @@
                         </nc:AddressCountry>
                         <nc:AddressPostalCode>String</nc:AddressPostalCode>
                         <nc:AddressPostalExtensionCode>String</nc:AddressPostalExtensionCode>
-                    </nc:ContactMailingAddress>                    
+                    </nc:ContactMailingAddress>
                     <nc:ContactTelephoneNumber>
                         <nc:FullTelephoneNumber>
                             <nc:TelephoneNumberFullID>String</nc:TelephoneNumberFullID>
@@ -297,7 +300,7 @@
                         </j:DriverLicenseCardIdentification>
                     </j:DriverLicense>
                     <j:PersonFBIIdentification>
-                        <nc:IdentificationID>String</nc:IdentificationID>                        
+                        <nc:IdentificationID>String</nc:IdentificationID>
                     </j:PersonFBIIdentification>
                 </j:PersonAugmentation>
             </nc:RoleOfPerson>
@@ -407,6 +410,14 @@
                 <j:ChargeFilingDate>
                     <nc:DateTime>2001-12-17T09:30:47Z</nc:DateTime>
                 </j:ChargeFilingDate>
+                <j:ChargeIdentification>
+                    <nc:IdentificationID>String</nc:IdentificationID>
+                </j:ChargeIdentification>
+                <j:ChargeInstrument>
+                    <nc:DocumentIdentification>
+                        <nc:IdentificationID>String</nc:IdentificationID>
+                    </nc:DocumentIdentification>
+                </j:ChargeInstrument>
                 <j:ChargeSequenceID>String</j:ChargeSequenceID>
                 <j:ChargeStatute>
                     <j:StatuteCodeIdentification>
@@ -518,9 +529,6 @@
             </j:ArrestWarrant>
             <nola-ext:ArrestAugmentation>
                 <nc:Incident>
-                    <nc:ActivityIdentification>
-                        <nc:IdentificationID>String</nc:IdentificationID>
-                    </nc:ActivityIdentification>
                     <nola-ext:IncidentAugmentation>
                         <j:Offense>
                             <nc:ActivityDate>
@@ -576,7 +584,7 @@
             </nola-ext:ArrestAugmentation>
         </j:Arrest>
     </j:Booking>
-    <nc:Case>
+    <nc:Case structures:ref="add">
         <j:CaseAugmentation>
             <j:CaseCourt>
                 <nc:OrganizationIdentification>
@@ -587,7 +595,7 @@
                         <nc:LocationRoomText>String</nc:LocationRoomText>
                     </nc:LocationPart>
                 </nc:OrganizationLocation>
-                <nc:OrganizationName>String</nc:OrganizationName>                
+                <nc:OrganizationName>String</nc:OrganizationName>
                 <j:OrganizationAugmentation>
                     <j:OrganizationORIIdentification>
                         <nc:IdentificationID>String</nc:IdentificationID>

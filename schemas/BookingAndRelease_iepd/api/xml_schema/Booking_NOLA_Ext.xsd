@@ -105,13 +105,51 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
+	<xs:simpleType name="MessageOperationCodeSimpleType">
+		<xs:annotation>
+			<xs:documentation>A simple data type for a message update code in
+				NOLA.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="add">
+				<xs:annotation>
+					<xs:documentation>New information that has been added</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="delete">
+				<xs:annotation>
+					<xs:documentation>Information previously sent that is not longer
+						valid</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="update">
+				<xs:annotation>
+					<xs:documentation>Information previously sent that has
+						changed</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="MessageOperationCodeType">
+		<xs:annotation>
+			<xs:documentation>A data type for a message update code in NOLA.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="nola-ext:MessageOperationCodeSimpleType">
+				<xs:attributeGroup ref="structures:SimpleObjectAttributeGroup"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
 	<xs:complexType name="NOLAExchangeType">
 		<xs:annotation>
 			<xs:documentation>A data type for a common ancestor containing exchange level data relevant to exchanges in NOLA.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="structures:ObjectType">
-				<xs:sequence/>
+				<xs:sequence>
+					<xs:element ref="nola-ext:MessageOperationCode" minOccurs="0"
+						maxOccurs="unbounded"/>
+				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
@@ -212,6 +250,11 @@
 	<xs:element name="JMSChargeNumber" type="niem-xs:string">
 		<xs:annotation>
 			<xs:documentation>A unique identification number assigned to a particular charge by a Jail Management System (JMS).</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="MessageOperationCode" type="nola-ext:MessageOperationCodeType">
+		<xs:annotation>
+			<xs:documentation>A message update code in NOLA.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="PersonComputerControlIdentifier" type="niem-xs:string">

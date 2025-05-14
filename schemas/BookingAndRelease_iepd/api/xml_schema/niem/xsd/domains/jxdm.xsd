@@ -186,6 +186,8 @@
           <xs:element ref="j:ChargeCountQuantity" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:ChargeDescriptionText" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="j:ChargeFilingDate" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="j:ChargeIdentification" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="j:ChargeInstrument" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="j:ChargeSequenceID" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="j:ChargeStatute" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:ChargeAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
@@ -538,6 +540,16 @@
   <xs:element name="ChargeFilingDate" type="nc:DateType" nillable="true">
     <xs:annotation>
       <xs:documentation>A date a charge was filed.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ChargeIdentification" type="nc:IdentificationType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A unique identification number assigned to a particular charge by an arresting agency, prosecuting attorney, or a court for case management purposes.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ChargeInstrument" type="nc:DocumentType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>An official document filed to formally accuse a person of committing a specific offense.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="ChargeSequenceID" type="niem-xs:string" nillable="true">
