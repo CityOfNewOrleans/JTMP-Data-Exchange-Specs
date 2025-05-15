@@ -60,8 +60,10 @@
 		<xs:complexContent>
 			<xs:extension base="structures:ObjectType">
 				<xs:sequence>
-					<xs:element ref="nola-ext:ChargeLIBRSCode" minOccurs="0" maxOccurs="1"/>
+					<xs:element ref="nola-ext:ChargeAffidavitNumber" minOccurs="0"
+						maxOccurs="unbounded"/>
 					<xs:element ref="nola-ext:ChargeKey" minOccurs="0" maxOccurs="1"/>
+					<xs:element ref="nola-ext:ChargeLIBRSCode" minOccurs="0" maxOccurs="1"/>
 					<xs:element ref="nola-ext:StatewideArrestTrackingNumber" minOccurs="0" maxOccurs="1"/>
 					<xs:element ref="nola-ext:StatewideATNChargeSequenceID" minOccurs="0" maxOccurs="1"/>
 					<xs:element ref="nola-ext:JMSChargeNumber" minOccurs="0" maxOccurs="1"/>
@@ -94,13 +96,51 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
+	<xs:simpleType name="MessageOperationCodeSimpleType">
+		<xs:annotation>
+			<xs:documentation>A simple data type for a message update code in
+				NOLA.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="add">
+				<xs:annotation>
+					<xs:documentation>New information that has been added</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="delete">
+				<xs:annotation>
+					<xs:documentation>Information previously sent that is not longer
+						valid</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="update">
+				<xs:annotation>
+					<xs:documentation>Information previously sent that has
+						changed</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="MessageOperationCodeType">
+		<xs:annotation>
+			<xs:documentation>A data type for a message update code in NOLA.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="nola-ext:MessageOperationCodeSimpleType">
+				<xs:attributeGroup ref="structures:SimpleObjectAttributeGroup"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
 	<xs:complexType name="NOLAExchangeType">
 		<xs:annotation>
 			<xs:documentation>A data type for a common ancestor containing exchange level data relevant to exchanges in NOLA.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="structures:ObjectType">
-				<xs:sequence/>
+				<xs:sequence>
+					<xs:element ref="nola-ext:MessageOperationCode" minOccurs="0"
+						maxOccurs="unbounded"/>
+				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
@@ -178,6 +218,12 @@
 			<xs:documentation>A case defandant-number associated with a specific criminal court case number.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
+	<xs:element name="ChargeAffidavitNumber" type="niem-xs:string">
+		<xs:annotation>
+			<xs:documentation>An affidavit is a sworn statement a person an official document filed
+				to formally accuse a person of committing a specific offense.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 	<xs:element name="ChargeKey" type="niem-xs:string">
 		<xs:annotation>
 			<xs:documentation>A UCT Charge Key (Uniform Charge Table) is a shared key or identifier from a shared table that standardizes charge code definitions across the enterprise.</xs:documentation>
@@ -193,9 +239,9 @@
 			<xs:documentation>A unique identification number assigned to a particular charge by a Jail Management System (JMS).</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="CourtType" type="aamva_d20:CourtCategoryCodeSimpleType">
+	<xs:element name="MessageOperationCode" type="nola-ext:MessageOperationCodeType">
 		<xs:annotation>
-			<xs:documentation>A data type for kinds of courts.</xs:documentation>
+			<xs:documentation>A message update code in NOLA.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="PersonComputerControlIdentifier" type="niem-xs:string">

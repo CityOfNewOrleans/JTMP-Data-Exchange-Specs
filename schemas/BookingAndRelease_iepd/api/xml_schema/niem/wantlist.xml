@@ -191,6 +191,8 @@
       w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="j:ChargeFilingDate" w:isReference="false"
       w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="j:ChargeIdentification"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="j:ChargeSequenceID" w:isReference="false"
       w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="j:ChargeStatute" w:isReference="false"
@@ -270,8 +272,6 @@
       w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
   </w:Type>
   <w:Type w:name="nc:ActivityType" w:isRequested="false">
-    <w:ElementInType w:name="nc:ActivityIdentification"
-      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="nc:ActivityComment" w:isReference="false"
       w:minOccurs="0" w:maxOccurs="unbounded"/>
     <w:ElementInType w:name="nc:ActivityCompletedIndicator"
@@ -342,6 +342,10 @@
   <w:Type w:name="nc:DateType" w:isRequested="false">
     <w:ElementInType w:name="nc:DateRepresentation"
       w:isReference="false" w:minOccurs="0" w:maxOccurs="unbounded"/>
+  </w:Type>
+  <w:Type w:name="nc:DocumentType" w:isRequested="false">
+    <w:ElementInType w:name="nc:DocumentIdentification"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
   </w:Type>
   <w:Type w:name="nc:EmployerType" w:isRequested="false">
     <w:ElementInType w:name="nc:EmployerAugmentationPoint"
