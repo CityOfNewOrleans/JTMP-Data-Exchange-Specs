@@ -413,7 +413,7 @@
                     <nc:DateTime>2001-12-17T09:30:47Z</nc:DateTime>
                 </j:ChargeFilingDate>
                 <j:ChargeIdentification>
-                    <!-- Police incident report number (aka Item Numer -->
+                    <!-- Police incident report number (aka Item Number -->
                     <nc:IdentificationID>String</nc:IdentificationID>
                 </j:ChargeIdentification>
                 <j:ChargeSequenceID>String</j:ChargeSequenceID>
