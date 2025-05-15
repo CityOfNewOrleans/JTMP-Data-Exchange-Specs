@@ -48,7 +48,7 @@ Subscriber systems will match the incoming Court Event with the Court Case ID (w
 ## Artifacts:
 **XML Schemas:** ![XML Schemas](schemas/CourtEvent_iepd/api/xml_schema)
 
-**Mapping Spreadsheet:** ![Mapping Spreadsheet](schemas/CourtEvent_iepd/artifacts/CourtEvent_MappingSpreadsheet.xlsx)
+**Mapping Spreadsheet:** ![Mapping Spreadsheet](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/CourtEvent_iepd/artifacts/CourtEvent_MappingSpreadsheet.xlsx)
 
 **Sample XML:** ![Sample XML](schemas/CourtEvent_iepd/examples/SampleCourtEventXML.xml)
 

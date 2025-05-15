@@ -6,7 +6,7 @@ This document provides guidance to implementors of the [Case Update messages](ht
 
 ## General Guidance
 - Each Case Update message specification is a subset of the [Case Initiation message specification](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/CaseInitiation_iepd/CaseInitiation.md).
-- Data elements in the Case Initiation message that are not required for each specific Case Update message are removed in each Case Update pdate message specification.
+- Data elements in the Case Initiation message that are not required for each specific Case Update message are removed in each Case Update message specification.
 
 ### Types of Update Operations
 - Each Case Update message can include any combination of data elements that are to be added, deleted or updated by the receiver.
