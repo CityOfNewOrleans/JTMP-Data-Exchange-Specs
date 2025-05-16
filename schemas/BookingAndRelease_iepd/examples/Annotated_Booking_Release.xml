@@ -471,6 +471,10 @@
 					<!--  Class: Charge, Attribute: ChargeEffectiveDate  -->
 					<DateTime>2001-12-17T09:30:47Z</DateTime>
 				</j:ChargeFilingDate>
+				<j:ChargeIdentification>
+					<!-- Class: Charge, Attribute: ItemNumber (aka Police incident report number -->
+					<IdentificationID>String</IdentificationID>
+				</j:ChargeIdentification>
 				<!--  Class: Charge, Attribute: ChargeSequenceNumber  -->
 				<j:ChargeSequenceID>String</j:ChargeSequenceID>
 				<j:ChargeStatute>
@@ -524,6 +528,10 @@
 			<j:ArrestCharge>
 				<!--  Class: Charge, Attribute: ChargeType  -->
 				<j:ChargeCategoryDescriptionText>String</j:ChargeCategoryDescriptionText>
+				<j:ChargeIdentification>
+					<!-- Class: Charge, Attribute: ItemNumber (aka Police incident report number -->
+					<IdentificationID>String</IdentificationID>
+				</j:ChargeIdentification>
 				<j:ChargeStatute>
 					<j:StatuteCodeIdentification>
 						<!--  Class: Statute, Attribute: ChargeStatute, Type: string  -->
@@ -561,6 +569,10 @@
 			<j:ArrestCharge>
 				<!--  Class: Charge, Attribute: ChargeType  -->
 				<j:ChargeCategoryDescriptionText>String</j:ChargeCategoryDescriptionText>
+				<j:ChargeIdentification>
+					<!-- Class: Charge, Attribute: ItemNumber (aka Police incident report number -->
+					<IdentificationID>String</IdentificationID>
+				</j:ChargeIdentification>
 				<j:ChargeStatute>
 					<j:StatuteCodeIdentification>
 						<!--  Class: Statute, Attribute: ChargeStatute, Type: string  -->
@@ -598,6 +610,10 @@
 			<j:ArrestCharge>
 				<!--  Class: Charge, Attribute: ChargeType  -->
 				<j:ChargeCategoryDescriptionText>String</j:ChargeCategoryDescriptionText>
+				<j:ChargeIdentification>
+					<!-- Class: Charge, Attribute: ItemNumber (aka Police incident report number -->
+					<IdentificationID>String</IdentificationID>
+				</j:ChargeIdentification>
 				<j:ChargeStatute>
 					<j:StatuteCodeIdentification>
 						<!--  Class: Statute, Attribute: ChargeStatute, Type: string  -->
@@ -635,6 +651,10 @@
 			<j:ArrestCharge>
 				<!--  Class: Charge, Attribute: ChargeType  -->
 				<j:ChargeCategoryDescriptionText>String</j:ChargeCategoryDescriptionText>
+				<j:ChargeIdentification>
+					<!-- Class: Charge, Attribute: ItemNumber (aka Police incident report number -->
+					<IdentificationID>String</IdentificationID>
+				</j:ChargeIdentification>
 				<j:ChargeStatute>
 					<j:StatuteCodeIdentification>
 						<!--  Class: Statute, Attribute: ChargeStatute, Type: string  -->
@@ -672,6 +692,10 @@
 			<j:ArrestCharge>
 				<!--  Class: Charge, Attribute: ChargeType  -->
 				<j:ChargeCategoryDescriptionText>String</j:ChargeCategoryDescriptionText>
+				<j:ChargeIdentification>
+					<!-- Class: Charge, Attribute: ItemNumber (aka Police incident report number -->
+					<IdentificationID>String</IdentificationID>
+				</j:ChargeIdentification>
 				<j:ChargeStatute>
 					<j:StatuteCodeIdentification>
 						<!--  Class: Statute, Attribute: ChargeStatute, Type: string  -->
