@@ -10,7 +10,7 @@ This document provides guidance to implementors of the [Case Initiation messages
 
 ## Guidance to Implementers of Systems Sending Case Initiation Messages
 Sending systems must:
-- Ensure that each nc:CourtCase contains at most one `j:CaseDefendantParty` by only including only one `j:CaseAugmentation` in each `nc:CourtCase`. Note that only one `j:CaseAugmentation` includes only one `j:CaseDefendantParty`.
+- Ensure that each nc:CourtCase contains at most one `j:CaseDefendantParty` by including only one `j:CaseAugmentation` in each `nc:CourtCase`. Note that each `j:CaseAugmentation` includes only one `j:CaseDefendantParty`.
 
 ## Guidance to Implementers of Systems Receiving Case Initiation Messages
 None at this time.
