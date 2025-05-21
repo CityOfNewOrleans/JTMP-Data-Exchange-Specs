@@ -372,6 +372,10 @@
                 <j:ChargeFilingDate>
                     <nc:DateTime>2001-12-17T09:30:47Z</nc:DateTime>
                 </j:ChargeFilingDate>
+                <j:ChargeIdentification>
+                    <!-- Police incident report number (aka Item Numer -->
+                    <nc:IdentificationID>String</nc:IdentificationID>
+                </j:ChargeIdentification>
                 <j:ChargeSequenceID>String</j:ChargeSequenceID>
                 <j:ChargeStatute>
                     <j:StatuteCodeIdentification>

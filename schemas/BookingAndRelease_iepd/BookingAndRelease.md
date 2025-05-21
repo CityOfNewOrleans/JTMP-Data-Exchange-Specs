@@ -61,7 +61,7 @@ The values for CourtType follow a national standard. Our implementation uses the
 ![XML Schemas](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/tree/main/schemas/BookingAndRelease_iepd/api/xml_schema)
 
 **Mapping Spreadsheet:**
-![Mapping Spreadsheet](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/BookingAndRelease_iepd/artifacts/Booking_MappingSpreadsheet.xlsx)
+![Mapping Spreadsheet](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/BookingAndRelease_iepd/artifacts/Booking_MappingSpreadsheet_2025-05-13.xlsx)
 
 **Sample XML:**
 ![Sample XML File](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/tree/main/schemas/BookingAndRelease_iepd/examples)

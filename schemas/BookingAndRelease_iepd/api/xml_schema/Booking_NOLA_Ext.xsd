@@ -197,6 +197,11 @@
 			<xs:documentation>Additional information about a charge statute in the NOLA.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
+	<xs:element name="CourtType" type="aamva_d20:CourtCategoryCodeType">
+		<xs:annotation>
+			<xs:documentation>A data type for kinds of courts.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 	<xs:element name="EmployerAugmentation" type="nola-ext:EmployerAugmentationType" substitutionGroup=" nc:EmployerAugmentationPoint">
 		<xs:annotation>
 			<xs:documentation>Additional information about an employer in the NOLA.</xs:documentation>
