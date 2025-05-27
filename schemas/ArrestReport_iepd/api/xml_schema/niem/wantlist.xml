@@ -236,7 +236,7 @@
   </w:Type>
   <w:Type w:name="j:IncidentArrestAssociationType" w:isRequested="false">
     <w:ElementInType w:name="nc:Incident" w:isReference="false"
-      w:minOccurs="0" w:maxOccurs="1"/>
+      w:minOccurs="0" w:maxOccurs="unbounded"/>
   </w:Type>
   <w:Type w:name="j:IncidentAugmentationType" w:isRequested="false">
     <w:ElementInType w:name="j:IncidentParticipant"
