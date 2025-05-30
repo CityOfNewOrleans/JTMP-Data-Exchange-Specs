@@ -34,7 +34,7 @@ Robust response messaging gives the Publisher of a message the assurance that th
 |---|---|----|---|
 |Endpoint Error|Failed to stage message|MessageStatus/MessageHandlingError|Error encountered  by an endpoint AFTER the processing has entered into the actual service implementation code but before the processing completes. Errors that occur in the underlying endpoint framework would respond with a fault.|
 |Content Error|Validation error|MessageStatus/MessageContentError|XML content, or XML validation errors. An error that is encountered AFTER the processing has entered into the actual service implementation code but before the processing completes.|
-|Received|Preliminary processing/successfully staged|MessageStatus/SystemEventDescriptionText|This status could be sent if the receiving system sends a later message upon final processing. For example, the service could send a Received message if final acceptance is pending human review, for example clerk review of an efiling message.|
+|Received|Successfully staged|MessageStatus/SystemEventDescriptionText|This status could be sent if the receiving system sends a later message upon final processing. For example, the service could send a Received message if final acceptance is pending human review, for example clerk review of an efiling message.|
 |Approved|Final Acceptance|MessageStatus/SystemEventDescriptionText|Final approval, which could be used if human review is the final stage in processing a message, for example clerk efiling review.|
 
 
