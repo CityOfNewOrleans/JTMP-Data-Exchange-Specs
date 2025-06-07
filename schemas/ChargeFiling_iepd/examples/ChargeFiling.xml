@@ -73,6 +73,10 @@
    </nola-ext:ChargeAugmentation>
   </j:ArrestCharge>
   <nola-ext:ArrestAugmentation>
+   <!-- Forlder Number -->
+   <j:BookingDocumentControlIdentification>
+    <nc:IdentificationID>999999999</nc:IdentificationID>
+   </j:BookingDocumentControlIdentification>
    <!-- Arrest Disposition -->
    <nola-ext:ArrestDispositionCode>Accepted</nola-ext:ArrestDispositionCode>
    <nola-ext:ArrestIncident>
