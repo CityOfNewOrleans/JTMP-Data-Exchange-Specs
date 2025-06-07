@@ -55,7 +55,7 @@
     <xs:complexContent>
       <xs:extension base="structures:AugmentationType">
         <xs:sequence>
-          <xs:element ref="em:ActivityReport" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="em:ActivityReport" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
