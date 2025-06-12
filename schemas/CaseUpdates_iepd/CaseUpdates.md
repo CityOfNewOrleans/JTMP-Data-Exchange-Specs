@@ -21,7 +21,7 @@ Further, the types of updates are predefined in this specification to include:
 - BondUpdate
 - ChargeUpdate
 - EntityUpdate (Parties on the case)
-- CaseUpdate (Specific changes to Case Activity, including change of court, judge, or case status)
+- CaseUpdate (Specific changes to Case Activity, including change of court, or update to case status)
 
 If one of these messages has previously been sent and information changes, the message can be sent again. Use of MessageOperationCode attributes (add, update, delete) enable the sender to indicate which data objects have changed, and what has changed. The attributes are declared in each relevant schema set and look like this: 
 image
