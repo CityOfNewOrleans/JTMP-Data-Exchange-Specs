@@ -416,7 +416,6 @@
         </j:ArrestOfficial>
         <j:ArrestSequenceID>string</j:ArrestSequenceID>
         <j:ArrestSubject>
-            <j:InvolvementText>string</j:InvolvementText>
             <nc:RoleOfPerson>
                 <nc:PersonBirthDate>
                     <nc:Date>2006-05-04</nc:Date>
@@ -776,9 +775,9 @@
                     <j:LocationBlockNumberText>string</j:LocationBlockNumberText>
                 </j:LocationAugmentation>
             </j:SubjectDetainmentLocation>
+            <j:InvolvementText>string</j:InvolvementText>
         </j:ArrestSubject>
         <j:ArrestSubject>
-            <j:InvolvementText>string</j:InvolvementText>
             <nc:RoleOfPerson>
                 <nc:PersonBirthDate>
                     <nc:Date>2006-05-04</nc:Date>
@@ -1138,6 +1137,7 @@
                     <j:LocationBlockNumberText>string</j:LocationBlockNumberText>
                 </j:LocationAugmentation>
             </j:SubjectDetainmentLocation>
+            <j:InvolvementText>string</j:InvolvementText>
         </j:ArrestSubject>
         <j:ArrestSubjectRightsReadIndicator>false</j:ArrestSubjectRightsReadIndicator>
         <j:ArrestWarrant>
