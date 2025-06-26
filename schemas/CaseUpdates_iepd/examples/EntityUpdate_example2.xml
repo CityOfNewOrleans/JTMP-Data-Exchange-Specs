@@ -122,6 +122,28 @@
 						<IdentificationID>String</IdentificationID>
 					</PersonStateIdentification>
 					<PersonUSCitizenIndicator>true</PersonUSCitizenIndicator>
+					<PersonContactInformation>
+						<ContactEmailID>String</ContactEmailID>
+						<ContactMailingAddress>
+							<AddressSecondaryUnitText>String</AddressSecondaryUnitText>
+							<AddressStreet>
+								<StreetFullText>String</StreetFullText>
+							</AddressStreet>
+							<AddressCityName>String</AddressCityName>
+							<AddressState>
+								<StateName>String</StateName>
+							</AddressState>
+							<AddressCountry>
+								<CountryName>String</CountryName>
+							</AddressCountry>
+							<AddressPostalCode>String</AddressPostalCode>
+						</ContactMailingAddress>
+						<ContactTelephoneNumber>
+							<FullTelephoneNumber>
+								<TelephoneNumberFullID>String</TelephoneNumberFullID>
+							</FullTelephoneNumber>
+						</ContactTelephoneNumber>
+					</PersonContactInformation>
 					<nola-ext:PersonAugmentation>
 						<!--  Class: Defendant, Attribute: CaseDefendantNumber  -->
 						<nola-ext:CaseDefendantNumber>String</nola-ext:CaseDefendantNumber>
