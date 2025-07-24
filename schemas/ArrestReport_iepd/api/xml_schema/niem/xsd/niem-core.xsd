@@ -403,7 +403,7 @@
         <xs:sequence>
           <xs:element ref="nc:IncidentEvent" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="nc:IncidentReportedNarrative" minOccurs="0" maxOccurs="1"/>
-          <xs:element ref="nc:IncidentAugmentationPoint" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="nc:IncidentAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
