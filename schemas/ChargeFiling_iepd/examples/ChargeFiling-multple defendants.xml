@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nola:ChargeFilingExchange xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/"
+ xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/"
+ xmlns:structures="http://release.niem.gov/niem/structures/5.0/"
+ xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:niem-xs="http://release.niem.gov/niem/proxy/niem-xs/5.0/"
+ xmlns:j="http://release.niem.gov/niem/domains/jxdm/7.2/" xmlns:nola="http://mcp.com/nola/v/1.0/"
+ xmlns:ncic="http://release.niem.gov/niem/codes/ncic/5.2/"
+ xmlns:clsa="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-schema-appinfo/"
+ xmlns:cls="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-instance/"
+ xmlns:nola-ext="http://mcp.com/nola/extension/v/1.0/"
+ xsi:schemaLocation="http://mcp.com/nola/v/1.0/ file:/C:/Users/JamesCabral/git/JTMP-Data-Exchange-Specs/schemas/ChargeFiling_iepd/api/xml_schema/ChargeFiling_NOLA.xsd">
+ <j:Arrest structures:ref="defendant1">
+  <nc:ActivityDate>
+   <!-- Date of arrest -->
+   <nc:Date>2024-08-01</nc:Date>
+  </nc:ActivityDate>
+  <j:ArrestCharge>
+   <!-- Charge Modifier -->
+   <j:ChargeApplicabilityText>14:25</j:ChargeApplicabilityText>
+   <!-- Charge Name -->
+   <j:ChargeDescriptionText>ACC SIMPLE BURGLARY</j:ChargeDescriptionText>
+   <j:ChargeStatute>
+    <j:StatuteCodeIdentification>
+     <!-- Charge Statute -->
+     <nc:IdentificationID>14.8</nc:IdentificationID>
+    </j:StatuteCodeIdentification>
+   </j:ChargeStatute>
+   <!-- Charge Class -->
+   <j:ChargeSeverityDescriptionText>3</j:ChargeSeverityDescriptionText>
+   <nola-ext:ChargeAugmentation>
+    <!-- Refused Charge Disposition RefusalCode -->
+    <nola-ext:ChargeDispositionCode>accepted</nola-ext:ChargeDispositionCode>
+    <!-- Charge Key -->
+    <nola-ext:ChargeKey>1058</nola-ext:ChargeKey>
+    <!-- JMSChargeNumnber -->
+    <nola-ext:JMSChargeNumber>H-26560-24</nola-ext:JMSChargeNumber>
+    <!-- Date of offense -->
+    <nola-ext:OffenseDate>8/1/2024</nola-ext:OffenseDate>
+    <!-- Arrest Tracking Number -->
+    <nola-ext:StatewideArrestTrackingNumber>XXX</nola-ext:StatewideArrestTrackingNumber>
+    <!-- ATN Charge Sequence Number -->
+    <nola-ext:StatewideATNChargeSequenceID>XXX</nola-ext:StatewideATNChargeSequenceID>
+   </nola-ext:ChargeAugmentation>
+  </j:ArrestCharge>
+  <j:ArrestCharge>
+   <!-- Charge Modifier -->
+   <j:ChargeApplicabilityText>14:25</j:ChargeApplicabilityText>
+   <!-- Charge Name -->
+   <j:ChargeDescriptionText>ACC SIMPLE BURGLARY</j:ChargeDescriptionText>
+   <j:ChargeStatute>
+    <j:StatuteCodeIdentification>
+     <!-- Charge Statute -->
+     <nc:IdentificationID>14.8</nc:IdentificationID>
+    </j:StatuteCodeIdentification>
+   </j:ChargeStatute>
+   <!-- Charge Class -->
+   <j:ChargeSeverityDescriptionText>3</j:ChargeSeverityDescriptionText>
+   <nola-ext:ChargeAugmentation>
+    <!-- Refused Charge Disposition RefusalCode -->
+    <nola-ext:ChargeDispositionCode>accepted</nola-ext:ChargeDispositionCode>
+    <!-- Charge Key -->
+    <nola-ext:ChargeKey>1058</nola-ext:ChargeKey>
+    <!-- JMSChargeNumnber -->
+    <nola-ext:JMSChargeNumber>H-26560-24</nola-ext:JMSChargeNumber>
+    <!-- Date of offense -->
+    <nola-ext:OffenseDate>8/1/2024</nola-ext:OffenseDate>
+    <!-- Arrest Tracking Number -->
+    <nola-ext:StatewideArrestTrackingNumber>XXX</nola-ext:StatewideArrestTrackingNumber>
+    <!-- ATN Charge Sequence Number -->
+    <nola-ext:StatewideATNChargeSequenceID>XXX</nola-ext:StatewideATNChargeSequenceID>
+   </nola-ext:ChargeAugmentation>
+  </j:ArrestCharge>
+  <nola-ext:ArrestAugmentation>
+   <!-- Forlder Number -->
+   <j:BookingDocumentControlIdentification>
+    <nc:IdentificationID>999999999</nc:IdentificationID>
+   </j:BookingDocumentControlIdentification>
+   <!-- Arrest Disposition -->
+   <nola-ext:ArrestDispositionCode>Accepted</nola-ext:ArrestDispositionCode>
+   <nola-ext:ArrestIncident>
+    <nc:ActivityIdentification>
+     <!-- Charge Item Number -->
+     <nc:IdentificationID/>
+    </nc:ActivityIdentification>
+   </nola-ext:ArrestIncident>
+   <nola-ext:ArrestReceivedDate>
+    <!-- Date received by prosecutor -->
+    <nc:Date>2024-08-01</nc:Date>
+   </nola-ext:ArrestReceivedDate>
+  </nola-ext:ArrestAugmentation>
+ </j:Arrest>
+ <j:Arrest structures:ref="defendant2">
+  <nc:ActivityDate>
+   <!-- Date of arrest -->
+   <nc:Date>2024-08-01</nc:Date>
+  </nc:ActivityDate>
+  <j:ArrestCharge>
+   <!-- Charge Modifier -->
+   <j:ChargeApplicabilityText>14:25</j:ChargeApplicabilityText>
+   <!-- Charge Name -->
+   <j:ChargeDescriptionText>ACC SIMPLE BURGLARY</j:ChargeDescriptionText>
+   <j:ChargeStatute>
+    <j:StatuteCodeIdentification>
+     <!-- Charge Statute -->
+     <nc:IdentificationID>14.8</nc:IdentificationID>
+    </j:StatuteCodeIdentification>
+   </j:ChargeStatute>
+   <!-- Charge Class -->
+   <j:ChargeSeverityDescriptionText>3</j:ChargeSeverityDescriptionText>
+   <nola-ext:ChargeAugmentation>
+    <!-- Refused Charge Disposition RefusalCode -->
+    <nola-ext:ChargeDispositionCode>accepted</nola-ext:ChargeDispositionCode>
+    <!-- Charge Key -->
+    <nola-ext:ChargeKey>1058</nola-ext:ChargeKey>
+    <!-- JMSChargeNumnber -->
+    <nola-ext:JMSChargeNumber>H-26560-24</nola-ext:JMSChargeNumber>
+    <!-- Date of offense -->
+    <nola-ext:OffenseDate>8/1/2024</nola-ext:OffenseDate>
+    <!-- Arrest Tracking Number -->
+    <nola-ext:StatewideArrestTrackingNumber>XXX</nola-ext:StatewideArrestTrackingNumber>
+    <!-- ATN Charge Sequence Number -->
+    <nola-ext:StatewideATNChargeSequenceID>XXX</nola-ext:StatewideATNChargeSequenceID>
+   </nola-ext:ChargeAugmentation>
+  </j:ArrestCharge>
+  <j:ArrestCharge>
+   <!-- Charge Modifier -->
+   <j:ChargeApplicabilityText>14:25</j:ChargeApplicabilityText>
+   <!-- Charge Name -->
+   <j:ChargeDescriptionText>ACC SIMPLE BURGLARY</j:ChargeDescriptionText>
+   <j:ChargeStatute>
+    <j:StatuteCodeIdentification>
+     <!-- Charge Statute -->
+     <nc:IdentificationID>14.8</nc:IdentificationID>
+    </j:StatuteCodeIdentification>
+   </j:ChargeStatute>
+   <!-- Charge Class -->
+   <j:ChargeSeverityDescriptionText>3</j:ChargeSeverityDescriptionText>
+   <nola-ext:ChargeAugmentation>
+    <!-- Refused Charge Disposition RefusalCode -->
+    <nola-ext:ChargeDispositionCode>accepted</nola-ext:ChargeDispositionCode>
+    <!-- Charge Key -->
+    <nola-ext:ChargeKey>1058</nola-ext:ChargeKey>
+    <!-- JMSChargeNumnber -->
+    <nola-ext:JMSChargeNumber>H-26560-24</nola-ext:JMSChargeNumber>
+    <!-- Date of offense -->
+    <nola-ext:OffenseDate>8/1/2024</nola-ext:OffenseDate>
+    <!-- Arrest Tracking Number -->
+    <nola-ext:StatewideArrestTrackingNumber>XXX</nola-ext:StatewideArrestTrackingNumber>
+    <!-- ATN Charge Sequence Number -->
+    <nola-ext:StatewideATNChargeSequenceID>XXX</nola-ext:StatewideATNChargeSequenceID>
+   </nola-ext:ChargeAugmentation>
+  </j:ArrestCharge>
+  <nola-ext:ArrestAugmentation>
+   <!-- Forlder Number -->
+   <j:BookingDocumentControlIdentification>
+    <nc:IdentificationID>999999999</nc:IdentificationID>
+   </j:BookingDocumentControlIdentification>
+   <!-- Arrest Disposition -->
+   <nola-ext:ArrestDispositionCode>Accepted</nola-ext:ArrestDispositionCode>
+   <nola-ext:ArrestIncident>
+    <nc:ActivityIdentification>
+     <!-- Charge Item Number -->
+     <nc:IdentificationID/>
+    </nc:ActivityIdentification>
+   </nola-ext:ArrestIncident>
+   <nola-ext:ArrestReceivedDate>
+    <!-- Date received by prosecutor -->
+    <nc:Date>2024-08-01</nc:Date>
+   </nola-ext:ArrestReceivedDate>
+  </nola-ext:ArrestAugmentation>
+ </j:Arrest>
+ <nc:CourtCase structures:id="case1">
+  <!-- Case type -->
+  <nc:CaseGeneralCategoryText>6TH DISTRICT CASE</nc:CaseGeneralCategoryText>
+  <!-- Case number-->
+  <nc:CaseDocketID>M999999</nc:CaseDocketID>
+  <j:CaseAugmentation>
+   <j:CaseCourt>
+    <nola-ext:CourtAugmentation>
+     <!-- Parish -->
+     <nc:AddressCountyName>Orleans</nc:AddressCountyName>
+    </nola-ext:CourtAugmentation>
+   </j:CaseCourt>
+   <j:CaseDefendantParty structures:id="defendant1">
+    <nc:EntityPerson>
+     <!-- Defendant Date of Birth -->
+     <nc:PersonBirthDate>
+      <nc:Date>1968-11-01</nc:Date>
+     </nc:PersonBirthDate>
+     <!-- Defendant Name, Co-Defendants Name -->
+     <nc:PersonName>
+      <!-- Defendant First Name -->
+      <nc:PersonGivenName>James</nc:PersonGivenName>
+      <!-- Defendant Middle Name -->
+      <nc:PersonMiddleName>A</nc:PersonMiddleName>
+      <!-- Defendant Last Name -->
+      <nc:PersonSurName>Brown</nc:PersonSurName>
+     </nc:PersonName>
+     <!-- Defendant Race -->
+     <ncic:PersonRaceCode>B</ncic:PersonRaceCode>
+     <!-- Defendant Sex -->
+     <ncic:PersonSexCode>M</ncic:PersonSexCode>
+     <nc:PersonStateIdentification>
+      <!-- SID/BOI ID -->
+      <nc:IdentificationID>XXX</nc:IdentificationID>
+     </nc:PersonStateIdentification>
+     <nc:PersonContactInformation>
+      <nc:ContactEmailID/>
+      <nc:ContactMailingAddress>
+       <!-- Defendant Address -->
+       <nc:AddressFullText>100 Main St, New Orleans, LA</nc:AddressFullText>
+      </nc:ContactMailingAddress>
+      <nc:ContactTelephoneNumber/>
+     </nc:PersonContactInformation>
+     <nola-ext:PersonAugmentation>
+      <!-- Motion No (CCN) -->
+      <nola-ext:PersonLocalIdentification>999999</nola-ext:PersonLocalIdentification>
+     </nola-ext:PersonAugmentation>
+    </nc:EntityPerson>
+   </j:CaseDefendantParty>
+  </j:CaseAugmentation>
+  <nola-ext:CaseAugmentation>
+   <nola-ext:CourtCaseFollowCaseIdentification>
+    <!-- Follow case no -->
+    <nc:IdentificationID>S999999</nc:IdentificationID>
+   </nola-ext:CourtCaseFollowCaseIdentification>
+   <!-- Grand jury indictment indicator -->
+   <nola-ext:CourtCaseGrandJuryIndictmentIndicator>false</nola-ext:CourtCaseGrandJuryIndictmentIndicator>
+   <!-- Standalone misdemanor -->
+   <nola-ext:CourtCaseStandaloneMisdemenaorIndicator>false</nola-ext:CourtCaseStandaloneMisdemenaorIndicator>
+   <nola-ext:CourtCaseTransfertoSectionIdentification>
+    <!-- Transfer to sec -->
+    <nc:IdentificationID>XXX</nc:IdentificationID>
+   </nola-ext:CourtCaseTransfertoSectionIdentification>
+  </nola-ext:CaseAugmentation>
+ </nc:CourtCase>
+ <nc:CourtCase structures:id="case2">
+  <!-- Case type -->
+  <nc:CaseGeneralCategoryText>6TH DISTRICT CASE</nc:CaseGeneralCategoryText>
+  <!-- Case number-->
+  <nc:CaseDocketID>M999998</nc:CaseDocketID>
+  <j:CaseAugmentation>
+   <j:CaseCourt>
+    <nola-ext:CourtAugmentation>
+     <!-- Parish -->
+     <nc:AddressCountyName>Orleans</nc:AddressCountyName>
+    </nola-ext:CourtAugmentation>
+   </j:CaseCourt>
+   <j:CaseDefendantParty structures:id="defendant2">
+    <nc:EntityPerson>
+     <!-- Defendant Date of Birth -->
+     <nc:PersonBirthDate>
+      <nc:Date>1969-11-01</nc:Date>
+     </nc:PersonBirthDate>
+     <!-- Defendant Name, Co-Defendants Name -->
+     <nc:PersonName>
+      <!-- Defendant First Name -->
+      <nc:PersonGivenName>John</nc:PersonGivenName>
+      <!-- Defendant Middle Name -->
+      <nc:PersonMiddleName>A</nc:PersonMiddleName>
+      <!-- Defendant Last Name -->
+      <nc:PersonSurName>Brown</nc:PersonSurName>
+     </nc:PersonName>
+     <!-- Defendant Race -->
+     <ncic:PersonRaceCode>B</ncic:PersonRaceCode>
+     <!-- Defendant Sex -->
+     <ncic:PersonSexCode>M</ncic:PersonSexCode>
+     <nc:PersonStateIdentification>
+      <!-- SID/BOI ID -->
+      <nc:IdentificationID>XXX</nc:IdentificationID>
+     </nc:PersonStateIdentification>
+     <nc:PersonContactInformation>
+      <nc:ContactEmailID/>
+      <nc:ContactMailingAddress>
+       <!-- Defendant Address -->
+       <nc:AddressFullText>200 Main St, New Orleans, LA</nc:AddressFullText>
+      </nc:ContactMailingAddress>
+      <nc:ContactTelephoneNumber/>
+     </nc:PersonContactInformation>
+     <nola-ext:PersonAugmentation>
+      <!-- Motion No (CCN) -->
+      <nola-ext:PersonLocalIdentification>999998</nola-ext:PersonLocalIdentification>
+     </nola-ext:PersonAugmentation>
+    </nc:EntityPerson>
+   </j:CaseDefendantParty>
+  </j:CaseAugmentation>
+  <nola-ext:CaseAugmentation>
+   <nola-ext:CourtCaseFollowCaseIdentification>
+    <!-- Follow case no -->
+    <nc:IdentificationID>S999998</nc:IdentificationID>
+   </nola-ext:CourtCaseFollowCaseIdentification>
+   <!-- Grand jury indictment indicator -->
+   <nola-ext:CourtCaseGrandJuryIndictmentIndicator>false</nola-ext:CourtCaseGrandJuryIndictmentIndicator>
+   <!-- Standalone misdemanor -->
+   <nola-ext:CourtCaseStandaloneMisdemenaorIndicator>false</nola-ext:CourtCaseStandaloneMisdemenaorIndicator>
+   <nola-ext:CourtCaseTransfertoSectionIdentification>
+    <!-- Transfer to sec -->
+    <nc:IdentificationID>XXX</nc:IdentificationID>
+   </nola-ext:CourtCaseTransfertoSectionIdentification>
+  </nola-ext:CaseAugmentation>
+ </nc:CourtCase>
+ <nola-ext:ChargeFilingDocument>
+  <!-- DocumentType -->
+  <nc:DocumentCategoryText>Charge Filing</nc:DocumentCategoryText>
+  <nc:DocumentBinary>
+   <!-- AttachmentID -->
+   <nc:BinaryID>String</nc:BinaryID>
+   <!-- BinaryObject -->
+   <nc:Base64BinaryObject>UjBsR09EbGhjZ0dTQUxNQUFBUUNBRU1tQ1p0dU1GUXhEUzhi</nc:Base64BinaryObject>
+   <!-- AttachmentFormat -->
+   <nc:BinaryFormatText>String</nc:BinaryFormatText>
+   <!-- AttachmentURI -->
+   <nc:BinaryURI>http://www.altova.com/</nc:BinaryURI>
+   <!-- AtachmentSize -->
+   <nc:BinarySizeValue>0</nc:BinarySizeValue>
+  </nc:DocumentBinary>
+ </nola-ext:ChargeFilingDocument>
+ <nola-ext:ProsecutionCase>
+  <!-- PBK system -->
+  <nc:CaseTrackingID>9999999</nc:CaseTrackingID>
+  <nola-ext:ProsecutionCaseReviewedByPerson>
+   <!-- Reviewed by -->
+   <nc:PersonName>
+    <nc:PersonGivenName>John</nc:PersonGivenName>
+    <nc:PersonMiddleName>Q</nc:PersonMiddleName>
+    <nc:PersonSurName>Smith</nc:PersonSurName>
+   </nc:PersonName>
+  </nola-ext:ProsecutionCaseReviewedByPerson>
+  <nola-ext:ProsecutionCaseScreenedByPerson>
+   <!-- Screened by -->
+   <nc:PersonName>
+    <nc:PersonGivenName>James</nc:PersonGivenName>
+    <nc:PersonMiddleName>T</nc:PersonMiddleName>
+    <nc:PersonSurName>Smith</nc:PersonSurName>
+   </nc:PersonName>
+  </nola-ext:ProsecutionCaseScreenedByPerson>
+  <!-- Screened date -->
+  <nola-ext:ProsecutionCaseScreenedDate>
+   <nc:Date>2024-10-01</nc:Date>
+  </nola-ext:ProsecutionCaseScreenedDate>
+ </nola-ext:ProsecutionCase>
+</nola:ChargeFilingExchange>
