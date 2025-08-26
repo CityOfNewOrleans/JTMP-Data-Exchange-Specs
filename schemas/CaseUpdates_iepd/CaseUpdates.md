@@ -66,7 +66,7 @@ Should be used in limited circumstances. Most elements once docketed on a court 
 1. Bond is ordered, modified or posted
 2. Documents are filed and accepted into the docket
 3. Charges are added, modified or dismissed
-4. A party of entity is added or removed
+4. A party or entity is added or removed
 5. The expunge/seal flag is set at the case or charge level
 6. One of the above items was previously entered in error and should be removed from the case docket
 
@@ -75,9 +75,9 @@ Proposed Motions and Orders filed to the Clerk by case parties
 
 ## Real-World Effects: 
 
-The purpose of this data exchange is to enable partner justice systems to update a case. This exchange should be triggered as soon as case is updated to keep partners like the jail, prosecutor, and public defender apprised and enable them to take the next actions in court in a timely manner. 
+The purpose of this data exchange is to enable partner justice systems to update a case. This exchange should be triggered as soon as information on a case is updated to keep partners like the jail, prosecutor, and public defender apprised and enable them to take the next actions in court in a timely manner. 
 
-This exchange is also intended to improve efficiency and accuracy. Subscriber systems should use the incoming data in this XML payload to update a Matter or Case (depending on the system's terminology) in time for their end users to review details and prepare filings for court. The timely exchange results in improvements in data accuracy and completeness, since data will populate automatically in the Subscriber systems. Reduction of re-keying of information saves staff time and reduces or elimiates errors.  Errors, especially in re-keying identifying numbers like SSN or court case ID lead to case delays and ill-informed decision-making. 
+This exchange is also intended to improve efficiency and accuracy. Subscriber systems should use the incoming data in this XML payload to update a Matter or Case (depending on the system's terminology) in time for their end users to review details and prepare filings for court. The timely exchange results in improvements in data accuracy and completeness, since data will populate automatically in the Subscriber systems. Reduction of re-keying of information saves staff time and reduces or elimiates errors.  Errors, especially in re-keying identifying numbers like SSN or court case ID lead to case delays and mis-informed decision-making. 
 
 A ChargeUpdate message will also convey the details of the one or more charges filed on the case. To the extent all partners are using values from the Uniform Charge Table, this will improve the clarity of specific charges and improve the visibility and accuracy of the please and other amendments to charges as the case proceeds. 
 
