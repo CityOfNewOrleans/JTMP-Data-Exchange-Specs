@@ -26,49 +26,15 @@ Further, the types of updates are predefined in this specification to include:
 If one of these messages has previously been sent and information changes, the message can be sent again. Use of MessageOperationCode attributes (add, update, delete) enable the sender to indicate which data objects have changed, and what has changed. The attributes are declared in each relevant schema set and look like this: 
 image
 
-### Example Scenarios:
-A previously scheduled Court Event is rescheduled. Courts would send a Court Event message. Set the attribute MessageOperationCode to 'Update' to indicate that the CourtEventDateTime has changed. CourtEventDateTime would have the new date and time of the event.
-After a delay, the State AFIS system has sent an Arrest Tracking Number (ATN) and ATN Sequence Number for a booked charge. In the original Booking message, ArrestTrackingNumber and ATNSequence were Null. A new message should be sent with the same Folder#, and a MessageOperationCode attribute set to 'Add' to for the ATN and each ATNSequence element.
-An updated XML node would be preceded by the appropriate Attribute. For example, an added charge would indicated as follows:
-
-        <j:BailBondAmount>
-            <Amount>0</Amount>
-        </j:BailBondAmount>
-        <j:BailBondConditionDescriptionText structures:metadata="add">String</j:BailBondConditionDescriptionText>
-        <j:BailBondSuretyEntity structures:metadata="update">
-            <EntityPerson>
-                <PersonName>
-                    <PersonFullName>String</PersonFullName>
-                </PersonName>
-            </EntityPerson>
-
-## Examples of Case and Charge Updates
-### Adds:
- - New charge added to the case
- - Bond added
- - New party (victim, witness, attorney) added
-
-### Updates:
- - Charge Disposition added
- - Bond updated or canceled
- - Court Event rescheduled. 
- - Lead attorney (prosecutor or defense) changed
- - Judge, Court Section or Courthouse changed
-
-### Deletes 
-Should be used in limited circumstances. Most elements once docketed on a court case are not removed. Exceptions: 
-  - Entered in Error
-  - Court Event canceled
-  - Expunge/Seal Flag Set (Case or Charge Level)
-
-## Triggering Events:
+## Triggering Events, in Priority Order of Implementation:
 
 1. Bond is ordered, modified or posted
-2. Documents are filed and accepted into the docket
-3. Charges are added, modified or dismissed
-4. A party or entity is added or removed
+2. Allotment, when Judge and Court Section are designated for a criminal case
+3. Charges are added, modified, or **disposed.** Disposition includes dismissal, amendment, or a final adjudication/disposition. 
+4. A person related to a case (entity) is added or removed, **or** contact information is updated. This includes Judges, Attorneys, Defendants, victims and witnesses
 5. The expunge/seal flag is set at the case or charge level
-6. One of the above items was previously entered in error and should be removed from the case docket
+6. Documents are filed and accepted into the docket
+7. One of the above items was previously entered in error and should be removed from the case docket
 
 ## Subsequent Events:
 Proposed Motions and Orders filed to the Clerk by case parties
@@ -95,6 +61,24 @@ A ChargeUpdate message will also convey the details of the one or more charges f
 - Judicial Official (the Judge to whom the case has been allotted)
 - Court Section
 
+## Examples of Case and Charge Updates
+### Adds:
+ - New charge added to the case
+ - Bond added
+ - New party (victim, witness, attorney) added
+
+### Updates:
+ - Charge Disposition added
+ - Bond updated or canceled
+ - Court Event rescheduled (this update is actually addressed with MessageOperationCodes in the Court Event specification). 
+ - Lead attorney (prosecutor or defense) changed
+ - Judge, Court Section or Courthouse changed
+
+### Deletes 
+Should be used in limited circumstances. Most elements once docketed on a court case are not removed. Exceptions: 
+  - Entered in Error
+  - Court Event canceled
+  - Expunge/Seal Flag Set (Case or Charge Level)
 ## Artifacts:
 
 ![Mapping Spreadsheet](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/CaseUpdates_iepd/artifacts/CourtDisposition_MappingSpreasheet.xlsx)
