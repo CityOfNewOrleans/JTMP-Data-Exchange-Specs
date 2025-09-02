@@ -26,6 +26,11 @@
 				<j:ChargeCountQuantity>0</j:ChargeCountQuantity>
 				<!--  Class: Charge, Attribute: ChargeDescription  -->
 				<j:ChargeDescriptionText>String</j:ChargeDescriptionText>
+				<j:ChargeDisposition>
+					<DispositionDate>
+						<Date>1957-08-13</Date>
+					</DispositionDate>
+				</j:ChargeDisposition>
 				<j:ChargeFilingDate>
 					<!--  Class: Charge, Attribute: ChargeEffectiveDate  -->
 					<Date>1957-08-13</Date>
@@ -117,6 +122,8 @@
 				<nola-ext:ChargeAugmentation>
 					<!--  Class: Charge, Attribute: ChargeAffidavitNumber  -->
 					<nola-ext:ChargeAffidavitNumber>String</nola-ext:ChargeAffidavitNumber>
+					<!-- Class: Charge Disposition, Attribute: ChargeDispositionCode -->
+					<nola-ext:ChargeDispositionCode>accepted</nola-ext:ChargeDispositionCode>
 					<!--  Class: Charge, Attribute: ChargeKey  -->
 					<nola-ext:ChargeKey>String</nola-ext:ChargeKey>
 					<!--  Class: Charge, Attribute: ChargeLIBRSCode  -->

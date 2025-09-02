@@ -148,6 +148,8 @@
       w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="j:ChargeDescriptionText"
       w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="j:ChargeDisposition" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="j:ChargeFilingDate" w:isReference="false"
       w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="j:ChargeSequenceID" w:isReference="false"
@@ -317,6 +319,10 @@
   <w:Type w:name="nc:DateType" w:isRequested="false">
     <w:ElementInType w:name="nc:DateRepresentation"
       w:isReference="false" w:minOccurs="0" w:maxOccurs="2"/>
+  </w:Type>
+  <w:Type w:name="nc:DispositionType" w:isRequested="false">
+    <w:ElementInType w:name="nc:DispositionDate" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
   </w:Type>
   <w:Type w:name="nc:EmployerType" w:isRequested="false">
     <w:ElementInType w:name="nc:EmployerAugmentationPoint"
