@@ -30,6 +30,7 @@
 					<DispositionDate>
 						<Date>1957-08-13</Date>
 					</DispositionDate>
+					<DispositionDescriptionText>Guilty</DispositionDescriptionText>
 				</j:ChargeDisposition>
 				<j:ChargeFilingDate>
 					<!--  Class: Charge, Attribute: ChargeEffectiveDate  -->

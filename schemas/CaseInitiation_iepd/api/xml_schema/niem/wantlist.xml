@@ -323,6 +323,8 @@
   <w:Type w:name="nc:DispositionType" w:isRequested="false">
     <w:ElementInType w:name="nc:DispositionDate" w:isReference="false"
       w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:DispositionDescriptionText"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
   </w:Type>
   <w:Type w:name="nc:EmployerType" w:isRequested="false">
     <w:ElementInType w:name="nc:EmployerAugmentationPoint"
