@@ -205,8 +205,7 @@
 	</xs:element>
 	<xs:element name="ChargeDispositionCode" type="niem-xs:string">
 		<xs:annotation>
-			<xs:documentation>A unique identification number assigned to a particular charge by an
-				arresting agency.</xs:documentation>
+			<xs:documentation>A value that describes the type of disposition.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="ChargeFilingDocument" type="nc:DocumentType">
