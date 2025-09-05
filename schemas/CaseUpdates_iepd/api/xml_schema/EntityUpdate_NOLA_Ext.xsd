@@ -127,6 +127,7 @@
 			<xs:extension base="structures:ObjectType">
 				<xs:sequence>
 					<!--					<xs:element ref="nola-ext:ChargeAffidavitNumber" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element ref="nola-ext:ChargeDispositionCode" minOccurs="0" maxOccurs="1"/>
 					<xs:element ref="nola-ext:ChargeKey" minOccurs="0" maxOccurs="1"/>
 					<xs:element ref="nola-ext:ChargeLIBRSCode" minOccurs="0" maxOccurs="1"/>-->
 					<xs:element ref="nola-ext:StatewideArrestTrackingNumber" minOccurs="0"
@@ -413,6 +414,12 @@
 			<xs:documentation>An affidavit is a sworn statement a person an official document filed to formally accuse a person of committing a specific offense.</xs:documentation>
 		</xs:annotation>
 	</xs:element>-->
+	<!--xs:element name="ChargeDispositionCode" type="niem-xs:string">
+		<xs:annotation>
+			<xs:documentation>A unique identification number assigned to a particular charge by an
+				arresting agency.</xs:documentation>
+		</xs:annotation>
+	</xs:element-->
 	<!--	<xs:element name="ChargeKey" type="niem-xs:string">
 		<xs:annotation>
 			<xs:documentation>A UCT Charge Key (Uniform Charge Table) is a shared key or identifier from a shared table that standardizes charge code definitions across the enterprise.</xs:documentation>
