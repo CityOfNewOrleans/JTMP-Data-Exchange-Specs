@@ -21,6 +21,8 @@
    <j:ChargeApplicabilityText>14:25</j:ChargeApplicabilityText>
    <!-- Charge Name -->
    <j:ChargeDescriptionText>ACC SIMPLE BURGLARY</j:ChargeDescriptionText>
+   <!-- Filed Charge Number -->
+   <j:ChargeSequenceID>1</j:ChargeSequenceID>
    <j:ChargeStatute>
     <j:StatuteCodeIdentification>
      <!-- Charge Statute -->
@@ -40,8 +42,6 @@
     <nola-ext:ChargeDispositionCode>accepted</nola-ext:ChargeDispositionCode>
     <!-- Charge Key -->
     <nola-ext:ChargeKey>1058</nola-ext:ChargeKey>
-    <!-- JMSChargeNumnber -->
-    <nola-ext:JMSChargeNumber>1</nola-ext:JMSChargeNumber>
     <!-- Date of offense -->
     <nola-ext:OffenseDate>8/1/2024</nola-ext:OffenseDate>
     <!-- Arrest Tracking Number -->
@@ -55,6 +55,8 @@
    <j:ChargeApplicabilityText>14:25</j:ChargeApplicabilityText>
    <!-- Charge Name -->
    <j:ChargeDescriptionText>ACC SIMPLE BURGLARY</j:ChargeDescriptionText>
+   <!-- Filed Charge Number -->
+   <j:ChargeSequenceID>2</j:ChargeSequenceID>
    <j:ChargeStatute>
     <j:StatuteCodeIdentification>
      <!-- Charge Statute -->
@@ -68,8 +70,6 @@
     <nola-ext:ChargeDispositionCode>accepted</nola-ext:ChargeDispositionCode>
     <!-- Charge Key -->
     <nola-ext:ChargeKey>1058</nola-ext:ChargeKey>
-    <!-- JMSChargeNumnber -->
-    <nola-ext:JMSChargeNumber>H-26560-24</nola-ext:JMSChargeNumber>
     <!-- Date of offense -->
     <nola-ext:OffenseDate>8/1/2024</nola-ext:OffenseDate>
     <!-- Arrest Tracking Number -->
