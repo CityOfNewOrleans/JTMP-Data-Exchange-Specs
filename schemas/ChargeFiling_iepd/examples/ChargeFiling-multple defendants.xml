@@ -10,7 +10,7 @@
  xmlns:clsa="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-schema-appinfo/"
  xmlns:cls="http://reference.niem.gov/niem/specification/code-lists/5.0/code-lists-instance/"
  xmlns:nola-ext="http://mcp.com/nola/extension/v/1.0/"
- xsi:schemaLocation="http://mcp.com/nola/v/1.0/ file:/C:/Users/JamesCabral/git/JTMP-Data-Exchange-Specs/schemas/ChargeFiling_iepd/api/xml_schema/ChargeFiling_NOLA.xsd">
+ xsi:schemaLocation="http://mcp.com/nola/v/1.0/ ../api/xml_schema/ChargeFiling_NOLA.xsd">
  <j:Arrest structures:ref="defendant1">
   <nc:ActivityDate>
    <!-- Date of arrest -->
@@ -30,12 +30,18 @@
    <!-- Charge Class -->
    <j:ChargeSeverityDescriptionText>3</j:ChargeSeverityDescriptionText>
    <nola-ext:ChargeAugmentation>
+    <nola-ext:ArrestIncident>
+     <nc:ActivityIdentification>
+      <!-- Charge Item Number -->
+      <nc:IdentificationID>H2656024</nc:IdentificationID>
+     </nc:ActivityIdentification>
+    </nola-ext:ArrestIncident>
     <!-- Refused Charge Disposition RefusalCode -->
     <nola-ext:ChargeDispositionCode>accepted</nola-ext:ChargeDispositionCode>
     <!-- Charge Key -->
     <nola-ext:ChargeKey>1058</nola-ext:ChargeKey>
     <!-- JMSChargeNumnber -->
-    <nola-ext:JMSChargeNumber>H-26560-24</nola-ext:JMSChargeNumber>
+    <nola-ext:JMSChargeNumber>1</nola-ext:JMSChargeNumber>
     <!-- Date of offense -->
     <nola-ext:OffenseDate>8/1/2024</nola-ext:OffenseDate>
     <!-- Arrest Tracking Number -->
@@ -58,12 +64,18 @@
    <!-- Charge Class -->
    <j:ChargeSeverityDescriptionText>3</j:ChargeSeverityDescriptionText>
    <nola-ext:ChargeAugmentation>
+    <nola-ext:ArrestIncident>
+     <nc:ActivityIdentification>
+      <!-- Charge Item Number -->
+      <nc:IdentificationID>H2656024</nc:IdentificationID>
+     </nc:ActivityIdentification>
+    </nola-ext:ArrestIncident>
     <!-- Refused Charge Disposition RefusalCode -->
     <nola-ext:ChargeDispositionCode>accepted</nola-ext:ChargeDispositionCode>
     <!-- Charge Key -->
     <nola-ext:ChargeKey>1058</nola-ext:ChargeKey>
     <!-- JMSChargeNumnber -->
-    <nola-ext:JMSChargeNumber>H-26560-24</nola-ext:JMSChargeNumber>
+    <nola-ext:JMSChargeNumber>2</nola-ext:JMSChargeNumber>
     <!-- Date of offense -->
     <nola-ext:OffenseDate>8/1/2024</nola-ext:OffenseDate>
     <!-- Arrest Tracking Number -->
@@ -79,12 +91,6 @@
    </j:BookingDocumentControlIdentification>
    <!-- Arrest Disposition -->
    <nola-ext:ArrestDispositionCode>Accepted</nola-ext:ArrestDispositionCode>
-   <nola-ext:ArrestIncident>
-    <nc:ActivityIdentification>
-     <!-- Charge Item Number -->
-     <nc:IdentificationID/>
-    </nc:ActivityIdentification>
-   </nola-ext:ArrestIncident>
    <nola-ext:ArrestReceivedDate>
     <!-- Date received by prosecutor -->
     <nc:Date>2024-08-01</nc:Date>
@@ -110,12 +116,18 @@
    <!-- Charge Class -->
    <j:ChargeSeverityDescriptionText>3</j:ChargeSeverityDescriptionText>
    <nola-ext:ChargeAugmentation>
+    <nola-ext:ArrestIncident>
+     <nc:ActivityIdentification>
+      <!-- Charge Item Number -->
+      <nc:IdentificationID>H2656025</nc:IdentificationID>
+     </nc:ActivityIdentification>
+    </nola-ext:ArrestIncident>
     <!-- Refused Charge Disposition RefusalCode -->
     <nola-ext:ChargeDispositionCode>accepted</nola-ext:ChargeDispositionCode>
     <!-- Charge Key -->
     <nola-ext:ChargeKey>1058</nola-ext:ChargeKey>
     <!-- JMSChargeNumnber -->
-    <nola-ext:JMSChargeNumber>H-26560-24</nola-ext:JMSChargeNumber>
+    <nola-ext:JMSChargeNumber>1</nola-ext:JMSChargeNumber>
     <!-- Date of offense -->
     <nola-ext:OffenseDate>8/1/2024</nola-ext:OffenseDate>
     <!-- Arrest Tracking Number -->
@@ -138,12 +150,18 @@
    <!-- Charge Class -->
    <j:ChargeSeverityDescriptionText>3</j:ChargeSeverityDescriptionText>
    <nola-ext:ChargeAugmentation>
+    <nola-ext:ArrestIncident>
+     <nc:ActivityIdentification>
+      <!-- Charge Item Number -->
+      <nc:IdentificationID>H2656025</nc:IdentificationID>
+     </nc:ActivityIdentification>
+    </nola-ext:ArrestIncident>
     <!-- Refused Charge Disposition RefusalCode -->
     <nola-ext:ChargeDispositionCode>accepted</nola-ext:ChargeDispositionCode>
     <!-- Charge Key -->
     <nola-ext:ChargeKey>1058</nola-ext:ChargeKey>
     <!-- JMSChargeNumnber -->
-    <nola-ext:JMSChargeNumber>H-26560-24</nola-ext:JMSChargeNumber>
+    <nola-ext:JMSChargeNumber>2</nola-ext:JMSChargeNumber>
     <!-- Date of offense -->
     <nola-ext:OffenseDate>8/1/2024</nola-ext:OffenseDate>
     <!-- Arrest Tracking Number -->
@@ -159,12 +177,6 @@
    </j:BookingDocumentControlIdentification>
    <!-- Arrest Disposition -->
    <nola-ext:ArrestDispositionCode>Accepted</nola-ext:ArrestDispositionCode>
-   <nola-ext:ArrestIncident>
-    <nc:ActivityIdentification>
-     <!-- Charge Item Number -->
-     <nc:IdentificationID/>
-    </nc:ActivityIdentification>
-   </nola-ext:ArrestIncident>
    <nola-ext:ArrestReceivedDate>
     <!-- Date received by prosecutor -->
     <nc:Date>2024-08-01</nc:Date>

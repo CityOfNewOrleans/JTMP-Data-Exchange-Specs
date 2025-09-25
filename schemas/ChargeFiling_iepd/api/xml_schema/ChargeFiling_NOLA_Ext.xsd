@@ -46,7 +46,6 @@
 				<xs:sequence>
 					<xs:element ref="j:BookingDocumentControlIdentification" minOccurs="0" maxOccurs="1"/>
 					<xs:element ref="nola-ext:ArrestDispositionCode" minOccurs="1" maxOccurs="1"/>
-					<xs:element ref="nola-ext:ArrestIncident" minOccurs="0" maxOccurs="1"/>
 					<xs:element ref="nola-ext:ArrestReceivedDate" minOccurs="1" maxOccurs="1"/>
 				</xs:sequence>
 			</xs:extension>
@@ -80,6 +79,7 @@
 		<xs:complexContent>
 			<xs:extension base="structures:ObjectType">
 				<xs:sequence>
+					<xs:element ref="nola-ext:ArrestIncident" minOccurs="0" maxOccurs="1"/>
 					<xs:element ref="nola-ext:ChargeDispositionCode" minOccurs="0" maxOccurs="1"/>
 					<xs:element ref="nola-ext:ChargeKey" minOccurs="0" maxOccurs="1"/>
 					<xs:element ref="nola-ext:JMSChargeNumber" minOccurs="0" maxOccurs="1"/>
