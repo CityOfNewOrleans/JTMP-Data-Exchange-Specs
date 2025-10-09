@@ -40,13 +40,14 @@ This exchange will also convey the details of the one or more charges filed on t
 ![XML Schemas](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/tree/main/schemas/CaseInitiation_iepd/api/xml_schema).
 
 ### Key data elements include:
-- Arrest number (enabling the JMS to correlate a new case to a previous Booking or Charge Screening). 
-- Court Case ID
-- Created Date (court clerk's staff will determine if this is a machine-generated date-time stamp, or the date of the judicial officer's approval)
-- Current charges (either arrest charges or filed charges if the DA has filed a Screening Action Form). 
-- SCN-Sequence number to correlate each Charge to the value originally assigned in the State's AFIS and CCH. 
-- Judicial Official (the Judge to whom the case has been allotted)
-- Court Section
+* Incident Item Number
+* Booking ID (enabling the JMS to correlate a new case to a previous Booking or Charge Screening).
+* Court Case ID
+* Created Date (court clerk's staff will determine if this is a machine-generated date-time stamp, or the date of the judicial officer's approval)
+* Current charges (either arrest charges or filed charges if the DA has filed a Screening Action Form)
+* ATN-Sequence number to correlate each Charge to the value originally assigned in the State's AFIS and CCH.
+* Judicial Official (the Magistrate who will hear a Magistrate case).
+* Magistrate Court Section 
 
 ## Artifacts:
 
