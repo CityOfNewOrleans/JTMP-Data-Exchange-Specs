@@ -22,7 +22,10 @@ The processes are different in Juvenile and Municipal and Traffic Court. The tri
 The processes are different in Juvenile and Municipal and Traffic Court. The triggering event will still be creation of a new case and assignment of a case ID number. 
 
 ## Subsequent Event:
-Proposed Motions and Orders filed to the Clerk by case parties
+* Case Updates convey the allotted judge and court section
+* Charge Updates convey amended or disposed charges
+* Entity Updates convey changes or additions to persons on the case 
+* Proposed Motions and Orders filed to the Clerk by case parties
 
 ## Real-World Effects: 
 
