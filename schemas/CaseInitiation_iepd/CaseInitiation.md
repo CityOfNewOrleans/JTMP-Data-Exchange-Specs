@@ -12,10 +12,12 @@ Booking
 Charge Filing (Screening Action and Bill of Information)
 
 ## Triggering Event:
+A Case Initiation message will be triggered any time a new case is created in a court case management system (CMS). 
+1. A new Booking message automatically generates a new Magistrate Case in Criminal District Courts’ CMS 
+2. A Charge Filing message automatically generates a new Criminal Case in Criminal District Courts’ CMS
 
-1. Magistrate Court binds a new arrest over to Criminal court
-2. Court clerk creates a new case, assigning a criminal case ID number as well as a judge and courtroom. 
-Note: this process of assigning new criminal cases was known as Allotment. This transactional data exchange replaces the Allotment List, in conveying new case information to all interested parties.
+Note: The judge and court section are assigned through a process  known as Allotment. The Allotment process will trigger a Case Update message that will associate the Criminal Case Docket # with the assigned Judge and Court Section. This transactional data exchange replaces the Allotment List, in conveying new case information to all interested parties.
+The processes are different in Juvenile and Municipal and Traffic Court. The triggering event will still be creation of a new case and assignment of a case ID number.
 
 The processes are different in Juvenile and Municipal and Traffic Court. The triggering event will still be creation of a new case and assignment of a case ID number. 
 
