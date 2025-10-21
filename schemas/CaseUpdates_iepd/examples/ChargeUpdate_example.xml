@@ -405,6 +405,29 @@
 					<j:ChargeQualifierText>String</j:ChargeQualifierText>
 				</nola-ext:AFISChargeAugmentation>
 			</j:CaseCharge>
+			<j:CaseDefendantParty>
+				<!--  Class: CourtCase, Attribute: CoutCaseDefendant  -->
+				<EntityPerson>
+					<PersonBirthDate>
+						<Date>1957-08-13</Date>
+					</PersonBirthDate>
+					<PersonName>
+						<PersonGivenName>String</PersonGivenName>
+						<PersonMiddleName>String</PersonMiddleName>
+						<PersonSurName>String</PersonSurName>
+						<PersonNameSuffixText>String</PersonNameSuffixText>
+						<PersonFullName>String</PersonFullName>
+					</PersonName>
+					<PersonStateIdentification>
+						<IdentificationID>String</IdentificationID>
+					</PersonStateIdentification>
+					<nola-ext:PersonAugmentation>
+						<!--  Class: Defendant, Attribute: CaseDefendantNumber  -->
+						<nola-ext:CaseDefendantNumber>String</nola-ext:CaseDefendantNumber>
+						<scr:InmateNumberID>String</scr:InmateNumberID>
+					</nola-ext:PersonAugmentation>
+				</EntityPerson>
+			</j:CaseDefendantParty>
 		</j:CaseAugmentation>
 	</CourtCase>
 </nola:ChargeUpdateExchange>
