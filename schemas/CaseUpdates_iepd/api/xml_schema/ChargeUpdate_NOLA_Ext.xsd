@@ -266,7 +266,7 @@
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<!--	<xs:complexType name="PersonAugmentationType">
+	<xs:complexType name="PersonAugmentationType">
 		<xs:annotation>
 			<xs:documentation>A data type for additional data Person information in NOLA.</xs:documentation>
 		</xs:annotation>
@@ -279,7 +279,7 @@
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
-	</xs:complexType>-->
+	</xs:complexType>
 	<xs:complexType name="StatuteAugmentationType">
 		<xs:annotation>
 			<xs:documentation>A data type for additional data Statute information in
@@ -361,11 +361,11 @@
 				NOLA.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<!--	<xs:element name="PersonAugmentation" type="nola-ext:PersonAugmentationType" substitutionGroup="nc:PersonAugmentationPoint">
+	<xs:element name="PersonAugmentation" type="nola-ext:PersonAugmentationType" substitutionGroup="nc:PersonAugmentationPoint">
 		<xs:annotation>
 			<xs:documentation>Additional information about a Person in the NOLA.</xs:documentation>
 		</xs:annotation>
-	</xs:element>-->
+	</xs:element>
 	<xs:element name="StatuteAugmentation" type="nola-ext:StatuteAugmentationType"
 		substitutionGroup="j:StatuteAugmentationPoint">
 		<xs:annotation>
