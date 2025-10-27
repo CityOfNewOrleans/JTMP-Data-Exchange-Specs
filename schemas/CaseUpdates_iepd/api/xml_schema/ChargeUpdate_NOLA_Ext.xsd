@@ -128,6 +128,7 @@
 				<xs:sequence>
 					<xs:element ref="nola-ext:ChargeAffidavitNumber" minOccurs="0"
 						maxOccurs="unbounded"/>
+					<xs:element ref="nola-ext:ChargeDispositionCode" minOccurs="0" maxOccurs="1"/>
 					<xs:element ref="nola-ext:ChargeKey" minOccurs="0" maxOccurs="1"/>
 					<xs:element ref="nola-ext:ChargeLIBRSCode" minOccurs="0" maxOccurs="1"/>
 					<xs:element ref="nola-ext:StatewideArrestTrackingNumber" minOccurs="0"
@@ -265,7 +266,7 @@
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
-	<!--	<xs:complexType name="PersonAugmentationType">
+	<xs:complexType name="PersonAugmentationType">
 		<xs:annotation>
 			<xs:documentation>A data type for additional data Person information in NOLA.</xs:documentation>
 		</xs:annotation>
@@ -278,7 +279,7 @@
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
-	</xs:complexType>-->
+	</xs:complexType>
 	<xs:complexType name="StatuteAugmentationType">
 		<xs:annotation>
 			<xs:documentation>A data type for additional data Statute information in
@@ -360,11 +361,11 @@
 				NOLA.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<!--	<xs:element name="PersonAugmentation" type="nola-ext:PersonAugmentationType" substitutionGroup="nc:PersonAugmentationPoint">
+	<xs:element name="PersonAugmentation" type="nola-ext:PersonAugmentationType" substitutionGroup="nc:PersonAugmentationPoint">
 		<xs:annotation>
 			<xs:documentation>Additional information about a Person in the NOLA.</xs:documentation>
 		</xs:annotation>
-	</xs:element>-->
+	</xs:element>
 	<xs:element name="StatuteAugmentation" type="nola-ext:StatuteAugmentationType"
 		substitutionGroup="j:StatuteAugmentationPoint">
 		<xs:annotation>
@@ -415,6 +416,11 @@
 		<xs:annotation>
 			<xs:documentation>An affidavit is a sworn statement a person an official document filed
 				to formally accuse a person of committing a specific offense.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="ChargeDispositionCode" type="niem-xs:string">
+		<xs:annotation>
+			<xs:documentation>A value that describes the type of disposition.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="ChargeKey" type="niem-xs:string">

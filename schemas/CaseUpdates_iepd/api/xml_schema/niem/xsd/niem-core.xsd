@@ -56,6 +56,23 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  <xs:complexType name="AddressType">
+    <xs:annotation>
+      <xs:documentation>A data type for a geophysical location described by postal information.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:ObjectType">
+        <xs:sequence>
+          <xs:element ref="nc:AddressSecondaryUnitText" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="nc:AddressDeliveryPointAbstract" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="nc:AddressCityName" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="nc:AddressState" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="nc:AddressCountry" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="nc:AddressPostalCode" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
   <xs:complexType name="AmountType">
     <xs:annotation>
       <xs:documentation>A data type for an amount of money.</xs:documentation>
@@ -105,6 +122,30 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  <xs:complexType name="ContactInformationType">
+    <xs:annotation>
+      <xs:documentation>A data type for how to contact a person or an organization.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:ObjectType">
+        <xs:sequence>
+          <xs:element ref="nc:ContactMeansAbstract" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CountryType">
+    <xs:annotation>
+      <xs:documentation>A data type for a country, territory, dependency, or other such geopolitical subdivision of a location.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:ObjectType">
+        <xs:sequence>
+          <xs:element ref="nc:CountryRepresentation" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
   <xs:complexType name="DateType">
     <xs:annotation>
       <xs:documentation>A data type for a calendar date.</xs:documentation>
@@ -113,6 +154,19 @@
       <xs:extension base="structures:ObjectType">
         <xs:sequence>
           <xs:element ref="nc:DateRepresentation" minOccurs="0" maxOccurs="2"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="DispositionType">
+    <xs:annotation>
+      <xs:documentation>A data type for a result or outcome that is the product of handling, processing, or finalizing something.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:ObjectType">
+        <xs:sequence>
+          <xs:element ref="nc:DispositionDate" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="nc:DispositionDescriptionText" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -151,6 +205,18 @@
         <xs:sequence>
           <xs:element ref="nc:EntityRepresentation" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="nc:EntityAugmentationPoint" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="FullTelephoneNumberType">
+    <xs:annotation>
+      <xs:documentation>A data type for a full telephone number.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:ObjectType">
+        <xs:sequence>
+          <xs:element ref="nc:TelephoneNumberFullID" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -254,6 +320,7 @@
           <xs:element ref="nc:PersonSSNIdentification" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="nc:PersonStateIdentification" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="nc:PersonUSCitizenIndicator" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="nc:PersonContactInformation" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="nc:PersonAugmentationPoint" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
       </xs:extension>
@@ -267,6 +334,18 @@
       <xs:extension base="nc:TextType"/>
     </xs:simpleContent>
   </xs:complexType>
+  <xs:complexType name="StateType">
+    <xs:annotation>
+      <xs:documentation>A data type for a state, commonwealth, province, or other such geopolitical subdivision of a country.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:ObjectType">
+        <xs:sequence>
+          <xs:element ref="nc:StateRepresentation" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
   <xs:complexType name="StatusType">
     <xs:annotation>
       <xs:documentation>A data type for a state of something or someone.</xs:documentation>
@@ -276,6 +355,30 @@
         <xs:sequence>
           <xs:element ref="nc:StatusAbstract" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="nc:StatusIssuerIdentification" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="StreetType">
+    <xs:annotation>
+      <xs:documentation>A data type for a road, thoroughfare, or highway.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:ObjectType">
+        <xs:sequence>
+          <xs:element ref="nc:StreetFullText" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="TelephoneNumberType">
+    <xs:annotation>
+      <xs:documentation>A data type for a telephone number for a telecommunication device.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:ObjectType">
+        <xs:sequence>
+          <xs:element ref="nc:TelephoneNumberAbstract" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -333,6 +436,16 @@
       <xs:documentation>A status of an activity.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="AddressCityName" type="nc:ProperNameTextType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A name of a city or town.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="AddressCountry" type="nc:CountryType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A country, territory, dependency, or other such geopolitical subdivision of a location.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="AddressCountyAbstract" abstract="true">
     <xs:annotation>
       <xs:documentation>A data concept for a county, parish, vicinage, or other such geopolitical subdivision of a state.</xs:documentation>
@@ -341,6 +454,31 @@
   <xs:element name="AddressCountyName" type="nc:ProperNameTextType" substitutionGroup="nc:AddressCountyAbstract">
     <xs:annotation>
       <xs:documentation>A name of a county, parish, vicinage, or other such geopolitical subdivision of a state.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="AddressDeliveryPointAbstract" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A data concept for a single place or unit at which mail is delivered.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="AddressPostalCode" type="niem-xs:string" nillable="true">
+    <xs:annotation>
+      <xs:documentation>An identifier of a post office-assigned zone for an address.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="AddressSecondaryUnitText" type="nc:TextType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A particular unit within a larger unit or grouping at a location.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="AddressState" type="nc:StateType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A state, commonwealth, province, or other such geopolitical subdivision of a country.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="AddressStreet" type="nc:StreetType" substitutionGroup="nc:AddressDeliveryPointAbstract">
+    <xs:annotation>
+      <xs:documentation>A road, thoroughfare or highway.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="Amount" type="niem-xs:decimal" nillable="true">
@@ -388,6 +526,36 @@
       <xs:documentation>A comment, note, or remark providing additional information.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="ContactEmailID" type="niem-xs:string" substitutionGroup="nc:ContactMeansAbstract">
+    <xs:annotation>
+      <xs:documentation>An electronic mailing address by which a person or organization may be contacted.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ContactMailingAddress" type="nc:AddressType" substitutionGroup="nc:ContactMeansAbstract">
+    <xs:annotation>
+      <xs:documentation>A postal address by which a person or organization may be contacted.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ContactMeansAbstract" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A data concept for a means of contacting someone.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ContactTelephoneNumber" type="nc:TelephoneNumberType" substitutionGroup="nc:ContactMeansAbstract">
+    <xs:annotation>
+      <xs:documentation>A telephone number for a telecommunication device by which a person or organization may be contacted.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="CountryName" type="nc:ProperNameTextType" substitutionGroup="nc:CountryRepresentation">
+    <xs:annotation>
+      <xs:documentation>A name of a country, territory, dependency, or other such geopolitical subdivision of a location.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="CountryRepresentation" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A data concept for a representation of a country.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="CourtCase" type="nc:CaseType">
     <xs:annotation>
       <xs:documentation>A court case.</xs:documentation>
@@ -406,6 +574,16 @@
   <xs:element name="DateTime" type="niem-xs:dateTime" substitutionGroup="nc:DateRepresentation">
     <xs:annotation>
       <xs:documentation>A full date and time.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="DispositionDate" type="nc:DateType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A date a disposition occurred.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="DispositionDescriptionText" type="nc:TextType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A description of a disposition.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="Employer" type="nc:EmployerType" nillable="true">
@@ -436,6 +614,11 @@
   <xs:element name="EntityRepresentation" abstract="true">
     <xs:annotation>
       <xs:documentation>A data concept for a representation of an entity.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="FullTelephoneNumber" type="nc:FullTelephoneNumberType" substitutionGroup="nc:TelephoneNumberAbstract">
+    <xs:annotation>
+      <xs:documentation>A full telephone number.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="IdentificationAugmentationPoint" abstract="true">
@@ -486,6 +669,11 @@
   <xs:element name="PersonBirthDate" type="nc:DateType" nillable="true">
     <xs:annotation>
       <xs:documentation>A date a person was born.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PersonContactInformation" type="nc:ContactInformationType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A means of contacting a person.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="PersonDescriptionText" type="nc:TextType" nillable="true">
@@ -578,6 +766,16 @@
       <xs:documentation>A name, identifier, or reference of a resource from which the information was taken.</xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="StateName" type="nc:ProperNameTextType" substitutionGroup="nc:StateRepresentation">
+    <xs:annotation>
+      <xs:documentation>A name of a state, commonwealth, province, or other such geopolitical subdivision of a country.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="StateRepresentation" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A data concept for a representation of a state, commonwealth, province, or other such geopolitical subdivision of a country.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="StatusAbstract" abstract="true">
     <xs:annotation>
       <xs:documentation>A data concept for a status or condition of something or someone.</xs:documentation>
@@ -591,6 +789,21 @@
   <xs:element name="StatusText" type="nc:TextType" substitutionGroup="nc:StatusAbstract">
     <xs:annotation>
       <xs:documentation>A status or condition of something or someone.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="StreetFullText" type="nc:TextType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A complete reference for a street.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TelephoneNumberAbstract" abstract="true">
+    <xs:annotation>
+      <xs:documentation>A data concept for a telephone number.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TelephoneNumberFullID" type="niem-xs:string" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A complete telephone number.</xs:documentation>
     </xs:annotation>
   </xs:element>
 </xs:schema>

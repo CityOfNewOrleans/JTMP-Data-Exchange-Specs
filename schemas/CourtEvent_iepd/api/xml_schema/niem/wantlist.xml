@@ -3,13 +3,23 @@
   xmlns:aamva_d20="http://release.niem.gov/niem/codes/aamva_d20/5.0/"
   xmlns:hs="http://release.niem.gov/niem/domains/humanServices/5.2/"
   xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/"
-  xmlns:w="http://niem.gov/niem/wantlist/2.2" xmlns:j="http://release.niem.gov/niem/domains/jxdm/7.2/">
+  xmlns:w="http://niem.gov/niem/wantlist/2.2"
+  xmlns:j="http://release.niem.gov/niem/domains/jxdm/7.2/" xmlns:scr="http://release.niem.gov/niem/domains/screening/5.2/">
+  <w:Element w:name="hs:EmployerAugmentation" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="j:CaseAugmentation" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="j:CourtCategoryCode" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="j:CourtEvent" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="nc:CaseGeneralCategoryText" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="nc:Date" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="nc:DateTime" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="nc:EntityPerson" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="nc:PersonEmploymentAssociation"
+    w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:PersonRaceText" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="nc:PersonSexText" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="nc:ScheduleDate" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="nc:StatusText" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="scr:InmateNumberID" w:isReference="false" w:nillable="true"/>
   <w:Type w:name="aamva_d20:CourtCategoryCodeSimpleType" w:isRequested="false">
     <w:Facet w:facet="enumeration" w:value="ADM"/>
     <w:Facet w:facet="enumeration" w:value="CHA"/>
@@ -51,6 +61,14 @@
     <w:ElementInType w:name="nc:CaseDocketID" w:isReference="false"
       w:minOccurs="0" w:maxOccurs="1"/>
   </w:Type>
+  <w:Type w:name="hs:EmployerAugmentationType" w:isRequested="false">
+    <w:ElementInType w:name="hs:EmployerName" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="unbounded"/>
+  </w:Type>
+  <w:Type w:name="j:CaseAugmentationType" w:isRequested="false">
+    <w:ElementInType w:name="j:CaseDefendantParty" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
   <w:Type w:name="j:CourtEventType" w:isRequested="false">
     <w:ElementInType w:name="j:CourtEventCase" w:isReference="false"
       w:minOccurs="0" w:maxOccurs="unbounded"/>
@@ -90,10 +108,24 @@
     <w:ElementInType w:name="nc:CaseDocketID" w:isReference="false"
       w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="nc:CaseAugmentationPoint"
-      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="unbounded"/>
   </w:Type>
   <w:Type w:name="nc:DateType" w:isRequested="false">
     <w:ElementInType w:name="nc:DateRepresentation"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:EmployerType" w:isRequested="false">
+    <w:ElementInType w:name="nc:EmployerAugmentationPoint"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="unbounded"/>
+  </w:Type>
+  <w:Type w:name="nc:EmploymentAssociationType" w:isRequested="false">
+    <w:ElementInType w:name="nc:Employer" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="unbounded"/>
+    <w:ElementInType w:name="nc:EmploymentStatus" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="unbounded"/>
+  </w:Type>
+  <w:Type w:name="nc:EntityType" w:isRequested="false">
+    <w:ElementInType w:name="nc:EntityRepresentation"
       w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
   </w:Type>
   <w:Type w:name="nc:IdentificationType" w:isRequested="false">
@@ -108,6 +140,7 @@
     <w:ElementInType w:name="nc:LocationPart" w:isReference="false"
       w:minOccurs="0" w:maxOccurs="1"/>
   </w:Type>
+  <w:Type w:name="nc:MetadataType" w:isRequested="true"/>
   <w:Type w:name="nc:OrganizationType" w:isRequested="true">
     <w:ElementInType w:name="nc:OrganizationIdentification"
       w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
@@ -127,8 +160,24 @@
       w:minOccurs="0" w:maxOccurs="1"/>
   </w:Type>
   <w:Type w:name="nc:PersonType" w:isRequested="false">
+    <w:ElementInType w:name="nc:PersonBirthDate" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:PersonDescriptionText"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="unbounded"/>
     <w:ElementInType w:name="nc:PersonName" w:isReference="false"
       w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:PersonRaceAbstract"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:PersonSexAbstract" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:PersonSSNIdentification"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:PersonStateIdentification"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:PersonUSCitizenIndicator"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:PersonAugmentationPoint"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="unbounded"/>
   </w:Type>
   <w:Type w:name="nc:ScheduleDayType" w:isRequested="false">
     <w:ElementInType w:name="nc:ScheduleDayAbstract"

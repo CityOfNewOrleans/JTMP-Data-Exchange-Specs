@@ -12,15 +12,20 @@ Booking
 Charge Filing (Screening Action and Bill of Information)
 
 ## Triggering Event:
+A Case Initiation message will be triggered any time a new case is created in a court case management system (CMS). 
+1. A new Booking message automatically generates a new Magistrate Case in Criminal District Courts’ CMS 
+2. A Charge Filing message automatically generates a new Criminal Case in Criminal District Courts’ CMS
 
-1. Magistrate Court binds a new arrest over to Criminal court
-2. Court clerk creates a new case, assigning a criminal case ID number as well as a judge and courtroom. 
-Note: this process of assigning new criminal cases was known as Allotment. This transactional data exchange replaces the Allotment List, in conveying new case information to all interested parties.
+Note: The judge and court section are assigned through a process  known as Allotment. The Allotment process will trigger a Case Update message that will associate the Criminal Case Docket # with the assigned Judge and Court Section. This transactional data exchange replaces the Allotment List, in conveying new case information to all interested parties.
+The processes are different in Juvenile and Municipal and Traffic Court. The triggering event will still be creation of a new case and assignment of a case ID number.
 
 The processes are different in Juvenile and Municipal and Traffic Court. The triggering event will still be creation of a new case and assignment of a case ID number. 
 
 ## Subsequent Event:
-Proposed Motions and Orders filed to the Clerk by case parties
+* Case Updates convey the allotted judge and court section
+* Charge Updates convey amended or disposed charges
+* Entity Updates convey changes or additions to persons on the case 
+* Proposed Motions and Orders filed to the Clerk by case parties
 
 ## Real-World Effects: 
 
@@ -35,13 +40,14 @@ This exchange will also convey the details of the one or more charges filed on t
 ![XML Schemas](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/tree/main/schemas/CaseInitiation_iepd/api/xml_schema).
 
 ### Key data elements include:
-- Arrest number (enabling the JMS to correlate a new case to a previous Booking or Charge Screening). 
-- Court Case ID
-- Created Date (court clerk's staff will determine if this is a machine-generated date-time stamp, or the date of the judicial officer's approval)
-- Current charges (either arrest charges or filed charges if the DA has filed a Screening Action Form). 
-- SCN-Sequence number to correlate each Charge to the value originally assigned in the State's AFIS and CCH. 
-- Judicial Official (the Judge to whom the case has been allotted)
-- Court Section
+* Incident Item Number
+* Booking ID (enabling the JMS to correlate a new case to a previous Booking or Charge Screening).
+* Court Case ID
+* Created Date (court clerk's staff will determine if this is a machine-generated date-time stamp, or the date of the judicial officer's approval)
+* Current charges (either arrest charges or filed charges if the DA has filed a Screening Action Form)
+* ATN-Sequence number to correlate each Charge to the value originally assigned in the State's AFIS and CCH.
+* Judicial Official (the Magistrate who will hear a Magistrate case).
+* Magistrate Court Section 
 
 ## Artifacts:
 

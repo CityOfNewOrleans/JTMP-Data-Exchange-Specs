@@ -1,0 +1,1302 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<nola:JuvenileAdmissionExchange xmlns:nola="http://mcp.com/nola/v/1.0/" xmlns:nola-ext="http://mcp.com/nola/extension/v/1.0/" xmlns:structures="http://release.niem.gov/niem/structures/5.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:j="http://release.niem.gov/niem/domains/jxdm/7.2/" xmlns:im="http://release.niem.gov/niem/domains/immigration/5.2/" xmlns:hs="http://release.niem.gov/niem/domains/humanServices/5.2/" xmlns:em="http://release.niem.gov/niem/domains/emergencyManagement/5.2/" xmlns:ncic="http://release.niem.gov/niem/codes/ncic/5.2/" xmlns:unece="http://release.niem.gov/niem/codes/unece_rec20/5.0/" xmlns:scr="http://release.niem.gov/niem/domains/screening/5.2/" xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/" xsi:schemaLocation="http://mcp.com/nola/v/1.0/ ../api/xml_schema/JuvenileAdmission_NOLA.xsd">
+	<!--  Class: NOLAObjectType, Attribute: MessageOperationCode  -->
+	<nola-ext:MessageOperationCode structures:id="add">add</nola-ext:MessageOperationCode>
+	<!--  Class: NOLAObjectType, Attribute: MessageOperationCode  -->
+	<nola-ext:MessageOperationCode structures:id="delete">delete</nola-ext:MessageOperationCode>
+	<!--  Class: NOLAObjectType, Attribute: MessageOperationCode  -->
+	<nola-ext:MessageOperationCode structures:id="update">update</nola-ext:MessageOperationCode>
+	<j:Booking structures:ref="add">
+		<nc:ActivityDate>
+			<!--  Class: Booking, Attribute: BookedDateTime  -->
+			<nc:DateTime>2001-12-17T09:30:47Z</nc:DateTime>
+		</nc:ActivityDate>
+		<!--  Class: Arrest, Association: BookingAgency to Class:Agency -->
+		<j:BookingAgency>
+			<!--  Class: Agency, Attribute: AgencyName  -->
+			<nc:OrganizationName>String</nc:OrganizationName>
+			<j:OrganizationAugmentation>
+				<j:OrganizationORIIdentification>
+					<!--  Class: Agency, Attribute: AgencyORI  -->
+					<nc:IdentificationID>String</nc:IdentificationID>
+				</j:OrganizationORIIdentification>
+			</j:OrganizationAugmentation>
+		</j:BookingAgency>
+		<!--  Class: Booking, Attribute: SheriffControlNumber  -->
+		<j:BookingAgencyRecordIdentification>
+			<nc:IdentificationID>String</nc:IdentificationID>
+		</j:BookingAgencyRecordIdentification>
+		<!--  Class: Arrest, Attribute: FolderNumber  -->
+		<j:BookingDocumentControlIdentification>
+			<nc:IdentificationID>String</nc:IdentificationID>
+		</j:BookingDocumentControlIdentification>
+		<!--  Class: Release, Association:BookingRelease from Class:Booking    -->
+		<j:BookingRelease>
+			<nc:ActivityComment>
+				<!--  Class: Release, Attribute: ReasonforRelease, Type: string  -->
+				<nc:CommentText>String</nc:CommentText>
+			</nc:ActivityComment>
+			<!--  Class: Release, Attribute: Released, Type: string  -->
+			<nc:ActivityCompletedIndicator>true</nc:ActivityCompletedIndicator>
+			<nc:ActivityDate>
+				<!--  Class: Release, Attribute: ReleaseDate, Type: dateTime  -->
+				<nc:DateTime>2001-12-17T09:30:47Z</nc:DateTime>
+			</nc:ActivityDate>
+			<nc:ActivityScheduledDate>
+				<!--  Class: Release, Attribute: ScheduledReleaseDate, Type: dateTime  -->
+				<nc:DateTime>2001-12-17T09:30:47Z</nc:DateTime>
+			</nc:ActivityScheduledDate>
+		</j:BookingRelease>
+		<!--  Class: Arrest, Attribute: ArrestSubject  -->
+		<j:BookingSubject structures:id="P1">
+			<nc:RoleOfPerson>
+				<nc:PersonBirthDate>
+					<!--  Class: PersonIdentifiers, Attribute: DateOfBirth, Type: date  -->
+					<nc:DateTime>2001-12-17T09:30:47Z</nc:DateTime>
+				</nc:PersonBirthDate>
+				<nc:PersonBirthLocation>
+					<nc:Address>
+						<nc:AddressState>
+							<!--  Class: PersonIdentifiers, Attribute: StateOfBirth, Type: string  -->
+							<nc:StateName>String</nc:StateName>
+						</nc:AddressState>
+					</nc:Address>
+				</nc:PersonBirthLocation>
+				<!--  Class: Person, Attribute: PersonImage, Type: As-is Process.Image  -->
+				<!--  Class: Booking, Attribute: BookingPhoto  -->
+				<!--  Class: Image, Attribute: BinaryAttachement  -->
+				<nc:PersonDigitalImage>
+					<!--  Class: Attachement, Attribute: AttachementID, Type: string  -->
+					<nc:BinaryID>String</nc:BinaryID>
+					<!--  Class: Attachement, Attribute: BinaryObject, Type: As-is Process.Object  -->
+					<nc:Base64BinaryObject>UjBsR09EbGhjZ0dTQUxNQUFBUUNBRU1tQ1p0dU1GUXhEUzhi</nc:Base64BinaryObject>
+					<!--  Class: Image, Attribute: ImageFileName, Type:string  -->
+					<nc:BinaryDescriptionText>String</nc:BinaryDescriptionText>
+					<!--  Class: Attachement, Attribute: AttachementFormat, Type: string  -->
+					<nc:BinaryFormatText>String</nc:BinaryFormatText>
+					<!--  Class: Attachement, Attribute: AttachementURI, Type: As-is Process.URI  -->
+					<nc:BinaryURI>http://www.altova.com/</nc:BinaryURI>
+					<!--  Class: Attachement, Attribute: AtachementSize, Type: int  -->
+					<nc:BinarySizeValue>0</nc:BinarySizeValue>
+				</nc:PersonDigitalImage>
+				<!--  Class: Education -->
+				<nc:PersonEducation>
+					<nc:EducationLevel>
+						<!--  Class: Education, Attribute: GradeLevel -->
+						<nc:EducationLevelText>String</nc:EducationLevelText>
+					</nc:EducationLevel>
+					<nola-ext:EducationAugmentation>
+						<hs:EducationOrganization>
+							<!--  Class: Education, Attribute: SchoolName -->
+							<nc:OrganizationName>String</nc:OrganizationName>
+						</hs:EducationOrganization>
+					</nola-ext:EducationAugmentation>
+				</nc:PersonEducation>
+				<!--  Class: Employer, Attribute: EmploymentStatusID, Type: boolean  -->
+				<nc:PersonEmployedIndicator>true</nc:PersonEmployedIndicator>
+				<!--  Class: PersonDemographics, Attribute: Ethnicity, Type: As-is Process.EthnicityCodeList  -->
+				<nc:PersonEthnicityText>String</nc:PersonEthnicityText>
+				<!--  Class: PersonDemographics, Attribute: EyeColorText   -->
+				<nc:PersonEyeColorText>brown</nc:PersonEyeColorText>
+				<!--  Class: PersonDemographics, Attribute: HairColorCode  -->
+				<nc:PersonHairColorText>String</nc:PersonHairColorText>
+				<!-- total height here is 6 feet 2 inches -->
+				<nc:PersonHeightMeasure>
+					<!--  Class: PersonDemographics, Attribute: Height, Type: string  -->
+					<nc:MeasureValueText>6</nc:MeasureValueText>
+					<!--  Class: PersonDemographics, Attribute: HeightUnits, Type: string  -->
+					<unece:LengthUnitCode>FOT</unece:LengthUnitCode>
+					<!-- foot -->
+				</nc:PersonHeightMeasure>
+				<nc:PersonHeightMeasure>
+					<!--  Class: PersonDemographics, Attribute: Height, Type: string  -->
+					<nc:MeasureValueText>2</nc:MeasureValueText>
+					<!--  Class: PersonDemographics, Attribute: HeightUnits, Type: string  -->
+					<unece:LengthUnitCode>INH</unece:LengthUnitCode>
+					<!-- inch -->
+				</nc:PersonHeightMeasure>
+				<!--  Class: Person, Attribute: PersonName, Type: As-is Process.PersonName  -->
+				<nc:PersonName>
+					<!--  Class: PersonName, Attribute: Title, Type: string  -->
+					<nc:PersonNamePrefixText>String</nc:PersonNamePrefixText>
+					<!--  Class: PersonName, Attribute: FirstName, Type: string  -->
+					<nc:PersonGivenName>String</nc:PersonGivenName>
+					<!--  Class: PersonName, Attribute: MiddleInitial, Type: string  -->
+					<nc:PersonMiddleName>String</nc:PersonMiddleName>
+					<!--  Class: PersonName, Attribute: LastName, Type: string  -->
+					<nc:PersonSurName>String</nc:PersonSurName>
+					<!--  Class: PersonName, Attribute: NameSuffix, Type: string  -->
+					<nc:PersonNameSuffixText>String</nc:PersonNameSuffixText>
+					<!--  Class: PersonName, Attribute: FullName, Type: string  -->
+					<nc:PersonFullName>String</nc:PersonFullName>
+					<nola-ext:PersonNameAugmentation>
+					    <!--  Class: Person, Attribute: PersonAlternateName, Type: PersonName  -->
+						<nola-ext:PersonAlternateName>
+							<!--  Class: PersonName, Attribute: Title, Type: string  -->
+							<nc:PersonNamePrefixText>String</nc:PersonNamePrefixText>
+							<!--  Class: PersonName, Attribute: FirstName, Type: string  -->
+							<nc:PersonGivenName>String</nc:PersonGivenName>
+							<!--  Class: PersonName, Attribute: MiddleInitial, Type: string  -->
+							<nc:PersonMiddleName>String</nc:PersonMiddleName>
+							<!--  Class: PersonName, Attribute: LastName, Type: string  -->
+							<nc:PersonSurName>String</nc:PersonSurName>
+							<!--  Class: PersonName, Attribute: NameSuffix, Type: string  -->
+							<nc:PersonNameSuffixText>String</nc:PersonNameSuffixText>
+							<!--  Class: PersonName, Attribute: FullName, Type: string  -->
+							<nc:PersonFullName>String</nc:PersonFullName>
+						</nola-ext:PersonAlternateName>
+						<!--  Class: Person, Attribute: PersonSoundexName, Type: PersonName  -->
+						<nola-ext:PersonNameSoundex>
+							<!--  Class: PersonName, Attribute: Title, Type: string  -->
+							<nc:PersonNamePrefixText>String</nc:PersonNamePrefixText>
+							<!--  Class: PersonName, Attribute: FirstName, Type: string  -->
+							<nc:PersonGivenName>String</nc:PersonGivenName>
+							<!--  Class: PersonName, Attribute: MiddleInitial, Type: string  -->
+							<nc:PersonMiddleName>String</nc:PersonMiddleName>
+							<!--  Class: PersonName, Attribute: LastName, Type: string  -->
+							<nc:PersonSurName>String</nc:PersonSurName>
+							<!--  Class: PersonName, Attribute: NameSuffix, Type: string  -->
+							<nc:PersonNameSuffixText>String</nc:PersonNameSuffixText>
+							<!--  Class: PersonName, Attribute: FullName, Type: string  -->
+							<nc:PersonFullName>String</nc:PersonFullName>
+						</nola-ext:PersonNameSoundex>
+					</nola-ext:PersonNameAugmentation>
+					<im:PersonNameAugmentation>
+						<!--  Class: PersonName, Attribute: Nickname, Type: string  -->
+						<im:PersonNickName>String</im:PersonNickName>
+					</im:PersonNameAugmentation>
+				</nc:PersonName>
+				<nc:PersonPrimaryLanguage>
+					<nc:Language>
+						<!--  Class: PersonDemographics, Attribute: PreferredLanguage, Type: string  -->
+						<nc:LanguageName>String</nc:LanguageName>
+					</nc:Language>
+				</nc:PersonPrimaryLanguage>
+				<!--  Class: PersonDemographics, Attribute: RaceCode, Type: As-is Process.RaceCodeList  -->
+				<nc:PersonRaceText>String</nc:PersonRaceText>
+				<!--  Class: PersonDemographics, Attribute: SexCode, Type: SexCodeList  -->
+				<nc:PersonSexText>String</nc:PersonSexText>
+				<!--  Class: PersonDemographics, Attribute: Homosexual, Type: string  -->
+				<nc:PersonSexualOrientationText>String</nc:PersonSexualOrientationText>
+				<nc:PersonSSNIdentification>
+					<!--  Class: PersonIdentifiers, Attribute: SocialSecurityNumber, Type: string  -->
+					<nc:IdentificationID>String</nc:IdentificationID>
+					<nc:IdentificationEffectiveDate>
+						<!--  Class: PersonIdentifiers, Attribute: SocialSecurityNumLastEntered, Type: string  -->
+						<nc:DateTime>2001-12-17T09:30:47Z</nc:DateTime>
+					</nc:IdentificationEffectiveDate>
+				</nc:PersonSSNIdentification>
+				<nc:PersonStateIdentification>
+					<!--  Class: PersonIdentifiers, Attribute: SIDNumber, Type: string  -->
+					<nc:IdentificationID>String</nc:IdentificationID>
+				</nc:PersonStateIdentification>
+				<!--  Class: PersonDemographics, Attribute: USCitizenship, Type: string  -->
+				<nc:PersonUSCitizenIndicator>true</nc:PersonUSCitizenIndicator>
+				<!--  Class: PersonDemographics, Attribute: Weight, Type: int  -->
+				<nc:PersonWeightDescriptionText>String</nc:PersonWeightDescriptionText>
+				<nc:PersonNationality>
+					<nc:PersonNationalityCountry>
+						<!--  Class: PersonDemographics, Attribute: Nationality, Type: string  -->
+						<nc:CountryName>String</nc:CountryName>
+					</nc:PersonNationalityCountry>
+				</nc:PersonNationality>
+				<nc:PersonContactInformation>
+					<!--  Class: ContactInformation, Attribute: EMailAddress, Type: string  -->
+					<nc:ContactEmailID>String</nc:ContactEmailID>
+					<!--  Class: ContactInformation, Attribute: ContactAddress, Type: As-is Process.Location  -->
+					<nc:ContactMailingAddress>
+						<!--  Class: Address, Attribute: Address, Type: string  -->
+						<nc:AddressFullText>String</nc:AddressFullText>
+						<!--  Class: Address, Attribute: ApartmentNumber, Type: string  -->
+						<nc:AddressSecondaryUnitText>String</nc:AddressSecondaryUnitText>
+						<nc:AddressStreet>
+							<!--  Class: Address, Attribute: StreetDirection, Type: string  -->
+							<nc:StreetFullText>String</nc:StreetFullText>
+							<!--  Class: Address, Attribute: StreetNumber, Type: string  -->
+							<nc:StreetNumberText>String</nc:StreetNumberText>
+							<nc:StreetPredirectional>
+								<!--  Class: Address, Attribute: StreetPrefix, Type: string  -->
+								<nc:StreetDirectionalText>String</nc:StreetDirectionalText>
+							</nc:StreetPredirectional>
+							<!--  Class: Address, Attribute: StreetName, Type: string  -->
+							<nc:StreetName>String</nc:StreetName>
+							<nc:StreetPostdirectional>
+								<!--  Class: Address, Attribute: StreetSuffix, Type: string  -->
+								<nc:StreetDirectionalText>String</nc:StreetDirectionalText>
+							</nc:StreetPostdirectional>
+						</nc:AddressStreet>
+						<!--  Class: Address, Attribute: BoxRouteCode, Type: CodeList  -->
+						<nc:AddressDeliveryPointID>String</nc:AddressDeliveryPointID>
+						<!--  Class: Address, Attribute: AddressBoxRoute, Type: string  -->
+						<nc:AddressRouteName>String</nc:AddressRouteName>
+						<!--  Class: Address, Attribute: AddressCity, Type: string  -->
+						<nc:AddressCityName>String</nc:AddressCityName>
+						<nc:AddressState>
+							<!--  Class: Address, Attribute: AddressState, Type: string  -->
+							<nc:StateName>String</nc:StateName>
+							<!--  Class: Address, Attribute: StateCode -->
+							<ncic:StateUSCode>CA</ncic:StateUSCode>
+						</nc:AddressState>
+						<!--  Class: Address, Attribute: ZIPCode, Type: CodeList  -->
+						<nc:AddressPostalCode>String</nc:AddressPostalCode>
+						<!--  Class: Address, Attribute: ZIPCodeExtension, Type: CodeList  -->
+						<nc:AddressPostalExtensionCode>String</nc:AddressPostalExtensionCode>
+					</nc:ContactMailingAddress>
+					<!--  Class: ContactInformation, Attribute: PhoneNumber, Type: TelephoneNumberType  -->
+					<nc:ContactTelephoneNumber>
+						<!--  Class: TelephoneNumberType, Attribute: FullTelephoneNumberType  -->
+						<nc:FullTelephoneNumber>
+							<!--  Class: FullTelephoneNumberType, Attribute: FullTelephoneNumber  -->
+							<nc:TelephoneNumberFullID>String</nc:TelephoneNumberFullID>
+							<!--  Class: FullTelephoneNumberType, Attribute: TelephoneNumberExtension  -->
+							<nc:TelephoneSuffixID>String</nc:TelephoneSuffixID>
+						</nc:FullTelephoneNumber>
+						<nc:NANPTelephoneNumber>
+							<!--  Class: FullTelephoneNumberType, Attribute: TelephoneNumberAreaCode  -->
+							<nc:TelephoneAreaCodeID>303</nc:TelephoneAreaCodeID>
+							<!--  Class: FullTelephoneNumberType, Attribute: TelephoneNumberExchangeID  -->
+							<nc:TelephoneExchangeID>123</nc:TelephoneExchangeID>
+							<!--  Class: FullTelephoneNumberType, Attribute: TelephoneNumberLineID  -->
+							<nc:TelephoneLineID>4567</nc:TelephoneLineID>
+						</nc:NANPTelephoneNumber>
+						<!--  Class: TelephoneNumberType, Attribute: TelephoneNumberDescription  -->
+						<nc:TelephoneNumberDescriptionText>String</nc:TelephoneNumberDescriptionText>
+					</nc:ContactTelephoneNumber>
+				</nc:PersonContactInformation>
+				<!--  Class: Employer, Attribute: EmployerContact, Type: As-is Process.ContactInformation  -->
+				<nc:EmployeeContactInformation>
+					<!--  Class: ContactInformation, Attribute: EMailAddress, Type: string  -->
+					<nc:ContactEmailID>String</nc:ContactEmailID>
+					<!--  Class: Employer, Attribute: EmployerAddress, Type: As-is Process.Address  -->
+					<!--  Class: ContactInformation, Attribute: ContactAddress, Type: As-is Process.Location  -->
+					<nc:ContactMailingAddress>
+						<!--  Class: Address, Attribute: Address, Type: string  -->
+						<nc:AddressFullText>String</nc:AddressFullText>
+						<!--  Class: Address, Attribute: ApartmentNumber, Type: string  -->
+						<nc:AddressSecondaryUnitText>String</nc:AddressSecondaryUnitText>
+						<nc:AddressStreet>
+							<!--  Class: Address, Attribute: StreetDirection, Type: string  -->
+							<nc:StreetFullText>String</nc:StreetFullText>
+							<!--  Class: Address, Attribute: StreetNumber, Type: string  -->
+							<nc:StreetNumberText>String</nc:StreetNumberText>
+							<nc:StreetPredirectional>
+								<!--  Class: Address, Attribute: StreetPrefix, Type: string  -->
+								<nc:StreetDirectionalText>String</nc:StreetDirectionalText>
+							</nc:StreetPredirectional>
+							<!--  Class: Address, Attribute: StreetName, Type: string  -->
+							<nc:StreetName>String</nc:StreetName>
+							<nc:StreetPostdirectional>
+								<!--  Class: Address, Attribute: StreetSuffix, Type: string  -->
+								<nc:StreetDirectionalText>String</nc:StreetDirectionalText>
+							</nc:StreetPostdirectional>
+						</nc:AddressStreet>
+						<!--  Class: Address, Attribute: BoxRouteCode, Type: CodeList  -->
+						<nc:AddressDeliveryPointID>String</nc:AddressDeliveryPointID>
+						<!--  Class: Address, Attribute: AddressBoxRoute, Type: string  -->
+						<nc:AddressRouteName>String</nc:AddressRouteName>
+						<!--  Class: Address, Attribute: AddressCity, Type: string  -->
+						<nc:AddressCityName>String</nc:AddressCityName>
+						<nc:AddressState>
+							<!--  Class: Address, Attribute: AddressState, Type: string  -->
+							<nc:StateName>String</nc:StateName>
+							<!--  Class: Address, Attribute: StateCode -->
+							<ncic:StateUSCode>CA</ncic:StateUSCode>
+						</nc:AddressState>
+						<!--  Class: Address, Attribute: ZIPCode, Type: CodeList  -->
+						<nc:AddressPostalCode>String</nc:AddressPostalCode>
+						<!--  Class: Address, Attribute: ZIPCodeExtension, Type: CodeList  -->
+						<nc:AddressPostalExtensionCode>String</nc:AddressPostalExtensionCode>
+					</nc:ContactMailingAddress>
+					<!--  Class: ContactInformation, Attribute: PhoneNumber, Type: TelephoneNumberType  -->
+					<nc:ContactTelephoneNumber>
+						<!--  Class: TelephoneNumberType, Attribute: FullTelephoneNumberType  -->
+						<nc:FullTelephoneNumber>
+							<!--  Class: FullTelephoneNumberType, Attribute: FullTelephoneNumber  -->
+							<nc:TelephoneNumberFullID>String</nc:TelephoneNumberFullID>
+							<!--  Class: FullTelephoneNumberType, Attribute: TelephoneNumberExtension  -->
+							<nc:TelephoneSuffixID>String</nc:TelephoneSuffixID>
+						</nc:FullTelephoneNumber>
+						<nc:NANPTelephoneNumber>
+							<!--  Class: FullTelephoneNumberType, Attribute: TelephoneNumberAreaCode  -->
+							<nc:TelephoneAreaCodeID>303</nc:TelephoneAreaCodeID>
+							<!--  Class: FullTelephoneNumberType, Attribute: TelephoneNumberExchangeID  -->
+							<nc:TelephoneExchangeID>123</nc:TelephoneExchangeID>
+							<!--  Class: FullTelephoneNumberType, Attribute: TelephoneNumberLineID  -->
+							<nc:TelephoneLineID>4567</nc:TelephoneLineID>
+						</nc:NANPTelephoneNumber>
+						<!--  Class: TelephoneNumberType, Attribute: TelephoneNumberDescription  -->
+						<nc:TelephoneNumberDescriptionText>String</nc:TelephoneNumberDescriptionText>
+					</nc:ContactTelephoneNumber>
+				</nc:EmployeeContactInformation>
+				<nola-ext:PersonAugmentation>
+					<nc:PersonEmploymentAssociation>
+						<nc:Employer>
+							<nola-ext:EmployerAugmentation>
+								<nc:EmploymentStatus>
+									<!--  Class: Employer, Attribute: EmploymentStatusText, Type: string  -->
+									<nc:StatusDescriptionText>String</nc:StatusDescriptionText>
+								</nc:EmploymentStatus>
+							</nola-ext:EmployerAugmentation>
+							<hs:EmployerAugmentation>
+								<!--  Class: Employer, Attribute: EmployerName, Type: string  -->
+								<hs:EmployerName>String</hs:EmployerName>
+							</hs:EmployerAugmentation>
+						</nc:Employer>
+						<!--  Class: Employer, Attribute: Occupation, Type: string  -->
+						<nc:EmployeeOccupationText>String</nc:EmployeeOccupationText>
+					</nc:PersonEmploymentAssociation>
+					<!--  Class: PersonIdentifiers, Attribute: CCN, Type: string  -->
+					<nola-ext:PersonComputerControlIdentifier>PersonComputerControlIdentifier (CCN) value</nola-ext:PersonComputerControlIdentifier>
+					<!--  Class: PersonIdentifiers, Attribute: CourtCasePersonID, Type: string  -->
+					<nola-ext:CourtCasePersonID>CourtCasePersonID value</nola-ext:CourtCasePersonID>
+					<!--  Class: PersonIdentifiers, Attribute: MentalHealthFlag -->
+					<nola-ext:MentalHealthFlag>true</nola-ext:MentalHealthFlag>
+				</nola-ext:PersonAugmentation>
+				<j:PersonAugmentation>
+					<!--  Class: PersonIdentifiers, Attribute: PersonDriversLicense, Type: DriversLicense  -->
+					<j:DriverLicense>
+						<j:DriverLicenseCardIdentification>
+							<!--  Class: DriversLicense, Attribute: DriversLicenseNumber, Type: string  -->
+							<nc:IdentificationID>String</nc:IdentificationID>
+							<nc:IdentificationJurisdiction>
+								<nc:JurisdictionLocation>
+									<nc:Address>
+										<nc:AddressState>
+											<!--  Class: DriversLicense, Attribute: DriversLicenseStateCode, Type: CodeList  -->
+											<nc:StateName>CO</nc:StateName>
+										</nc:AddressState>
+									</nc:Address>
+								</nc:JurisdictionLocation>
+							</nc:IdentificationJurisdiction>
+							<nc:IdentificationExpirationDate>
+								<!--  Class: DriversLicense, Attribute: DriversLicenseYear, Type: yeardate  -->
+								<nc:YearDate>2032</nc:YearDate>
+							</nc:IdentificationExpirationDate>
+						</j:DriverLicenseCardIdentification>
+					</j:DriverLicense>
+					<j:PersonFBIIdentification>
+						<!--  Class: PersonIdentifiers, Attribute: FBINumber, Type: string  -->
+						<nc:IdentificationID>String</nc:IdentificationID>
+					</j:PersonFBIIdentification>
+				</j:PersonAugmentation>
+				<hs:PersonAugmentation>
+					<!--  Class: Employer, Attribute: EmployerContact  -->
+					<hs:EmployerContactInformation>
+						<!--  Class: ContactInformation, Attribute: EMailAddress, Type: string  -->
+						<nc:ContactEmailID>String</nc:ContactEmailID>
+						<!--  Class: ContactInformation, Attribute: ContactAddress, Type: As-is Process.Location  -->
+						<nc:ContactMailingAddress>
+							<!--  Class: Address, Attribute: Address, Type: string  -->
+							<nc:AddressFullText>String</nc:AddressFullText>
+							<!--  Class: Address, Attribute: ApartmentNumber, Type: string  -->
+							<nc:AddressSecondaryUnitText>String</nc:AddressSecondaryUnitText>
+							<nc:AddressStreet>
+								<!--  Class: Address, Attribute: StreetDirection, Type: string  -->
+								<nc:StreetFullText>String</nc:StreetFullText>
+								<!--  Class: Address, Attribute: StreetNumber, Type: string  -->
+								<nc:StreetNumberText>String</nc:StreetNumberText>
+								<nc:StreetPredirectional>
+									<!--  Class: Address, Attribute: StreetPrefix, Type: string  -->
+									<nc:StreetDirectionalText>String</nc:StreetDirectionalText>
+								</nc:StreetPredirectional>
+								<!--  Class: Address, Attribute: StreetName, Type: string  -->
+								<nc:StreetName>String</nc:StreetName>
+								<nc:StreetPostdirectional>
+									<!--  Class: Address, Attribute: StreetSuffix, Type: string  -->
+									<nc:StreetDirectionalText>String</nc:StreetDirectionalText>
+								</nc:StreetPostdirectional>
+							</nc:AddressStreet>
+							<!--  Class: Address, Attribute: BoxRouteCode, Type: CodeList  -->
+							<nc:AddressDeliveryPointID>String</nc:AddressDeliveryPointID>
+							<!--  Class: Address, Attribute: AddressBoxRoute, Type: string  -->
+							<nc:AddressRouteName>String</nc:AddressRouteName>
+							<!--  Class: Address, Attribute: AddressCity, Type: string  -->
+							<nc:AddressCityName>String</nc:AddressCityName>
+							<nc:AddressState>
+								<!--  Class: Address, Attribute: AddressState, Type: string  -->
+								<nc:StateName>String</nc:StateName>
+								<!--  Class: Address, Attribute: StateCode -->
+								<ncic:StateUSCode>CA</ncic:StateUSCode>
+							</nc:AddressState>
+							<!--  Class: Address, Attribute: ZIPCode, Type: CodeList  -->
+							<nc:AddressPostalCode>String</nc:AddressPostalCode>
+							<!--  Class: Address, Attribute: ZIPCodeExtension, Type: CodeList  -->
+							<nc:AddressPostalExtensionCode>String</nc:AddressPostalExtensionCode>
+						</nc:ContactMailingAddress>
+						<!--  Class: ContactInformation, Attribute: PhoneNumber, Type: TelephoneNumberType  -->
+						<nc:ContactTelephoneNumber>
+							<!--  Class: TelephoneNumberType, Attribute: FullTelephoneNumberType  -->
+							<nc:FullTelephoneNumber>
+								<!--  Class: FullTelephoneNumberType, Attribute: FullTelephoneNumber  -->
+								<nc:TelephoneNumberFullID>String</nc:TelephoneNumberFullID>
+								<!--  Class: FullTelephoneNumberType, Attribute: TelephoneNumberExtension  -->
+								<nc:TelephoneSuffixID>String</nc:TelephoneSuffixID>
+							</nc:FullTelephoneNumber>
+							<nc:NANPTelephoneNumber>
+								<!--  Class: FullTelephoneNumberType, Attribute: TelephoneNumberAreaCode  -->
+								<nc:TelephoneAreaCodeID>303</nc:TelephoneAreaCodeID>
+								<!--  Class: FullTelephoneNumberType, Attribute: TelephoneNumberExchangeID  -->
+								<nc:TelephoneExchangeID>123</nc:TelephoneExchangeID>
+								<!--  Class: FullTelephoneNumberType, Attribute: TelephoneNumberLineID  -->
+								<nc:TelephoneLineID>4567</nc:TelephoneLineID>
+							</nc:NANPTelephoneNumber>
+							<!--  Class: TelephoneNumberType, Attribute: TelephoneNumberDescription  -->
+							<nc:TelephoneNumberDescriptionText>String</nc:TelephoneNumberDescriptionText>
+						</nc:ContactTelephoneNumber>
+					</hs:EmployerContactInformation>
+					<hs:AlienIdentification>
+						<!--  Class: PersonIdentifiers, Attribute: AlienIdentificationNumber, Type: string  -->
+						<nc:IdentificationID>String</nc:IdentificationID>
+					</hs:AlienIdentification>
+					<!--  Class: PersonDemographics, Attribute: GenderText, Type: As-is Process.GenderCodeList  -->
+					<hs:PersonGenderIdentityText>String</hs:PersonGenderIdentityText>
+					<!--  Class: PersonDemographics, Attribute: GenderCode, Type: As-is Process.GenderCodeList  -->
+					<hs:PersonGenderIdentityCode>Female</hs:PersonGenderIdentityCode>
+				</hs:PersonAugmentation>
+			</nc:RoleOfPerson>
+			<j:SubjectAppointment>
+				<!--  Class: Booking, Attribute: BookingPriority  -->
+				<j:AppointmentPriorityText>String</j:AppointmentPriorityText>
+				<!--  Class: Booking, Attribute: BookingEventResult  -->
+				<j:AppointmentResultsText>String</j:AppointmentResultsText>
+			</j:SubjectAppointment>
+			<nola-ext:SubjectAugmentation>
+				<!--  Class: Juvenile -->
+				<hs:Juvenile structures:ref="P1">
+					<nola-ext:JuvenileAugmentation>
+						<!--  Class: Juvenile, Attribute: JuvenileID   -->
+						<nola-ext:JuvenileIdentification>ABC123</nola-ext:JuvenileIdentification>
+						<!--  Class: Juvenile, Attribute: JuvenileReferralNumber   -->
+						<nola-ext:ReferralNumber>String</nola-ext:ReferralNumber>
+						<!--  Class: Juvenile, Attribute: LegalStatus   -->
+						<nola-ext:LegalStatus>String</nola-ext:LegalStatus>
+						<!--  Class: Juvenile, Attribute: AdmissionDate   -->
+						<j:SubjectProgramAdmissionDate>
+							<nc:DateTime>2020-12-17T00:00:00Z</nc:DateTime>
+						</j:SubjectProgramAdmissionDate>
+						<!--  Class: Juvenile, Attribute: JuvenileGuardian   -->
+						<nola-ext:Guardian>
+							<!--  Class: Person, Attribute: PersonName, Type: As-is Process.PersonName  -->
+							<nc:PersonName>
+								<!--  Class: PersonName, Attribute: Title, Type: string  -->
+								<nc:PersonNamePrefixText>String</nc:PersonNamePrefixText>
+								<!--  Class: PersonName, Attribute: FirstName, Type: string  -->
+								<nc:PersonGivenName>String</nc:PersonGivenName>
+								<!--  Class: PersonName, Attribute: MiddleInitial, Type: string  -->
+								<nc:PersonMiddleName>String</nc:PersonMiddleName>
+								<!--  Class: PersonName, Attribute: LastName, Type: string  -->
+								<nc:PersonSurName>String</nc:PersonSurName>
+								<!--  Class: PersonName, Attribute: NameSuffix, Type: string  -->
+								<nc:PersonNameSuffixText>String</nc:PersonNameSuffixText>
+								<!--  Class: PersonName, Attribute: FullName, Type: string  -->
+								<nc:PersonFullName>String</nc:PersonFullName>
+							</nc:PersonName>
+							<nc:PersonContactInformation>
+								<!--  Class: ContactInformation, Attribute: EMailAddress, Type: string  -->
+								<nc:ContactEmailID>String</nc:ContactEmailID>
+								<!--  Class: ContactInformation, Attribute: ContactAddress, Type: As-is Process.Location  -->
+								<nc:ContactMailingAddress>
+									<!--  Class: Address, Attribute: Address, Type: string  -->
+									<nc:AddressFullText>String</nc:AddressFullText>
+									<!--  Class: Address, Attribute: ApartmentNumber, Type: string  -->
+									<nc:AddressSecondaryUnitText>String</nc:AddressSecondaryUnitText>
+									<nc:AddressStreet>
+										<!--  Class: Address, Attribute: StreetDirection, Type: string  -->
+										<nc:StreetFullText>String</nc:StreetFullText>
+										<!--  Class: Address, Attribute: StreetNumber, Type: string  -->
+										<nc:StreetNumberText>String</nc:StreetNumberText>
+										<nc:StreetPredirectional>
+											<!--  Class: Address, Attribute: StreetPrefix, Type: string  -->
+											<nc:StreetDirectionalText>String</nc:StreetDirectionalText>
+										</nc:StreetPredirectional>
+										<!--  Class: Address, Attribute: StreetName, Type: string  -->
+										<nc:StreetName>String</nc:StreetName>
+										<nc:StreetPostdirectional>
+											<!--  Class: Address, Attribute: StreetSuffix, Type: string  -->
+											<nc:StreetDirectionalText>String</nc:StreetDirectionalText>
+										</nc:StreetPostdirectional>
+									</nc:AddressStreet>
+									<!--  Class: Address, Attribute: BoxRouteCode, Type: CodeList  -->
+									<nc:AddressDeliveryPointID>String</nc:AddressDeliveryPointID>
+									<!--  Class: Address, Attribute: AddressBoxRoute, Type: string  -->
+									<nc:AddressRouteName>String</nc:AddressRouteName>
+									<!--  Class: Address, Attribute: AddressCity, Type: string  -->
+									<nc:AddressCityName>String</nc:AddressCityName>
+									<nc:AddressState>
+										<!--  Class: Address, Attribute: AddressState, Type: string  -->
+										<nc:StateName>String</nc:StateName>
+										<!--  Class: Address, Attribute: StateCode -->
+										<ncic:StateUSCode>CA</ncic:StateUSCode>
+									</nc:AddressState>
+									<!--  Class: Address, Attribute: ZIPCode, Type: CodeList  -->
+									<nc:AddressPostalCode>String</nc:AddressPostalCode>
+									<!--  Class: Address, Attribute: ZIPCodeExtension, Type: CodeList  -->
+									<nc:AddressPostalExtensionCode>String</nc:AddressPostalExtensionCode>
+								</nc:ContactMailingAddress>
+								<!--  Class: ContactInformation, Attribute: PhoneNumber, Type: TelephoneNumberType  -->
+								<nc:ContactTelephoneNumber>
+									<!--  Class: TelephoneNumberType, Attribute: FullTelephoneNumberType  -->
+									<nc:FullTelephoneNumber>
+										<!--  Class: FullTelephoneNumberType, Attribute: FullTelephoneNumber  -->
+										<nc:TelephoneNumberFullID>String</nc:TelephoneNumberFullID>
+										<!--  Class: FullTelephoneNumberType, Attribute: TelephoneNumberExtension  -->
+										<nc:TelephoneSuffixID>String</nc:TelephoneSuffixID>
+									</nc:FullTelephoneNumber>
+									<nc:NANPTelephoneNumber>
+										<!--  Class: FullTelephoneNumberType, Attribute: TelephoneNumberAreaCode  -->
+										<nc:TelephoneAreaCodeID>303</nc:TelephoneAreaCodeID>
+										<!--  Class: FullTelephoneNumberType, Attribute: TelephoneNumberExchangeID  -->
+										<nc:TelephoneExchangeID>123</nc:TelephoneExchangeID>
+										<!--  Class: FullTelephoneNumberType, Attribute: TelephoneNumberLineID  -->
+										<nc:TelephoneLineID>4567</nc:TelephoneLineID>
+									</nc:NANPTelephoneNumber>
+									<!--  Class: TelephoneNumberType, Attribute: TelephoneNumberDescription  -->
+									<nc:TelephoneNumberDescriptionText>String</nc:TelephoneNumberDescriptionText>
+								</nc:ContactTelephoneNumber>
+							</nc:PersonContactInformation>
+						</nola-ext:Guardian>
+					</nola-ext:JuvenileAugmentation>
+				</hs:Juvenile>
+			</nola-ext:SubjectAugmentation>
+		</j:BookingSubject>
+		<!--  Class: Booking, Attribute: BookingToArrest  -->
+		<!--  Class: Arrest  -->
+		<j:Arrest>
+			<!--  Class: Arrest, Attribute: ArrestDateTime  -->
+			<nc:ActivityDate>
+				<nc:DateTime>2001-12-17T09:30:47Z</nc:DateTime>
+			</nc:ActivityDate>
+			<!--  Class: Arrest, Attribute: ArrestLocation  -->
+			<nc:ActivityLocation>
+				<nc:Address>
+					<!--  Class: Address, Attribute: Address, Type: string  -->
+									<nc:AddressFullText>String</nc:AddressFullText>
+									<!--  Class: Address, Attribute: ApartmentNumber, Type: string  -->
+									<nc:AddressSecondaryUnitText>String</nc:AddressSecondaryUnitText>
+									<nc:AddressStreet>
+										<!--  Class: Address, Attribute: StreetDirection, Type: string  -->
+										<nc:StreetFullText>String</nc:StreetFullText>
+										<!--  Class: Address, Attribute: StreetNumber, Type: string  -->
+										<nc:StreetNumberText>String</nc:StreetNumberText>
+										<nc:StreetPredirectional>
+											<!--  Class: Address, Attribute: StreetPrefix, Type: string  -->
+											<nc:StreetDirectionalText>String</nc:StreetDirectionalText>
+										</nc:StreetPredirectional>
+										<!--  Class: Address, Attribute: StreetName, Type: string  -->
+										<nc:StreetName>String</nc:StreetName>
+										<nc:StreetPostdirectional>
+											<!--  Class: Address, Attribute: StreetSuffix, Type: string  -->
+											<nc:StreetDirectionalText>String</nc:StreetDirectionalText>
+										</nc:StreetPostdirectional>
+									</nc:AddressStreet>
+									<!--  Class: Address, Attribute: BoxRouteCode, Type: CodeList  -->
+									<nc:AddressDeliveryPointID>String</nc:AddressDeliveryPointID>
+									<!--  Class: Address, Attribute: AddressBoxRoute, Type: string  -->
+									<nc:AddressRouteName>String</nc:AddressRouteName>
+									<!--  Class: Address, Attribute: AddressCity, Type: string  -->
+									<nc:AddressCityName>String</nc:AddressCityName>
+									<nc:AddressState>
+										<!--  Class: Address, Attribute: AddressState, Type: string  -->
+										<nc:StateName>String</nc:StateName>
+										<!--  Class: Address, Attribute: StateCode -->
+										<ncic:StateUSCode>CA</ncic:StateUSCode>
+									</nc:AddressState>
+									<!--  Class: Address, Attribute: ZIPCode, Type: CodeList  -->
+									<nc:AddressPostalCode>String</nc:AddressPostalCode>
+									<!--  Class: Address, Attribute: ZIPCodeExtension, Type: CodeList  -->
+									<nc:AddressPostalExtensionCode>String</nc:AddressPostalExtensionCode>
+				</nc:Address>
+				<!--  Class: Address, Attribute: AddressCrossStreet  -->
+								<!--  Class: CrossStreet -->
+								<nc:AddressCrossStreet>
+									<nc:AddressStreet>
+										<!--  Class: CrossStreet, Attribute: CrossStreetDirection  -->
+										<nc:StreetFullText>String</nc:StreetFullText>
+										<!--  Class: CrossStreet, Attribute: CrossStreetDirectionNumber  -->
+										<nc:StreetNumberText>String</nc:StreetNumberText>
+										<!--  Class: CrossStreet, Attribute: CrossStreetPrefix  -->
+										<nc:StreetPredirectional>
+											<nc:StreetDirectionalText>String</nc:StreetDirectionalText>
+										</nc:StreetPredirectional>
+										<!--  Class: CrossStreet, Attribute: CrossStreetName  -->
+										<nc:StreetName>String</nc:StreetName>
+										<!--  Class: CrossStreet, Attribute: CrossStreetSuffix  -->
+										<nc:StreetPostdirectional>
+											<nc:StreetDirectionalText>String</nc:StreetDirectionalText>
+										</nc:StreetPostdirectional>
+									</nc:AddressStreet>
+								</nc:AddressCrossStreet>
+								<nola-ext:LocationAugmentation>
+									<!--  Class: CrossStreet, Attribute: CrossStreetIntersectionCode  -->
+									<nola-ext:CrossStreetIntersectionText>String</nola-ext:CrossStreetIntersectionText>
+								</nola-ext:LocationAugmentation>
+			</nc:ActivityLocation>
+			<j:ArrestAgency>
+				<!--  Class: Agency, Attribute: AgencyName  -->
+				<!--  Class: Arrest, Attribute: ArrestingAgency  -->
+				<nc:OrganizationName>String</nc:OrganizationName>
+				<j:OrganizationAugmentation>
+					<j:OrganizationORIIdentification>
+						<!--  Class: Agency, Attribute: AgencyORI  -->
+						<nc:IdentificationID>String</nc:IdentificationID>
+					</j:OrganizationORIIdentification>
+				</j:OrganizationAugmentation>
+			</j:ArrestAgency>
+			<!-- CHARGE 1..* 1111111111111111111111111111111111111111111111111111 -->
+			<j:ArrestCharge>
+				<!--  Class: Charge, Attribute: ChargeType  -->
+				<j:ChargeCategoryDescriptionText>String</j:ChargeCategoryDescriptionText>
+				<!--  Class: Charge, Attribute: ChargeCount  -->
+				<j:ChargeCountQuantity>0</j:ChargeCountQuantity>
+				<!--  Class: Charge, Attribute: ChargeDescription  -->
+				<j:ChargeDescriptionText>String</j:ChargeDescriptionText>
+				<j:ChargeFilingDate>
+					<!--  Class: Charge, Attribute: ChargeEffectiveDate  -->
+					<nc:DateTime>2001-12-17T09:30:47Z</nc:DateTime>
+				</j:ChargeFilingDate>
+				<j:ChargeIdentification>
+					<!-- Class: Charge, Attribute: ItemNumber (aka Police incident report number -->
+					<nc:IdentificationID>String</nc:IdentificationID>
+				</j:ChargeIdentification>
+				<!--  Class: Charge, Attribute: ChargeSequenceNumber  -->
+				<j:ChargeSequenceID>String</j:ChargeSequenceID>
+				<j:ChargeStatute>
+					<j:StatuteCodeIdentification>
+						<!--  Class: Statute, Attribute: ChargeStatute, Type: string  -->
+						<nc:IdentificationID>String</nc:IdentificationID>
+					</j:StatuteCodeIdentification>
+					<j:StatuteCodeSectionIdentification>
+						<!--  Class: Statute, Attribute: ChargeViolation, Type: string  -->
+						<nc:IdentificationID>String</nc:IdentificationID>
+					</j:StatuteCodeSectionIdentification>
+					<!--  Class: Statute, Attribute: ChargeStatueDescription  -->
+					<j:StatuteDescriptionText>String</j:StatuteDescriptionText>
+					<!--  Class: Statute, Attribute: FullStatuteText  -->
+					<j:StatuteText>Full statute text</j:StatuteText>
+					<nola-ext:ChargeStatuteAugmentation>
+						<nola-ext:StatuteCodeSectionSubparagraphIdentification>
+							<!--  Class: Statute, Attribute: ChargeSubparagraph, Type: string  -->
+							<nc:IdentificationID>String</nc:IdentificationID>
+						</nola-ext:StatuteCodeSectionSubparagraphIdentification>
+					</nola-ext:ChargeStatuteAugmentation>
+				</j:ChargeStatute>
+				<!--  Class: Charge, Attribute: ChargeType  -->
+				<!--<nola-ext:ChargeCategoryCodeText>String</nola-ext:ChargeCategoryCodeText>-->
+				<nola-ext:ChargeAugmentation>
+					<!-- Class: Charge, Attribute: PrimaryChargeFlag -->
+					<nola-ext:PrimaryChargeFlag>true</nola-ext:PrimaryChargeFlag>
+					<!-- Class: Charge, Attribute: AffivaditNumber -->
+					<nola-ext:ChargeAffidavitNumber>String</nola-ext:ChargeAffidavitNumber>
+					<!--  Class: Charge, Attribute: ChargeKey  -->
+					<nola-ext:ChargeKey>String</nola-ext:ChargeKey>
+					<!--  Class: Charge, Attribute: ChargeLIBRSCode  -->
+					<nola-ext:ChargeLIBRSCode>String</nola-ext:ChargeLIBRSCode>
+					<!-- Class:Arrest, Attribute:ArrestTrackingNumber  -->
+					<nola-ext:StatewideArrestTrackingNumber>String</nola-ext:StatewideArrestTrackingNumber>
+					<!-- Class:Arrest, Attribute:ATNChargeSequenceID  -->
+					<nola-ext:StatewideATNChargeSequenceID>String</nola-ext:StatewideATNChargeSequenceID>
+					<!-- Class:Charge, Attribute:ChargeNumber  -->
+					<nola-ext:JMSChargeNumber>String</nola-ext:JMSChargeNumber>
+					<!-- Class:Charge, Attribute:CourtType -->
+					<nola-ext:CourtType>MUN</nola-ext:CourtType>
+				</nola-ext:ChargeAugmentation>
+				<hs:ChargeAugmentation>
+					<j:BailBond>
+						<j:BailBondAmount>
+							<!--  Class: Bond, Attribute: BondAmount  -->
+							<nc:Amount>0</nc:Amount>
+						</j:BailBondAmount>
+					</j:BailBond>
+				</hs:ChargeAugmentation>
+			</j:ArrestCharge>
+			<!-- CHARGE 2 222222222222222222222222222222222222222222222222222222 -->
+			<j:ArrestCharge>
+				<!--  Class: Charge, Attribute: ChargeType  -->
+				<j:ChargeCategoryDescriptionText>String</j:ChargeCategoryDescriptionText>
+				<!--  Class: Charge, Attribute: ChargeCount  -->
+				<j:ChargeCountQuantity>0</j:ChargeCountQuantity>
+				<!--  Class: Charge, Attribute: ChargeDescription  -->
+				<j:ChargeDescriptionText>String</j:ChargeDescriptionText>
+				<j:ChargeFilingDate>
+					<!--  Class: Charge, Attribute: ChargeEffectiveDate  -->
+					<nc:DateTime>2001-12-17T09:30:47Z</nc:DateTime>
+				</j:ChargeFilingDate>
+				<j:ChargeIdentification>
+					<!-- Class: Charge, Attribute: ItemNumber (aka Police incident report number -->
+					<nc:IdentificationID>String</nc:IdentificationID>
+				</j:ChargeIdentification>
+				<!--  Class: Charge, Attribute: ChargeSequenceNumber  -->
+				<j:ChargeSequenceID>String</j:ChargeSequenceID>
+				<j:ChargeStatute>
+					<j:StatuteCodeIdentification>
+						<!--  Class: Statute, Attribute: ChargeStatute, Type: string  -->
+						<nc:IdentificationID>String</nc:IdentificationID>
+					</j:StatuteCodeIdentification>
+					<j:StatuteCodeSectionIdentification>
+						<!--  Class: Statute, Attribute: ChargeViolation, Type: string  -->
+						<nc:IdentificationID>String</nc:IdentificationID>
+					</j:StatuteCodeSectionIdentification>
+					<!--  Class: Statute, Attribute: ChargeStatueDescription  -->
+					<j:StatuteDescriptionText>String</j:StatuteDescriptionText>
+					<!--  Class: Statute, Attribute: FullStatuteText  -->
+					<j:StatuteText>Full statute text</j:StatuteText>
+					<nola-ext:ChargeStatuteAugmentation>
+						<nola-ext:StatuteCodeSectionSubparagraphIdentification>
+							<!--  Class: Statute, Attribute: ChargeSubparagraph, Type: string  -->
+							<nc:IdentificationID>String</nc:IdentificationID>
+						</nola-ext:StatuteCodeSectionSubparagraphIdentification>
+					</nola-ext:ChargeStatuteAugmentation>
+				</j:ChargeStatute>
+				<!--  Class: Charge, Attribute: ChargeType  -->
+				<!--<nola-ext:ChargeCategoryCodeText>String</nola-ext:ChargeCategoryCodeText>-->
+				<nola-ext:ChargeAugmentation>
+					<!-- Class: Charge, Attribute: PrimaryChargeFlag -->
+					<nola-ext:PrimaryChargeFlag>true</nola-ext:PrimaryChargeFlag>
+					<!-- Class: Charge, Attribute: AffivaditNumber -->
+					<nola-ext:ChargeAffidavitNumber>String</nola-ext:ChargeAffidavitNumber>
+					<!--  Class: Charge, Attribute: ChargeKey  -->
+					<nola-ext:ChargeKey>String</nola-ext:ChargeKey>
+					<!--  Class: Charge, Attribute: ChargeLIBRSCode  -->
+					<nola-ext:ChargeLIBRSCode>String</nola-ext:ChargeLIBRSCode>
+					<!-- Class:Arrest, Attribute:ArrestTrackingNumber  -->
+					<nola-ext:StatewideArrestTrackingNumber>String</nola-ext:StatewideArrestTrackingNumber>
+					<!-- Class:Arrest, Attribute:ATNChargeSequenceID  -->
+					<nola-ext:StatewideATNChargeSequenceID>String</nola-ext:StatewideATNChargeSequenceID>
+					<!-- Class:Charge, Attribute:ChargeNumber  -->
+					<nola-ext:JMSChargeNumber>String</nola-ext:JMSChargeNumber>
+					<!-- Class:Charge, Attribute:CourtType -->
+					<nola-ext:CourtType>MUN</nola-ext:CourtType>
+				</nola-ext:ChargeAugmentation>
+				<hs:ChargeAugmentation>
+					<j:BailBond>
+						<j:BailBondAmount>
+							<!--  Class: Bond, Attribute: BondAmount  -->
+							<nc:Amount>0</nc:Amount>
+						</j:BailBondAmount>
+					</j:BailBond>
+				</hs:ChargeAugmentation>
+			</j:ArrestCharge>
+			<!-- CHARGE 3 3333333333333333333333333333333333333333333333333 -->
+			<j:ArrestCharge>
+				<!--  Class: Charge, Attribute: ChargeType  -->
+				<j:ChargeCategoryDescriptionText>String</j:ChargeCategoryDescriptionText>
+				<!--  Class: Charge, Attribute: ChargeCount  -->
+				<j:ChargeCountQuantity>0</j:ChargeCountQuantity>
+				<!--  Class: Charge, Attribute: ChargeDescription  -->
+				<j:ChargeDescriptionText>String</j:ChargeDescriptionText>
+				<j:ChargeFilingDate>
+					<!--  Class: Charge, Attribute: ChargeEffectiveDate  -->
+					<nc:DateTime>2001-12-17T09:30:47Z</nc:DateTime>
+				</j:ChargeFilingDate>
+				<j:ChargeIdentification>
+					<!-- Class: Charge, Attribute: ItemNumber (aka Police incident report number -->
+					<nc:IdentificationID>String</nc:IdentificationID>
+				</j:ChargeIdentification>
+				<!--  Class: Charge, Attribute: ChargeSequenceNumber  -->
+				<j:ChargeSequenceID>String</j:ChargeSequenceID>
+				<j:ChargeStatute>
+					<j:StatuteCodeIdentification>
+						<!--  Class: Statute, Attribute: ChargeStatute, Type: string  -->
+						<nc:IdentificationID>String</nc:IdentificationID>
+					</j:StatuteCodeIdentification>
+					<j:StatuteCodeSectionIdentification>
+						<!--  Class: Statute, Attribute: ChargeViolation, Type: string  -->
+						<nc:IdentificationID>String</nc:IdentificationID>
+					</j:StatuteCodeSectionIdentification>
+					<!--  Class: Statute, Attribute: ChargeStatueDescription  -->
+					<j:StatuteDescriptionText>String</j:StatuteDescriptionText>
+					<!--  Class: Statute, Attribute: FullStatuteText  -->
+					<j:StatuteText>Full statute text</j:StatuteText>
+					<nola-ext:ChargeStatuteAugmentation>
+						<nola-ext:StatuteCodeSectionSubparagraphIdentification>
+							<!--  Class: Statute, Attribute: ChargeSubparagraph, Type: string  -->
+							<nc:IdentificationID>String</nc:IdentificationID>
+						</nola-ext:StatuteCodeSectionSubparagraphIdentification>
+					</nola-ext:ChargeStatuteAugmentation>
+				</j:ChargeStatute>
+				<!--  Class: Charge, Attribute: ChargeType  -->
+				<!--<nola-ext:ChargeCategoryCodeText>String</nola-ext:ChargeCategoryCodeText>-->
+				<nola-ext:ChargeAugmentation>
+					<!-- Class: Charge, Attribute: PrimaryChargeFlag -->
+					<nola-ext:PrimaryChargeFlag>true</nola-ext:PrimaryChargeFlag>
+					<!-- Class: Charge, Attribute: AffivaditNumber -->
+					<nola-ext:ChargeAffidavitNumber>String</nola-ext:ChargeAffidavitNumber>
+					<!--  Class: Charge, Attribute: ChargeKey  -->
+					<nola-ext:ChargeKey>String</nola-ext:ChargeKey>
+					<!--  Class: Charge, Attribute: ChargeLIBRSCode  -->
+					<nola-ext:ChargeLIBRSCode>String</nola-ext:ChargeLIBRSCode>
+					<!-- Class:Arrest, Attribute:ArrestTrackingNumber  -->
+					<nola-ext:StatewideArrestTrackingNumber>String</nola-ext:StatewideArrestTrackingNumber>
+					<!-- Class:Arrest, Attribute:ATNChargeSequenceID  -->
+					<nola-ext:StatewideATNChargeSequenceID>String</nola-ext:StatewideATNChargeSequenceID>
+					<!-- Class:Charge, Attribute:ChargeNumber  -->
+					<nola-ext:JMSChargeNumber>String</nola-ext:JMSChargeNumber>
+					<!-- Class:Charge, Attribute:CourtType -->
+					<nola-ext:CourtType>MUN</nola-ext:CourtType>
+				</nola-ext:ChargeAugmentation>
+				<hs:ChargeAugmentation>
+					<j:BailBond>
+						<j:BailBondAmount>
+							<!--  Class: Bond, Attribute: BondAmount  -->
+							<nc:Amount>0</nc:Amount>
+						</j:BailBondAmount>
+					</j:BailBond>
+				</hs:ChargeAugmentation>
+			</j:ArrestCharge>
+			<!-- CHARGE 4 444444444444444444444444444444444444444444444444444444444 -->
+			<j:ArrestCharge>
+				<!--  Class: Charge, Attribute: ChargeType  -->
+				<j:ChargeCategoryDescriptionText>String</j:ChargeCategoryDescriptionText>
+				<!--  Class: Charge, Attribute: ChargeCount  -->
+				<j:ChargeCountQuantity>0</j:ChargeCountQuantity>
+				<!--  Class: Charge, Attribute: ChargeDescription  -->
+				<j:ChargeDescriptionText>String</j:ChargeDescriptionText>
+				<j:ChargeFilingDate>
+					<!--  Class: Charge, Attribute: ChargeEffectiveDate  -->
+					<nc:DateTime>2001-12-17T09:30:47Z</nc:DateTime>
+				</j:ChargeFilingDate>
+				<j:ChargeIdentification>
+					<!-- Class: Charge, Attribute: ItemNumber (aka Police incident report number -->
+					<nc:IdentificationID>String</nc:IdentificationID>
+				</j:ChargeIdentification>
+				<!--  Class: Charge, Attribute: ChargeSequenceNumber  -->
+				<j:ChargeSequenceID>String</j:ChargeSequenceID>
+				<j:ChargeStatute>
+					<j:StatuteCodeIdentification>
+						<!--  Class: Statute, Attribute: ChargeStatute, Type: string  -->
+						<nc:IdentificationID>String</nc:IdentificationID>
+					</j:StatuteCodeIdentification>
+					<j:StatuteCodeSectionIdentification>
+						<!--  Class: Statute, Attribute: ChargeViolation, Type: string  -->
+						<nc:IdentificationID>String</nc:IdentificationID>
+					</j:StatuteCodeSectionIdentification>
+					<!--  Class: Statute, Attribute: ChargeStatueDescription  -->
+					<j:StatuteDescriptionText>String</j:StatuteDescriptionText>
+					<!--  Class: Statute, Attribute: FullStatuteText  -->
+					<j:StatuteText>Full statute text</j:StatuteText>
+					<nola-ext:ChargeStatuteAugmentation>
+						<nola-ext:StatuteCodeSectionSubparagraphIdentification>
+							<!--  Class: Statute, Attribute: ChargeSubparagraph, Type: string  -->
+							<nc:IdentificationID>String</nc:IdentificationID>
+						</nola-ext:StatuteCodeSectionSubparagraphIdentification>
+					</nola-ext:ChargeStatuteAugmentation>
+				</j:ChargeStatute>
+				<!--  Class: Charge, Attribute: ChargeType  -->
+				<!--<nola-ext:ChargeCategoryCodeText>String</nola-ext:ChargeCategoryCodeText>-->
+				<nola-ext:ChargeAugmentation>
+					<!-- Class: Charge, Attribute: PrimaryChargeFlag -->
+					<nola-ext:PrimaryChargeFlag>true</nola-ext:PrimaryChargeFlag>
+					<!-- Class: Charge, Attribute: AffivaditNumber -->
+					<nola-ext:ChargeAffidavitNumber>String</nola-ext:ChargeAffidavitNumber>
+					<!--  Class: Charge, Attribute: ChargeKey  -->
+					<nola-ext:ChargeKey>String</nola-ext:ChargeKey>
+					<!--  Class: Charge, Attribute: ChargeLIBRSCode  -->
+					<nola-ext:ChargeLIBRSCode>String</nola-ext:ChargeLIBRSCode>
+					<!-- Class:Arrest, Attribute:ArrestTrackingNumber  -->
+					<nola-ext:StatewideArrestTrackingNumber>String</nola-ext:StatewideArrestTrackingNumber>
+					<!-- Class:Arrest, Attribute:ATNChargeSequenceID  -->
+					<nola-ext:StatewideATNChargeSequenceID>String</nola-ext:StatewideATNChargeSequenceID>
+					<!-- Class:Charge, Attribute:ChargeNumber  -->
+					<nola-ext:JMSChargeNumber>String</nola-ext:JMSChargeNumber>
+					<!-- Class:Charge, Attribute:CourtType -->
+					<nola-ext:CourtType>MUN</nola-ext:CourtType>
+				</nola-ext:ChargeAugmentation>
+				<hs:ChargeAugmentation>
+					<j:BailBond>
+						<j:BailBondAmount>
+							<!--  Class: Bond, Attribute: BondAmount  -->
+							<nc:Amount>0</nc:Amount>
+						</j:BailBondAmount>
+					</j:BailBond>
+				</hs:ChargeAugmentation>
+			</j:ArrestCharge>
+			<!-- CHARGE 5 5555555555555555555555555555555555555555555555555555 -->
+			<j:ArrestCharge>
+				<!--  Class: Charge, Attribute: ChargeType  -->
+				<j:ChargeCategoryDescriptionText>String</j:ChargeCategoryDescriptionText>
+				<!--  Class: Charge, Attribute: ChargeCount  -->
+				<j:ChargeCountQuantity>0</j:ChargeCountQuantity>
+				<!--  Class: Charge, Attribute: ChargeDescription  -->
+				<j:ChargeDescriptionText>String</j:ChargeDescriptionText>
+				<j:ChargeFilingDate>
+					<!--  Class: Charge, Attribute: ChargeEffectiveDate  -->
+					<nc:DateTime>2001-12-17T09:30:47Z</nc:DateTime>
+				</j:ChargeFilingDate>
+				<j:ChargeIdentification>
+					<!-- Class: Charge, Attribute: ItemNumber (aka Police incident report number -->
+					<nc:IdentificationID>String</nc:IdentificationID>
+				</j:ChargeIdentification>
+				<!--  Class: Charge, Attribute: ChargeSequenceNumber  -->
+				<j:ChargeSequenceID>String</j:ChargeSequenceID>
+				<j:ChargeStatute>
+					<j:StatuteCodeIdentification>
+						<!--  Class: Statute, Attribute: ChargeStatute, Type: string  -->
+						<nc:IdentificationID>String</nc:IdentificationID>
+					</j:StatuteCodeIdentification>
+					<j:StatuteCodeSectionIdentification>
+						<!--  Class: Statute, Attribute: ChargeViolation, Type: string  -->
+						<nc:IdentificationID>String</nc:IdentificationID>
+					</j:StatuteCodeSectionIdentification>
+					<!--  Class: Statute, Attribute: ChargeStatueDescription  -->
+					<j:StatuteDescriptionText>String</j:StatuteDescriptionText>
+					<!--  Class: Statute, Attribute: FullStatuteText  -->
+					<j:StatuteText>Full statute text</j:StatuteText>
+					<nola-ext:ChargeStatuteAugmentation>
+						<nola-ext:StatuteCodeSectionSubparagraphIdentification>
+							<!--  Class: Statute, Attribute: ChargeSubparagraph, Type: string  -->
+							<nc:IdentificationID>String</nc:IdentificationID>
+						</nola-ext:StatuteCodeSectionSubparagraphIdentification>
+					</nola-ext:ChargeStatuteAugmentation>
+				</j:ChargeStatute>
+				<!--  Class: Charge, Attribute: ChargeType  -->
+				<!--<nola-ext:ChargeCategoryCodeText>String</nola-ext:ChargeCategoryCodeText>-->
+				<nola-ext:ChargeAugmentation>
+					<!-- Class: Charge, Attribute: PrimaryChargeFlag -->
+					<nola-ext:PrimaryChargeFlag>true</nola-ext:PrimaryChargeFlag>
+					<!-- Class: Charge, Attribute: AffivaditNumber -->
+					<nola-ext:ChargeAffidavitNumber>String</nola-ext:ChargeAffidavitNumber>
+					<!--  Class: Charge, Attribute: ChargeKey  -->
+					<nola-ext:ChargeKey>String</nola-ext:ChargeKey>
+					<!--  Class: Charge, Attribute: ChargeLIBRSCode  -->
+					<nola-ext:ChargeLIBRSCode>String</nola-ext:ChargeLIBRSCode>
+					<!-- Class:Arrest, Attribute:ArrestTrackingNumber  -->
+					<nola-ext:StatewideArrestTrackingNumber>String</nola-ext:StatewideArrestTrackingNumber>
+					<!-- Class:Arrest, Attribute:ATNChargeSequenceID  -->
+					<nola-ext:StatewideATNChargeSequenceID>String</nola-ext:StatewideATNChargeSequenceID>
+					<!-- Class:Charge, Attribute:ChargeNumber  -->
+					<nola-ext:JMSChargeNumber>String</nola-ext:JMSChargeNumber>
+					<!-- Class:Charge, Attribute:CourtType -->
+					<nola-ext:CourtType>MUN</nola-ext:CourtType>
+				</nola-ext:ChargeAugmentation>
+				<hs:ChargeAugmentation>
+					<j:BailBond>
+						<j:BailBondAmount>
+							<!--  Class: Bond, Attribute: BondAmount  -->
+							<nc:Amount>0</nc:Amount>
+						</j:BailBondAmount>
+					</j:BailBond>
+				</hs:ChargeAugmentation>
+			</j:ArrestCharge>
+			<!-- CHARGE 6 6666666666666666666666666666666666666666666666666666 -->
+			<j:ArrestCharge>
+				<!--  Class: Charge, Attribute: ChargeType  -->
+				<j:ChargeCategoryDescriptionText>String</j:ChargeCategoryDescriptionText>
+				<!--  Class: Charge, Attribute: ChargeCount  -->
+				<j:ChargeCountQuantity>0</j:ChargeCountQuantity>
+				<!--  Class: Charge, Attribute: ChargeDescription  -->
+				<j:ChargeDescriptionText>String</j:ChargeDescriptionText>
+				<j:ChargeFilingDate>
+					<!--  Class: Charge, Attribute: ChargeEffectiveDate  -->
+					<nc:DateTime>2001-12-17T09:30:47Z</nc:DateTime>
+				</j:ChargeFilingDate>
+				<j:ChargeIdentification>
+					<!-- Class: Charge, Attribute: ItemNumber (aka Police incident report number -->
+					<nc:IdentificationID>String</nc:IdentificationID>
+				</j:ChargeIdentification>
+				<!--  Class: Charge, Attribute: ChargeSequenceNumber  -->
+				<j:ChargeSequenceID>String</j:ChargeSequenceID>
+				<j:ChargeStatute>
+					<j:StatuteCodeIdentification>
+						<!--  Class: Statute, Attribute: ChargeStatute, Type: string  -->
+						<nc:IdentificationID>String</nc:IdentificationID>
+					</j:StatuteCodeIdentification>
+					<j:StatuteCodeSectionIdentification>
+						<!--  Class: Statute, Attribute: ChargeViolation, Type: string  -->
+						<nc:IdentificationID>String</nc:IdentificationID>
+					</j:StatuteCodeSectionIdentification>
+					<!--  Class: Statute, Attribute: ChargeStatueDescription  -->
+					<j:StatuteDescriptionText>String</j:StatuteDescriptionText>
+					<!--  Class: Statute, Attribute: FullStatuteText  -->
+					<j:StatuteText>Full statute text</j:StatuteText>
+					<nola-ext:ChargeStatuteAugmentation>
+						<nola-ext:StatuteCodeSectionSubparagraphIdentification>
+							<!--  Class: Statute, Attribute: ChargeSubparagraph, Type: string  -->
+							<nc:IdentificationID>String</nc:IdentificationID>
+						</nola-ext:StatuteCodeSectionSubparagraphIdentification>
+					</nola-ext:ChargeStatuteAugmentation>
+				</j:ChargeStatute>
+				<!--  Class: Charge, Attribute: ChargeType  -->
+				<!--<nola-ext:ChargeCategoryCodeText>String</nola-ext:ChargeCategoryCodeText>-->
+				<nola-ext:ChargeAugmentation>
+					<!-- Class: Charge, Attribute: PrimaryChargeFlag -->
+					<nola-ext:PrimaryChargeFlag>true</nola-ext:PrimaryChargeFlag>
+					<!-- Class: Charge, Attribute: AffivaditNumber -->
+					<nola-ext:ChargeAffidavitNumber>String</nola-ext:ChargeAffidavitNumber>
+					<!--  Class: Charge, Attribute: ChargeKey  -->
+					<nola-ext:ChargeKey>String</nola-ext:ChargeKey>
+					<!--  Class: Charge, Attribute: ChargeLIBRSCode  -->
+					<nola-ext:ChargeLIBRSCode>String</nola-ext:ChargeLIBRSCode>
+					<!-- Class:Arrest, Attribute:ArrestTrackingNumber  -->
+					<nola-ext:StatewideArrestTrackingNumber>String</nola-ext:StatewideArrestTrackingNumber>
+					<!-- Class:Arrest, Attribute:ATNChargeSequenceID  -->
+					<nola-ext:StatewideATNChargeSequenceID>String</nola-ext:StatewideATNChargeSequenceID>
+					<!-- Class:Charge, Attribute:ChargeNumber  -->
+					<nola-ext:JMSChargeNumber>String</nola-ext:JMSChargeNumber>
+					<!-- Class:Charge, Attribute:CourtType -->
+					<nola-ext:CourtType>MUN</nola-ext:CourtType>
+				</nola-ext:ChargeAugmentation>
+				<hs:ChargeAugmentation>
+					<j:BailBond>
+						<j:BailBondAmount>
+							<!--  Class: Bond, Attribute: BondAmount  -->
+							<nc:Amount>0</nc:Amount>
+						</j:BailBondAmount>
+					</j:BailBond>
+				</hs:ChargeAugmentation>
+			</j:ArrestCharge>
+			<!-- Arresting arrest officer -->
+			<j:ArrestOfficial>
+				<nc:RoleOfPerson>
+					<nc:PersonName>
+						<!--  Class: PersonName, Attribute: Title, Type: string  -->
+						<nc:PersonNamePrefixText>String</nc:PersonNamePrefixText>
+						<!--  Class: PersonName, Attribute: FirstName, Type: string  -->
+						<nc:PersonGivenName>String</nc:PersonGivenName>
+						<!--  Class: PersonName, Attribute: MiddleInitial, Type: string  -->
+						<nc:PersonMiddleName>String</nc:PersonMiddleName>
+						<!--  Class: PersonName, Attribute: LastName, Type: string  -->
+						<nc:PersonSurName>String</nc:PersonSurName>
+						<!--  Class: PersonName, Attribute: NameSuffix, Type: string  -->
+						<nc:PersonNameSuffixText>String</nc:PersonNameSuffixText>
+						<!--  Class: PersonName, Attribute: FullName, Type: string  -->
+						<nc:PersonFullName>String</nc:PersonFullName>
+					</nc:PersonName>
+					<nc:PersonContactInformation>
+						<!--  Class: ContactInformation, Attribute: EMailAddress, Type: string  -->
+						<nc:ContactEmailID>String</nc:ContactEmailID>
+						<!--  Class: ContactInformation, Attribute: PhoneNumber, Type: TelephoneNumberType  -->
+						<nc:ContactTelephoneNumber>
+							<!--  Class: TelephoneNumberType, Attribute: FullTelephoneNumberType  -->
+							<nc:FullTelephoneNumber>
+								<!--  Class: FullTelephoneNumberType, Attribute: FullTelephoneNumber  -->
+								<nc:TelephoneNumberFullID>String</nc:TelephoneNumberFullID>
+								<!--  Class: FullTelephoneNumberType, Attribute: TelephoneNumberExtension  -->
+								<nc:TelephoneSuffixID>String</nc:TelephoneSuffixID>
+							</nc:FullTelephoneNumber>
+							<nc:NANPTelephoneNumber>
+								<!--  Class: FullTelephoneNumberType, Attribute: TelephoneNumberAreaCode  -->
+								<nc:TelephoneAreaCodeID>303</nc:TelephoneAreaCodeID>
+								<!--  Class: FullTelephoneNumberType, Attribute: TelephoneNumberExchangeID  -->
+								<nc:TelephoneExchangeID>123</nc:TelephoneExchangeID>
+								<!--  Class: FullTelephoneNumberType, Attribute: TelephoneNumberLineID  -->
+								<nc:TelephoneLineID>4567</nc:TelephoneLineID>
+							</nc:NANPTelephoneNumber>
+							<!--  Class: TelephoneNumberType, Attribute: TelephoneNumberDescription  -->
+							<nc:TelephoneNumberDescriptionText>String</nc:TelephoneNumberDescriptionText>
+						</nc:ContactTelephoneNumber>
+					</nc:PersonContactInformation>
+				</nc:RoleOfPerson>
+				<j:EnforcementOfficialBadgeIdentification>
+					<!--  Class: Officer, Attribute: BadgeNumber, Type: string  -->
+					<nc:IdentificationID>String</nc:IdentificationID>
+				</j:EnforcementOfficialBadgeIdentification>
+				<!-- Class:Officer, Attribute: OfficerType -->
+				<j:EnforcementOfficialCategoryText>Arresting Officer</j:EnforcementOfficialCategoryText>
+				<j:EnforcementOfficialUnit>
+					<!--  Class: Agency, Attribute: AgencyName  -->
+					<nc:OrganizationName>String</nc:OrganizationName>
+					<j:OrganizationAugmentation>
+						<j:OrganizationORIIdentification>
+							<!--  Class: Agency, Attribute: AgencyORI  -->
+							<nc:IdentificationID>String</nc:IdentificationID>
+						</j:OrganizationORIIdentification>
+					</j:OrganizationAugmentation>
+					<!--  Class: Officer, Attribute: UnitName, Type: string  -->
+					<j:EnforcementUnitName>String</j:EnforcementUnitName>
+				</j:EnforcementOfficialUnit>
+			</j:ArrestOfficial>
+			<!-- Transporting arrest officer -->
+			<j:ArrestOfficial>
+				<nc:RoleOfPerson>
+					<nc:PersonName>
+						<!--  Class: PersonName, Attribute: Title, Type: string  -->
+						<nc:PersonNamePrefixText>String</nc:PersonNamePrefixText>
+						<!--  Class: PersonName, Attribute: FirstName, Type: string  -->
+						<nc:PersonGivenName>String</nc:PersonGivenName>
+						<!--  Class: PersonName, Attribute: MiddleInitial, Type: string  -->
+						<nc:PersonMiddleName>String</nc:PersonMiddleName>
+						<!--  Class: PersonName, Attribute: LastName, Type: string  -->
+						<nc:PersonSurName>String</nc:PersonSurName>
+						<!--  Class: PersonName, Attribute: NameSuffix, Type: string  -->
+						<nc:PersonNameSuffixText>String</nc:PersonNameSuffixText>
+						<!--  Class: PersonName, Attribute: FullName, Type: string  -->
+						<nc:PersonFullName>String</nc:PersonFullName>
+					</nc:PersonName>
+					<nc:PersonContactInformation>
+						<!--  Class: ContactInformation, Attribute: EMailAddress, Type: string  -->
+						<nc:ContactEmailID>String</nc:ContactEmailID>
+						<!--  Class: ContactInformation, Attribute: PhoneNumber, Type: TelephoneNumberType  -->
+						<nc:ContactTelephoneNumber>
+							<!--  Class: TelephoneNumberType, Attribute: FullTelephoneNumberType  -->
+							<nc:FullTelephoneNumber>
+								<!--  Class: FullTelephoneNumberType, Attribute: FullTelephoneNumber  -->
+								<nc:TelephoneNumberFullID>String</nc:TelephoneNumberFullID>
+								<!--  Class: FullTelephoneNumberType, Attribute: TelephoneNumberExtension  -->
+								<nc:TelephoneSuffixID>String</nc:TelephoneSuffixID>
+							</nc:FullTelephoneNumber>
+							<nc:NANPTelephoneNumber>
+								<!--  Class: FullTelephoneNumberType, Attribute: TelephoneNumberAreaCode  -->
+								<nc:TelephoneAreaCodeID>303</nc:TelephoneAreaCodeID>
+								<!--  Class: FullTelephoneNumberType, Attribute: TelephoneNumberExchangeID  -->
+								<nc:TelephoneExchangeID>123</nc:TelephoneExchangeID>
+								<!--  Class: FullTelephoneNumberType, Attribute: TelephoneNumberLineID  -->
+								<nc:TelephoneLineID>4567</nc:TelephoneLineID>
+							</nc:NANPTelephoneNumber>
+							<!--  Class: TelephoneNumberType, Attribute: TelephoneNumberDescription  -->
+							<nc:TelephoneNumberDescriptionText>String</nc:TelephoneNumberDescriptionText>
+						</nc:ContactTelephoneNumber>
+					</nc:PersonContactInformation>
+				</nc:RoleOfPerson>
+				<j:EnforcementOfficialBadgeIdentification>
+					<!--  Class: Officer, Attribute: BadgeNumber, Type: string  -->
+					<nc:IdentificationID>String</nc:IdentificationID>
+				</j:EnforcementOfficialBadgeIdentification>
+				<!-- Class:Officer, Attribute: OfficerType -->
+				<j:EnforcementOfficialCategoryText>Transporting Officer</j:EnforcementOfficialCategoryText>
+				<j:EnforcementOfficialUnit>
+					<!--  Class: Agency, Attribute: AgencyName  -->
+					<nc:OrganizationName>String</nc:OrganizationName>
+					<j:OrganizationAugmentation>
+						<j:OrganizationORIIdentification>
+							<!--  Class: Agency, Attribute: AgencyORI  -->
+							<nc:IdentificationID>String</nc:IdentificationID>
+						</j:OrganizationORIIdentification>
+					</j:OrganizationAugmentation>
+					<!--  Class: Officer, Attribute: UnitName, Type: string  -->
+					<j:EnforcementUnitName>String</j:EnforcementUnitName>
+				</j:EnforcementOfficialUnit>
+			</j:ArrestOfficial>
+			<!--  Class: Arrest, Attribute: ArrestWarrant  -->
+			<!--  Class: Warrants  -->
+			<j:ArrestWarrant>
+				<!--  Class: Warrants, Attribute: WarrantType  -->
+				<j:WarrantCategoryCode>ARREST_WARRANT</j:WarrantCategoryCode>
+                <scr:WarrantAugmentation>
+					<!--  Class: Warrants, Attribute: WarrantNumber -->
+                    <scr:WarrantIdentification>
+                        <nc:IdentificationID>String</nc:IdentificationID>
+                    </scr:WarrantIdentification>
+                </scr:WarrantAugmentation>
+			</j:ArrestWarrant>
+			<nola-ext:ArrestAugmentation>
+				<nc:Incident>
+					<nola-ext:IncidentAugmentation>
+						<j:Offense>
+							<nc:ActivityDate>
+								<!--  Class: Offense Attribute: OffenseDate  -->
+								<nc:DateTime>2001-12-17T09:30:47Z</nc:DateTime>
+							</nc:ActivityDate>
+							<!--  Class: Offense Attribute: OffenseLocation  -->
+							<nc:ActivityLocation>
+								<nc:Address>
+									<!--  Class: Address, Attribute: Address, Type: string  -->
+									<nc:AddressFullText>String</nc:AddressFullText>
+									<!--  Class: Address, Attribute: ApartmentNumber, Type: string  -->
+									<nc:AddressSecondaryUnitText>String</nc:AddressSecondaryUnitText>
+									<nc:AddressStreet>
+										<!--  Class: Address, Attribute: StreetDirection, Type: string  -->
+										<nc:StreetFullText>String</nc:StreetFullText>
+										<!--  Class: Address, Attribute: StreetNumber, Type: string  -->
+										<nc:StreetNumberText>String</nc:StreetNumberText>
+										<nc:StreetPredirectional>
+											<!--  Class: Address, Attribute: StreetPrefix, Type: string  -->
+											<nc:StreetDirectionalText>String</nc:StreetDirectionalText>
+										</nc:StreetPredirectional>
+										<!--  Class: Address, Attribute: StreetName, Type: string  -->
+										<nc:StreetName>String</nc:StreetName>
+										<nc:StreetPostdirectional>
+											<!--  Class: Address, Attribute: StreetSuffix, Type: string  -->
+											<nc:StreetDirectionalText>String</nc:StreetDirectionalText>
+										</nc:StreetPostdirectional>
+									</nc:AddressStreet>
+									<!--  Class: Address, Attribute: BoxRouteCode, Type: CodeList  -->
+									<nc:AddressDeliveryPointID>String</nc:AddressDeliveryPointID>
+									<!--  Class: Address, Attribute: AddressBoxRoute, Type: string  -->
+									<nc:AddressRouteName>String</nc:AddressRouteName>
+									<!--  Class: Address, Attribute: AddressCity, Type: string  -->
+									<nc:AddressCityName>String</nc:AddressCityName>
+									<nc:AddressState>
+										<!--  Class: Address, Attribute: AddressState, Type: string  -->
+										<nc:StateName>String</nc:StateName>
+										<!--  Class: Address, Attribute: StateCode -->
+										<ncic:StateUSCode>CA</ncic:StateUSCode>
+									</nc:AddressState>
+									<!--  Class: Address, Attribute: ZIPCode, Type: CodeList  -->
+									<nc:AddressPostalCode>String</nc:AddressPostalCode>
+									<!--  Class: Address, Attribute: ZIPCodeExtension, Type: CodeList  -->
+									<nc:AddressPostalExtensionCode>String</nc:AddressPostalExtensionCode>
+								</nc:Address>
+								<!--  Class: Address, Attribute: AddressCrossStreet  -->
+								<!--  Class: CrossStreet -->
+								<nc:AddressCrossStreet>
+									<nc:AddressStreet>
+										<!--  Class: CrossStreet, Attribute: CrossStreetDirection  -->
+										<nc:StreetFullText>String</nc:StreetFullText>
+										<!--  Class: CrossStreet, Attribute: CrossStreetDirectionNumber  -->
+										<nc:StreetNumberText>String</nc:StreetNumberText>
+										<!--  Class: CrossStreet, Attribute: CrossStreetPrefix  -->
+										<nc:StreetPredirectional>
+											<nc:StreetDirectionalText>String</nc:StreetDirectionalText>
+										</nc:StreetPredirectional>
+										<!--  Class: CrossStreet, Attribute: CrossStreetName  -->
+										<nc:StreetName>String</nc:StreetName>
+										<!--  Class: CrossStreet, Attribute: CrossStreetSuffix  -->
+										<nc:StreetPostdirectional>
+											<nc:StreetDirectionalText>String</nc:StreetDirectionalText>
+										</nc:StreetPostdirectional>
+									</nc:AddressStreet>
+								</nc:AddressCrossStreet>
+								<nola-ext:LocationAugmentation>
+									<!--  Class: CrossStreet, Attribute: CrossStreetIntersectionCode  -->
+									<nola-ext:CrossStreetIntersectionText>String</nola-ext:CrossStreetIntersectionText>
+								</nola-ext:LocationAugmentation>
+							</nc:ActivityLocation>
+						</j:Offense>
+					</nola-ext:IncidentAugmentation>
+				</nc:Incident>
+			</nola-ext:ArrestAugmentation>
+		</j:Arrest>
+	</j:Booking>
+	<nc:Case structures:ref="add">
+		<!--  Class: CourtCase, Attribute: CourtCaseDocketNumber  -->
+		<nc:CaseDocketID>String</nc:CaseDocketID>
+		<j:CaseAugmentation>
+			<!-- CaseCourt - A court of law in which the case is being tried. j:CourtType-->
+			<j:CaseCourt>
+				<nc:OrganizationIdentification>
+					<!--  Class: Court, Attribute: CourtID  -->
+					<nc:IdentificationID>String</nc:IdentificationID>
+				</nc:OrganizationIdentification>
+				<nc:OrganizationLocation>
+					<nc:LocationPart>
+						<!--  Class: Court, Attribute: MagistrateSection  -->
+						<nc:LocationRoomText>String</nc:LocationRoomText>
+					</nc:LocationPart>
+				</nc:OrganizationLocation>
+				<!--  Class: Agency, Attribute: AgencyName  -->
+				<nc:OrganizationName>String</nc:OrganizationName>
+				<j:OrganizationAugmentation>
+					<j:OrganizationORIIdentification>
+						<!--  Class: Agency, Attribute: AgencyORI  -->
+						<nc:IdentificationID>String</nc:IdentificationID>
+					</j:OrganizationORIIdentification>
+				</j:OrganizationAugmentation>
+				<!--  Class: Court, Attribute: CourtName  -->
+				<j:CourtName>String</j:CourtName>
+				<!--  Class: Court, Attribute: CourtSection  -->
+				<j:CourtDivisionText>String</j:CourtDivisionText>
+			</j:CaseCourt>
+			<!-- j:CaseCourtEvent- A court occurrence related to a case. j:CourtEventType-->
+			<j:CaseCourtEvent>
+				<nc:ActivityComment>
+					<!--  Class: MinutesDocument, Attribute: MinuteText  -->
+					<nc:CommentText>String</nc:CommentText>
+				</nc:ActivityComment>
+				<nc:ActivityDate>
+					<!--  Class: CourtEvent, Attribute: CourtEventDate  -->
+					<nc:DateTime>2001-12-17T09:30:47Z</nc:DateTime>
+				</nc:ActivityDate>
+			</j:CaseCourtEvent>
+		</j:CaseAugmentation>
+	</nc:Case>
+</nola:JuvenileAdmissionExchange>

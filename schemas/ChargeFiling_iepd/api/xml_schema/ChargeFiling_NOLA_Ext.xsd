@@ -44,8 +44,8 @@
 		<xs:complexContent>
 			<xs:extension base="structures:ObjectType">
 				<xs:sequence>
+					<xs:element ref="j:BookingDocumentControlIdentification" minOccurs="0" maxOccurs="1"/>
 					<xs:element ref="nola-ext:ArrestDispositionCode" minOccurs="1" maxOccurs="1"/>
-					<xs:element ref="nola-ext:ArrestIncident" minOccurs="0" maxOccurs="1"/>
 					<xs:element ref="nola-ext:ArrestReceivedDate" minOccurs="1" maxOccurs="1"/>
 				</xs:sequence>
 			</xs:extension>
@@ -79,9 +79,9 @@
 		<xs:complexContent>
 			<xs:extension base="structures:ObjectType">
 				<xs:sequence>
+					<xs:element ref="nola-ext:ArrestIncident" minOccurs="0" maxOccurs="1"/>
 					<xs:element ref="nola-ext:ChargeDispositionCode" minOccurs="0" maxOccurs="1"/>
 					<xs:element ref="nola-ext:ChargeKey" minOccurs="0" maxOccurs="1"/>
-					<xs:element ref="nola-ext:JMSChargeNumber" minOccurs="0" maxOccurs="1"/>
 					<xs:element ref="nola-ext:OffenseDate" minOccurs="0" maxOccurs="1"/>
 					<xs:element ref="nola-ext:StatewideArrestTrackingNumber" minOccurs="0"
 						maxOccurs="1"/>
@@ -204,8 +204,7 @@
 	</xs:element>
 	<xs:element name="ChargeDispositionCode" type="niem-xs:string">
 		<xs:annotation>
-			<xs:documentation>A unique identification number assigned to a particular charge by an
-				arresting agency.</xs:documentation>
+			<xs:documentation>A value that describes the type of disposition.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="ChargeFilingDocument" type="nc:DocumentType">
@@ -234,12 +233,6 @@
 	<xs:element name="CourtCaseTransfertoSectionIdentification" type="nc:IdentificationType">
 		<xs:annotation>
 			<xs:documentation>Identifies the court section to transfer this case.</xs:documentation>
-		</xs:annotation>
-	</xs:element>
-	<xs:element name="JMSChargeNumber" type="niem-xs:string">
-		<xs:annotation>
-			<xs:documentation>A unique identification number assigned to a particular charge by a
-				Jail Management System (JMS).</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="PersonLocalIdentification" type="niem-xs:string">

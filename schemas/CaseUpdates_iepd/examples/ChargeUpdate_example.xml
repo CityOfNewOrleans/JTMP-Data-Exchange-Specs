@@ -26,6 +26,12 @@
 				<j:ChargeCountQuantity>0</j:ChargeCountQuantity>
 				<!--  Class: Charge, Attribute: ChargeDescription  -->
 				<j:ChargeDescriptionText>String</j:ChargeDescriptionText>
+				<j:ChargeDisposition>
+					<DispositionDate>
+						<Date>1957-08-13</Date>
+					</DispositionDate>
+					<DispositionDescriptionText>Guilty</DispositionDescriptionText>
+				</j:ChargeDisposition>
 				<j:ChargeFilingDate>
 					<!--  Class: Charge, Attribute: ChargeEffectiveDate  -->
 					<Date>1957-08-13</Date>
@@ -117,6 +123,8 @@
 				<nola-ext:ChargeAugmentation>
 					<!--  Class: Charge, Attribute: ChargeAffidavitNumber  -->
 					<nola-ext:ChargeAffidavitNumber>String</nola-ext:ChargeAffidavitNumber>
+					<!-- Class: Charge Disposition, Attribute: ChargeDispositionCode -->
+					<nola-ext:ChargeDispositionCode>accepted</nola-ext:ChargeDispositionCode>
 					<!--  Class: Charge, Attribute: ChargeKey  -->
 					<nola-ext:ChargeKey>String</nola-ext:ChargeKey>
 					<!--  Class: Charge, Attribute: ChargeLIBRSCode  -->
@@ -397,6 +405,29 @@
 					<j:ChargeQualifierText>String</j:ChargeQualifierText>
 				</nola-ext:AFISChargeAugmentation>
 			</j:CaseCharge>
+			<j:CaseDefendantParty>
+				<!--  Class: CourtCase, Attribute: CourtCaseDefendant  -->
+				<EntityPerson>
+					<PersonBirthDate>
+						<Date>1957-08-13</Date>
+					</PersonBirthDate>
+					<PersonName>
+						<PersonGivenName>String</PersonGivenName>
+						<PersonMiddleName>String</PersonMiddleName>
+						<PersonSurName>String</PersonSurName>
+						<PersonNameSuffixText>String</PersonNameSuffixText>
+						<PersonFullName>String</PersonFullName>
+					</PersonName>
+					<PersonStateIdentification>
+						<IdentificationID>String</IdentificationID>
+					</PersonStateIdentification>
+					<nola-ext:PersonAugmentation>
+						<!--  Class: Defendant, Attribute: CaseDefendantNumber  -->
+						<nola-ext:CaseDefendantNumber>String</nola-ext:CaseDefendantNumber>
+						<scr:InmateNumberID>String</scr:InmateNumberID>
+					</nola-ext:PersonAugmentation>
+				</EntityPerson>
+			</j:CaseDefendantParty>
 		</j:CaseAugmentation>
 	</CourtCase>
 </nola:ChargeUpdateExchange>
