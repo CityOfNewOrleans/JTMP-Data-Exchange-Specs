@@ -8,120 +8,120 @@
   xmlns:im="http://release.niem.gov/niem/domains/immigration/5.2/"
   xmlns:ndex="http://release.niem.gov/niem/codes/ndex/5.0/"
   xmlns:ncic="http://release.niem.gov/niem/codes/ncic/5.2/" xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/">
-  <w:Element w:name="em:ActivityAugmentation" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="em:ActivityAugmentation" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="em:PatientConditionName" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="em:PatientDiagnosisICDCodeID" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="em:PersonAlternateName" w:isReference="false" w:nillable="true"/>
-  <w:Element w:name="hs:EmployerAugmentation" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="hs:PersonAugmentation" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="hs:PersonGenderIdentityText" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="im:PersonNameAugmentation" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="hs:EmployerAugmentation" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="hs:PersonAugmentation" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="hs:PersonGenderIdentityText" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="im:PersonNameAugmentation" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="j:ActivityForceAssociation" w:isReference="false" w:nillable="true"/>
-  <w:Element w:name="j:Arrest" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="j:ArrestCategoryJABSCode" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="j:ConveyanceRegistration" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="j:Arrest" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="j:ArrestCategoryJABSCode" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="j:ConveyanceRegistration" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="j:DriverLicenseCommercialClassText"
-    w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="j:DrugCategoryCode" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="j:EducationAugmentation" w:isReference="false" w:nillable="false"/>
+    w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="j:DrugCategoryCode" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="j:EducationAugmentation" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="j:EnforcementOfficialAssignmentCategoryText"
-    w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="j:IncidentArrestAssociation" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="j:IncidentAugmentation" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="j:IncidentStatusCode" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="j:InjuryCategoryCode" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="j:InjuryLocationNDExCode" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="j:InvolvementText" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="j:ItemAugmentation" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="j:LocationAugmentation" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="j:LocationCategoryCode" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="j:MaritalStatusCode" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="j:OffenseArrestAssociation" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="j:OffenseChargeAssociation" w:isReference="false" w:nillable="false"/>
+    w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="j:IncidentArrestAssociation" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="j:IncidentAugmentation" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="j:IncidentStatusCode" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="j:InjuryCategoryCode" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="j:InjuryLocationNDExCode" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="j:InvolvementText" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="j:ItemAugmentation" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="j:LocationAugmentation" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="j:LocationCategoryCode" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="j:MaritalStatusCode" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="j:OffenseArrestAssociation" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="j:OffenseChargeAssociation" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="j:OffenseUCRCode" w:isReference="false" w:nillable="true"/>
-  <w:Element w:name="j:OrganizationAugmentation" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="j:OrganizationAugmentation" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="j:OtherInvolvedPerson" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="j:ParticipantRoleCategoryText"
-    w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="j:PersonAugmentation" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="j:PersonBuildCode" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="j:PersonFacialHairCode" w:isReference="false" w:nillable="false"/>
+    w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="j:PersonAugmentation" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="j:PersonBuildCode" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="j:PersonFacialHairCode" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="j:PersonGangAssociation" w:isReference="false" w:nillable="true"/>
-  <w:Element w:name="j:PersonHairLengthCode" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="j:VictimCategoryCode" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="j:WarrantCategoryCode" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:ActivityCategoryText" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:ActivityReasonText" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:Address" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:AddressCrossStreet" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:AddressDeliveryPointID" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:AddressStreet" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:Base64BinaryObject" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:ContactEmailID" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:ContactMailingAddress" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:ContactTelephoneNumber" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="j:PersonHairLengthCode" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="j:VictimCategoryCode" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="j:WarrantCategoryCode" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:ActivityCategoryText" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:ActivityReasonText" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:Address" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:AddressCrossStreet" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:AddressDeliveryPointID" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:AddressStreet" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:Base64BinaryObject" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:ContactEmailID" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:ContactMailingAddress" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:ContactTelephoneNumber" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="nc:ConveyanceColorPrimaryText"
-    w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:CountryName" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:Date" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:DateTime" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:DocumentBinary" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:DocumentCategoryText" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:DocumentMediaCategoryText" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:DrugClassScheduleText" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:EducationLevelText" w:isReference="false" w:nillable="false"/>
+    w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:CountryName" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:Date" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:DateTime" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:DocumentBinary" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:DocumentCategoryText" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:DocumentMediaCategoryText" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:DrugClassScheduleText" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:EducationLevelText" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="nc:EmployeeOccupationCategoryText"
-    w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:EmployeeOccupationText" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:EntityPerson" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:FullTelephoneNumber" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:GenericEntity" w:isReference="false" w:nillable="false"/>
+    w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:EmployeeOccupationText" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:EntityPerson" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:FullTelephoneNumber" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:GenericEntity" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="nc:IncidentVehicleAssociation"
-    w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:InjuryCategoryText" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:InjuryLocationText" w:isReference="false" w:nillable="false"/>
+    w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:InjuryCategoryText" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:InjuryLocationText" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="nc:InternationalTelephoneNumber"
-    w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:ItemMakeName" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:LanguageName" w:isReference="false" w:nillable="false"/>
+    w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:ItemMakeName" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:LanguageName" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="nc:Location2DGeospatialCoordinate"
-    w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:LocationCategoryText" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:MeasureIntegerValue" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:MeasurePointAbstract" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:MeasureUnitText" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:PersonComplexionText" w:isReference="false" w:nillable="false"/>
+    w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:LocationCategoryText" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:MeasureIntegerValue" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:MeasurePointAbstract" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:MeasureUnitText" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:PersonComplexionText" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="nc:PersonEmploymentAssociation"
     w:isReference="false" w:nillable="true"/>
-  <w:Element w:name="nc:PersonMentalStateText" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:PersonNamePrefixText" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:PersonRaceText" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:PersonReligionText" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="nc:PersonMentalStateText" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:PersonNamePrefixText" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:PersonRaceText" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:PersonReligionText" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="nc:PhysicalFeatureCategoryText"
-    w:isReference="false" w:nillable="false"/>
+    w:isReference="false" w:nillable="true"/>
   <w:Element w:name="nc:SourceText" w:isReference="false" w:nillable="true"/>
-  <w:Element w:name="nc:StateName" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:StatusText" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:StreetDirectionalText" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:SubstanceCategoryText" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="nc:YearDate" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="ncic:ChargeCode" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="nc:StateName" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:StatusText" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:StreetDirectionalText" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:SubstanceCategoryText" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:YearDate" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="ncic:ChargeCode" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="ncic:ConveyanceColorPrimaryCode"
-    w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="ncic:ItemCategoryCode" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="ncic:ItemCategoryTYPCode" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="ncic:ItemMakeCode" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="ncic:PersonEthnicityCode" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="ncic:PersonEyeColorCode" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="ncic:PersonHairColorCode" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="ncic:PersonIDCategoryCode" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="ncic:PersonRaceCode" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="ncic:PersonSexCode" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="ncic:PersonSkinToneCode" w:isReference="false" w:nillable="false"/>
+    w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="ncic:ItemCategoryCode" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="ncic:ItemCategoryTYPCode" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="ncic:ItemMakeCode" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="ncic:PersonEthnicityCode" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="ncic:PersonEyeColorCode" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="ncic:PersonHairColorCode" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="ncic:PersonIDCategoryCode" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="ncic:PersonRaceCode" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="ncic:PersonSexCode" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="ncic:PersonSkinToneCode" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="ncic:PhysicalFeatureCategoryCode"
-    w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="ncic:StateUSCode" w:isReference="false" w:nillable="false"/>
-  <w:Element w:name="ncic:VehicleStyleCode" w:isReference="false" w:nillable="false"/>
+    w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="ncic:StateUSCode" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="ncic:VehicleStyleCode" w:isReference="false" w:nillable="true"/>
   <w:Type w:name="em:ActivityAugmentationType" w:isRequested="false">
     <w:ElementInType w:name="em:ActivityReport" w:isReference="false"
       w:minOccurs="0" w:maxOccurs="unbounded"/>
