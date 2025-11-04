@@ -655,7 +655,7 @@
       <xs:documentation>A status of the current disposition of an incident.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="InjuryCategoryCode" type="ucr:InjuryCategoryCodeType" substitutionGroup="nc:InjuryCategoryAbstract">
+  <xs:element name="InjuryCategoryCode" type="ucr:InjuryCategoryCodeType" substitutionGroup="nc:InjuryCategoryAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A general category of harm or injury.</xs:documentation>
     </xs:annotation>
@@ -705,7 +705,7 @@
       <xs:documentation>A number identifying a section of a city enclosed by intersecting streets.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="LocationCategoryCode" type="ndex:LocationCategoryCodeType" substitutionGroup="nc:LocationCategoryAbstract">
+  <xs:element name="LocationCategoryCode" type="ndex:LocationCategoryCodeType" substitutionGroup="nc:LocationCategoryAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A kind of location or area.</xs:documentation>
     </xs:annotation>
