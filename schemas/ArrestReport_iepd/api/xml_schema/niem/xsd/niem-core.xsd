@@ -1846,7 +1846,7 @@
       <xs:documentation>A data concept for a title or honorific used by a person.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="PersonNamePrefixText" type="nc:TextType" substitutionGroup="nc:PersonNamePrefixAbstract">
+  <xs:element name="PersonNamePrefixText" type="nc:TextType" substitutionGroup="nc:PersonNamePrefixAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A title or honorific used by a person.</xs:documentation>
     </xs:annotation>
@@ -1909,6 +1909,11 @@
   <xs:element name="PersonSexAbstract" abstract="true">
     <xs:annotation>
       <xs:documentation>A data concept for a gender or sex of a person.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PersonSexText" type="nc:TextType" substitutionGroup="nc:PersonSexAbstract">
+    <xs:annotation>
+      <xs:documentation>A gender or sex of a person.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:element name="PersonSkinToneAbstract" abstract="true">
@@ -2016,7 +2021,7 @@
       <xs:documentation>A description of a status or condition of something or someone.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="StatusText" type="nc:TextType" substitutionGroup="nc:StatusAbstract">
+  <xs:element name="StatusText" type="nc:TextType" substitutionGroup="nc:StatusAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A status or condition of something or someone.</xs:documentation>
     </xs:annotation>
