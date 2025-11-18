@@ -10,17 +10,22 @@ The publisher may be the CMS of any court jurisdiction - Criminal, Juvenile, or 
 
 ## Preceding Exchange:
 
-Booking - First Appearance would be scheduled with the Magistrate case number. 
-or
-Charge Screening Action (new Criminal charges filed - from District Attorney). Scheduled events will carry the Criminal Case number (after allotment). 
-Case Initiation (new criminal case established, Court publishes Case Number and Filed Charges)​
+* Booking - Each booking automatically schedules a First Appearance and a 701 Hearing, based on the court clerk's business logic for scheduling. 
+* Charge Filing - Filed Charges received from the DA will automatically schedule an Arraignment based on the court clerk's business logic for scheduling. 
 
 ## Triggering Event:  
 
-1. Judge orders an event (hearing) to be scheduled
-2. Court clerk addes the scheduled event to a court case docket
-3. A Court Clerk updates an existing scheduled event when it is cancelled, continued or rescheduled.  
+1. The following actions trigger a CourtEvent tagged with a MessageOperationCode of "add":
+   * Judge orders an event (hearing) to be scheduled
+   * Minute adds the scheduled event to a court case
+   * Booking or Charge Filing automatically schedule the events described above.
+2. The following actions will trigger a CourtEvent tagged with a MessageOperationCode of "update":
+    * Details such as the type of Hearing are changed
+3. The following actions will trigger a CourtEvent tagged with a MessageOperationCode of "delete":
+    * A hearing is cancelled. The minute clerk or clerk will remove the hearing from the court case, without deleting the record
 
+## Message Operation Codes
+This exchange uses a metadata tag, MessageOperationCode to direct the receiving system how to process events. [Implementation Guidance](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/CaseUpdates_iepd/artifacts/Implementation%20Guidance.md) provides detail on how to implement. 
 
 ## Real-World Effects: 
 
@@ -53,3 +58,4 @@ Subscriber systems will match the incoming Court Event with the Court Case ID (w
 **Sample XML:** ![Sample XML](schemas/CourtEvent_iepd/examples/SampleCourtEventXML.xml)
 
 **Class Diagram:** ![Class Diagram](schemas/CourtEvent_iepd/artifacts/CourtEventClassDiagram.svg)
+
