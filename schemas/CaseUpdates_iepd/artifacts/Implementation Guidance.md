@@ -2,14 +2,14 @@
 ![Return to the Case Updates IEPD](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/CaseUpdates_iepd/CaseUpdates.md)
 
 # Implementation Guidance for Case Update Exchanges
-This document provides guidance to implementors of the [Case Update messages](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/CaseUpdates_iepd/CaseUpdates.md) in the [New Orleans Justice Technology Modernization Program](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/tree/main) to ensure consistent and accurate processing of case update messages across systems.
+This document provides guidance to implementors of the [Case Update](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/CaseUpdates_iepd/CaseUpdates.md) and [Court Event](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/tree/main/schemas/CourtEvent_iepd) messages in the [New Orleans Justice Technology Modernization Program](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/tree/main) to ensure consistent and accurate processing across systems.
 
 ## General Guidance
 - Each Case Update message specification is a subset of the [Case Initiation message specification](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/CaseInitiation_iepd/CaseInitiation.md).
 - Data elements in the Case Initiation message that are not required for each specific Case Update message are removed in each Case Update message specification.
 
 ### Types of Update Operations
-- Each Case Update message can include any combination of data elements that are to be added, deleted or updated by the receiver.
+- Each Case Update or Court Event message can include any combination of data elements that are to be added, deleted or updated by the receiver.
 - The value of the `<nola-ext:MessageOperationCode>` metadata element indicate which types of update operations are in the message. 
 - The value of the `<nola-ext:MessageOperationCode>` metadata element must be one of the following: 
     - "add"    - Indicates the addition of new content.
