@@ -97,6 +97,7 @@
   <w:Element w:name="nc:PersonNamePrefixText" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="nc:PersonRaceText" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="nc:PersonReligionText" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:PersonSexText" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="nc:PhysicalFeatureCategoryText"
     w:isReference="false" w:nillable="true"/>
   <w:Element w:name="nc:SourceText" w:isReference="false" w:nillable="true"/>
@@ -117,7 +118,6 @@
   <w:Element w:name="ncic:PersonIDCategoryCode" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="ncic:PersonRaceCode" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="ncic:PersonSexCode" w:isReference="false" w:nillable="true"/>
-  <w:Element w:name="ncic:PersonSexText" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="ncic:PersonSkinToneCode" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="ncic:PhysicalFeatureCategoryCode"
     w:isReference="false" w:nillable="true"/>
