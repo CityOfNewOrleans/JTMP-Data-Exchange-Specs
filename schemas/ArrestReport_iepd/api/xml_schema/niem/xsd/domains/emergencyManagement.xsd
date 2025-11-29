@@ -60,7 +60,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="ActivityAugmentation" type="em:ActivityAugmentationType" substitutionGroup="nc:ActivityAugmentationPoint">
+  <xs:element name="ActivityAugmentation" type="em:ActivityAugmentationType" substitutionGroup="nc:ActivityAugmentationPoint" nillable="true">
     <xs:annotation>
       <xs:documentation>Additional information about an activity.</xs:documentation>
     </xs:annotation>

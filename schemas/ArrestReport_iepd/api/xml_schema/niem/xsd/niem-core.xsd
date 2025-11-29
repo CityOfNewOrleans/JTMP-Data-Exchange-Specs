@@ -976,7 +976,7 @@
       <xs:documentation>A data concept for a kind of activity.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="ActivityCategoryText" type="nc:TextType" substitutionGroup="nc:ActivityCategoryAbstract">
+  <xs:element name="ActivityCategoryText" type="nc:TextType" substitutionGroup="nc:ActivityCategoryAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A kind of activity.</xs:documentation>
     </xs:annotation>
@@ -1006,7 +1006,7 @@
       <xs:documentation>A data concept for a reason for an activity.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="ActivityReasonText" type="nc:TextType" substitutionGroup="nc:ActivityReasonAbstract">
+  <xs:element name="ActivityReasonText" type="nc:TextType" substitutionGroup="nc:ActivityReasonAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A reason for an activity.</xs:documentation>
     </xs:annotation>
@@ -1016,7 +1016,7 @@
       <xs:documentation>A status of an activity.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="Address" type="nc:AddressType" substitutionGroup="nc:LocationAddressAbstract">
+  <xs:element name="Address" type="nc:AddressType" substitutionGroup="nc:LocationAddressAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A set of location information, often described by postal information.</xs:documentation>
     </xs:annotation>
@@ -1031,7 +1031,7 @@
       <xs:documentation>A country, territory, dependency, or other such geopolitical subdivision of a location.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="AddressCrossStreet" type="nc:CrossStreetType" substitutionGroup="nc:LocationAddressAbstract">
+  <xs:element name="AddressCrossStreet" type="nc:CrossStreetType" substitutionGroup="nc:LocationAddressAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A location identified by two or more streets which intersect.</xs:documentation>
     </xs:annotation>
@@ -1041,7 +1041,7 @@
       <xs:documentation>A data concept for a single place or unit at which mail is delivered.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="AddressDeliveryPointID" type="niem-xs:string" substitutionGroup="nc:AddressDeliveryPointAbstract">
+  <xs:element name="AddressDeliveryPointID" type="niem-xs:string" substitutionGroup="nc:AddressDeliveryPointAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>An identifier of a single place or unit at which mail is delivered.</xs:documentation>
     </xs:annotation>
@@ -1071,7 +1071,7 @@
       <xs:documentation>A state, commonwealth, province, or other such geopolitical subdivision of a country.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="AddressStreet" type="nc:StreetType" substitutionGroup="nc:AddressDeliveryPointAbstract">
+  <xs:element name="AddressStreet" type="nc:StreetType" substitutionGroup="nc:AddressDeliveryPointAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A road, thoroughfare or highway.</xs:documentation>
     </xs:annotation>
@@ -1081,7 +1081,7 @@
       <xs:documentation>An amount of money.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="Base64BinaryObject" type="niem-xs:base64Binary" substitutionGroup="nc:BinaryObjectAbstract">
+  <xs:element name="Base64BinaryObject" type="niem-xs:base64Binary" substitutionGroup="nc:BinaryObjectAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A base64 binary encoding of data.</xs:documentation>
     </xs:annotation>
@@ -1091,7 +1091,7 @@
       <xs:documentation>A data concept for a binary encoding of data.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="ContactEmailID" type="niem-xs:string" substitutionGroup="nc:ContactMeansAbstract">
+  <xs:element name="ContactEmailID" type="niem-xs:string" substitutionGroup="nc:ContactMeansAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>An electronic mailing address by which a person or organization may be contacted.</xs:documentation>
     </xs:annotation>
@@ -1101,7 +1101,7 @@
       <xs:documentation>An entity that may be contacted by using the given contact information.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="ContactMailingAddress" type="nc:AddressType" substitutionGroup="nc:ContactMeansAbstract">
+  <xs:element name="ContactMailingAddress" type="nc:AddressType" substitutionGroup="nc:ContactMeansAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A postal address by which a person or organization may be contacted.</xs:documentation>
     </xs:annotation>
@@ -1111,7 +1111,7 @@
       <xs:documentation>A data concept for a means of contacting someone.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="ContactTelephoneNumber" type="nc:TelephoneNumberType" substitutionGroup="nc:ContactMeansAbstract">
+  <xs:element name="ContactTelephoneNumber" type="nc:TelephoneNumberType" substitutionGroup="nc:ContactMeansAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A telephone number for a telecommunication device by which a person or organization may be contacted.</xs:documentation>
     </xs:annotation>
@@ -1126,12 +1126,12 @@
       <xs:documentation>An augmentation point for ConveyanceType.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="ConveyanceColorPrimaryText" type="nc:TextType" substitutionGroup="nc:ItemColorPrimaryAbstract">
+  <xs:element name="ConveyanceColorPrimaryText" type="nc:TextType" substitutionGroup="nc:ItemColorPrimaryAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A single, upper-most, front-most, or majority color of a conveyance.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="CountryName" type="nc:ProperNameTextType" substitutionGroup="nc:CountryRepresentation">
+  <xs:element name="CountryName" type="nc:ProperNameTextType" substitutionGroup="nc:CountryRepresentation" nillable="true">
     <xs:annotation>
       <xs:documentation>A name of a country, territory, dependency, or other such geopolitical subdivision of a location.</xs:documentation>
     </xs:annotation>
@@ -1141,7 +1141,7 @@
       <xs:documentation>A data concept for a representation of a country.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="Date" type="niem-xs:date" substitutionGroup="nc:DateRepresentation">
+  <xs:element name="Date" type="niem-xs:date" substitutionGroup="nc:DateRepresentation" nillable="true">
     <xs:annotation>
       <xs:documentation>A full date.</xs:documentation>
     </xs:annotation>
@@ -1151,7 +1151,7 @@
       <xs:documentation>A data concept for a representation of a date.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="DateTime" type="niem-xs:dateTime" substitutionGroup="nc:DateRepresentation">
+  <xs:element name="DateTime" type="niem-xs:dateTime" substitutionGroup="nc:DateRepresentation" nillable="true">
     <xs:annotation>
       <xs:documentation>A full date and time.</xs:documentation>
     </xs:annotation>
@@ -1166,7 +1166,7 @@
       <xs:documentation>An entity primarily responsible for creating the intellectual content of the resource.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="DocumentBinary" type="nc:BinaryType" substitutionGroup="nc:DocumentContentAbstract">
+  <xs:element name="DocumentBinary" type="nc:BinaryType" substitutionGroup="nc:DocumentContentAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A binary encoding of the content of a document.</xs:documentation>
     </xs:annotation>
@@ -1176,7 +1176,7 @@
       <xs:documentation>A data concept for a kind of document.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="DocumentCategoryText" type="nc:TextType" substitutionGroup="nc:DocumentCategoryAbstract">
+  <xs:element name="DocumentCategoryText" type="nc:TextType" substitutionGroup="nc:DocumentCategoryAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A kind of document; a nature or genre of the content.</xs:documentation>
     </xs:annotation>
@@ -1216,7 +1216,7 @@
       <xs:documentation>A location of an electronic representation of a document.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="DocumentMediaCategoryText" type="nc:TextType" substitutionGroup="nc:DocumentFormatAbstract">
+  <xs:element name="DocumentMediaCategoryText" type="nc:TextType" substitutionGroup="nc:DocumentFormatAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A kind of media type, also known as a MIME type, which indicates the nature and format of a document.</xs:documentation>
     </xs:annotation>
@@ -1236,7 +1236,7 @@
       <xs:documentation>A data concept for a class to which the Drug Enforcement Agency has assigned the product under the Controlled Substances A data concept for act of 1970.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="DrugClassScheduleText" type="nc:TextType" substitutionGroup="nc:DrugClassScheduleAbstract">
+  <xs:element name="DrugClassScheduleText" type="nc:TextType" substitutionGroup="nc:DrugClassScheduleAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A class to which the Drug Enforcement Agency (DEA) has assigned the product under the Controlled Substances Act of 1970.</xs:documentation>
     </xs:annotation>
@@ -1256,7 +1256,7 @@
       <xs:documentation>A data concept for a representation of a level of education reached by a person.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="EducationLevelText" type="nc:TextType" substitutionGroup="nc:EducationLevelRepresentation">
+  <xs:element name="EducationLevelText" type="nc:TextType" substitutionGroup="nc:EducationLevelRepresentation" nillable="true">
     <xs:annotation>
       <xs:documentation>A level of education reached by a person.</xs:documentation>
     </xs:annotation>
@@ -1271,12 +1271,12 @@
       <xs:documentation>A data concept for a general kind of job of an employee.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="EmployeeOccupationCategoryText" type="nc:TextType" substitutionGroup="nc:EmployeeOccupationCategoryAbstract">
+  <xs:element name="EmployeeOccupationCategoryText" type="nc:TextType" substitutionGroup="nc:EmployeeOccupationCategoryAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A general kind of job of an employee.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="EmployeeOccupationText" type="nc:TextType" substitutionGroup="nc:EmployeeOccupationAbstract">
+  <xs:element name="EmployeeOccupationText" type="nc:TextType" substitutionGroup="nc:EmployeeOccupationAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A job of an employee.</xs:documentation>
     </xs:annotation>
@@ -1306,7 +1306,7 @@
       <xs:documentation>A name of an entity.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="EntityPerson" type="nc:PersonType" substitutionGroup="nc:EntityRepresentation">
+  <xs:element name="EntityPerson" type="nc:PersonType" substitutionGroup="nc:EntityRepresentation" nillable="true">
     <xs:annotation>
       <xs:documentation>A person capable of bearing legal rights and responsibilities.</xs:documentation>
     </xs:annotation>
@@ -1316,12 +1316,12 @@
       <xs:documentation>A data concept for a representation of an entity.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="FullTelephoneNumber" type="nc:FullTelephoneNumberType" substitutionGroup="nc:TelephoneNumberAbstract">
+  <xs:element name="FullTelephoneNumber" type="nc:FullTelephoneNumberType" substitutionGroup="nc:TelephoneNumberAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A full telephone number.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="GenericEntity" type="nc:GenericEntityType" substitutionGroup="nc:EntityRepresentation">
+  <xs:element name="GenericEntity" type="nc:GenericEntityType" substitutionGroup="nc:EntityRepresentation" nillable="true">
     <xs:annotation>
       <xs:documentation>A basic set of information about a person or an organization.</xs:documentation>
     </xs:annotation>
@@ -1381,7 +1381,7 @@
       <xs:documentation>A document containing an account of the events that transpired in an incident.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="IncidentVehicleAssociation" type="nc:ActivityConveyanceAssociationType">
+  <xs:element name="IncidentVehicleAssociation" type="nc:ActivityConveyanceAssociationType" nillable="true">
     <xs:annotation>
       <xs:documentation>An association between an incident and a vehicle.</xs:documentation>
     </xs:annotation>
@@ -1391,7 +1391,7 @@
       <xs:documentation>A data concept for a kind of bodily harm or injury.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="InjuryCategoryText" type="nc:TextType" substitutionGroup="nc:InjuryCategoryAbstract">
+  <xs:element name="InjuryCategoryText" type="nc:TextType" substitutionGroup="nc:InjuryCategoryAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A kind of bodily harm or injury.</xs:documentation>
     </xs:annotation>
@@ -1406,12 +1406,12 @@
       <xs:documentation>A data concept for a place on the body of a person where an injury occurred.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="InjuryLocationText" type="nc:TextType" substitutionGroup="nc:InjuryLocationAbstract">
+  <xs:element name="InjuryLocationText" type="nc:TextType" substitutionGroup="nc:InjuryLocationAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A place on the body of a person where an injury occurred.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="InternationalTelephoneNumber" type="nc:InternationalTelephoneNumberType" substitutionGroup="nc:TelephoneNumberAbstract">
+  <xs:element name="InternationalTelephoneNumber" type="nc:InternationalTelephoneNumberType" substitutionGroup="nc:TelephoneNumberAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>An international telephone number.</xs:documentation>
     </xs:annotation>
@@ -1446,7 +1446,7 @@
       <xs:documentation>A data concept for a manufacturer that produced an item.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="ItemMakeName" type="nc:ProperNameTextType" substitutionGroup="nc:ItemMakeAbstract">
+  <xs:element name="ItemMakeName" type="nc:ProperNameTextType" substitutionGroup="nc:ItemMakeAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A name of the manufacturer that produced an item.</xs:documentation>
     </xs:annotation>
@@ -1516,7 +1516,7 @@
       <xs:documentation>A method of human communication, either spoken or written, consisting of the use of words in a structured and conventional way.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="LanguageName" type="nc:TextType" substitutionGroup="nc:LanguageRepresentation">
+  <xs:element name="LanguageName" type="nc:TextType" substitutionGroup="nc:LanguageRepresentation" nillable="true">
     <xs:annotation>
       <xs:documentation>A name of a system of words or symbols used for communication.</xs:documentation>
     </xs:annotation>
@@ -1551,7 +1551,7 @@
       <xs:documentation>A name given to an area defined for administrative or official purposes.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="Location2DGeospatialCoordinate" type="nc:Location2DGeospatialCoordinateType" substitutionGroup="nc:LocationGeospatialCoordinateAbstract">
+  <xs:element name="Location2DGeospatialCoordinate" type="nc:Location2DGeospatialCoordinateType" substitutionGroup="nc:LocationGeospatialCoordinateAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A location identified by a latitude and longitude.</xs:documentation>
     </xs:annotation>
@@ -1571,7 +1571,7 @@
       <xs:documentation>A data concept for a kind or functional description of a location.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="LocationCategoryText" type="nc:TextType" substitutionGroup="nc:LocationCategoryAbstract">
+  <xs:element name="LocationCategoryText" type="nc:TextType" substitutionGroup="nc:LocationCategoryAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A kind or functional description of a location.</xs:documentation>
     </xs:annotation>
@@ -1611,7 +1611,7 @@
       <xs:documentation>A longitude value that specifies a second of a minute. The value comes from a restricted range of 0 (inclusive) to 60 (exclusive).</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="MeasureIntegerValue" type="niem-xs:integer" substitutionGroup="nc:MeasurePointAbstract">
+  <xs:element name="MeasureIntegerValue" type="niem-xs:integer" substitutionGroup="nc:MeasurePointAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>An integer measurement value.</xs:documentation>
     </xs:annotation>
@@ -1626,7 +1626,7 @@
       <xs:documentation>A data concept for a unit of measure of a measurement value.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="MeasureUnitText" type="nc:TextType" substitutionGroup="nc:MeasureUnitAbstract">
+  <xs:element name="MeasureUnitText" type="nc:TextType" substitutionGroup="nc:MeasureUnitAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A unit that qualifies the measurement value.</xs:documentation>
     </xs:annotation>
@@ -1711,7 +1711,7 @@
       <xs:documentation>A data concept for an appearance or condition of the skin of a person.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="PersonComplexionText" type="nc:TextType" substitutionGroup="nc:PersonComplexionAbstract">
+  <xs:element name="PersonComplexionText" type="nc:TextType" substitutionGroup="nc:PersonComplexionAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>An appearance or condition of the skin of a person.</xs:documentation>
     </xs:annotation>
@@ -1816,7 +1816,7 @@
       <xs:documentation>A data concept for a mental condition of a person.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="PersonMentalStateText" type="nc:TextType" substitutionGroup="nc:PersonMentalStateAbstract">
+  <xs:element name="PersonMentalStateText" type="nc:TextType" substitutionGroup="nc:PersonMentalStateAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A mental condition of a person.</xs:documentation>
     </xs:annotation>
@@ -1891,7 +1891,7 @@
       <xs:documentation>A data concept for a classification of a person based on factors such as geographical locations and genetics.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="PersonRaceText" type="nc:TextType" substitutionGroup="nc:PersonRaceAbstract">
+  <xs:element name="PersonRaceText" type="nc:TextType" substitutionGroup="nc:PersonRaceAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A classification of a person based on factors such as geographical locations and genetics.</xs:documentation>
     </xs:annotation>
@@ -1901,7 +1901,7 @@
       <xs:documentation>A data concept for a religion to which a person subscribes or believes; a categorization of spiritual beliefs.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="PersonReligionText" type="nc:TextType" substitutionGroup="nc:PersonReligionAbstract">
+  <xs:element name="PersonReligionText" type="nc:TextType" substitutionGroup="nc:PersonReligionAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A religion to which a person subscribes or believes; a categorization of spiritual beliefs.</xs:documentation>
     </xs:annotation>
@@ -1911,7 +1911,7 @@
       <xs:documentation>A data concept for a gender or sex of a person.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="PersonSexText" type="nc:TextType" substitutionGroup="nc:PersonSexAbstract">
+  <xs:element name="PersonSexText" type="nc:TextType" substitutionGroup="nc:PersonSexAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A gender or sex of a person.</xs:documentation>
     </xs:annotation>
@@ -1956,7 +1956,7 @@
       <xs:documentation>A data concept for a specific kind of physical feature.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="PhysicalFeatureCategoryText" type="nc:TextType" substitutionGroup="nc:PhysicalFeatureCategoryAbstract">
+  <xs:element name="PhysicalFeatureCategoryText" type="nc:TextType" substitutionGroup="nc:PhysicalFeatureCategoryAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A specific kind of physical feature.</xs:documentation>
     </xs:annotation>
@@ -1996,7 +1996,7 @@
       <xs:documentation>A name, identifier, or reference of a resource from which the information was taken.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="StateName" type="nc:ProperNameTextType" substitutionGroup="nc:StateRepresentation">
+  <xs:element name="StateName" type="nc:ProperNameTextType" substitutionGroup="nc:StateRepresentation" nillable="true">
     <xs:annotation>
       <xs:documentation>A name of a state, commonwealth, province, or other such geopolitical subdivision of a country.</xs:documentation>
     </xs:annotation>
@@ -2031,7 +2031,7 @@
       <xs:documentation>A data concept for a representation of a direction that appears in a street name.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="StreetDirectionalText" type="nc:TextType" substitutionGroup="nc:StreetDirectionalRepresentation">
+  <xs:element name="StreetDirectionalText" type="nc:TextType" substitutionGroup="nc:StreetDirectionalRepresentation" nillable="true">
     <xs:annotation>
       <xs:documentation>A direction that in a street name.</xs:documentation>
     </xs:annotation>
@@ -2066,7 +2066,7 @@
       <xs:documentation>A data concept for a kind of substance.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="SubstanceCategoryText" type="nc:TextType" substitutionGroup="nc:SubstanceCategoryAbstract">
+  <xs:element name="SubstanceCategoryText" type="nc:TextType" substitutionGroup="nc:SubstanceCategoryAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A kind of substance.</xs:documentation>
     </xs:annotation>
@@ -2101,7 +2101,7 @@
       <xs:documentation>An additional sequence of numbers to be entered after a call connects to be directed to the appropriate place.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="YearDate" type="niem-xs:gYear" substitutionGroup="nc:DateRepresentation">
+  <xs:element name="YearDate" type="niem-xs:gYear" substitutionGroup="nc:DateRepresentation" nillable="true">
     <xs:annotation>
       <xs:documentation>A year.</xs:documentation>
     </xs:annotation>

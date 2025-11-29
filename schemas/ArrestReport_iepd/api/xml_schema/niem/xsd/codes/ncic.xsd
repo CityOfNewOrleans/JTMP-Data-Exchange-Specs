@@ -10067,27 +10067,27 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
-  <xs:element name="ChargeCode" type="ncic:OFFCodeType" substitutionGroup="j:ChargeNCICAbstract">
+  <xs:element name="ChargeCode" type="ncic:OFFCodeType" substitutionGroup="j:ChargeNCICAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>An offense within the National Crime Information Center (NCIC) system.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="ConveyanceColorPrimaryCode" type="ncic:VCOCodeType" substitutionGroup="nc:ItemColorPrimaryAbstract">
+  <xs:element name="ConveyanceColorPrimaryCode" type="ncic:VCOCodeType" substitutionGroup="nc:ItemColorPrimaryAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A single, upper-most, front-most, or majority color of a vehicle.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="ItemCategoryCode" type="ncic:TYPACodeType" substitutionGroup="nc:ItemCategoryAbstract">
+  <xs:element name="ItemCategoryCode" type="ncic:TYPACodeType" substitutionGroup="nc:ItemCategoryAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A kind of item.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="ItemCategoryTYPCode" type="ncic:GTYPCodeType" substitutionGroup="nc:ItemCategoryAbstract">
+  <xs:element name="ItemCategoryTYPCode" type="ncic:GTYPCodeType" substitutionGroup="nc:ItemCategoryAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A kind of property.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="ItemMakeCode" type="ncic:ABRACodeType" substitutionGroup="nc:ItemMakeAbstract">
+  <xs:element name="ItemMakeCode" type="ncic:ABRACodeType" substitutionGroup="nc:ItemMakeAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A manufacturer that produced an item.</xs:documentation>
     </xs:annotation>
@@ -10097,47 +10097,47 @@
       <xs:documentation>A cultural lineage of a person.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="PersonEyeColorCode" type="ncic:EYECodeType" substitutionGroup="nc:PersonEyeColorAbstract">
+  <xs:element name="PersonEyeColorCode" type="ncic:EYECodeType" substitutionGroup="nc:PersonEyeColorAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A color of the eyes of a person.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="PersonHairColorCode" type="ncic:HAIRCodeType" substitutionGroup="nc:PersonHairColorAbstract">
+  <xs:element name="PersonHairColorCode" type="ncic:HAIRCodeType" substitutionGroup="nc:PersonHairColorAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A color of the hair of a person.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="PersonIDCategoryCode" type="ncic:MNUCodeType" substitutionGroup="nc:IdentificationCategoryAbstract">
+  <xs:element name="PersonIDCategoryCode" type="ncic:MNUCodeType" substitutionGroup="nc:IdentificationCategoryAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A kind of identifier assigned to a person.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="PersonRaceCode" type="ncic:RACECodeType" substitutionGroup="nc:PersonRaceAbstract">
+  <xs:element name="PersonRaceCode" type="ncic:RACECodeType" substitutionGroup="nc:PersonRaceAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A classification of a person based on factors such as geographical locations and genetics.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="PersonSexCode" type="ncic:SEXCodeType" substitutionGroup="nc:PersonSexAbstract">
+  <xs:element name="PersonSexCode" type="ncic:SEXCodeType" substitutionGroup="nc:PersonSexAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A gender or sex of a person.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="PersonSkinToneCode" type="ncic:SKINCodeType" substitutionGroup="nc:PersonSkinToneAbstract">
+  <xs:element name="PersonSkinToneCode" type="ncic:SKINCodeType" substitutionGroup="nc:PersonSkinToneAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A color or tone of the skin of a person.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="PhysicalFeatureCategoryCode" type="ncic:SMTCodeType" substitutionGroup="nc:PhysicalFeatureCategoryAbstract">
+  <xs:element name="PhysicalFeatureCategoryCode" type="ncic:SMTCodeType" substitutionGroup="nc:PhysicalFeatureCategoryAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A specific kind of physical feature.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="StateUSCode" type="ncic:UnitedStatesCodeType" substitutionGroup="nc:StateRepresentation">
+  <xs:element name="StateUSCode" type="ncic:UnitedStatesCodeType" substitutionGroup="nc:StateRepresentation" nillable="true">
     <xs:annotation>
       <xs:documentation>A state in the United States.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="VehicleStyleCode" type="ncic:VSTCodeType" substitutionGroup="nc:ItemStyleAbstract">
+  <xs:element name="VehicleStyleCode" type="ncic:VSTCodeType" substitutionGroup="nc:ItemStyleAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A style of a vehicle.</xs:documentation>
     </xs:annotation>

@@ -440,7 +440,7 @@
       <xs:documentation>An association between an activity and a use of force.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="Arrest" type="j:ArrestType">
+  <xs:element name="Arrest" type="j:ArrestType" nillable="true">
     <xs:annotation>
       <xs:documentation>An apprehension of a subject by a peace official based on an observed or a reported violation of a law or ordinance, an outstanding arrest warrant, or probable cause information.</xs:documentation>
     </xs:annotation>
@@ -460,7 +460,7 @@
       <xs:documentation>A data concept for a kind of apprehension.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="ArrestCategoryJABSCode" type="ndex:ArrestCategoryJABSCodeType" substitutionGroup="j:ArrestCategoryJABSAbstract">
+  <xs:element name="ArrestCategoryJABSCode" type="ndex:ArrestCategoryJABSCodeType" substitutionGroup="j:ArrestCategoryJABSAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A kind of apprehension.</xs:documentation>
     </xs:annotation>
@@ -555,7 +555,7 @@
       <xs:documentation>A person or entity who is the victim of an offense designated by the charge.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="ConveyanceRegistration" type="j:ConveyanceRegistrationType">
+  <xs:element name="ConveyanceRegistration" type="j:ConveyanceRegistrationType" nillable="true">
     <xs:annotation>
       <xs:documentation>A registration of a conveyance with an authority.</xs:documentation>
     </xs:annotation>
@@ -585,17 +585,17 @@
       <xs:documentation>A data concept for a kind of commercial vehicle that a licensed driver has been examined on and approved to operate.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="DriverLicenseCommercialClassText" type="nc:TextType" substitutionGroup="j:DriverLicenseCommercialClassAbstract">
+  <xs:element name="DriverLicenseCommercialClassText" type="nc:TextType" substitutionGroup="j:DriverLicenseCommercialClassAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A kind of commercial vehicle that a licensed driver has been examined on and approved to operate.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="DrugCategoryCode" type="ucr:DrugCategoryCodeType" substitutionGroup="nc:SubstanceCategoryAbstract">
+  <xs:element name="DrugCategoryCode" type="ucr:DrugCategoryCodeType" substitutionGroup="nc:SubstanceCategoryAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A kind of drug.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="EducationAugmentation" type="j:EducationAugmentationType" substitutionGroup="nc:EducationAugmentationPoint">
+  <xs:element name="EducationAugmentation" type="j:EducationAugmentationType" substitutionGroup="nc:EducationAugmentationPoint" nillable="true">
     <xs:annotation>
       <xs:documentation>Additional information about an education.</xs:documentation>
     </xs:annotation>
@@ -610,7 +610,7 @@
       <xs:documentation>A data concept for a kind of assignment of an enforcement official.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="EnforcementOfficialAssignmentCategoryText" type="nc:TextType" substitutionGroup="j:EnforcementOfficialAssignmentCategoryAbstract">
+  <xs:element name="EnforcementOfficialAssignmentCategoryText" type="nc:TextType" substitutionGroup="j:EnforcementOfficialAssignmentCategoryAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A kind of assignment of an enforcement official.</xs:documentation>
     </xs:annotation>
@@ -635,12 +635,12 @@
       <xs:documentation>An augmentation point for ForceType.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="IncidentArrestAssociation" type="j:IncidentArrestAssociationType">
+  <xs:element name="IncidentArrestAssociation" type="j:IncidentArrestAssociationType" nillable="true">
     <xs:annotation>
       <xs:documentation>A relationship between an incident and an arrest.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="IncidentAugmentation" type="j:IncidentAugmentationType" substitutionGroup="nc:IncidentAugmentationPoint">
+  <xs:element name="IncidentAugmentation" type="j:IncidentAugmentationType" substitutionGroup="nc:IncidentAugmentationPoint" nillable="true">
     <xs:annotation>
       <xs:documentation>Additional information about an incident.</xs:documentation>
     </xs:annotation>
@@ -650,7 +650,7 @@
       <xs:documentation>A name of a participant associated with an incident.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="IncidentStatusCode" type="ndex:IncidentStatusCodeType" substitutionGroup="nc:StatusAbstract">
+  <xs:element name="IncidentStatusCode" type="ndex:IncidentStatusCodeType" substitutionGroup="nc:StatusAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A status of the current disposition of an incident.</xs:documentation>
     </xs:annotation>
@@ -660,7 +660,7 @@
       <xs:documentation>A general category of harm or injury.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="InjuryLocationNDExCode" type="ndex:InjuryLocationCodeType" substitutionGroup="nc:InjuryLocationAbstract">
+  <xs:element name="InjuryLocationNDExCode" type="ndex:InjuryLocationCodeType" substitutionGroup="nc:InjuryLocationAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A location of the victim's injury.</xs:documentation>
     </xs:annotation>
@@ -670,12 +670,12 @@
       <xs:documentation>A data concept for a person's or organization's involvement in something.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="InvolvementText" type="nc:TextType" substitutionGroup="j:InvolvementAbstract">
+  <xs:element name="InvolvementText" type="nc:TextType" substitutionGroup="j:InvolvementAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A status or level of involvement.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="ItemAugmentation" type="j:ItemAugmentationType" substitutionGroup="nc:ItemAugmentationPoint">
+  <xs:element name="ItemAugmentation" type="j:ItemAugmentationType" substitutionGroup="nc:ItemAugmentationPoint" nillable="true">
     <xs:annotation>
       <xs:documentation>Additional information about an item.</xs:documentation>
     </xs:annotation>
@@ -695,7 +695,7 @@
       <xs:documentation>True if the legal status of a person is a juvenile; false otherwise.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="LocationAugmentation" type="j:LocationAugmentationType" substitutionGroup="nc:LocationAugmentationPoint">
+  <xs:element name="LocationAugmentation" type="j:LocationAugmentationType" substitutionGroup="nc:LocationAugmentationPoint" nillable="true">
     <xs:annotation>
       <xs:documentation>Additional information about a location.</xs:documentation>
     </xs:annotation>
@@ -710,7 +710,7 @@
       <xs:documentation>A kind of location or area.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="MaritalStatusCode" type="ndex:MaritalStatusCodeType" substitutionGroup="nc:PersonUnionStatusAbstract">
+  <xs:element name="MaritalStatusCode" type="ndex:MaritalStatusCodeType" substitutionGroup="nc:PersonUnionStatusAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A status of a union, such as separated or divorced.</xs:documentation>
     </xs:annotation>
@@ -720,12 +720,12 @@
       <xs:documentation>An act or a course of action which may constitute a violation of a criminal statute, ordinance or rule that occurred during an incident.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="OffenseArrestAssociation" type="j:OffenseArrestAssociationType">
+  <xs:element name="OffenseArrestAssociation" type="j:OffenseArrestAssociationType" nillable="true">
     <xs:annotation>
       <xs:documentation>A relationship between an offense and the arrest of a subject alleged to have committed the offense.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="OffenseChargeAssociation" type="j:OffenseChargeAssociationType">
+  <xs:element name="OffenseChargeAssociation" type="j:OffenseChargeAssociationType" nillable="true">
     <xs:annotation>
       <xs:documentation>A relationship between an offense that occurred and the formal charge that was assigned to it as a result of classifying the offense.</xs:documentation>
     </xs:annotation>
@@ -745,7 +745,7 @@
       <xs:documentation>An offense designation as specified by FBI's Uniform Crime Reporting (UCR) program.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="OrganizationAugmentation" type="j:OrganizationAugmentationType" substitutionGroup="nc:OrganizationAugmentationPoint">
+  <xs:element name="OrganizationAugmentation" type="j:OrganizationAugmentationType" substitutionGroup="nc:OrganizationAugmentationPoint" nillable="true">
     <xs:annotation>
       <xs:documentation>Additional information about an organization.</xs:documentation>
     </xs:annotation>
@@ -765,17 +765,17 @@
       <xs:documentation>A data concept for a kind of role of a participant.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="ParticipantRoleCategoryText" type="nc:TextType" substitutionGroup="j:ParticipantRoleCategoryAbstract">
+  <xs:element name="ParticipantRoleCategoryText" type="nc:TextType" substitutionGroup="j:ParticipantRoleCategoryAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A kind of role of a participant.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="PersonAugmentation" type="j:PersonAugmentationType" substitutionGroup="nc:PersonAugmentationPoint">
+  <xs:element name="PersonAugmentation" type="j:PersonAugmentationType" substitutionGroup="nc:PersonAugmentationPoint" nillable="true">
     <xs:annotation>
       <xs:documentation>Additional information about a person.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="PersonBuildCode" type="ndex:PersonBuildCodeType" substitutionGroup="nc:PersonBuildAbstract">
+  <xs:element name="PersonBuildCode" type="ndex:PersonBuildCodeType" substitutionGroup="nc:PersonBuildAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A person's physique or body shape.</xs:documentation>
     </xs:annotation>
@@ -790,7 +790,7 @@
       <xs:documentation>True if a person admits to having used or abused drugs or alcohol; false otherwise.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="PersonFacialHairCode" type="ndex:PersonFacialHairCodeType" substitutionGroup="nc:PersonFacialHairAbstract">
+  <xs:element name="PersonFacialHairCode" type="ndex:PersonFacialHairCodeType" substitutionGroup="nc:PersonFacialHairAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A kind of facial hair.</xs:documentation>
     </xs:annotation>
@@ -800,7 +800,7 @@
       <xs:documentation>An association between a person and a gang.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="PersonHairLengthCode" type="ndex:PersonHairLengthCodeType" substitutionGroup="nc:PersonHairLengthAbstract">
+  <xs:element name="PersonHairLengthCode" type="ndex:PersonHairLengthCodeType" substitutionGroup="nc:PersonHairLengthAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A length of hair of a person.</xs:documentation>
     </xs:annotation>
@@ -825,7 +825,7 @@
       <xs:documentation>A data concept for a kind of victim an offense was committed against.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="VictimCategoryCode" type="ucr:VictimCategoryCodeType" substitutionGroup="j:VictimCategoryAbstract">
+  <xs:element name="VictimCategoryCode" type="ucr:VictimCategoryCodeType" substitutionGroup="j:VictimCategoryAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A kind of victim an offense was committed against.</xs:documentation>
     </xs:annotation>
@@ -845,7 +845,7 @@
       <xs:documentation>A data concept for a kind of warrant.</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:element name="WarrantCategoryCode" type="ndex:WarrantCategoryCodeType" substitutionGroup="j:WarrantCategoryAbstract">
+  <xs:element name="WarrantCategoryCode" type="ndex:WarrantCategoryCodeType" substitutionGroup="j:WarrantCategoryAbstract" nillable="true">
     <xs:annotation>
       <xs:documentation>A kind of warrant.</xs:documentation>
     </xs:annotation>
