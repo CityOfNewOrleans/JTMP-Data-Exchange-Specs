@@ -126,7 +126,7 @@
           <xs:element ref="j:CourtEventCourt" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="j:CourtEventJudge" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:CourtEventSchedule" minOccurs="0" maxOccurs="1"/>
-          <xs:element ref="j:CourtEventSequenceID" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="j:CourtEventSequenceID" minOccurs="1" maxOccurs="1"/>
           <xs:element ref="j:CourtEventAugmentationPoint" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
       </xs:extension>

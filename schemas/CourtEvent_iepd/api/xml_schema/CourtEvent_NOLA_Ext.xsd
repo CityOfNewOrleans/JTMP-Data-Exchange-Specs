@@ -148,12 +148,12 @@
 				event.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="CourtEventTypeCode" type="niem-xs:string">
+	<xs:element name="CourtEventTypeCode" type="niem-xs:int">
 		<xs:annotation>
 			<xs:documentation>A code value that describes a type of court event.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="CourtEventTypeText" type="niem-xs:string">
+	<xs:element name="CourtEventTypeText" type="nc:TextType">
 		<xs:annotation>
 			<xs:documentation>A description of a type of court event.</xs:documentation>
 		</xs:annotation>

@@ -129,7 +129,7 @@
 		<j:CourtEventSequenceID>100</j:CourtEventSequenceID>
 		<nola-ext:CourtEventAugmentation>
 			<!--  Class: CourtEvent, Attribute: CourtEventCode  -->
-			<nola-ext:CourtEventTypeCode>String</nola-ext:CourtEventTypeCode>
+			<nola-ext:CourtEventTypeCode>100</nola-ext:CourtEventTypeCode>
 			<nola-ext:CourtEventTypeText>String</nola-ext:CourtEventTypeText>
 		</nola-ext:CourtEventAugmentation>
 	</j:CourtEvent>
