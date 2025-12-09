@@ -125,9 +125,12 @@
 				<DateTime>2001-12-17T09:30:47Z</DateTime>
 			</ScheduleDate>
 		</j:CourtEventSchedule>
+		<!--  Class: CourtEvent, Attribute: CourtEventSequenceID  -->
+		<j:CourtEventSequenceID>100</j:CourtEventSequenceID>
 		<nola-ext:CourtEventAugmentation>
 			<!--  Class: CourtEvent, Attribute: CourtEventCode  -->
 			<nola-ext:CourtEventTypeCode>String</nola-ext:CourtEventTypeCode>
+			<nola-ext:CourtEventTypeText>String</nola-ext:CourtEventTypeText>
 		</nola-ext:CourtEventAugmentation>
 	</j:CourtEvent>
 </nola:CourtEventExchange>

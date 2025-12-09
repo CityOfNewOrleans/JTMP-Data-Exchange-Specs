@@ -78,6 +78,8 @@
       w:minOccurs="0" w:maxOccurs="unbounded"/>
     <w:ElementInType w:name="j:CourtEventSchedule" w:isReference="false"
       w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="j:CourtEventSequenceID"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="j:CourtEventAugmentationPoint"
       w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
   </w:Type>
