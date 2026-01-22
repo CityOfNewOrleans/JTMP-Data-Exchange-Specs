@@ -211,7 +211,7 @@
           <xs:element ref="j:ChargeVictim" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="j:ChargeSeverityDescriptionText" minOccurs="0" maxOccurs="1"/>
           <xs:element ref="j:ChargeUCRAbstract" minOccurs="0" maxOccurs="2"/>
-          <xs:element ref="j:ChargeAugmentationPoint" minOccurs="0" maxOccurs="3"/>
+          <xs:element ref="j:ChargeAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
