@@ -171,7 +171,7 @@
     <w:ElementInType w:name="j:ChargeUCRAbstract" w:isReference="false"
       w:minOccurs="0" w:maxOccurs="2"/>
     <w:ElementInType w:name="j:ChargeAugmentationPoint"
-      w:isReference="false" w:minOccurs="0" w:maxOccurs="3"/>
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="unbounded"/>
   </w:Type>
   <w:Type w:name="j:CourtEventType" w:isRequested="false">
     <w:ElementInType w:name="j:CourtEventAction" w:isReference="false"
