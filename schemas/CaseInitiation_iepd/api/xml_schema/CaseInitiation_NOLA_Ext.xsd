@@ -129,6 +129,7 @@
 		<xs:complexContent>
 			<xs:extension base="structures:ObjectType">
 				<xs:sequence>
+					<xs:element ref="nola-ext:ArrestIncident" minOccurs="0" maxOccurs="1"/>
 					<xs:element ref="nola-ext:ChargeAffidavitNumber" minOccurs="0"
 						maxOccurs="unbounded"/>
 					<xs:element ref="nola-ext:ChargeDispositionCode" minOccurs="0" maxOccurs="1"/>
@@ -312,6 +313,12 @@
 		<xs:annotation>
 			<xs:documentation>Additional information about a AFISCharge in the
 				NOLA.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="ArrestIncident" type="nc:IncidentType">
+		<xs:annotation>
+			<xs:documentation>Indicates whether the arrest is 'accepted', 'refused', 'diverted', or
+				'referred'.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="BailBondAugmentation" type="nola-ext:BailBondAugmentationType"

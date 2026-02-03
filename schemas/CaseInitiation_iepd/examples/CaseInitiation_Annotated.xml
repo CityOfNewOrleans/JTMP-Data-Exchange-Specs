@@ -95,6 +95,13 @@
 						<j:Arrest>
 							<j:ArrestCharge>
 								<nola-ext:ChargeAugmentation>
+									<nola-ext:ArrestIncident>
+										<ActivityIdentification>
+											<!-- Class:Charge, Attribute:ChargeItemNumber -->
+											<IdentificationID>H2656024</IdentificationID>
+										</ActivityIdentification>
+									</nola-ext:ArrestIncident>
+									<nola-ext:ChargeDispositionCode></nola-ext:ChargeDispositionCode>
 									<!-- Class:Arrest, Attribute:ArrestTrackingNumber  -->
 									<nola-ext:StatewideArrestTrackingNumber>String</nola-ext:StatewideArrestTrackingNumber>
 									<!-- Class:Arrest, Attribute:ATNChargeSequenceID  -->
