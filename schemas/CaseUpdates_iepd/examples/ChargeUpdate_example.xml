@@ -14,6 +14,12 @@
 	<CourtCase>
 		<!-- CASEACTIVITY UPDATE-->
 		<CaseDocketID>String</CaseDocketID>
+		<nola-ext:CaseAugmentation>
+			<nola-ext:CourtCaseFollowCaseIdentification>
+				<!-- Class: Cass, Attribute: CourtCaseFollowCaseID -->
+				<IdentificationID>S999999</IdentificationID>
+			</nola-ext:CourtCaseFollowCaseIdentification>
+		</nola-ext:CaseAugmentation>
 		<j:CaseAugmentation>
 			<!--  Class: Defendant, Attribute: SubjectCharged  -->
 			<!-- CHARGES UPDATE -->

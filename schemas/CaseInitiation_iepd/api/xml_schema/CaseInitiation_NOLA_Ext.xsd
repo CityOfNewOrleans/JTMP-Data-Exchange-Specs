@@ -104,6 +104,7 @@
 			<xs:extension base="structures:ObjectType">
 				<xs:sequence>
 					<xs:element ref="nola-ext:CourtCaseCancelledFlag" minOccurs="0" maxOccurs="1"/>
+					<xs:element ref="nola-ext:CourtCaseFollowCaseIdentification" minOccurs="0" maxOccurs="1"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -363,6 +364,12 @@
 		substitutionGroup="j:CourtAugmentationPoint">
 		<xs:annotation>
 			<xs:documentation>Additional information about a Court in the NOLA.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="CourtCaseFollowCaseIdentification" type="nc:IdentificationType">
+		<xs:annotation>
+			<xs:documentation>Identifies an existing court case that this case should
+				follow.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="CourtDocketAugmentation" type="nola-ext:CourtDocketAugmentationType"

@@ -23,6 +23,10 @@
 		<nola-ext:CaseAugmentation>
 			<!--  Class: CourtCase, Attribute: CourtCaseCancelledFlag  -->
 			<nola-ext:CourtCaseCancelledFlag>true</nola-ext:CourtCaseCancelledFlag>
+			<nola-ext:CourtCaseFollowCaseIdentification>
+				<!-- Class: Cass, Attribute: CourtCaseFollowCaseID -->
+				<IdentificationID>S999999</IdentificationID>
+			</nola-ext:CourtCaseFollowCaseIdentification>
 		</nola-ext:CaseAugmentation>
 		<j:CaseAugmentation>
 			<!--  Class: Defendant, Attribute: SubjectCharged  -->

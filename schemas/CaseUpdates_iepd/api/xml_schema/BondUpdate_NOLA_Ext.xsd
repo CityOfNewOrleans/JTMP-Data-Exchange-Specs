@@ -357,6 +357,12 @@
 			<xs:documentation>Additional information about a Court in the NOLA.</xs:documentation>
 		</xs:annotation>
 	</xs:element>-->
+	<!--	<xs:element name="CourtCaseFollowCaseIdentification" type="nc:IdentificationType">
+		<xs:annotation>
+			<xs:documentation>Identifies an existing court case that this case should
+				follow.</xs:documentation>
+		</xs:annotation>
+	</xs:element>-->
 	<!--	<xs:element name="CourtDocketAugmentation" type="nola-ext:CourtDocketAugmentationType"
 		substitutionGroup="j:CourtAugmentationPoint">
 		<xs:annotation>
