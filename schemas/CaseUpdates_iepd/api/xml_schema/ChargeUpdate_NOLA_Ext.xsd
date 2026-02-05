@@ -94,18 +94,19 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>-->
-	<!--	<xs:complexType name="CaseAugmentationType">
+	<xs:complexType name="CaseAugmentationType">
 		<xs:annotation>
 			<xs:documentation>A data type for additional data Case information in NOLA.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="structures:ObjectType">
 				<xs:sequence>
-					<xs:element ref="nola-ext:CourtCaseCancelledFlag" minOccurs="0" maxOccurs="1"/>
+					<!--<xs:element ref="nola-ext:CourtCaseCancelledFlag" minOccurs="0" maxOccurs="1"/>-->
+					<xs:element ref="nola-ext:CourtCaseFollowCaseIdentification" minOccurs="0" maxOccurs="1"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
-	</xs:complexType>-->
+	</xs:complexType>
 	<!--	<xs:complexType name="CaseOfficialAugmentationType">
 		<xs:annotation>
 			<xs:documentation>A data type for additional data CaseOfficial information in NOLA.</xs:documentation>
@@ -126,6 +127,7 @@
 		<xs:complexContent>
 			<xs:extension base="structures:ObjectType">
 				<xs:sequence>
+					<xs:element ref="nola-ext:ArrestIncident" minOccurs="0" maxOccurs="1"/>
 					<xs:element ref="nola-ext:ChargeAffidavitNumber" minOccurs="0"
 						maxOccurs="unbounded"/>
 					<xs:element ref="nola-ext:ChargeDispositionCode" minOccurs="0" maxOccurs="1"/>
@@ -302,16 +304,22 @@
 				NOLA.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
+	<xs:element name="ArrestIncident" type="nc:IncidentType">
+		<xs:annotation>
+			<xs:documentation>Indicates whether the arrest is 'accepted', 'refused', 'diverted', or
+				'referred'.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 	<!--	<xs:element name="BailBondAugmentation" type="nola-ext:BailBondAugmentationType" substitutionGroup="j:BailBondAugmentationPoint">
 		<xs:annotation>
 			<xs:documentation>Additional information about a BailBond in the NOLA.</xs:documentation>
 		</xs:annotation>
 	</xs:element>-->
-	<!--	<xs:element name="CaseAugmentation" type="nola-ext:CaseAugmentationType" substitutionGroup="nc:CaseAugmentationPoint">
+	<xs:element name="CaseAugmentation" type="nola-ext:CaseAugmentationType" substitutionGroup="nc:CaseAugmentationPoint">
 		<xs:annotation>
 			<xs:documentation>Additional information about a Case in the NOLA.</xs:documentation>
 		</xs:annotation>
-	</xs:element>-->
+	</xs:element>
 	<!--	<xs:element name="CaseOfficialAugmentation" type="nola-ext:CaseOfficialAugmentationType" substitutionGroup="j:CaseOfficialAugmentationPoint">
 		<xs:annotation>
 			<xs:documentation>Additional information about a CaseOfficial in the NOLA.</xs:documentation>
@@ -339,6 +347,12 @@
 			<xs:documentation>Additional information about a Court in the NOLA.</xs:documentation>
 		</xs:annotation>
 	</xs:element>-->
+	<xs:element name="CourtCaseFollowCaseIdentification" type="nc:IdentificationType">
+		<xs:annotation>
+			<xs:documentation>Identifies an existing court case that this case should
+				follow.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 	<!--		<xs:element name="CourtDocketAugmentation" type="nola-ext:CourtDocketAugmentationType" substitutionGroup="j:CourtAugmentationPoint">
 		<xs:annotation>
 			<xs:documentation>Additional information about a Court Docket in the NOLA.</xs:documentation>

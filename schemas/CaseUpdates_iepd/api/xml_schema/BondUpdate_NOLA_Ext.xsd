@@ -307,6 +307,12 @@
 				NOLA.</xs:documentation>
 		</xs:annotation>
 	</xs:element>-->
+	<!--	xs:element name="ArrestIncident" type="nc:IncidentType">
+		<xs:annotation>
+			<xs:documentation>Indicates whether the arrest is 'accepted', 'refused', 'diverted', or
+				'referred'.</xs:documentation>
+		</xs:annotation>
+	</xs:element-->
 	<xs:element name="BailBondAugmentation" type="nola-ext:BailBondAugmentationType"
 		substitutionGroup="j:BailBondAugmentationPoint">
 		<xs:annotation>
@@ -349,6 +355,12 @@
 		substitutionGroup="j:CourtAugmentationPoint">
 		<xs:annotation>
 			<xs:documentation>Additional information about a Court in the NOLA.</xs:documentation>
+		</xs:annotation>
+	</xs:element>-->
+	<!--	<xs:element name="CourtCaseFollowCaseIdentification" type="nc:IdentificationType">
+		<xs:annotation>
+			<xs:documentation>Identifies an existing court case that this case should
+				follow.</xs:documentation>
 		</xs:annotation>
 	</xs:element>-->
 	<!--	<xs:element name="CourtDocketAugmentation" type="nola-ext:CourtDocketAugmentationType"

@@ -23,6 +23,10 @@
 		<nola-ext:CaseAugmentation>
 			<!--  Class: CourtCase, Attribute: CourtCaseCancelledFlag  -->
 			<nola-ext:CourtCaseCancelledFlag>true</nola-ext:CourtCaseCancelledFlag>
+			<nola-ext:CourtCaseFollowCaseIdentification>
+				<!-- Class: Case, Attribute: CourtCaseFollowCaseID -->
+				<IdentificationID>S999999</IdentificationID>
+			</nola-ext:CourtCaseFollowCaseIdentification>
 		</nola-ext:CaseAugmentation>
 		<j:CaseAugmentation>
 			<!--  Class: Defendant, Attribute: SubjectCharged  -->
@@ -95,6 +99,13 @@
 						<j:Arrest>
 							<j:ArrestCharge>
 								<nola-ext:ChargeAugmentation>
+									<nola-ext:ArrestIncident>
+										<ActivityIdentification>
+											<!-- Class:Charge, Attribute:ChargeItemNumber -->
+											<IdentificationID>H2656024</IdentificationID>
+										</ActivityIdentification>
+									</nola-ext:ArrestIncident>
+									<nola-ext:ChargeDispositionCode></nola-ext:ChargeDispositionCode>
 									<!-- Class:Arrest, Attribute:ArrestTrackingNumber  -->
 									<nola-ext:StatewideArrestTrackingNumber>String</nola-ext:StatewideArrestTrackingNumber>
 									<!-- Class:Arrest, Attribute:ATNChargeSequenceID  -->
