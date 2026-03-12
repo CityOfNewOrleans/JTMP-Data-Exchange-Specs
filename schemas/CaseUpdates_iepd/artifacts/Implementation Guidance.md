@@ -34,13 +34,12 @@ For example, this [example of the Bond Update message](https://github.com/CityOf
 ```
 
 ### Identifying Specific Data Elements to Update
-- Data elements that are to be added, deleted or updated must reference the id of the appropriate metadata element with the attribute `structures:metadata`. For instance, in the following portion of the Bond Update message example, the `<j:BailBondConditionDescriptionText>` data element is to be added.
+- Data elements that are to be added, deleted or updated must reference the id of the appropriate metadata element with the attribute `structures:metadata`. For instance, in the following portion of the Bond Update message example, the `<j:BailBondSuretyEntity>` data element is to be updated.
 
 ``` xml
         <j:BailBondAmount>
             <Amount>0</Amount>
         </j:BailBondAmount>
-        <j:BailBondConditionDescriptionText structures:metadata="add">String</j:BailBondConditionDescriptionText>
         <j:BailBondSuretyEntity structures:metadata="update">
             <EntityPerson>
                 <PersonName>

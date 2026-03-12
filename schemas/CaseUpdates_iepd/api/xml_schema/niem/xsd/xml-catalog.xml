@@ -8,6 +8,7 @@
   <uri name="http://release.niem.gov/niem/codes/ucr/5.1/" uri="codes/ucr.xsd"/>
   <uri name="http://release.niem.gov/niem/conformanceTargets/3.0/" uri="utility/conformanceTargets.xsd"/>
   <uri name="http://release.niem.gov/niem/domains/humanServices/5.2/" uri="domains/hs.xsd"/>
+  <uri name="http://release.niem.gov/niem/domains/immigration/5.2/" uri="domains/immigration.xsd"/>
   <uri name="http://release.niem.gov/niem/domains/jxdm/7.2/" uri="domains/jxdm.xsd"/>
   <uri name="http://release.niem.gov/niem/domains/screening/5.2/" uri="domains/screening.xsd"/>
   <uri name="http://release.niem.gov/niem/niem-core/5.0/" uri="niem-core.xsd"/>

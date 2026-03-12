@@ -6,10 +6,12 @@
   xmlns:scr="http://release.niem.gov/niem/domains/screening/5.2/"
   xmlns:j="http://release.niem.gov/niem/domains/jxdm/7.2/"
   xmlns:ucr="http://release.niem.gov/niem/codes/ucr/5.1/"
+  xmlns:im="http://release.niem.gov/niem/domains/immigration/5.2/"
   xmlns:structures="http://release.niem.gov/niem/structures/5.0/"
   xmlns:niem-xs="http://release.niem.gov/niem/proxy/niem-xs/5.0/" xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/">
   <w:Element w:name="hs:ChargeAugmentation" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="hs:EmployerAugmentation" w:isReference="false" w:nillable="false"/>
+  <w:Element w:name="im:ReleaseConditionText" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="j:Arrest" w:isReference="false" w:nillable="true"/>
   <w:Element w:name="j:CaseAugmentation" w:isReference="false" w:nillable="false"/>
   <w:Element w:name="j:ChargeIdentification" w:isReference="false" w:nillable="true"/>
@@ -92,8 +94,6 @@
   <w:Type w:name="j:BailBondType" w:isRequested="false">
     <w:ElementInType w:name="j:BailBondAmount" w:isReference="false"
       w:minOccurs="0" w:maxOccurs="1"/>
-    <w:ElementInType w:name="j:BailBondConditionDescriptionText"
-      w:isReference="false" w:minOccurs="0" w:maxOccurs="unbounded"/>
     <w:ElementInType w:name="j:BailBondSuretyEntity"
       w:isReference="false" w:minOccurs="0" w:maxOccurs="unbounded"/>
     <w:ElementInType w:name="j:BailBondAugmentationPoint"
