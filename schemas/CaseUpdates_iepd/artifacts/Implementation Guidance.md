@@ -59,3 +59,7 @@ Receiving systems must:
 - Look for the `nola-ext:MessageOperationCode` element in incoming messages to indicate what update operations are contained in the message.
 - Look for the attribute `structures:metadata` attributes to identify the data elements to be updated and specific update operation.
 - Update each set of data elements as appropriate based on the associated update operation.
+
+## Deprecated Elements
+The following elements are no longer recommended for use and are included for backward compatibility:
+- j:BailBond/j:BailBondConditionDescriptionTest - instead use nola-ext:PersonAugmentation/im:ReleaseConditionText

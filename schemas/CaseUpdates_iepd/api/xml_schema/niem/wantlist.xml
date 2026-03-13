@@ -94,6 +94,8 @@
   <w:Type w:name="j:BailBondType" w:isRequested="false">
     <w:ElementInType w:name="j:BailBondAmount" w:isReference="false"
       w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="j:BailBondConditionDescriptionText"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
     <w:ElementInType w:name="j:BailBondSuretyEntity"
       w:isReference="false" w:minOccurs="0" w:maxOccurs="unbounded"/>
     <w:ElementInType w:name="j:BailBondAugmentationPoint"
