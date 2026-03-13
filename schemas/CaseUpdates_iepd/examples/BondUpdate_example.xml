@@ -85,7 +85,6 @@
 							<!--  Class: Bond, Attribute: BondAmount  -->
 							<Amount>0</Amount>
 						</j:BailBondAmount>
-						<j:BailBondConditionDescriptionText structures:metadata="add">String</j:BailBondConditionDescriptionText>
 						<j:BailBondSuretyEntity structures:metadata="update">
 							<EntityPerson>
 								<PersonName>

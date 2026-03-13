@@ -34,13 +34,12 @@ For example, this [example of the Bond Update message](https://github.com/CityOf
 ```
 
 ### Identifying Specific Data Elements to Update
-- Data elements that are to be added, deleted or updated must reference the id of the appropriate metadata element with the attribute `structures:metadata`. For instance, in the following portion of the Bond Update message example, the `<j:BailBondConditionDescriptionText>` data element is to be added.
+- Data elements that are to be added, deleted or updated must reference the id of the appropriate metadata element with the attribute `structures:metadata`. For instance, in the following portion of the Bond Update message example, the `<j:BailBondSuretyEntity>` data element is to be updated.
 
 ``` xml
         <j:BailBondAmount>
             <Amount>0</Amount>
         </j:BailBondAmount>
-        <j:BailBondConditionDescriptionText structures:metadata="add">String</j:BailBondConditionDescriptionText>
         <j:BailBondSuretyEntity structures:metadata="update">
             <EntityPerson>
                 <PersonName>
@@ -60,3 +59,7 @@ Receiving systems must:
 - Look for the `nola-ext:MessageOperationCode` element in incoming messages to indicate what update operations are contained in the message.
 - Look for the attribute `structures:metadata` attributes to identify the data elements to be updated and specific update operation.
 - Update each set of data elements as appropriate based on the associated update operation.
+
+## Deprecated Elements
+The following elements are no longer recommended for use and are included for backward compatibility:
+- j:BailBond/j:BailBondConditionDescriptionTest - instead use nola-ext:PersonAugmentation/im:ReleaseConditionText
