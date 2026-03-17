@@ -32,7 +32,7 @@ This data exchange should also include all informaiton an arresting officer has,
 
 ## Artifacts:
 
-**![Mapping Spreadsheet](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/ArrestReport_iepd/artifacts/Arrest_MappingSpreadsheet.xlsx)**
+**![Mapping Spreadsheet](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/ArrestReport_iepd/artifacts/Arrest_MappingSpreadsheet_v3_2025_04_24.xlsx)**
 
 **![Sample XML File](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/ArrestReport_iepd/examples/ArrestSampleConcise.xml)**
 
