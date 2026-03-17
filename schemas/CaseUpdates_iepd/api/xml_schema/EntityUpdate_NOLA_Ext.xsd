@@ -8,6 +8,7 @@
 	xmlns:aamva_d20="http://release.niem.gov/niem/codes/aamva_d20/5.0/"
 	xmlns:ucr="http://release.niem.gov/niem/codes/ucr/5.1/"
 	xmlns:hs="http://release.niem.gov/niem/domains/humanServices/5.2/"
+	xmlns:im="http://release.niem.gov/niem/domains/immigration/5.2/"
 	xmlns:j="http://release.niem.gov/niem/domains/jxdm/7.2/"
 	xmlns:scr="http://release.niem.gov/niem/domains/screening/5.2/"
 	xmlns:appinfo="http://release.niem.gov/niem/appinfo/5.0/"
@@ -29,6 +30,8 @@
 		schemaLocation="./niem/xsd/codes/ucr.xsd"/>
 	<xs:import namespace="http://release.niem.gov/niem/domains/humanServices/5.2/"
 		schemaLocation="./niem/xsd/domains/hs.xsd"/>
+	<xs:import namespace="http://release.niem.gov/niem/domains/immigration/5.2/"
+		schemaLocation="./niem/xsd/domains/immigration.xsd"/>
 	<xs:import namespace="http://release.niem.gov/niem/domains/jxdm/7.2/"
 		schemaLocation="./niem/xsd/domains/jxdm.xsd"/>
 	<xs:import namespace="http://release.niem.gov/niem/domains/screening/5.2/"
@@ -275,6 +278,7 @@
 				<xs:sequence>
 					<xs:element ref="nola-ext:CaseDefendantNumber" minOccurs="0"
 						maxOccurs="unbounded"/>
+					<xs:element ref="im:ReleaseConditionText" minOccurs="0" maxOccurs="1"/>
 					<xs:element ref="scr:InmateNumberID" minOccurs="0" maxOccurs="1"/>
 					<xs:element ref="nc:PersonEmploymentAssociation" minOccurs="0" maxOccurs="1"/>
 				</xs:sequence>
