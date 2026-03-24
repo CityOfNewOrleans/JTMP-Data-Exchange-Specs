@@ -53,6 +53,7 @@ For example, this [example of the Bond Update message](https://github.com/CityOf
 Sending systems must:
 - Include one or more `nola-ext:MessageOperationCode` elements in the message, as appropriate based on the update operation(s).
 - Use the attribute `structures:metadata` to indicate the data elements to be updated and associate them with the appropriate updates operation.
+- Include multiple `j:CaseAugmentation` elements in the EntityUpdate exchange as described in the [Case Initiation exchange](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/CaseInitiation_iepd//artifacts/Implementation%20Guidance.md). 
 
 ## Guidance to Implementers of Systems Receiving Case Update Messages
 Receiving systems must:
