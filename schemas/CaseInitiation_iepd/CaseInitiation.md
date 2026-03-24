@@ -6,6 +6,9 @@ A Courts' Case Management (CMS) will publish a New Case Initiation message each 
 
 The publisher may be the CMS of any court jurisdiction - Criminal, Juvenile, or Municipal & Traffic. 
 
+## IMPORTANT - Use of Augmentations
+Please review ![Implementation Guidance](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/CaseInitiation_iepd/artifacts/Implementation%20Guidance.md) for information on use of CaseAugmentation and PersonAugmentation elements in these schema. This approach is essential for multi-defendant cases but must be implemented for any single-defendant case to ensure consistency in downstream processing.  This document can also be found in the 'artifacts' folder of this exchange. 
+
 ## Preceding Exchange: 
 
 Booking
