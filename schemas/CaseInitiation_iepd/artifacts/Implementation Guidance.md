@@ -18,11 +18,11 @@ Sending systems must ensure that each nc:CourtCase contains multiple `j:CaseAugm
         - `j:CaseJudge`
         - `j:CaseOfficial`
         - `j:CaseOtherEntity`
-        - `j:CaseProsecutionAttorney`'
+        - `j:CaseProsecutionAttorney`
         - `j:CaseWitness`
     - Leave empty (indicated with `xsi:nil="true"`) the following elements specific to a defendant:
         - `j:CaseCharge`
-        - `j:CaseDefendantAttorney`
+        - `j:CaseDefenseAttorney`
         - `j:CaseDefendantParty`
 - One `j:CaseAugmentation` with `structures:id="defendant1"` (or `defendant2`, `defendant3`, etc.) for each defendant
     - Leave empty the elements specific to the case (listed above)

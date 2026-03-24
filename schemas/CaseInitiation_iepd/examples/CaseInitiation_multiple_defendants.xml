@@ -117,7 +117,7 @@
 				<j:CourtEventSequenceID>String</j:CourtEventSequenceID>
 			</j:CaseCourtEvent>
 			<!--  Class: CourtCase, Attribute: CourtCaseDefendantCount  -->
-			<j:CaseDefendantQuantityText>1</j:CaseDefendantQuantityText>
+			<j:CaseDefendantQuantityText>2</j:CaseDefendantQuantityText>
 			<j:CaseDefendantParty xsi:nil="true"/>
 			<j:CaseDefenseAttorney xsi:nil="true"/>
 			<!--  Class: CourtCase, Attribute: CourtCaseEvidence  -->
