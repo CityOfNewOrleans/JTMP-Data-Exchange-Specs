@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+    xmlns:nc="http://release.niem.gov/niem/niem-core/5.0/" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xmlns:structures="http://release.niem.gov/niem/structures/5.0/" 
+    xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/"     
+    xmlns:niem-xs="http://release.niem.gov/niem/proxy/niem-xs/5.0/" 
+    xmlns:j="http://release.niem.gov/niem/domains/jxdm/7.2/"     
+    xmlns:nola-ext="http://mcp.com/nola/extension/v/1.0/"     
+    targetNamespace="http://mcp.com/nola/extension/v/1.0/" 
+    xmlns:hs="http://release.niem.gov/niem/domains/humanServices/5.2/"
+    xmlns:scr="http://release.niem.gov/niem/domains/screening/5.2/"
+    xmlns:unece="http://release.niem.gov/niem/codes/unece_rec20/5.0/"
+    xmlns:ndex="http://release.niem.gov/niem/codes/ndex/5.0/" 
+    xmlns:ncic="http://release.niem.gov/niem/codes/ncic/5.2/"
+    elementFormDefault="qualified" 
+    attributeFormDefault="unqualified" 
+    version="1" 
+    xml:lang="en-US" 
+    ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/5.0/#ExtensionDocument">
+    <!-- NIEM schema imports -->
+    <xs:import namespace="http://release.niem.gov/niem/niem-core/5.0/" schemaLocation="./niem\xsd\niem-core.xsd"/>
+    <xs:import namespace="http://release.niem.gov/niem/proxy/niem-xs/5.0/" schemaLocation="./niem\xsd\adapters\niem-xs.xsd"/>
+    <xs:import namespace="http://release.niem.gov/niem/domains/jxdm/7.2/" schemaLocation="./niem\xsd\domains\jxdm.xsd"/>
+    <xs:import namespace="http://release.niem.gov/niem/structures/5.0/" schemaLocation="./niem\xsd\utility\structures.xsd"/>
+    <xs:import namespace="http://release.niem.gov/niem/domains/humanServices/5.2/" schemaLocation="./niem\xsd\domains\hs.xsd"/>
+    <xs:import namespace="http://release.niem.gov/niem/domains/screening/5.2/" schemaLocation="./niem\xsd\domains\screening.xsd"/>
+    <xs:import namespace="http://release.niem.gov/niem/codes/unece_rec20/5.0/" schemaLocation="./niem\xsd\codes\unece_rec20.xsd"/>    
+    <xs:import namespace="http://release.niem.gov/niem/codes/ndex/5.0/" schemaLocation="./niem\xsd\codes\ndex.xsd"/>
+    <xs:import namespace="http://release.niem.gov/niem/codes/ncic/5.2/" schemaLocation="./niem\xsd\codes\ncic.xsd"/>
+    <!-- complexType Definitions, NIEM mapping ======================================================================== -->
+    <xs:complexType name="WarrantAugmentationType">
+        <xs:annotation>
+            <xs:documentation>A data type for additional data for Warrant information in NOLA.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="structures:AugmentationType">
+                <xs:sequence>               
+                    <xs:element ref="j:ActivityCaseAssociation" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nc:Document" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:WarrantServiceAttempt" minOccurs="0" maxOccurs="unbounded"/>                    
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="WarrantServiceAttemptType">
+        <xs:annotation>
+            <xs:documentation>A data type for additional data for Warrant information in NOLA.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="structures:AugmentationType">
+                <xs:sequence>               
+                    <xs:element ref="j:CourtOrderServiceDate" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nc:Address" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nc:AddressCrossStreet" minOccurs="0" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="PersonAugmentationType">
+        <xs:annotation>
+            <xs:documentation>A data type for additional data for a Person information in NOLA.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="structures:AugmentationType">
+                <xs:sequence>
+                    <xs:element ref="nc:PersonEmploymentAssociation" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="j:EnforcementOfficialBadgeIdentification" minOccurs="0" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="EmployerAugmentationType">
+        <xs:annotation>
+            <xs:documentation>A data type for additional data for a Employer information in NOLA.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="structures:AugmentationType">
+                <xs:sequence>
+                    <xs:element ref="nc:EmploymentStatus" minOccurs="0" maxOccurs="1"/>                    
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="StatuteAugmentationType">
+        <xs:annotation>
+            <xs:documentation>A data type for additional data for a Charge Statute information in NOLA.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="structures:AugmentationType">
+                <xs:sequence>
+                    <xs:element ref="nola-ext:StatuteCodeSectionSubparagraphIdentification" minOccurs="0" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="StatuteCodeSectionSubparagraphIdentificationType">
+        <xs:annotation>
+            <xs:documentation>A data type for additional data for a Charge Statute information in NOLA.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="structures:AugmentationType">
+                <xs:sequence>
+                    <xs:element ref="nc:IdentificationID" minOccurs="0" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="ChargeAugmentationType">
+        <xs:annotation>
+            <xs:documentation>A data type for additional data for a Charge information in NOLA.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="structures:AugmentationType">
+                <xs:sequence>                    
+                    <xs:element ref="nola-ext:JMSChargeNumber" minOccurs="0" maxOccurs="1"/>
+                    <xs:element ref="nola-ext:ChargeKey" minOccurs="0" maxOccurs="1"/>                    
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="CrossStreetAugmentationType">
+        <xs:annotation>
+            <xs:documentation>A data type for additional data for a Cross Street information in NOLA.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="structures:AugmentationType">
+                <xs:sequence>                    
+                    <xs:element ref="nola-ext:CrossStreetIntersectionText" minOccurs="0" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>    
+    <xs:complexType name="NOLAExchangeType">
+        <xs:annotation>
+            <xs:documentation>A data type for a common ancestor containing exchange level data relevant to exchanges in NOLA.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="structures:ObjectType">
+                <xs:sequence/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>    
+    <!-- Augmentation Elements ======================================================================== -->
+    <xs:element name="WarrantAugmentation" type="nola-ext:WarrantAugmentationType" substitutionGroup="j:WarrantAugmentationPoint">
+        <xs:annotation>
+            <xs:documentation>Additional information about a Warrant in the NOLA.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="PersonAugmentation" type="nola-ext:PersonAugmentationType" substitutionGroup="nc:PersonAugmentationPoint">
+        <xs:annotation>
+            <xs:documentation>Additional information about a person in the NOLA.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="EmployerAugmentation" type="nola-ext:EmployerAugmentationType" substitutionGroup="nc:EmployerAugmentationPoint">
+        <xs:annotation>
+            <xs:documentation>Additional information about a person in the NOLA.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="StatuteAugmentation" type="nola-ext:StatuteAugmentationType" substitutionGroup="j:StatuteAugmentationPoint">
+        <xs:annotation>
+            <xs:documentation>Additional information about a statute in the NOLA.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="ChargeAugmentation" type="nola-ext:ChargeAugmentationType" substitutionGroup="j:ChargeAugmentationPoint">
+        <xs:annotation>
+            <xs:documentation>Additional information about a charge in the NOLA.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="CrossStreetAugmentation" type="nola-ext:CrossStreetAugmentationType" substitutionGroup="nc:CrossStreetAugmentationPoint">
+        <xs:annotation>
+            <xs:documentation>Additional information about a cross street in the NOLA.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <!-- New Element definitions ======================================================================== -->
+    <xs:element name="WarrantServiceAttempt" type="nola-ext:WarrantServiceAttemptType">
+        <xs:annotation>
+            <xs:documentation>The information about each warrant service Attempt</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="StatuteCodeSectionSubparagraphIdentification" type="nola-ext:StatuteCodeSectionSubparagraphIdentificationType">
+        <xs:annotation>
+            <xs:documentation>A subparagraph description of a criminal offense within a state code book.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="JMSChargeNumber" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation>A unique identification number assigned to a particular charge by an arresting agency.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="ChargeKey" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation>A UCT Charge Key (Uniform Charge Table) is a shared key or identifier from a shared table that standardizes charge code definitions across the enterprise.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="CrossStreetIntersectionText" type="niem-xs:string">
+        <xs:annotation>
+            <xs:documentation>The cross street intersection code.</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+</xs:schema>
