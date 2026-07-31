@@ -6,7 +6,15 @@ The Subscriber to any message may send a response message through the service bu
 
 The ESB will also capture async responses and can route the message to a designated recipient at the sending agency. 
 
-![Async Response IEPD](schemas/AsyncResponse_iepd)
+## Artifacts:
+**XML Schemas:** 
+![XML Schemas](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/tree/main/schemas/AsyncResponse_iepd/api/xml_schema)
+
+**Mapping Spreadsheet:**
+![Mapping Spreadsheet](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/AsyncResponse_iepd/artifacts/Async_Response_MappingSpreadsheet.xlsx)
+
+**Sample XML:** 
+![Sample XML Files](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/tree/main/schemas/AsyncResponse_iepd/examples)
 
 ## Preceding Exchange: 
 
@@ -37,16 +45,6 @@ Robust response messaging gives the Publisher of a message the assurance that th
 |Received|Successfully staged|MessageStatus/SystemEventDescriptionText|This status could be sent if the receiving system sends a later message upon final processing. For example, the service could send a Received message if final acceptance is pending human review, for example clerk review of an efiling message.|
 |Approved|Final Acceptance|MessageStatus/SystemEventDescriptionText|Final approval, which could be used if human review is the final stage in processing a message, for example clerk efiling review.|
 
-
-## Artifacts:
-**XML Schemas:** 
-![XML Schemas](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/tree/main/schemas/AsyncResponse_iepd/api/xml_schema)
-
-**Mapping Spreadsheet:**
-![Mapping Spreadsheet](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/blob/main/schemas/AsyncResponse_iepd/artifacts/Async_Response_MappingSpreadsheet.xlsx)
-
-**Sample XML:** 
-![Sample XML Files](https://github.com/CityOfNewOrleans/JTMP-Data-Exchange-Specs/tree/main/schemas/AsyncResponse_iepd/examples)
 
 **Class Diagram:** 
 
